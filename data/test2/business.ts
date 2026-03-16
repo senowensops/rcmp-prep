@@ -1,0 +1,39 @@
+// TODO: Test 2 questions
+import type { Question } from '@/types';
+
+const Q6A=[
+{id:'6A-1',text:'All officers must complete their report within 24 hours. Constable Tremblay submitted hers on Tuesday at 14:00. Was policy followed?',opts:['Yes','No','Cannot be determined'],correct:2,exp:'We don\'t know when the incident occurred.' /* TODO: expand explanation */},
+{id:'6A-2',text:'All detectives are officers. Some officers work undercover. Therefore:',opts:['All detectives work undercover','Some detectives may work undercover','No detectives work undercover','Most detectives work undercover'],correct:1,exp:'Detectives are a subset of officers; some officers work undercover — so some detectives might.'},
+{id:'6A-3',text:'Some criminals are repeat offenders. All repeat offenders have prior convictions. Therefore:',opts:['All criminals have prior convictions','Some criminals have prior convictions','No first-time offenders are criminals','Most criminals are repeat offenders'],correct:1,exp:'Some criminals → repeat offenders → prior convictions. So some criminals have prior convictions.'},
+{id:'6A-4',text:'All patrol cars have radios. Some patrol cars have dashcams. Therefore:',opts:['All cars with radios are patrol cars','Some patrol cars have both radios and dashcams','All patrol cars have dashcams','Cars without radios may be patrol cars'],correct:1,exp:'All patrol cars have radios. Some also have dashcams. So some have both.' /* TODO: expand explanation */},
+{id:'6A-5',text:'No civilians are authorized to carry handcuffs on duty. Constable Roy carries handcuffs on duty. Therefore:',opts:['Constable Roy is not a civilian','Constable Roy is breaking the law','Constable Roy is a police officer','All officers carry handcuffs'],correct:0,exp:'Only non-civilians are authorized. Roy carries them → Roy is not a civilian.' /* TODO: expand explanation */},
+{id:'6A-6',text:'All evidence must be tagged before storage. Some evidence was found at the roadside. Therefore:',opts:['Roadside evidence doesn\'t need tagging','Roadside evidence must be tagged before storage','All tagged evidence was found at the roadside','Evidence found at the roadside is less reliable'],correct:1,exp:'ALL evidence must be tagged — roadside evidence is evidence, so it must be tagged.'},
+{id:'6A-7',text:'If it rains, the parade will be cancelled. The parade was not cancelled. Therefore:',opts:['It rained','It did not rain','It was moved indoors','Cannot be determined'],correct:1,exp:'Contrapositive: if not cancelled → not rain.' /* TODO: expand explanation */},
+{id:'6A-8',text:'All cadets must pass a fitness test. Marie is a cadet. Therefore:',opts:['Marie passed the test','Marie must pass the test','Marie is fit','Marie will become an officer'],correct:1,exp:'She must pass it, but we don\'t know if she has yet.' /* TODO: expand explanation */},
+{id:'6A-9',text:'Overtime must be pre-approved unless there is an emergency. Constable Park worked overtime at a multi-vehicle accident without pre-approval. Did he violate policy?',opts:['Yes','No','Cannot be determined'],correct:1,exp:'Multi-vehicle accident = emergency. Exception applies.' /* TODO: expand explanation */},
+{id:'6A-10',text:'<strong>Abundant : Scarce</strong><br>Transparent : ____',opts:['Clear','Opaque','Obvious','Visible'],correct:1,exp:'Opposites. Transparent↔opaque.' /* TODO: expand explanation */},
+{id:'6A-11',text:'All sergeants have completed leadership training. No recruits have completed leadership training. Therefore:',opts:['No recruits are sergeants','Some recruits may be sergeants','All sergeants are recruits','Recruits don\'t need leadership training'],correct:0,exp:'Sergeants have training; recruits don\'t. No overlap → no recruits are sergeants.'},
+{id:'6A-12',text:'Some witnesses are unreliable. All unreliable witnesses give inconsistent statements. Therefore:',opts:['All witnesses give inconsistent statements','Some witnesses give inconsistent statements','No reliable witness gives inconsistent statements','Inconsistent statements prove a witness is unreliable'],correct:1,exp:'Some witnesses → unreliable → inconsistent. So some witnesses give inconsistent statements.'},
+{id:'6A-13',text:'<strong>Witness : Testimony</strong><br>Judge : ____',opts:['Courtroom','Verdict','Lawyer','Evidence'],correct:1,exp:'Witness provides testimony; judge provides verdict.' /* TODO: expand explanation */},
+{id:'6A-14',text:'All vehicles in the fleet must have winter tires by November 1st. It is October 28th and 4 of 12 vehicles have been changed. Has policy been violated?',opts:['Yes','No','Cannot be determined'],correct:1,exp:'The deadline is November 1st. It is still October 28th — they still have time.' /* TODO: expand explanation */},
+{id:'6A-15',text:'Some officers speak French. All bilingual officers receive a bonus. Therefore:',opts:['All officers who speak French receive a bonus','Some officers receive a bonus','No unilingual officers receive bonuses','All officers should learn French'],correct:1,exp:'Some officers speak French → some are bilingual → some receive a bonus.' /* TODO: expand explanation */}
+];
+
+const Q6B=[
+{id:'6B-1',text:'A constable earns $46/hr, works 37.5 hrs/week. After a 4.5% raise, new weekly gross?',opts:['$1,725.00','$1,802.63','$1,797.38','$1,805.25'],correct:1,exp:'$46×37.5=$1,725. ×1.045=$1,802.63.' /* TODO: expand explanation */},
+{id:'6B-2',text:'Budget $840,000: personnel 62%, vehicles 18%, rest operations. Operations budget?',opts:['$168,000','$172,800','$151,200','$184,000'],correct:0,exp:'20% → $168,000.' /* TODO: expand explanation */},
+{id:'6B-3',text:'85 km/h for 2.5 hrs + 60 km/h for 1.5 hrs. Total distance?',opts:['290 km','302.5 km','305 km','312.5 km'],correct:1,exp:'212.5+90=302.5.' /* TODO: expand explanation */},
+{id:'6B-4',text:'12L/100km fuel use. $1.65/L. Cost for 350 km?',opts:['$63.25','$66.30','$69.30','$72.60'],correct:2,exp:'42L×$1.65=$69.30.' /* TODO: expand explanation */},
+{id:'6B-5',text:'32 cadets, 24 passed. Pass rate?',opts:['70%','72%','75%','78%'],correct:2,exp:'24÷32=75%.' /* TODO: expand explanation */},
+{id:'6B-6',text:'Cruiser $34,000. Options +12%. HST 15% on total. Final price?',opts:['$42,504','$43,792','$43,624','$44,160'],correct:1,exp:'$34,000×1.12=$38,080×1.15=$43,792.' /* TODO: expand explanation */},
+{id:'6B-7',text:'Calls: Jan 420, Feb 380, Mar 460. Monthly average?',opts:['400','410','420','430'],correct:2,exp:'1260÷3=420.' /* TODO: expand explanation */},
+{id:'6B-8',text:'Seized 2.4 kg cocaine ($90/g) + $18,500 cash. Total?',opts:['$234,500','$234,000','$216,500','$235,000'],correct:2,exp:'2.4×1000×$90 = $216,000 + $18,500 = $234,500.' /* TODO: expand explanation */},
+{id:'6B-9',text:'Officer works 40 hours/week at $52/hr. Overtime is 1.5x rate. If she works 6 hours overtime, total weekly pay?',opts:['$2,548','$2,628','$2,548','$2,600'],correct:1,exp:'40×$52 = $2,080. 6×$78 = $468. Total = $2,548.' /* TODO: expand explanation */},
+{id:'6B-10',text:'Evidence room: 320 items. 45% are weapons, 30% are drugs, rest are documents. How many documents?',opts:['75','80','85','90'],correct:1,exp:'25% documents: 320×0.25 = 80.' /* TODO: expand explanation */}
+,
+{id:'6B-11',text:'Officer earns $52/hr. Overtime = 1.5x rate. She works 8 regular + 3 overtime hours. Total day pay?',opts:['$572','$598','$650','$682'],correct:2,exp:'Regular: 8x$52=$416. OT: 3x($52x1.5)=3x$78=$234. Total: $416+$234=$650.'},
+{id:'6B-12',text:'Detachment A: 12,400 km2 with 8 officers. Detachment B: 9,300 km2 with 6 officers. Which has more area per officer?',opts:['A more area per officer','B more area per officer','Equal','Cannot determine'],correct:2,exp:'A: 12400/8=1550 km2/officer. B: 9300/6=1550 km2/officer. Equal.'}
+];
+
+export const businessLogic: Question[] = Q6A;
+export const businessMath: Question[] = Q6B;
