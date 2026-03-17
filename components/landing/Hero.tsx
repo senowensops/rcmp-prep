@@ -10,7 +10,7 @@ export function Hero() {
           </Link>
           <Link
             href="/sample"
-            className="rounded-full border border-white/15 bg-white px-5 py-2.5 font-head text-sm font-bold uppercase tracking-[0.12em] text-[var(--dark)] transition hover:bg-white/90"
+            className="rounded-full border border-[var(--red)] bg-[var(--red)] px-5 py-2.5 font-head text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[var(--red-dk)]"
           >
             Try Free
           </Link>
@@ -28,7 +28,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
-            Three full-length practice tests built to mirror the structure, timing, and question types of the real RCMP Online Assessment. No shortcuts. No fluff.
+            Practice tests built to mirror the structure, timing, and question types of the real RCMP Online Assessment. No shortcuts. No fluff.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -47,7 +47,7 @@ export function Hero() {
           </div>
 
           <p className="mt-5 text-sm text-white/55 sm:text-base">
-            No account needed to try · Lifetime access · CAD pricing
+            No account needed to try · Lifetime access
           </p>
         </div>
       </div>

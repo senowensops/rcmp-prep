@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FoundingMemberCounter } from "@/components/landing/FoundingMemberCounter";
 
 const features = [
-  "All 3 full-length practice tests",
+  "All 3 practice tests",
   "6 sections per test",
   "Timed sections matching real assessment",
   "Answer explanations on every question",

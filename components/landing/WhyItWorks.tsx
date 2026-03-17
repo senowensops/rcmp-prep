@@ -1,9 +1,9 @@
 const bullets = [
   "Mirrors the real format — same section order, same timing, same question types",
-  "3 full tests — practice once, compare progress, build confidence",
+  "3 practice tests — practice once, compare progress, build confidence",
   "Memory section uses real photos — not generic diagrams",
   "Detailed explanations on every question — learn, don't just drill",
-  "Canadian content — detachments, CAD figures, Canadian scenarios",
+  "Real scenarios — situations and examples drawn from actual police assessment content",
   "One-time price — no subscription, no recurring charges",
 ];
 
