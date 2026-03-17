@@ -1,6 +1,12 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
+import { PaywallModal } from "@/components/ui/PaywallModal";
 
 export function Hero() {
+  const [showPaywall, setShowPaywall] = useState(false);
+
   return (
     <section className="relative overflow-hidden px-6 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-8">
       <div className="mx-auto max-w-6xl">
@@ -38,12 +44,12 @@ export function Hero() {
             >
               Try Free Sample →
             </Link>
-            <Link
-              href="/test/1"
+            <button
+              onClick={() => setShowPaywall(true)}
               className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-transparent px-7 py-4 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:border-white/35 hover:bg-white/5"
             >
               Unlock Full Access →
-            </Link>
+            </button>
           </div>
 
           <p className="mt-5 text-sm text-white/55 sm:text-base">
@@ -51,6 +57,16 @@ export function Hero() {
           </p>
         </div>
       </div>
+
+      {showPaywall && (
+        <PaywallModal
+          onClose={() => setShowPaywall(false)}
+          onUnlock={() => {
+            setShowPaywall(false);
+            window.location.href = '/test/1';
+          }}
+        />
+      )}
     </section>
   );
 }
