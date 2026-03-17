@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable react-hooks/set-state-in-effect */
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { TopBar } from "@/components/layout/TopBar";
@@ -37,6 +37,8 @@ export default function TestPage() {
   const [resumeReady, setResumeReady] = useState(false);
   const [lockedSubsections, setLockedSubsections] = useState<Record<string, boolean>>({});
   const [lockedChallenges, setLockedChallenges] = useState<Record<string, boolean>>({});
+  const [hasStudied, setHasStudied] = useState<Record<string, boolean>>({});
+  const currentChallengeIdRef = useRef<string | null>(null);
   const [isPaid, setIsPaid] = useState(false);
   const [showPaywall, setShowPaywall] = useState(false);
   const questionSubsection = currentQuestion.subsectionId;
@@ -58,8 +60,17 @@ export default function TestPage() {
   const { secondsLeft: subsectionTime, setSecondsLeft: setSubsectionTime } = useTimer(activeSubsection?.timerSeconds ?? null, Boolean(activeSubsection?.timerSeconds && !studyActive && !lockedSubsections[activeSubsection.id]), () => {
     if (activeSubsection) setLockedSubsections((prev) => ({ ...prev, [activeSubsection.id]: true }));
   });
-  const { secondsLeft: studyRemaining, setSecondsLeft: setStudyRemaining } = useTimer(challenge?.studyTime ?? null, studyActive, () => setStudyActive(false));
-  const { secondsLeft: answerRemaining, setSecondsLeft: setAnswerRemaining } = useTimer(challenge?.answerTime ?? null, Boolean(currentSection.type === 'memory' && !studyActive && challenge && !lockedChallenges[challenge.id]), () => {
+  // Keep a ref to the current challenge ID so the study timer callback can access it
+  useEffect(() => {
+    currentChallengeIdRef.current = challenge?.id ?? null;
+  }, [challenge?.id]);
+
+  const { secondsLeft: studyRemaining, setSecondsLeft: setStudyRemaining } = useTimer(challenge?.studyTime ?? null, studyActive, () => {
+    setStudyActive(false);
+    const cid = currentChallengeIdRef.current;
+    if (cid) setHasStudied((prev) => ({ ...prev, [cid]: true }));
+  });
+  const { secondsLeft: answerRemaining, setSecondsLeft: setAnswerRemaining } = useTimer(challenge?.answerTime ?? null, Boolean(currentSection.type === 'memory' && !studyActive && challenge && !lockedChallenges[challenge.id] && hasStudied[challenge?.id ?? '']), () => {
     if (challenge) {
       setLockedChallenges((prev) => ({ ...prev, [challenge.id]: true }));
       next();
@@ -71,8 +82,8 @@ export default function TestPage() {
   }, [activeSubsection, lockedSubsections, setSubsectionTime]);
 
   useEffect(() => {
-    if (challenge && !studyActive && !lockedChallenges[challenge.id]) setAnswerRemaining(challenge.answerTime ?? 45);
-  }, [challenge, studyActive, lockedChallenges, setAnswerRemaining]);
+    if (challenge && !studyActive && !lockedChallenges[challenge.id] && hasStudied[challenge.id]) setAnswerRemaining(challenge.answerTime ?? 45);
+  }, [challenge, studyActive, lockedChallenges, hasStudied, setAnswerRemaining]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -137,7 +148,7 @@ export default function TestPage() {
             {currentSection.bannerNote ? <p className="mt-3 rounded-xl bg-[var(--surface2)] p-3 text-sm text-[var(--muted)]">{currentSection.bannerNote}</p> : null}
           </div>
           <Timer label={activeSubsection ? `${activeSubsection.label} timer` : `${currentSection.label} timer`} secondsLeft={subsectionTime} />
-          {currentSection.type === "memory" && !studyActive ? <div className="mb-4 text-center font-mono text-lg text-[var(--gold)]">Answer timer: {answerRemaining ?? challenge?.answerTime ?? 45}s</div> : null}
+          {currentSection.type === "memory" && !studyActive && hasStudied[challenge?.id ?? ''] ? <div className="mb-4 text-center font-mono text-lg text-[var(--gold)]">Answer timer: {answerRemaining ?? challenge?.answerTime ?? 45}s</div> : null}
           {currentSection.type === "memory" ? (
             <MemorySection question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => setAnswer(currentQuestion.id, value)} onFlag={() => toggleFlag(currentQuestion.id)} challenge={challenge} studying={studyActive} studyRemaining={studyRemaining} onBeginStudy={() => { setStudyRemaining(challenge?.studyTime ?? 60); setStudyActive(true); }} />
           ) : Renderer ? (

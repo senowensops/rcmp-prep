@@ -8,7 +8,11 @@ export function QuestionCard({ question, answer, flagged, locked, showDontKnow, 
     <div className="surface-card p-6">
       <div className="mb-2 font-head text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">{question.id}</div>
       <div className="review-html mb-5 text-lg leading-8" dangerouslySetInnerHTML={{ __html: question.text }} />
-      {question.promptSvg ? <div className="mb-5 rounded-2xl bg-[var(--surface2)] p-4" dangerouslySetInnerHTML={{ __html: question.promptSvg }} /> : null}
+      {question.promptSvg ? (
+        <div className="mb-5 rounded-2xl bg-[var(--surface2)] p-4 flex justify-center">
+          <div style={{ width: '100%', maxWidth: '200px' }} dangerouslySetInnerHTML={{ __html: question.promptSvg }} />
+        </div>
+      ) : null}
       {question.svg ? <div className="mb-5 overflow-auto rounded-2xl bg-[var(--surface2)] p-4" dangerouslySetInnerHTML={{ __html: question.svg }} /> : null}
       <div className="mb-5 flex flex-col gap-3">
         {options.map((opt, index) => {
@@ -19,7 +23,9 @@ export function QuestionCard({ question, answer, flagged, locked, showDontKnow, 
             <button key={`${question.id}-${index}`} disabled={locked} onClick={() => onAnswer(value)} className={`flex items-center gap-3 rounded-2xl border p-4 text-left transition ${selected ? "border-[var(--blue)] bg-[var(--blue-bg)]" : "border-[var(--border)] bg-[var(--surface2)] hover:border-[var(--red)]"} ${locked ? "opacity-70" : ""}`}>
               <span className={`flex h-8 w-8 items-center justify-center rounded-full border font-head text-sm font-bold ${selected ? "border-[var(--blue)] bg-[var(--blue)] text-white" : "border-[var(--border)] text-[var(--muted)]"}`}>{showDontKnow && index === options.length - 1 ? "IDK" : String.fromCharCode(65 + index)}</span>
               <div className="flex-1">
-                {svgChoice ? <div dangerouslySetInnerHTML={{ __html: svgChoice }} /> : <span>{opt}</span>}
+                {svgChoice ? (
+                  <div style={{ width: '80px', height: '80px', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: svgChoice }} />
+                ) : <span>{opt}</span>}
               </div>
             </button>
           );

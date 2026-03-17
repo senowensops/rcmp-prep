@@ -1,23 +1,12 @@
 import type { MemoryChallenge, SectionRendererProps } from "@/types";
 import { MemoryQuestionCard } from "@/components/ui/MemoryQuestionCard";
 
-const IMAGE_KEYWORDS: Record<string, string> = {
-  mem1: 'intersection,street,pedestrian',
-  mem2: 'city,street,tram',
-};
-
-function getImageKeywords(challenge: MemoryChallenge): string {
-  if (IMAGE_KEYWORDS[challenge.id]) return IMAGE_KEYWORDS[challenge.id];
-  // Derive keywords from the title words
-  return challenge.title.toLowerCase().replace(/[^a-z0-9 ]/g, '').split(' ').filter(Boolean).join(',');
-}
-
 export function MemorySection(props: SectionRendererProps & { challenge?: MemoryChallenge; studying?: boolean; studyRemaining?: number | null; onBeginStudy?: () => void }) {
   const { challenge, studying, studyRemaining, onBeginStudy, locked } = props;
   if (!challenge) return null;
 
   const imageUrl = challenge.studyType === 'image'
-    ? `https://source.unsplash.com/featured/600x400?${getImageKeywords(challenge)}`
+    ? `https://picsum.photos/seed/${challenge.id}/600/400`
     : null;
 
   return (
