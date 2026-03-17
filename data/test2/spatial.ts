@@ -1,49 +1,542 @@
-// TODO: Test 2 questions
 import type { Question } from '@/types';
+import { gearSVG, cubeNetSVG } from '@/data/shared/svgHelpers';
 
-export const CUBE_NET_1 = {top:{symbol:'★',color:'#c8102e'},left:{symbol:'▲',color:'#2563eb'},center:{symbol:'✕',color:'#333'},right:{symbol:'■',color:'#d4900a'},below:{symbol:'♦',color:'#15803d'},bottom:{symbol:'●',color:'#7B2D8E'}};
-export const CUBE_NET_2 = {top:{symbol:'□',color:'#333'},left:{symbol:'⬟',color:'#333'},center:{symbol:'#',color:'#333'},right:{symbol:'✕',color:'#333'},below:{symbol:'☆',color:'#333'},bottom:{symbol:'⊕',color:'#333'}};
+// ─── SVG helpers ───────────────────────────────────────────────────────────────
 
-const ROTATION_2D: Question[] = [
-  { id:'4A-1', subsectionId:'spatial-2d', text:'Which option matches the original arrow after a 90° clockwise rotation?', opts:['A','B','C','D'], correct:1, exp:'A 90° clockwise turn points the arrow downward.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M22 58h50V40l28 20-28 20V62H22z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M18 40h46V24l26 16-26 16V44H18z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M60 14v38H44l16 24 16-24H60V14z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M102 40H56V24L30 40l26 16V44h46z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M60 66V28H44l16-24 16 24H60z" fill="#2563eb"/></svg>`] },
-  { id:'4A-2', subsectionId:'spatial-2d', text:'Which rotated L-shape matches a 180° turn of the original?', opts:['A','B','C','D'], correct:2, exp:'A 180° turn moves the foot from bottom-right to top-left.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M34 24h16v52h40v16H34z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M26 18h48v14H40v40H26z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M80 16h14v50H46V52h34z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M74 18h16v54H30V56h44z" transform="rotate(180 60 40)" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M22 60h48V46H36V10H22z" fill="#2563eb"/></svg>`] },
-  { id:'4A-3', subsectionId:'spatial-2d', text:'Which option shows the F-shape after a 90° counter-clockwise rotation?', opts:['A','B','C','D'], correct:0, exp:'Counter-clockwise rotation turns the upright F so it lies on its side with bars facing upward.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M34 24h18v72H34zm18 0h34v14H52zm0 28h26v14H52z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M20 46h72V28H20zm0 18h72V46H20zm0-36h72V10H20zm0-18h18v54H20z" transform="rotate(-90 60 40)" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M26 10h18v60H26zm18 0h34v12H44zm0 24h26v12H44z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M26 54h68V40H26zm0-16h52V24H26zm0-16h68V8H26zm50 0h18v54H76z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M18 18h84v14H18zm0 22h56v14H18zm0 22h84v14H18z" fill="#2563eb"/></svg>`] },
-  { id:'4A-4', subsectionId:'spatial-2d', text:'Which asymmetric polygon is the same shape rotated, not mirrored?', opts:['A','B','C','D'], correct:3, exp:'Only option D preserves the notch and long edge positions under rotation.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M24 40 58 24 94 40 78 56 86 84 40 94 28 64 40 52Z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M18 38 46 18 88 26 82 48 92 62 38 68 22 54 34 44Z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M24 28 58 12 94 28 78 44 86 72 40 82 28 52 40 40Z" transform="scale(-1,1) translate(-120,0)" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M20 28 48 14 90 28 74 42 90 66 46 74 22 54 36 44Z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M38 12 58 24 82 22 92 54 66 70 44 60 28 64 20 36Z" fill="#2563eb"/></svg>`] },
-  { id:'4A-5', subsectionId:'spatial-2d', text:'Which option matches the bent arrow after a 270° clockwise rotation?', opts:['A','B','C','D'], correct:2, exp:'A 270° clockwise turn is the same as 90° counter-clockwise.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M28 28h18v32h24V42l26 18-26 18V60H28z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M22 16h18v28h20V26l24 16-24 16V48H22z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M88 18H70v24H44V26L20 40l24 14V40h44z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M82 12v18H54v20h18l-14 24-14-24h18V12z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M38 68V50h28V30H48L62 6l14 24H58v38z" fill="#2563eb"/></svg>`] },
-  { id:'4A-6', subsectionId:'spatial-2d', text:'Which option is the same zig-zag banner rotated 90° clockwise?', opts:['A','B','C','D'], correct:1, exp:'The point order is preserved only in option B after rotation.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M18 40h36l10-14 18 14h20v40H82L70 94 52 80H18z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M18 26h70v12l14 8-14 8v12H18l14-20z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M42 6v30l14 8-14 16v14h40V54l14-10-14-12V6z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M18 18h28l8-10 14 10h22v40H68L58 72 40 58H18z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M44 6v22l-12 8 12 16v20h34V52l18-10-18-14V6z" fill="#2563eb"/></svg>`] },
-  { id:'4A-7', subsectionId:'spatial-2d', text:'Which option shows the original shape after a 90° clockwise rotation?', opts:['A','B','C','D'], correct:0, exp:'The long arm swings downward and the short tab ends up on the left.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M22 32h60v18H58v18H42V50H22z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M68 8v40H50V32H32V16h18V8z" transform="rotate(90 60 40)" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M18 24h56v16H54v16H38V40H18z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M102 24H46v16h20v16h16V40h20z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M60 10v52H44V46H28V30h16V10z" fill="#2563eb"/></svg>`] },
-  { id:'4A-8', subsectionId:'spatial-2d', text:'Which rotated triangle marker matches the original after a 180° rotation?', opts:['A','B','C','D'], correct:3, exp:'A 180° turn flips both the point and the notch location.', promptSvg:`<svg viewBox="0 0 120 120" width="120" height="120"><rect width="120" height="120" rx="16" fill="#fff" stroke="#ddd"/><path d="M24 36 78 30 92 58 66 86 34 80 42 60Z" fill="#C8102E"/></svg>`, choicesSvg:[`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M18 32 72 26 86 54 60 72 28 66 36 46Z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M98 32 44 26 30 54 56 72 88 66 80 46Z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M26 20 58 14 90 20 82 40 66 54 28 50 18 34Z" fill="#2563eb"/></svg>`,`<svg viewBox="0 0 120 80" width="120" height="80"><path d="M96 48 42 54 28 26 54 -2 86 4 78 24Z" fill="#2563eb"/></svg>`] },
+const qSvg = (inner: string) =>
+  `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="98" height="98" rx="8" fill="#fff" stroke="#d1d5db" strokeWidth="1.5"/>${inner}</svg>`;
+
+const oSvg = (inner: string) =>
+  `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="58" height="58" rx="6" fill="#fff" stroke="#d1d5db" strokeWidth="1.2"/>${inner}</svg>`;
+
+const F = '#f0fdf4';
+const S = '#16a34a';
+
+// Rotate at correct pivot for 100×100 question SVG
+const rotQ = (d: string, deg: number) =>
+  `<path d="${d}" fill="${F}" stroke="${S}" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" transform="rotate(${deg},50,50)"/>`;
+
+// Rotate at correct pivot for 60×60 option SVG
+const rotO = (d: string, deg: number) =>
+  `<path d="${d}" fill="#fefce8" stroke="#ca8a04" strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round" transform="rotate(${deg},30,30)"/>`;
+
+// ─── Shape paths (centred at 50,50 for Q, at 30,30 for O) ─────────────────────
+
+// Chevron pointing RIGHT, centred at 50,50
+const CHEV_Q = 'M22,38 L54,38 L72,50 L54,62 L22,62 L40,50 Z';
+const CHEV_O  = 'M8,22 L32,22 L44,30 L32,38 L8,38 L20,30 Z';
+
+// Flag shape (rectangle + triangle) pointing RIGHT, centred at 50,50
+const FLAG_Q = 'M22,30 L22,70 L36,70 L36,58 L72,50 L36,42 L36,30 Z';
+const FLAG_O  = 'M8,14 L8,46 L18,46 L18,37 L50,30 L18,23 L18,14 Z';
+
+// C-shape (open on right), centred at 50,50
+const C_Q = 'M68,28 L38,28 L38,38 L56,38 L56,62 L38,62 L38,72 L68,72 L68,62 L50,62 L50,38 L68,38 Z';
+const C_O  = 'M46,12 L22,12 L22,20 L36,20 L36,40 L22,40 L22,48 L46,48 L46,40 L32,40 L32,20 L46,20 Z';
+
+// Isosceles triangle pointing UP, centred at 50,50
+const TRI_Q = 'M50,22 L76,74 L24,74 Z';
+const TRI_O  = 'M30,10 L52,52 L8,52 Z';
+
+// Key shape (circle + stem), centred at 50,50
+// Represented as an irregular polygon approximating a key
+const KEY_Q = 'M32,32 L32,45 L38,45 L38,68 L50,68 L50,62 L58,62 L58,55 L50,55 L50,45 L62,45 L62,32 L32,32 Z';
+const KEY_O  = 'M14,14 L14,24 L20,24 L20,44 L28,44 L28,40 L34,40 L34,34 L28,34 L28,24 L38,24 L38,14 Z';
+
+// Arrow with forked tail pointing LEFT, centred at 50,50
+const FORK_Q = 'M78,44 L55,44 L55,34 L22,50 L55,66 L55,56 L72,56 L72,64 L82,64 L82,44 Z';
+const FORK_O  = 'M50,26 L34,26 L34,18 L10,30 L34,42 L34,34 L46,34 L46,40 L52,40 L52,26 Z';
+
+// Hexagon, centred at 50,50
+const HEX_Q = 'M50,22 L70,32 L70,62 L50,72 L30,62 L30,32 Z';
+const HEX_O  = 'M30,10 L46,18 L46,42 L30,50 L14,42 L14,18 Z';
+
+// Cross/plus with one arm longer (pointing DOWN), centred at 50,50
+const ASYM_CROSS_Q = 'M38,22 L62,22 L62,42 L76,42 L76,56 L62,56 L62,78 L38,78 L38,56 L24,56 L24,42 L38,42 Z';
+const ASYM_CROSS_O  = 'M20,10 L40,10 L40,25 L50,25 L50,36 L40,36 L40,52 L20,52 L20,36 L10,36 L10,25 L20,25 Z';
+
+// ─── isoCube helper ────────────────────────────────────────────────────────────
+
+const isoCube = (x: number, y: number, top = '#f8fafc', left = '#e2e8f0', right = '#cbd5e1') => {
+  const topPts  = `${x},${y-10} ${x+10},${y-16} ${x+20},${y-10} ${x+10},${y-4}`;
+  const leftPts = `${x},${y-10} ${x},${y+6} ${x+10},${y+12} ${x+10},${y-4}`;
+  const rightPts= `${x+10},${y-4} ${x+20},${y-10} ${x+20},${y+6} ${x+10},${y+12}`;
+  return `<polygon points="${topPts}" fill="${top}" stroke="#333" strokeWidth="1.6"/>
+          <polygon points="${leftPts}" fill="${left}" stroke="#333" strokeWidth="1.6"/>
+          <polygon points="${rightPts}" fill="${right}" stroke="#333" strokeWidth="1.6"/>`;
+};
+
+const cubeRow = (coords: Array<[number,number]>, ox: number, oy: number, scale = 1) =>
+  coords.map(([cx,cy]) => isoCube(ox+cx*20*scale, oy+cy*16*scale, '#fef9c3','#fde047','#ca8a04')).join('');
+
+const mechSvg = (inner: string) =>
+  `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="98" height="98" rx="8" fill="#fff" stroke="#d1d5db" strokeWidth="1.5"/>${inner}</svg>`;
+
+const gearDiag = (items: Array<{cx:number;cy:number;r:number;teeth:number;label:string;sub?:string}>) =>
+  mechSvg(items.map(g => gearSVG(g.cx,g.cy,g.r,g.teeth,'#16a34a',g.label,g.sub)).join(''));
+
+const leverSvg = (fulcrumX: number, leftX: number, rightX: number, leftW: string, rightW: string) =>
+  mechSvg(`
+    <line x1="12" y1="62" x2="88" y2="62" stroke="#555" strokeWidth="3" strokeLinecap="round"/>
+    <polygon points="${fulcrumX},62 ${fulcrumX-5},76 ${fulcrumX+5},76" fill="#9ca3af" stroke="#555" strokeWidth="1.2"/>
+    <circle cx="${leftX}" cy="54" r="7" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+    <text x="${leftX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">${leftW}</text>
+    <circle cx="${rightX}" cy="54" r="7" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="2.5 1.5"/>
+    <text x="${rightX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#2563eb">${rightW}</text>
+  `);
+
+// Inclined plane / wedge SVG
+const inclinedSvg = mechSvg(`
+  <polygon points="15,80 85,80 85,30" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
+  <rect x="60" y="20" width="20" height="16" rx="2" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+  <text x="70" y="31" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">40kg</text>
+  <text x="50" y="72" textAnchor="middle" fontSize="7" fontWeight="700" fill="#555">30°</text>
+  <text x="30" y="55" textAnchor="middle" fontSize="7" fontWeight="700" fill="#2563eb">? N</text>
+`);
+
+// Three-pulley compound SVG
+const compoundPulleySvg = mechSvg(`
+  <rect x="30" y="6" width="40" height="5" rx="2" fill="#9ca3af"/>
+  <circle cx="50" cy="22" r="10" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
+  <circle cx="50" cy="22" r="2.5" fill="#6b7280"/>
+  <circle cx="50" cy="50" r="10" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
+  <circle cx="50" cy="50" r="2.5" fill="#6b7280"/>
+  <line x1="40" y1="22" x2="40" y2="50" stroke="#555" strokeWidth="1.8"/>
+  <line x1="60" y1="22" x2="60" y2="50" stroke="#555" strokeWidth="1.8"/>
+  <rect x="34" y="62" width="32" height="14" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+  <text x="50" y="72" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">120kg</text>
+  <line x1="60" y1="50" x2="78" y2="78" stroke="#2563eb" strokeWidth="1.8"/>
+  <path d="M73,73 L79,81 L85,73" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
+  <text x="82" y="84" fontSize="7" fontWeight="700" fill="#2563eb">?</text>
+`);
+
+// Gear chain with idler
+const idlerGearSvg = gearDiag([
+  {cx:18,cy:50,r:13,teeth:10,label:'A',sub:'CW'},
+  {cx:44,cy:50,r:10,teeth:8,label:'B'},
+  {cx:67,cy:50,r:12,teeth:9,label:'C',sub:'?'},
+]);
+
+// Wheel and axle
+const wheelAxleSvg = mechSvg(`
+  <circle cx="50" cy="50" r="30" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
+  <circle cx="50" cy="50" r="10" fill="#e2e8f0" stroke="#555" strokeWidth="2"/>
+  <text x="50" y="26" textAnchor="middle" fontSize="6" fontWeight="700" fill="#555">Wheel r=30</text>
+  <text x="50" y="54" textAnchor="middle" fontSize="6" fontWeight="700" fill="#555">Axle r=10</text>
+  <path d="M80,50 L90,50" stroke="#c8102e" strokeWidth="2"/>
+  <text x="88" y="48" fontSize="6" fill="#c8102e" fontWeight="700">F?</text>
+  <path d="M20,50 L10,50" stroke="#2563eb" strokeWidth="2"/>
+  <text x="5" y="48" fontSize="6" fill="#2563eb" fontWeight="700">60N</text>
+`);
+
+// ─── Cube net data ────────────────────────────────────────────────────────────
+
+const NET_C = {
+  top:    { symbol: '1', color: '#c8102e' },
+  left:   { symbol: '2', color: '#2563eb' },
+  center: { symbol: '3', color: '#111'    },
+  right:  { symbol: '4', color: '#d97706' },
+  below:  { symbol: '5', color: '#15803d' },
+  bottom: { symbol: '6', color: '#7c3aed' },
+};
+
+const NET_D = {
+  top:    { symbol: '◯', color: '#c8102e' },
+  left:   { symbol: '△', color: '#2563eb' },
+  center: { symbol: '□', color: '#111'    },
+  right:  { symbol: '◇', color: '#d97706' },
+  below:  { symbol: '☆', color: '#15803d' },
+  bottom: { symbol: '⬟', color: '#7c3aed' },
+};
+
+const netPromptC = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(NET_C, 55)}</g>`);
+const netPromptD = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(NET_D, 55)}</g>`);
+
+const netOption = (top: string, front: string, right: string) =>
+  oSvg(`
+    <polygon points="17,24 30,17 43,24 30,31" fill="#f8fafc" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="17,24 17,38 30,45 30,31" fill="#e2e8f0" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="30,31 43,24 43,38 30,45" fill="#cbd5e1" stroke="#333" strokeWidth="1.5"/>
+    <text x="30" y="28" textAnchor="middle" fontSize="8" fill="#111" fontWeight="700">${top}</text>
+    <text x="23" y="37" textAnchor="middle" fontSize="8" fill="#111" fontWeight="700">${front}</text>
+    <text x="37" y="37" textAnchor="middle" fontSize="8" fill="#111" fontWeight="700">${right}</text>
+  `);
+
+// ─── Part A: 2D Rotations ─────────────────────────────────────────────────────
+
+const partA: Question[] = [
+  {
+    id: 'T2-A-1',
+    subsectionId: 'spatial-2d',
+    text: 'The <strong>chevron</strong> points right. Which option shows it after a <strong>90° clockwise</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 2,
+    exp: 'Rotating a right-pointing chevron 90° CW makes it point downward. Option C shows the chevron pointing down.',
+    promptSvg: qSvg(rotQ(CHEV_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(CHEV_O, 180)),  // A: 180° = pointing left
+      oSvg(rotO(CHEV_O, 270)),  // B: 90° CCW = pointing up
+      oSvg(rotO(CHEV_O, 90)),   // C: 90° CW = pointing down ✓
+      oSvg(rotO(CHEV_O, 0)),    // D: unchanged = pointing right
+    ],
+  },
+  {
+    id: 'T2-A-2',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>flag shape</strong> after a <strong>180°</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 0,
+    exp: 'A 180° rotation flips the flag: the pole moves to the right side and the triangular point faces left. Option A shows this.',
+    promptSvg: qSvg(rotQ(FLAG_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(FLAG_O, 180)),  // A: 180° ✓
+      oSvg(rotO(FLAG_O, 90)),   // B: 90° CW
+      oSvg(rotO(FLAG_O, 0)),    // C: unchanged
+      oSvg(rotO(FLAG_O, 270)),  // D: 90° CCW
+    ],
+  },
+  {
+    id: 'T2-A-3',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>C-shape</strong> after a <strong>90° counter-clockwise</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 3,
+    exp: '90° CCW rotates the C so its opening faces downward. Option D shows this correctly.',
+    promptSvg: qSvg(rotQ(C_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(C_O, 90)),   // A: 90° CW = opening faces up
+      oSvg(rotO(C_O, 180)),  // B: 180° = opening faces left
+      oSvg(rotO(C_O, 0)),    // C: unchanged = opening faces right
+      oSvg(rotO(C_O, 270)),  // D: 90° CCW = opening faces down ✓
+    ],
+  },
+  {
+    id: 'T2-A-4',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>triangle</strong> after a <strong>180°</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 1,
+    exp: 'The triangle points up. After 180°, it points down. Option B shows a downward-pointing triangle.',
+    promptSvg: qSvg(rotQ(TRI_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(TRI_O, 90)),   // A: 90° CW = points right
+      oSvg(rotO(TRI_O, 180)),  // B: 180° = points down ✓
+      oSvg(rotO(TRI_O, 270)),  // C: 90° CCW = points left
+      oSvg(rotO(TRI_O, 0)),    // D: unchanged = points up
+    ],
+  },
+  {
+    id: 'T2-A-5',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>key shape</strong> after a <strong>90° clockwise</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 0,
+    exp: 'The key stem points down in the original. After 90° CW, the stem points left. Option A is correct.',
+    promptSvg: qSvg(rotQ(KEY_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(KEY_O, 90)),   // A: 90° CW ✓
+      oSvg(rotO(KEY_O, 0)),    // B: unchanged
+      oSvg(rotO(KEY_O, 180)),  // C: 180°
+      oSvg(rotO(KEY_O, 270)),  // D: 90° CCW
+    ],
+  },
+  {
+    id: 'T2-A-6',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>forked arrow</strong> after a <strong>270° clockwise</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 3,
+    exp: '270° CW = 90° CCW. The arrow pointing left rotates so it points upward. Option D shows this.',
+    promptSvg: qSvg(rotQ(FORK_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(FORK_O, 0)),    // A: unchanged = left
+      oSvg(rotO(FORK_O, 90)),   // B: 90° CW = down
+      oSvg(rotO(FORK_O, 180)),  // C: 180° = right
+      oSvg(rotO(FORK_O, 270)),  // D: 90° CCW = up ✓
+    ],
+  },
+  {
+    id: 'T2-A-7',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>hexagon</strong> after a <strong>90° clockwise</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 2,
+    exp: 'A regular hexagon looks the same at 60° intervals, but this one has a flat top and bottom. 90° CW gives it a pointed top and bottom. Option C is correct.',
+    promptSvg: qSvg(rotQ(HEX_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(HEX_O, 0)),    // A: unchanged (flat top)
+      oSvg(rotO(HEX_O, 180)),  // B: 180° (same as original for regular hex)
+      oSvg(rotO(HEX_O, 90)),   // C: 90° CW (pointed top) ✓
+      oSvg(rotO(HEX_O, 270)),  // D: 90° CCW (also pointed, but mirrored orientation)
+    ],
+  },
+  {
+    id: 'T2-A-8',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>asymmetric cross</strong> after a <strong>180°</strong> rotation?',
+    opts: ['A','B','C','D'],
+    correct: 1,
+    exp: 'The asymmetric cross has a longer bottom arm. After 180°, the longer arm is at the top. Option B shows this.',
+    promptSvg: qSvg(rotQ(ASYM_CROSS_Q, 0)),
+    choicesSvg: [
+      oSvg(rotO(ASYM_CROSS_O, 270)),  // A: 90° CCW
+      oSvg(rotO(ASYM_CROSS_O, 180)),  // B: 180° ✓
+      oSvg(rotO(ASYM_CROSS_O, 90)),   // C: 90° CW
+      oSvg(rotO(ASYM_CROSS_O, 0)),    // D: unchanged
+    ],
+  },
 ];
 
-const SHAPE_3D: Question[] = [
-  { id:'4B-1', subsectionId:'spatial-3d', text:'Which 3D block matches the original shape?', opts:['A','B','C','D'], correct:2, exp:'Only option C keeps the two-cube vertical stack on the right without mirroring it.', promptSvg:`<svg viewBox="0 0 160 120" width="160" height="120"><polygon points="52,28 80,12 108,28 80,44" fill="#f5d0d7" stroke="#333"/><polygon points="52,28 52,60 80,76 80,44" fill="#e6a4af" stroke="#333"/><polygon points="80,44 108,28 108,60 80,76" fill="#c8102e" stroke="#333"/><polygon points="80,44 108,60 136,44 108,28" fill="#f5d0d7" stroke="#333"/><polygon points="108,60 108,92 136,76 136,44" fill="#c8102e" stroke="#333"/><polygon points="80,44 80,76 108,92 108,60" fill="#e6a4af" stroke="#333"/></svg>`, choicesSvg:[`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="38,24 58,12 78,24 58,36" fill="#dbeafe" stroke="#333"/><polygon points="38,24 38,48 58,60 58,36" fill="#93c5fd" stroke="#333"/><polygon points="58,36 78,24 78,48 58,60" fill="#2563eb" stroke="#333"/><polygon points="58,36 78,48 98,36 78,24" fill="#dbeafe" stroke="#333"/><polygon points="78,48 78,72 98,60 98,36" fill="#2563eb" stroke="#333"/><polygon points="58,36 58,60 78,72 78,48" fill="#93c5fd" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="42,20 62,8 82,20 62,32" fill="#dbeafe" stroke="#333"/><polygon points="42,20 42,44 62,56 62,32" fill="#93c5fd" stroke="#333"/><polygon points="62,32 82,20 82,44 62,56" fill="#2563eb" stroke="#333"/><polygon points="22,32 42,20 62,32 42,44" fill="#dbeafe" stroke="#333"/><polygon points="22,32 22,56 42,68 42,44" fill="#93c5fd" stroke="#333"/><polygon points="42,44 62,32 62,56 42,68" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="40,26 60,14 80,26 60,38" fill="#dbeafe" stroke="#333"/><polygon points="40,26 40,50 60,62 60,38" fill="#93c5fd" stroke="#333"/><polygon points="60,38 80,26 80,50 60,62" fill="#2563eb" stroke="#333"/><polygon points="60,38 80,50 100,38 80,26" fill="#dbeafe" stroke="#333"/><polygon points="80,50 80,74 100,62 100,38" fill="#2563eb" stroke="#333"/><polygon points="60,38 60,62 80,74 80,50" fill="#93c5fd" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="58,16 78,4 98,16 78,28" fill="#dbeafe" stroke="#333"/><polygon points="58,16 58,40 78,52 78,28" fill="#93c5fd" stroke="#333"/><polygon points="78,28 98,16 98,40 78,52" fill="#2563eb" stroke="#333"/><polygon points="38,28 58,16 78,28 58,40" fill="#dbeafe" stroke="#333"/><polygon points="38,28 38,52 58,64 58,40" fill="#93c5fd" stroke="#333"/><polygon points="58,40 78,28 78,52 58,64" fill="#2563eb" stroke="#333"/></svg>`] },
-  { id:'4B-2', subsectionId:'spatial-3d', text:'Which object is the same stepped shape shown above?', opts:['A','B','C','D'], correct:0, exp:'Option A preserves the stair-step rising from left front to right rear.', promptSvg:`<svg viewBox="0 0 160 120" width="160" height="120"><polygon points="28,64 56,48 84,64 56,80" fill="#fde68a" stroke="#333"/><polygon points="56,48 84,32 112,48 84,64" fill="#fde68a" stroke="#333"/><polygon points="84,32 112,16 140,32 112,48" fill="#fde68a" stroke="#333"/><polygon points="28,64 28,92 56,108 56,80" fill="#fbbf24" stroke="#333"/><polygon points="56,80 56,108 84,92 84,64" fill="#d4900a" stroke="#333"/><polygon points="56,48 56,76 84,92 84,64" fill="#fbbf24" stroke="#333"/><polygon points="84,64 84,92 112,76 112,48" fill="#d4900a" stroke="#333"/></svg>`, choicesSvg:[`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="18,50 36,40 54,50 36,60" fill="#dbeafe" stroke="#333"/><polygon points="36,40 54,30 72,40 54,50" fill="#dbeafe" stroke="#333"/><polygon points="54,30 72,20 90,30 72,40" fill="#dbeafe" stroke="#333"/><polygon points="18,50 18,68 36,78 36,60" fill="#93c5fd" stroke="#333"/><polygon points="36,60 36,78 54,68 54,50" fill="#2563eb" stroke="#333"/><polygon points="36,40 36,58 54,68 54,50" fill="#93c5fd" stroke="#333"/><polygon points="54,50 54,68 72,58 72,40" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="24,52 42,42 60,52 42,62" fill="#dbeafe" stroke="#333"/><polygon points="42,42 60,32 78,42 60,52" fill="#dbeafe" stroke="#333"/><polygon points="60,52 78,42 96,52 78,62" fill="#dbeafe" stroke="#333"/><polygon points="24,52 24,70 42,80 42,62" fill="#93c5fd" stroke="#333"/><polygon points="42,62 42,80 60,70 60,52" fill="#2563eb" stroke="#333"/><polygon points="60,52 60,70 78,80 78,62" fill="#93c5fd" stroke="#333"/><polygon points="78,62 78,80 96,70 96,52" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="26,50 44,40 62,50 44,60" fill="#dbeafe" stroke="#333"/><polygon points="44,40 62,30 80,40 62,50" fill="#dbeafe" stroke="#333"/><polygon points="62,30 80,20 98,30 80,40" fill="#dbeafe" stroke="#333"/><polygon points="62,50 80,40 98,50 80,60" fill="#dbeafe" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="20,54 38,44 56,54 38,64" fill="#dbeafe" stroke="#333"/><polygon points="38,44 56,34 74,44 56,54" fill="#dbeafe" stroke="#333"/><polygon points="56,34 74,24 92,34 74,44" fill="#dbeafe" stroke="#333"/><polygon points="20,54 20,72 38,82 38,64" fill="#93c5fd" stroke="#333"/><polygon points="38,64 38,82 56,72 56,54" fill="#2563eb" stroke="#333"/><polygon points="56,34 56,52 74,62 74,44" fill="#93c5fd" stroke="#333"/><polygon points="74,44 74,62 92,52 92,34" fill="#2563eb" stroke="#333"/></svg>`] },
-  { id:'4B-3', subsectionId:'spatial-3d', text:'Which option matches this corner block without mirroring it?', opts:['A','B','C','D'], correct:3, exp:'Option D keeps the raised cube on the back-left corner rather than flipping it.', promptSvg:`<svg viewBox="0 0 160 120" width="160" height="120"><polygon points="40,40 68,24 96,40 68,56" fill="#dcfce7" stroke="#333"/><polygon points="68,56 96,40 124,56 96,72" fill="#dcfce7" stroke="#333"/><polygon points="40,40 40,72 68,88 68,56" fill="#86efac" stroke="#333"/><polygon points="68,56 68,88 96,72 96,40" fill="#22c55e" stroke="#333"/><polygon points="68,24 68,56 96,72 96,40" fill="#86efac" stroke="#333"/><polygon points="96,40 124,56 124,88 96,72" fill="#22c55e" stroke="#333"/></svg>`, choicesSvg:[`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="26,28 44,18 62,28 44,38" fill="#dbeafe" stroke="#333"/><polygon points="44,38 62,28 80,38 62,48" fill="#dbeafe" stroke="#333"/><polygon points="26,28 26,50 44,60 44,38" fill="#93c5fd" stroke="#333"/><polygon points="44,38 44,60 62,50 62,28" fill="#2563eb" stroke="#333"/><polygon points="62,28 80,38 80,60 62,50" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="30,30 48,20 66,30 48,40" fill="#dbeafe" stroke="#333"/><polygon points="48,40 66,30 84,40 66,50" fill="#dbeafe" stroke="#333"/><polygon points="48,20 48,42 66,52 66,30" fill="#93c5fd" stroke="#333"/><polygon points="66,30 84,40 84,62 66,52" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="34,34 52,24 70,34 52,44" fill="#dbeafe" stroke="#333"/><polygon points="52,44 70,34 88,44 70,54" fill="#dbeafe" stroke="#333"/><polygon points="34,34 34,56 52,66 52,44" fill="#93c5fd" stroke="#333"/><polygon points="52,44 52,66 70,56 70,34" fill="#2563eb" stroke="#333"/><polygon points="52,24 52,46 70,56 70,34" fill="#93c5fd" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="30,28 48,18 66,28 48,38" fill="#dbeafe" stroke="#333"/><polygon points="48,38 66,28 84,38 66,48" fill="#dbeafe" stroke="#333"/><polygon points="30,28 30,50 48,60 48,38" fill="#93c5fd" stroke="#333"/><polygon points="48,38 48,60 66,50 66,28" fill="#2563eb" stroke="#333"/><polygon points="48,18 48,40 66,50 66,28" fill="#93c5fd" stroke="#333"/><polygon points="66,28 84,38 84,60 66,50" fill="#2563eb" stroke="#333"/></svg>`] },
-  { id:'4B-4', subsectionId:'spatial-3d', text:'Which 3D figure matches the original T-shaped stack?', opts:['A','B','C','D'], correct:1, exp:'Option B matches the top crossbar and centered support without a mirror flip.', promptSvg:`<svg viewBox="0 0 160 120" width="160" height="120"><polygon points="38,44 66,28 94,44 66,60" fill="#fee2e2" stroke="#333"/><polygon points="66,44 94,28 122,44 94,60" fill="#fee2e2" stroke="#333"/><polygon points="66,60 94,44 122,60 94,76" fill="#fee2e2" stroke="#333"/><polygon points="66,60 66,92 94,108 94,76" fill="#fca5a5" stroke="#333"/><polygon points="94,76 122,60 122,92 94,108" fill="#ef4444" stroke="#333"/></svg>`, choicesSvg:[`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="18,36 36,26 54,36 36,46" fill="#dbeafe" stroke="#333"/><polygon points="36,36 54,26 72,36 54,46" fill="#dbeafe" stroke="#333"/><polygon points="54,36 72,26 90,36 72,46" fill="#dbeafe" stroke="#333"/><polygon points="36,46 36,68 54,78 54,56" fill="#93c5fd" stroke="#333"/><polygon points="54,56 72,46 72,68 54,78" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="24,34 42,24 60,34 42,44" fill="#dbeafe" stroke="#333"/><polygon points="42,34 60,24 78,34 60,44" fill="#dbeafe" stroke="#333"/><polygon points="60,44 78,34 96,44 78,54" fill="#dbeafe" stroke="#333"/><polygon points="42,44 42,66 60,76 60,54" fill="#93c5fd" stroke="#333"/><polygon points="60,54 78,44 78,66 60,76" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="28,38 46,28 64,38 46,48" fill="#dbeafe" stroke="#333"/><polygon points="46,38 64,28 82,38 64,48" fill="#dbeafe" stroke="#333"/><polygon points="64,38 82,28 100,38 82,48" fill="#dbeafe" stroke="#333"/><polygon points="64,48 64,70 82,80 82,58" fill="#93c5fd" stroke="#333"/><polygon points="82,58 100,48 100,70 82,80" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="24,34 42,24 60,34 42,44" fill="#dbeafe" stroke="#333"/><polygon points="42,34 60,24 78,34 60,44" fill="#dbeafe" stroke="#333"/><polygon points="60,34 78,24 96,34 78,44" fill="#dbeafe" stroke="#333"/><polygon points="60,44 60,66 78,76 78,54" fill="#93c5fd" stroke="#333"/><polygon points="78,54 96,44 96,66 78,76" fill="#2563eb" stroke="#333"/></svg>`] },
-  { id:'4B-5', subsectionId:'spatial-3d', text:'Which option is the same four-cube snake shape?', opts:['A','B','C','D'], correct:2, exp:'Option C preserves the bend direction at both joints.', promptSvg:`<svg viewBox="0 0 160 120" width="160" height="120"><polygon points="28,56 56,40 84,56 56,72" fill="#ede9fe" stroke="#333"/><polygon points="56,40 84,24 112,40 84,56" fill="#ede9fe" stroke="#333"/><polygon points="84,56 112,40 140,56 112,72" fill="#ede9fe" stroke="#333"/><polygon points="56,72 84,56 112,72 84,88" fill="#ede9fe" stroke="#333"/><polygon points="28,56 28,88 56,104 56,72" fill="#c4b5fd" stroke="#333"/><polygon points="56,72 56,104 84,88 84,56" fill="#8b5cf6" stroke="#333"/></svg>`, choicesSvg:[`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="18,44 36,34 54,44 36,54" fill="#dbeafe" stroke="#333"/><polygon points="36,34 54,24 72,34 54,44" fill="#dbeafe" stroke="#333"/><polygon points="54,44 72,34 90,44 72,54" fill="#dbeafe" stroke="#333"/><polygon points="72,54 90,44 108,54 90,64" fill="#dbeafe" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="18,46 36,36 54,46 36,56" fill="#dbeafe" stroke="#333"/><polygon points="36,36 54,26 72,36 54,46" fill="#dbeafe" stroke="#333"/><polygon points="54,46 72,36 90,46 72,56" fill="#dbeafe" stroke="#333"/><polygon points="36,56 54,46 72,56 54,66" fill="#dbeafe" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="18,44 36,34 54,44 36,54" fill="#dbeafe" stroke="#333"/><polygon points="36,34 54,24 72,34 54,44" fill="#dbeafe" stroke="#333"/><polygon points="54,44 72,34 90,44 72,54" fill="#dbeafe" stroke="#333"/><polygon points="36,54 54,44 72,54 54,64" fill="#dbeafe" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="24,42 42,32 60,42 42,52" fill="#dbeafe" stroke="#333"/><polygon points="42,32 60,22 78,32 60,42" fill="#dbeafe" stroke="#333"/><polygon points="60,42 78,32 96,42 78,52" fill="#dbeafe" stroke="#333"/><polygon points="60,52 78,42 96,52 78,62" fill="#dbeafe" stroke="#333"/></svg>`] },
-  { id:'4B-6', subsectionId:'spatial-3d', text:'Which option matches the original corner tower?', opts:['A','B','C','D'], correct:0, exp:'Option A keeps the tower on the rear cube instead of mirroring it forward.', promptSvg:`<svg viewBox="0 0 160 120" width="160" height="120"><polygon points="44,44 72,28 100,44 72,60" fill="#cffafe" stroke="#333"/><polygon points="72,60 100,44 128,60 100,76" fill="#cffafe" stroke="#333"/><polygon points="72,28 72,60 100,76 100,44" fill="#67e8f9" stroke="#333"/><polygon points="100,44 128,60 128,92 100,76" fill="#06b6d4" stroke="#333"/><polygon points="72,60 72,92 100,108 100,76" fill="#67e8f9" stroke="#333"/></svg>`, choicesSvg:[`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="30,34 48,24 66,34 48,44" fill="#dbeafe" stroke="#333"/><polygon points="48,44 66,34 84,44 66,54" fill="#dbeafe" stroke="#333"/><polygon points="48,24 48,46 66,56 66,34" fill="#93c5fd" stroke="#333"/><polygon points="66,34 84,44 84,66 66,56" fill="#2563eb" stroke="#333"/><polygon points="48,44 48,66 66,76 66,54" fill="#93c5fd" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="30,34 48,24 66,34 48,44" fill="#dbeafe" stroke="#333"/><polygon points="48,44 66,34 84,44 66,54" fill="#dbeafe" stroke="#333"/><polygon points="66,34 66,56 84,66 84,44" fill="#93c5fd" stroke="#333"/><polygon points="84,44 102,54 102,76 84,66" fill="#2563eb" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="30,36 48,26 66,36 48,46" fill="#dbeafe" stroke="#333"/><polygon points="48,46 66,36 84,46 66,56" fill="#dbeafe" stroke="#333"/><polygon points="30,36 30,58 48,68 48,46" fill="#93c5fd" stroke="#333"/><polygon points="48,46 48,68 66,58 66,36" fill="#2563eb" stroke="#333"/><polygon points="66,56 66,78 84,88 84,66" fill="#93c5fd" stroke="#333"/></svg>`,`<svg viewBox="0 0 140 90" width="140" height="90"><polygon points="34,34 52,24 70,34 52,44" fill="#dbeafe" stroke="#333"/><polygon points="52,44 70,34 88,44 70,54" fill="#dbeafe" stroke="#333"/><polygon points="52,24 52,46 70,56 70,34" fill="#93c5fd" stroke="#333"/><polygon points="70,34 88,44 88,66 70,56" fill="#2563eb" stroke="#333"/><polygon points="70,56 70,78 88,88 88,66" fill="#93c5fd" stroke="#333"/></svg>`] },
+// ─── Part B: 3D block matching ────────────────────────────────────────────────
+
+const partB: Question[] = [
+  {
+    id: 'T2-B-1',
+    subsectionId: 'spatial-3d',
+    text: 'Which option matches this <strong>flat row</strong> of 4 cubes?',
+    opts: ['A','B','C','D'],
+    correct: 0,
+    exp: 'Four cubes in a straight line. Option A shows exactly that.',
+    promptSvg: qSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 8, 58, 0.85)),
+    choicesSvg: [
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),     // A: correct ✓
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[2,-1]], 4, 34, 0.7)),    // B: row + 1 rising
+      oSvg(cubeRow([[0,0],[1,0],[1,-1],[2,-1]], 4, 36, 0.7)),   // C: Z-shape
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[1,1]], 4, 30, 0.7)),     // D: T-shape
+    ],
+  },
+  {
+    id: 'T2-B-2',
+    subsectionId: 'spatial-3d',
+    text: 'Which option matches this <strong>2×2 square base</strong> of cubes?',
+    opts: ['A','B','C','D'],
+    correct: 3,
+    exp: 'Four cubes in a 2×2 grid (no height). Option D shows that footprint correctly.',
+    promptSvg: qSvg(cubeRow([[0,0],[1,0],[0,1],[1,1]], 20, 58)),
+    choicesSvg: [
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),    // A: straight row
+      oSvg(cubeRow([[0,0],[1,0],[0,-1],[1,-1]], 8, 40, 0.88)), // B: 2×2 but different orientation
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[1,1]], 4, 30, 0.7)),    // C: T-shape
+      oSvg(cubeRow([[0,0],[1,0],[0,1],[1,1]], 10, 36, 0.88)),  // D: correct ✓
+    ],
+  },
+  {
+    id: 'T2-B-3',
+    subsectionId: 'spatial-3d',
+    text: 'Which option matches this <strong>S-shaped</strong> 4-cube arrangement?',
+    opts: ['A','B','C','D'],
+    correct: 1,
+    exp: 'The S-shape has two cubes offset in opposite directions. Option B reproduces that correctly.',
+    promptSvg: qSvg(cubeRow([[0,0],[0,-1],[1,-1],[1,-2]], 28, 66)),
+    choicesSvg: [
+      oSvg(cubeRow([[0,0],[1,0],[1,-1],[2,-1]], 8, 40, 0.88)),  // A: Z-shape
+      oSvg(cubeRow([[0,0],[0,-1],[1,-1],[1,-2]], 14, 42, 0.88)),// B: correct ✓
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),     // C: flat row
+      oSvg(cubeRow([[0,0],[0,-1],[0,-2],[1,-2]], 16, 44, 0.88)),// D: L-tower shape
+    ],
+  },
+  {
+    id: 'T2-B-4',
+    subsectionId: 'spatial-3d',
+    text: 'Which option matches this <strong>pyramid</strong> (3 on base, 1 on top-middle)?',
+    opts: ['A','B','C','D'],
+    correct: 2,
+    exp: 'Three cubes form the base row and one cube sits on top of the middle cube. Option C shows that arrangement.',
+    promptSvg: qSvg(cubeRow([[0,0],[1,0],[2,0],[1,-1]], 18, 58)),
+    choicesSvg: [
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[0,-1]], 6, 36, 0.88)),  // A: tower on left
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[2,-1]], 6, 36, 0.88)),  // B: tower on right
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[1,-1]], 6, 36, 0.88)),  // C: correct ✓
+      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),    // D: flat row of 4
+    ],
+  },
+  {
+    id: 'T2-B-5',
+    subsectionId: 'spatial-3d',
+    text: 'Which option matches this <strong>L-tower</strong> (2 cubes stacked on left, 1 cube at bottom-right)?',
+    opts: ['A','B','C','D'],
+    correct: 3,
+    exp: 'Two cubes stacked vertically on the left, one cube beside the bottom. Option D has that layout.',
+    promptSvg: qSvg(cubeRow([[0,0],[0,-1],[1,0]], 28, 64)),
+    choicesSvg: [
+      oSvg(cubeRow([[0,0],[1,0],[0,-1],[0,-2]], 10, 42, 0.88)), // A: different L-tower
+      oSvg(cubeRow([[0,0],[1,0],[2,0]], 8, 34, 0.88)),          // B: flat row
+      oSvg(cubeRow([[0,0],[0,-1],[0,-2]], 20, 44, 0.88)),       // C: vertical tower of 3
+      oSvg(cubeRow([[0,0],[0,-1],[1,0]], 14, 40, 0.88)),        // D: correct ✓
+    ],
+  },
+  {
+    id: 'T2-B-6',
+    subsectionId: 'spatial-3d',
+    text: 'Which option matches this <strong>staggered pair</strong> (one cube front-left, one cube back-right, raised one level)?',
+    opts: ['A','B','C','D'],
+    correct: 0,
+    exp: 'Two cubes diagonally offset with one raised. Option A preserves that exact relationship.',
+    promptSvg: qSvg(cubeRow([[0,0],[1,-1]], 30, 64)),
+    choicesSvg: [
+      oSvg(cubeRow([[0,0],[1,-1]], 14, 38, 0.88)),  // A: correct ✓
+      oSvg(cubeRow([[0,0],[1,0]], 14, 38, 0.88)),   // B: side by side
+      oSvg(cubeRow([[0,0],[0,-1]], 22, 40, 0.88)),  // C: stacked vertically
+      oSvg(cubeRow([[0,-1],[1,0]], 14, 40, 0.88)),  // D: reversed offset
+    ],
+  },
 ];
 
-const MECHANICAL_AND_PATTERNS: Question[] = [
-{id:'4C-1', subsectionId:'spatial-mech', text:'A lever has its fulcrum placed 1/3 from the left end. A 20 kg weight sits on the short (left) side. How much weight on the long (right) side balances it?',opts:['5 kg','10 kg','15 kg','40 kg'],correct:1,exp:'20×1 = ?×2 → ? = 10 kg.' /* TODO: expand explanation */, svg:`<svg viewBox="0 0 400 130" width="400"><rect x="40" y="60" width="320" height="8" fill="#555" rx="2"/><polygon points="147,68 130,115 164,115" fill="#999"/><circle cx="65" cy="55" r="18" fill="#c8102e" opacity=".85"/><text x="65" y="59" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">20kg</text><circle cx="330" cy="55" r="18" fill="#2563eb" opacity=".6" stroke="#2563eb" stroke-dasharray="4"/><text x="330" y="59" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="700">?</text></svg>`},
-{id:'4C-2', subsectionId:'spatial-mech', text:'Gear A (20 teeth) meshes with Gear B (10 teeth). If A turns <strong>clockwise at 30 RPM</strong>, how does B turn?',opts:['Clockwise at 60 RPM','Counter-clockwise at 60 RPM','Clockwise at 15 RPM','Counter-clockwise at 15 RPM'],correct:1,exp:'Meshing gears reverse direction → CCW. Speed: 20/10=2× → 60 RPM.' /* TODO: expand explanation */,gears:[{cx:120,cy:88,r:48,teeth:16,color:'#c8102e',label:'A',sub:'20T · CW 30RPM'},{cx:228,cy:88,r:30,teeth:10,color:'#2563eb',label:'B',sub:'10T · ?'}],gw:340,gh:175},
-{id:'4C-3', subsectionId:'spatial-mech', text:'Three gears in a chain: A (30T) → B (15T) → C (10T). A turns clockwise. Direction and speed of C relative to A?',opts:['Clockwise, 3× faster','Counter-clockwise, 3× faster','Clockwise, same speed','Counter-clockwise, slower'],correct:0,exp:'A→B reverses. B→C reverses again = same as A (CW). Speed: 30/15×15/10 = 3× faster.',gears:[{cx:80,cy:88,r:46,teeth:18,color:'#c8102e',label:'A',sub:'30T'},{cx:188,cy:88,r:28,teeth:10,color:'#d4900a',label:'B',sub:'15T'},{cx:270,cy:88,r:20,teeth:7,color:'#2563eb',label:'C',sub:'10T · ?'}],gw:360,gh:175},
-{id:'4C-4', subsectionId:'spatial-mech', text:'Two identical gears (20T each) mesh together. Left turns clockwise at 40 RPM. How does the right gear turn?',opts:['CW at 40 RPM','CCW at 40 RPM','CW at 80 RPM','CCW at 20 RPM'],correct:1,exp:'Same size = same speed. Meshing reverses → CCW at 40 RPM.' /* TODO: expand explanation */,gears:[{cx:100,cy:80,r:40,teeth:14,color:'#c8102e',label:'L',sub:'20T · CW 40'},{cx:218,cy:80,r:40,teeth:14,color:'#2563eb',label:'R',sub:'20T · ?'}],gw:320,gh:165},
-{id:'4C-5', subsectionId:'spatial-mech', text:'A rope passes over a single wheel attached to the ceiling. A 50 kg load hangs on one side. How much force must you pull down on the other side?',opts:['25 kg','50 kg','75 kg','100 kg'],correct:1,exp:'A single fixed pulley changes direction only — force required = 50 kg.' /* TODO: expand explanation */, svg:`<svg viewBox="0 0 180 190" width="180"><rect x="55" y="5" width="70" height="8" fill="#999" rx="2"/><circle cx="90" cy="30" r="14" fill="#ddd" stroke="#888" stroke-width="2.5"/><circle cx="90" cy="30" r="3" fill="#666"/><line x1="76" y1="30" x2="76" y2="155" stroke="#555" stroke-width="2"/><rect x="62" y="155" width="28" height="22" fill="#c8102e" rx="3"/><text x="76" y="170" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">50kg</text><line x1="104" y1="30" x2="104" y2="140" stroke="#2563eb" stroke-width="2"/><path d="M98,132 L104,142 L110,132" fill="none" stroke="#2563eb" stroke-width="2"/><text x="120" y="140" font-size="10" fill="#2563eb" font-weight="700">?</text></svg>`},
-{id:'4C-6', subsectionId:'spatial-mech', text:'A rope is threaded through two wheels — one attached to the ceiling and one attached to the load. If the load is 80 kg, approximately how much force do you need to pull?',opts:['20 kg','40 kg','80 kg','160 kg'],correct:1,exp:'Two-wheel system gives 2:1 advantage. 80÷2 = 40 kg.' /* TODO: expand explanation */, svg:`<svg viewBox="0 0 180 200" width="180"><rect x="45" y="5" width="90" height="8" fill="#999" rx="2"/><circle cx="80" cy="28" r="12" fill="#ddd" stroke="#888" stroke-width="2.5"/><circle cx="80" cy="28" r="3" fill="#666"/><circle cx="80" cy="110" r="12" fill="#ddd" stroke="#888" stroke-width="2.5"/><circle cx="80" cy="110" r="3" fill="#666"/><line x1="68" y1="28" x2="68" y2="110" stroke="#555" stroke-width="2"/><line x1="92" y1="28" x2="92" y2="110" stroke="#555" stroke-width="2"/><line x1="92" y1="110" x2="120" y2="165" stroke="#2563eb" stroke-width="2"/><rect x="56" y="126" width="48" height="24" fill="#c8102e" rx="3"/><text x="80" y="142" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">80 kg</text><path d="M114,157 L120,167 L126,157" fill="none" stroke="#2563eb" stroke-width="2"/><text x="132" y="168" font-size="10" fill="#2563eb" font-weight="700">?</text></svg>`},
-{id:'4C-7', subsectionId:'spatial-cubes', text:'Look at the unfolded cube net below. When folded, which two symbols are on <strong>opposite</strong> faces?',opts:['★ and ●','▲ and ✕','★ and ♦','■ and ♦'],correct:0,exp:'In this cross net: ★(top) folds opposite ●(bottom of vertical strip). ▲(left) opposite ■(right). ✕(center front) opposite ♦(below, becomes back).',useNet:1},
-{id:'4C-8', subsectionId:'spatial-cubes', text:'Using the same net: if ✕ is facing you, which symbol is directly behind it?',opts:['★','●','▲','♦'],correct:3,exp:'✕ is the center face. ♦ is one square below it in the vertical strip — when folded, ♦ becomes the back face opposite ✕.',useNet:1},
-{id:'4C-9', subsectionId:'spatial-cubes', text:'Using the same net: if ★ is on top, which symbol is on the bottom?',opts:['♦','●','■','✕'],correct:1,exp:'★ is at the top of the vertical strip, ● is at the bottom. They fold to opposite faces.',useNet:1},
-{id:'4D-10', subsectionId:'spatial-cubes', text:'Look at this second cube net. When folded, which symbol is opposite the # symbol?',opts:['□','☆','⊕','✕'],correct:1,exp:'In this cross net, # is center. The face directly below it (☆) folds to become the back — but wait: □ is top, ⊕ is bottom of vertical strip, so □ and ⊕ are opposite. ⬟(left) and ✕(right) are opposite. # and ☆ are opposite.',useNet:2},
-{id:'4D-11', subsectionId:'spatial-cubes', text:'Same net: which symbol is opposite ⬟?',opts:['□','#','✕','⊕'],correct:2,exp:'⬟ is left of center, ✕ is right of center. Left and right faces are always opposite in a cross net.',useNet:2},
-{id:'4D-12', subsectionId:'spatial-cubes', text:'Same net: if □ is on top, which is on the bottom?',opts:['☆','⊕','#','✕'],correct:1,exp:'□ is at the top of the vertical strip, ⊕ is at the bottom. Top and bottom of the vertical strip are always opposite.',useNet:2},
-{id:'4D-13', subsectionId:'spatial-cubes', text:'A right-pointing arrow → is rotated 90° clockwise. Which direction does it point?',opts:['Up ↑','Down ↓','Left ←','Same →'],correct:1,exp:'90° CW: → becomes ↓.' /* TODO: expand explanation */},
-{id:'4D-14', subsectionId:'spatial-cubes', text:'An "L" shape (vertical line + foot extending right at bottom) is rotated 180°. What does it look like?',opts:['Foot right at top','Foot left at bottom','Foot left at top','Same as original'],correct:2,exp:'180° flips both axes: foot moves from bottom-right to top-left.' /* TODO: expand explanation */},
-{id:'4D-15', subsectionId:'spatial-cubes', text:'What comes next?<br><span class="expr">○ ● ○ ○ ● ○ ○ ○ ● ?</span>',opts:['○','●','○ ○','● ●'],correct:0,exp:'Pattern adds one ○ before each ●: (○●)(○○●)(○○○●)(○○○○...) → next is ○.' /* TODO: expand explanation */},
-{id:'4D-16', subsectionId:'spatial-cubes', text:'Complete the sequence:<br><span class="expr">2, 6, 18, 54, ___</span>',opts:['108','162','148','72'],correct:1,exp:'Each ×3: 54×3=162.' /* TODO: expand explanation */},
-{id:'4D-17', subsectionId:'spatial-cubes', text:'If you fold a piece of paper in half once, then punch one hole through both layers, how many holes appear when unfolded?',opts:['1','2','3','4'],correct:1,exp:'One punch through 2 layers = 2 holes.' /* TODO: expand explanation */},
-{id:'4D-18', subsectionId:'spatial-cubes', text:'If you fold a square piece of paper in half, then in half again (into a quarter), then cut one corner off — how many holes appear when fully unfolded?',opts:['1','2','3','4'],correct:3,exp:'Folded into quarters = 4 layers. Cutting one corner makes a hole through all 4, creating 4 holes when unfolded (or one diamond-shaped hole in the center if you cut the folded corner).'},
-{id:'4D-19', subsectionId:'spatial-cubes', text:'Complete the sequence:<br><span class="expr">1, 1, 2, 3, 5, 8, ___</span>',opts:['11','12','13','15'],correct:2,exp:'Fibonacci: each number = sum of two before it. 5+8=13.' /* TODO: expand explanation */}
+// ─── Part C: Mechanical reasoning ────────────────────────────────────────────
+
+const partC: Question[] = [
+  {
+    id: 'T2-C-1',
+    subsectionId: 'spatial-mech',
+    text: 'An idler gear B sits between gears A and C. A turns <strong>CW</strong>. Which way does C turn?',
+    opts: ['Clockwise','Counter-clockwise','Same as B','Depends on tooth count'],
+    correct: 0,
+    exp: 'A→B reverses direction. B→C reverses again. Two reversals restore the original direction: C turns clockwise, same as A.',
+    promptSvg: idlerGearSvg,
+  },
+  {
+    id: 'T2-C-2',
+    subsectionId: 'spatial-mech',
+    text: 'Gear A has <strong>20 teeth at 60 RPM</strong>. Gear B has <strong>60 teeth</strong>. How fast does B turn?',
+    opts: ['180 RPM','60 RPM','20 RPM','10 RPM'],
+    correct: 2,
+    exp: 'Speed ratio = 20/60 = 1/3. B turns at 60 × (1/3) = 20 RPM. Larger gear turns slower.',
+    promptSvg: gearDiag([
+      {cx:22,cy:50,r:11,teeth:8,label:'A',sub:'20T·60RPM'},
+      {cx:60,cy:50,r:22,teeth:14,label:'B',sub:'60T·?'},
+    ]),
+  },
+  {
+    id: 'T2-C-3',
+    subsectionId: 'spatial-mech',
+    text: 'A <strong>wheel and axle</strong>: the wheel radius is 30 cm, the axle radius is 10 cm. A 60 N load is on the axle. How much force on the wheel lifts it?',
+    opts: ['60 N','20 N','180 N','30 N'],
+    correct: 1,
+    exp: 'Mechanical advantage = wheel radius / axle radius = 30/10 = 3. Force = 60/3 = 20 N.',
+    promptSvg: wheelAxleSvg,
+  },
+  {
+    id: 'T2-C-4',
+    subsectionId: 'spatial-mech',
+    text: 'A lever\'s fulcrum is <strong>25 cm from the left</strong> and 75 cm from the right. A 30 kg weight is on the left. What weight on the right balances it?',
+    opts: ['30 kg','15 kg','10 kg','90 kg'],
+    correct: 2,
+    exp: 'Torque: 30×25 = ?×75 → ? = 750/75 = 10 kg. Longer side needs less weight.',
+    promptSvg: leverSvg(38, 18, 78, '30kg', '?'),
+  },
+  {
+    id: 'T2-C-5',
+    subsectionId: 'spatial-mech',
+    text: 'A compound pulley has <strong>2 rope sections</strong> supporting a movable block holding 120 kg. How much force is needed?',
+    opts: ['120 kg','60 kg','40 kg','30 kg'],
+    correct: 1,
+    exp: 'With 2 supporting rope sections, mechanical advantage = 2. Force = 120/2 = 60 kg.',
+    promptSvg: compoundPulleySvg,
+  },
+  {
+    id: 'T2-C-6',
+    subsectionId: 'spatial-mech',
+    text: 'A 40 kg box sits on a <strong>frictionless 30° inclined plane</strong>. Which force component acts along the slope?',
+    opts: ['40 kg (full weight)','20 kg (half weight)','about 20 kg (sin 30°)','about 35 kg (cos 30°)'],
+    correct: 2,
+    exp: 'The component of gravity along the slope = mass × sin(angle). Sin(30°) = 0.5, so 40 × 0.5 = 20 kg-force acts along the slope.',
+    promptSvg: inclinedSvg,
+  },
+  {
+    id: 'T2-C-7',
+    subsectionId: 'spatial-mech',
+    text: 'Two gears mesh. Gear X has 24 teeth at 45 RPM; Gear Y has 8 teeth. What speed does Y turn?',
+    opts: ['15 RPM','45 RPM','90 RPM','135 RPM'],
+    correct: 3,
+    exp: 'Speed ratio = 24/8 = 3. Y turns at 45 × 3 = 135 RPM. Smaller gear spins faster.',
+    promptSvg: gearDiag([
+      {cx:28,cy:50,r:16,teeth:12,label:'X',sub:'24T·45RPM'},
+      {cx:57,cy:50,r:8,teeth:6,label:'Y',sub:'8T·?'},
+    ]),
+  },
+  {
+    id: 'T2-C-8',
+    subsectionId: 'spatial-mech',
+    text: 'Two gears with identical tooth counts mesh. Left turns CCW at 50 RPM. The right gear turns:',
+    opts: ['CW at 50 RPM','CCW at 50 RPM','CW at 100 RPM','CCW at 25 RPM'],
+    correct: 0,
+    exp: 'Equal tooth count means equal speed. Meshing gears reverse direction: left CCW → right CW at 50 RPM.',
+    promptSvg: gearDiag([
+      {cx:28,cy:50,r:14,teeth:10,label:'L',sub:'CCW·50'},
+      {cx:58,cy:50,r:14,teeth:10,label:'R',sub:'?'},
+    ]),
+  },
 ];
 
-export const spatialQuestions: Question[] = [...ROTATION_2D, ...SHAPE_3D, ...MECHANICAL_AND_PATTERNS];
+// ─── Part D: Cube nets ────────────────────────────────────────────────────────
+
+const partD: Question[] = [
+  {
+    id: 'T2-D-1',
+    subsectionId: 'spatial-cubes',
+    text: 'When this net is folded, which face is <strong>opposite 1</strong>?',
+    opts: ['6','2','4','5'],
+    correct: 0,
+    exp: 'In a vertical cross net, 1 (top) is opposite 6 (bottom). They are at opposite ends of the centre strip.',
+    promptSvg: netPromptC,
+  },
+  {
+    id: 'T2-D-2',
+    subsectionId: 'spatial-cubes',
+    text: 'When this net is folded, which face is <strong>opposite 2</strong>?',
+    opts: ['1','3','4','5'],
+    correct: 2,
+    exp: '2 is the left face and 4 is the right face of the cross. Left and right fold to opposite sides.',
+    promptSvg: netPromptC,
+  },
+  {
+    id: 'T2-D-3',
+    subsectionId: 'spatial-cubes',
+    text: 'Which cube could be folded from this net?',
+    opts: ['A','B','C','D'],
+    correct: 2,
+    exp: 'Option C shows faces 1, 3, and 4 at a corner — 1 is above 3 in the strip, 4 is to the right of 3. These are all adjacent.',
+    promptSvg: netPromptC,
+    choicesSvg: [
+      netOption('1','6','2'),  // A: 1 opposite 6 → can't share corner
+      netOption('2','4','3'),  // B: 2 opposite 4 → can't share corner
+      netOption('1','3','4'),  // C: correct ✓
+      netOption('5','6','2'),  // D: 5 opposite? invalid
+    ],
+  },
+  {
+    id: 'T2-D-4',
+    subsectionId: 'spatial-cubes',
+    text: 'When this second net is folded, which face is <strong>opposite ◯</strong>?',
+    opts: ['⬟','△','□','☆'],
+    correct: 0,
+    exp: 'In a vertical cross net, ◯ (top) and ⬟ (bottom) are at opposite ends of the strip — they become opposite faces.',
+    promptSvg: netPromptD,
+  },
+  {
+    id: 'T2-D-5',
+    subsectionId: 'spatial-cubes',
+    text: 'When this second net is folded, which face is <strong>opposite △</strong>?',
+    opts: ['◯','□','◇','⬟'],
+    correct: 2,
+    exp: '△ is the left face and ◇ is the right face. Left and right faces of a cross net are always opposite.',
+    promptSvg: netPromptD,
+  },
+  {
+    id: 'T2-D-6',
+    subsectionId: 'spatial-cubes',
+    text: 'Which cube could be folded from the second net?',
+    opts: ['A','B','C','D'],
+    correct: 1,
+    exp: 'Option B shows ◯, □, and △ at one corner — ◯ is above □ in the strip, △ is to the left of □. All three are adjacent.',
+    promptSvg: netPromptD,
+    choicesSvg: [
+      netOption('◯','⬟','△'),  // A: ◯ opposite ⬟ → can't share corner
+      netOption('◯','□','△'),  // B: correct ✓
+      netOption('△','◇','☆'),  // C: △ opposite ◇ → can't share corner
+      netOption('☆','□','◇'),  // D: ☆ opposite □? invalid
+    ],
+  },
+];
+
+export const spatialQuestions: Question[] = [...partA, ...partB, ...partC, ...partD];

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import type { SectionDefinition } from "@/types";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import { DarkModeToggle } from "@/components/ui/DarkModeToggle";
 
 export function TopBar({ answered, section, progress }: { answered: number; total: number; section?: SectionDefinition; progress: number }) {
   return (
@@ -16,9 +15,7 @@ export function TopBar({ answered, section, progress }: { answered: number; tota
         <div className="hidden items-center gap-2 sm:flex">
           <span className="pill font-head text-sm font-bold uppercase tracking-[0.08em] text-[var(--gold)]">{answered} answered</span>
           {section ? <span className="font-head text-sm uppercase tracking-[0.08em] text-white/70">{section.label}</span> : null}
-          <DarkModeToggle />
         </div>
-        <div className="sm:hidden"><DarkModeToggle /></div>
       </div>
     </header>
   );
