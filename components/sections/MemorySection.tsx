@@ -10,18 +10,18 @@ export function MemorySection(props: SectionRendererProps & { challenge?: Memory
       <div className="surface-card p-6">
         <div className="mb-2 font-head text-xs font-bold uppercase tracking-[0.2em] text-[var(--red)]">Memory Challenge</div>
         <h3 className="font-head text-2xl font-extrabold uppercase">{challenge.title}</h3>
-        <p className="mt-2 text-sm text-[var(--muted)]">Study time: {challenge.studyTime}s</p>
-        {studying ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.75rem' }}>
+        <p className="mt-2 text-sm text-[var(--muted)]">Study the scene, then answer from memory.</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.75rem' }}>
+          {studying ? (
             <p className="font-mono text-3xl text-[var(--gold)]">{studyRemaining}s</p>
-            <button onClick={onSkipStudy} className="rounded-xl border border-white/20 px-4 py-2 font-head text-sm font-bold uppercase tracking-[0.08em] text-white/70 hover:border-white/40 hover:text-white transition">
-              I&apos;m Ready →
-            </button>
-          </div>
-        ) : (
-          <button onClick={onBeginStudy} className="mt-4 rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">Start Timer</button>
-        )}
-        <div className={`mt-5 rounded-2xl border border-[var(--border)] bg-[var(--surface2)] p-4 ${studying ? "" : "blur-sm"}`}>
+          ) : (
+            <button onClick={onBeginStudy} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">Start Timer</button>
+          )}
+          <button onClick={onSkipStudy} className="rounded-xl border border-white/20 px-4 py-2 font-head text-sm font-bold uppercase tracking-[0.08em] text-white/70 hover:border-white/40 hover:text-white transition">
+            I&apos;m Ready →
+          </button>
+        </div>
+        <div className="mt-5 rounded-2xl border border-[var(--border)] bg-[var(--surface2)] p-4">
           {challenge.studyType === "text" ? <p className="leading-8">{challenge.studyContent}</p> : null}
           {challenge.studyType === "table" ? (
             <table className="w-full text-left text-sm">
