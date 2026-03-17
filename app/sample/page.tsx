@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Free Sample Test | RCMP Prep",
+  description: "Try the first 3 questions from each RCMP Online Assessment section — free, no account required.",
+};
+
+
 export default function SamplePage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-16 text-center">

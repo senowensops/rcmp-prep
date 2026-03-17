@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | RCMP Prep",
+  description: "Privacy Policy for RCMP Prep. We collect only your email, never sell data, and use Stripe for secure payments.",
+};
+
+import Link from "next/link";
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-[var(--dark)] px-6 py-20 text-white sm:px-8">
       <div className="mx-auto max-w-3xl">
+        <div className="mb-10">
+          <Link href="/" className="font-head text-sm font-bold uppercase tracking-[0.12em] text-[var(--red)] hover:opacity-80">← Back to RCMPPREP.CA</Link>
+        </div>
         <p className="font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)]">Legal</p>
         <h1 className="mt-3 font-head text-4xl font-extrabold uppercase tracking-[0.04em]">Privacy Policy</h1>
         <p className="mt-4 text-sm text-white/40">Last updated: March 2026</p>
