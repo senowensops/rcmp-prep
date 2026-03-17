@@ -115,9 +115,10 @@ export function PaywallModal({ onClose, onUnlock }: Props) {
           <form onSubmit={handleUnlock} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             <input
               type="email"
+                required
               value={email}
               onChange={e => setEmail(e.target.value)}
-              placeholder="Enter your email (optional)"
+              placeholder="Enter your email address"
               style={{
                 width: '100%', padding: '0.875rem 1rem', borderRadius: '0.75rem',
                 background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
