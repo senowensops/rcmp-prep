@@ -150,7 +150,7 @@ export default function TestPage() {
           <Timer label={activeSubsection ? `${activeSubsection.label} timer` : `${currentSection.label} timer`} secondsLeft={subsectionTime} />
           {currentSection.type === "memory" && !studyActive && hasStudied[challenge?.id ?? ''] ? <div className="mb-4 text-center font-mono text-lg text-[var(--gold)]">Answer timer: {answerRemaining ?? challenge?.answerTime ?? 45}s</div> : null}
           {currentSection.type === "memory" ? (
-            <MemorySection question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => setAnswer(currentQuestion.id, value)} onFlag={() => toggleFlag(currentQuestion.id)} challenge={challenge} studying={studyActive} studyRemaining={studyRemaining} onBeginStudy={() => { setStudyRemaining(challenge?.studyTime ?? 60); setStudyActive(true); }} />
+            <MemorySection question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => setAnswer(currentQuestion.id, value)} onFlag={() => toggleFlag(currentQuestion.id)} challenge={challenge} studying={studyActive} studyRemaining={studyRemaining} onBeginStudy={() => { setStudyRemaining(challenge?.studyTime ?? 60); setStudyActive(true); }} onSkipStudy={() => { setStudyActive(false); if (challenge) setHasStudied(prev => ({ ...prev, [challenge.id]: true })); }} />
           ) : Renderer ? (
             <Renderer question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => setAnswer(currentQuestion.id, value)} onFlag={() => toggleFlag(currentQuestion.id)} locked={locked} />
           ) : null}

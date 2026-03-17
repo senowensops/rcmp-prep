@@ -14,13 +14,28 @@ const FEATURES = [
   'Lifetime access',
 ];
 
+const DISCOUNT_CODE = 'DEPOT2026';
+
 export function PaywallModal({ onClose, onUnlock }: Props) {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [discountCode, setDiscountCode] = useState('');
+  const [discountApplied, setDiscountApplied] = useState(false);
+  const [discountError, setDiscountError] = useState('');
 
-  // Suppress unused param warning — onUnlock kept in case caller needs it
-  void onUnlock;
+  const handleApplyDiscount = () => {
+    setDiscountError('');
+    if (discountCode.trim().toUpperCase() === DISCOUNT_CODE) {
+      setDiscountApplied(true);
+      localStorage.setItem('rcmp-access-unlocked', '1');
+      setTimeout(() => {
+        onUnlock();
+      }, 800);
+    } else {
+      setDiscountError('Invalid code');
+    }
+  };
 
   const handleUnlock = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -112,39 +127,82 @@ export function PaywallModal({ onClose, onUnlock }: Props) {
               onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.1)')}
             />
 
+            {/* Discount code row */}
+            <div style={{ display: 'flex', gap: '0.5rem' }}>
+              <input
+                type="text"
+                value={discountCode}
+                onChange={e => { setDiscountCode(e.target.value); setDiscountError(''); }}
+                placeholder="Discount code"
+                disabled={discountApplied}
+                style={{
+                  flex: 1, padding: '0.75rem 1rem', borderRadius: '0.75rem',
+                  background: 'rgba(255,255,255,0.05)', border: `1px solid ${discountApplied ? '#22c55e' : 'rgba(255,255,255,0.1)'}`,
+                  color: '#fff', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box',
+                  opacity: discountApplied ? 0.7 : 1,
+                }}
+                onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); handleApplyDiscount(); } }}
+              />
+              <button
+                type="button"
+                onClick={handleApplyDiscount}
+                disabled={discountApplied || !discountCode.trim()}
+                style={{
+                  padding: '0.75rem 1rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.15)',
+                  background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.8)',
+                  fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: '0.85rem',
+                  textTransform: 'uppercase', letterSpacing: '0.06em', cursor: discountApplied ? 'default' : 'pointer',
+                  whiteSpace: 'nowrap', opacity: discountApplied ? 0.5 : 1,
+                }}
+              >
+                {discountApplied ? '✓ Applied' : 'Apply'}
+              </button>
+            </div>
+
+            {discountApplied && (
+              <p style={{ color: '#22c55e', fontSize: '0.85rem', margin: 0, textAlign: 'center', fontWeight: 600 }}>
+                ✓ Code accepted! Unlocking access…
+              </p>
+            )}
+            {discountError && (
+              <p style={{ color: '#f87171', fontSize: '0.82rem', margin: 0 }}>{discountError}</p>
+            )}
+
             {error && (
               <p style={{ color: '#f87171', fontSize: '0.82rem', margin: 0 }}>{error}</p>
             )}
 
-            <button
-              type="submit"
-              disabled={loading}
-              style={{
-                width: '100%', padding: '1rem', borderRadius: '0.75rem', border: 'none',
-                background: '#c8102e', color: '#fff', cursor: loading ? 'not-allowed' : 'pointer',
-                fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
-                fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '0.08em',
-                opacity: loading ? 0.6 : 1, transition: 'opacity 0.2s',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-              }}
-            >
-              {loading ? (
-                <>
-                  <span style={{
-                    display: 'inline-block',
-                    width: '1em',
-                    height: '1em',
-                    borderRadius: '50%',
-                    border: '2px solid rgba(255,255,255,0.3)',
-                    borderTopColor: '#fff',
-                    animation: 'spin 0.7s linear infinite',
-                  }} />
-                  Redirecting to checkout...
-                </>
-              ) : (
-                'Unlock Full Access — $29 CAD'
-              )}
-            </button>
+            {!discountApplied && (
+              <button
+                type="submit"
+                disabled={loading}
+                style={{
+                  width: '100%', padding: '1rem', borderRadius: '0.75rem', border: 'none',
+                  background: '#c8102e', color: '#fff', cursor: loading ? 'not-allowed' : 'pointer',
+                  fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
+                  fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '0.08em',
+                  opacity: loading ? 0.6 : 1, transition: 'opacity 0.2s',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                }}
+              >
+                {loading ? (
+                  <>
+                    <span style={{
+                      display: 'inline-block',
+                      width: '1em',
+                      height: '1em',
+                      borderRadius: '50%',
+                      border: '2px solid rgba(255,255,255,0.3)',
+                      borderTopColor: '#fff',
+                      animation: 'spin 0.7s linear infinite',
+                    }} />
+                    Redirecting to checkout...
+                  </>
+                ) : (
+                  'Unlock Full Access — $29 CAD'
+                )}
+              </button>
+            )}
 
             <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'rgba(255,255,255,0.25)', margin: 0 }}>
               Secure payment powered by Stripe

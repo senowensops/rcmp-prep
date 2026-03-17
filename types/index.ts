@@ -23,9 +23,10 @@ export type MemoryChallenge = {
   title: string;
   studyTime: number;
   answerTime?: number;
-  studyType: "image" | "text" | "table";
+  studyType: "image" | "text" | "table" | "svg";
   studyPrompt?: string;
   studyContent?: string;
+  studySvg?: string;
   studyRows?: string[][];
   questions: Question[];
 };

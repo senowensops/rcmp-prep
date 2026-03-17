@@ -4,7 +4,7 @@ import Stripe from 'stripe';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2025-01-27.acrobat' as any });
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rcmp-prep.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rcmpprep.ca';
 
 export async function POST(req: NextRequest) {
   try {
