@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
 
 async function sendConfirmationEmail(customerEmail: string) {
   await transporter.sendMail({
-    from: '"RCMP Prep" <sen.owens.ops@gmail.com>',
+    from: '"RCMP Prep" <support@rcmpprep.ca>',
     to: customerEmail,
     subject: 'You\'re in — RCMP Prep Full Access',
     html: `
