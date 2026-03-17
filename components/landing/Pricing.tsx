@@ -1,4 +1,7 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
 import { FoundingMemberCounter } from "@/components/landing/FoundingMemberCounter";
 
 const features = [
@@ -11,6 +14,28 @@ const features = [
 ];
 
 export function Pricing() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleUnlock = async () => {
+    setError('');
+    setLoading(true);
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({}),
+      });
+      if (!res.ok) throw new Error('Checkout failed');
+      const { url } = await res.json();
+      if (!url) throw new Error('No URL');
+      window.location.href = url;
+    } catch {
+      setError('Something went wrong. Please try again.');
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="px-6 py-20 sm:px-8 sm:py-24">
       <div className="mx-auto flex max-w-6xl flex-col items-center">
@@ -44,12 +69,34 @@ export function Pricing() {
 
           <div className="my-6 h-px bg-white/10" />
 
-          <Link
-            href="/test/1"
-            className="inline-flex w-full items-center justify-center rounded-2xl bg-[var(--red)] px-6 py-4 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)]"
+          {error && (
+            <p style={{ color: '#f87171', fontSize: '0.82rem', marginBottom: '0.75rem', textAlign: 'center' }}>
+              {error}
+            </p>
+          )}
+
+          <button
+            onClick={handleUnlock}
+            disabled={loading}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--red)] px-6 py-4 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
-            Unlock Full Access →
-          </Link>
+            {loading ? (
+              <>
+                <span style={{
+                  display: 'inline-block',
+                  width: '1em',
+                  height: '1em',
+                  borderRadius: '50%',
+                  border: '2px solid rgba(255,255,255,0.3)',
+                  borderTopColor: '#fff',
+                  animation: 'spin 0.7s linear infinite',
+                }} />
+                Redirecting...
+              </>
+            ) : (
+              'Unlock Full Access →'
+            )}
+          </button>
 
           <FoundingMemberCounter />
         </div>
@@ -61,6 +108,12 @@ export function Pricing() {
           </Link>
         </div>
       </div>
+
+      <style>{`
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
     </section>
   );
 }

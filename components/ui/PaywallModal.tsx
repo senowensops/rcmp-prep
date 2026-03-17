@@ -17,30 +17,44 @@ const FEATURES = [
 export function PaywallModal({ onClose, onUnlock }: Props) {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<'idle' | 'success' | 'duplicate' | 'error'>('idle');
+  const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Suppress unused param warning — onUnlock kept in case caller needs it
+  void onUnlock;
+
+  const handleUnlock = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    setError('');
     setLoading(true);
+
     try {
-      const res = await fetch('/api/leads', {
+      // Fire-and-forget lead capture (don't block on it)
+      if (email.trim()) {
+        fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email.trim() }),
+        }).catch(() => {/* silent */});
+      }
+
+      // Create Stripe checkout session
+      const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim() }),
       });
-      if (res.ok || res.status === 409) {
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('rcmp-access-unlocked', '1');
-        }
-        setStatus(res.status === 409 ? 'duplicate' : 'success');
-        setTimeout(() => onUnlock(), 1800);
-      } else {
-        setStatus('error');
+
+      if (!res.ok) {
+        throw new Error('Checkout failed');
       }
-    } catch {
-      setStatus('error');
-    } finally {
+
+      const { url } = await res.json();
+      if (!url) throw new Error('No checkout URL returned');
+
+      window.location.href = url;
+    } catch (err) {
+      console.error('Checkout error:', err);
+      setError('Something went wrong. Please try again.');
       setLoading(false);
     }
   };
@@ -83,55 +97,67 @@ export function PaywallModal({ onClose, onUnlock }: Props) {
             ))}
           </ul>
 
-          {status === 'success' ? (
-            <div className="text-center py-4">
-              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>✅</div>
-              <p style={{ color: '#fff', fontWeight: 600 }}>You&apos;re on the list!</p>
-              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', marginTop: '0.25rem' }}>Unlocking your access now...</p>
-            </div>
-          ) : status === 'duplicate' ? (
-            <div className="text-center py-4">
-              <p style={{ color: '#d4900a' }}>You&apos;re already registered — unlocking!</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <input
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                required
-                style={{
-                  width: '100%', padding: '0.875rem 1rem', borderRadius: '0.75rem',
-                  background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-                  color: '#fff', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box',
-                }}
-                onFocus={e => (e.target.style.borderColor = '#c8102e')}
-                onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.1)')}
-              />
-              {status === 'error' && (
-                <p style={{ color: '#f87171', fontSize: '0.82rem', margin: 0 }}>Something went wrong. Please try again.</p>
+          <form onSubmit={handleUnlock} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <input
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              placeholder="Enter your email (optional)"
+              style={{
+                width: '100%', padding: '0.875rem 1rem', borderRadius: '0.75rem',
+                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
+                color: '#fff', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box',
+              }}
+              onFocus={e => (e.target.style.borderColor = '#c8102e')}
+              onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.1)')}
+            />
+
+            {error && (
+              <p style={{ color: '#f87171', fontSize: '0.82rem', margin: 0 }}>{error}</p>
+            )}
+
+            <button
+              type="submit"
+              disabled={loading}
+              style={{
+                width: '100%', padding: '1rem', borderRadius: '0.75rem', border: 'none',
+                background: '#c8102e', color: '#fff', cursor: loading ? 'not-allowed' : 'pointer',
+                fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
+                fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '0.08em',
+                opacity: loading ? 0.6 : 1, transition: 'opacity 0.2s',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+              }}
+            >
+              {loading ? (
+                <>
+                  <span style={{
+                    display: 'inline-block',
+                    width: '1em',
+                    height: '1em',
+                    borderRadius: '50%',
+                    border: '2px solid rgba(255,255,255,0.3)',
+                    borderTopColor: '#fff',
+                    animation: 'spin 0.7s linear infinite',
+                  }} />
+                  Redirecting to checkout...
+                </>
+              ) : (
+                'Unlock Full Access — $29 CAD'
               )}
-              <button
-                type="submit"
-                disabled={loading}
-                style={{
-                  width: '100%', padding: '1rem', borderRadius: '0.75rem', border: 'none',
-                  background: '#c8102e', color: '#fff', cursor: 'pointer',
-                  fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800,
-                  fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '0.08em',
-                  opacity: loading ? 0.6 : 1, transition: 'opacity 0.2s',
-                }}
-              >
-                {loading ? 'Saving...' : 'Join the Waitlist — $29 CAD'}
-              </button>
-              <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'rgba(255,255,255,0.25)', margin: 0 }}>
-                We&apos;ll send your access link by email.
-              </p>
-            </form>
-          )}
+            </button>
+
+            <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'rgba(255,255,255,0.25)', margin: 0 }}>
+              Secure payment powered by Stripe
+            </p>
+          </form>
         </div>
       </div>
+
+      <style>{`
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
     </div>
   );
 }
