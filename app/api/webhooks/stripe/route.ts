@@ -1,19 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2025-01-27.acrobat' as any });
-
-const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET ?? '';
+function getStripe() {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) throw new Error('STRIPE_SECRET_KEY is not set');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return new Stripe(key, { apiVersion: '2025-01-27.acrobat' as any });
+}
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
   const sig = req.headers.get('stripe-signature') ?? '';
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET ?? '';
 
   let event: Stripe.Event;
 
   try {
-    event = stripe.webhooks.constructEvent(body, sig, WEBHOOK_SECRET);
+    const stripe = getStripe();
+    event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
   } catch (err) {
     console.error('Webhook signature verification failed:', err);
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });

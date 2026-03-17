@@ -1,13 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2025-01-27.acrobat' as any });
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rcmp-prep.vercel.app';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rcmpprep.ca';
+function getStripe() {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) throw new Error('STRIPE_SECRET_KEY is not set');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return new Stripe(key, { apiVersion: '2025-01-27.acrobat' as any });
+}
 
 export async function POST(req: NextRequest) {
   try {
+    const stripe = getStripe();
     const body = await req.json().catch(() => ({}));
     const { email } = body as { email?: string };
 
