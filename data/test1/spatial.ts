@@ -128,21 +128,21 @@ const movePulleySvg = mechSvg(`
 // ─── Cube net data ────────────────────────────────────────────────────────────
 
 const NET_A = {
-  top:    { symbol: '★', color: '#c8102e' },
-  left:   { symbol: '▲', color: '#2563eb' },
-  center: { symbol: '●', color: '#111'    },
-  right:  { symbol: '■', color: '#d97706' },
-  below:  { symbol: '♦', color: '#15803d' },
-  bottom: { symbol: '✕', color: '#7c3aed' },
+  top:    { symbol: 'R', color: '#c8102e' },   // Red R
+  left:   { symbol: 'B', color: '#2563eb' },   // Blue B
+  center: { symbol: 'X', color: '#111'    },   // Black X
+  right:  { symbol: 'O', color: '#d97706' },   // Orange O
+  below:  { symbol: 'G', color: '#15803d' },   // Green G
+  bottom: { symbol: 'P', color: '#7c3aed' },   // Purple P
 };
 
 const NET_B = {
-  top:    { symbol: 'A', color: '#c8102e' },
-  left:   { symbol: 'B', color: '#2563eb' },
-  center: { symbol: 'C', color: '#111'    },
-  right:  { symbol: 'D', color: '#d97706' },
-  below:  { symbol: 'E', color: '#15803d' },
-  bottom: { symbol: 'F', color: '#7c3aed' },
+  top:    { symbol: '1', color: '#c8102e' },
+  left:   { symbol: '2', color: '#2563eb' },
+  center: { symbol: '3', color: '#111'    },
+  right:  { symbol: '4', color: '#d97706' },
+  below:  { symbol: '5', color: '#15803d' },
+  bottom: { symbol: '6', color: '#7c3aed' },
 };
 
 const netPromptA = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(NET_A, 55)}</g>`);
@@ -474,52 +474,52 @@ const partD: Question[] = [
   {
     id: 'T1-D-1',
     subsectionId: 'spatial-cubes',
-    text: 'When this net is folded, which face is <strong>opposite ★</strong>?',
-    opts: ['✕','▲','♦','■'],
+    text: 'When this net is folded, which face is <strong>opposite R</strong> (the red face)?',
+    opts: ['P','B','G','O'],
     correct: 0,
-    exp: 'In a vertical cross net, the top face (★) folds opposite the bottom face (✕). They end up on opposite sides of the cube.',
+    exp: 'In a vertical cross net, the top face (R) folds opposite the bottom face (P). They end up on opposite sides of the cube.',
     promptSvg: netPromptA,
   },
   {
     id: 'T1-D-2',
     subsectionId: 'spatial-cubes',
-    text: 'When this net is folded, which face is <strong>opposite ▲</strong>?',
-    opts: ['★','●','■','✕'],
+    text: 'When this net is folded, which face is <strong>opposite B</strong> (the blue face)?',
+    opts: ['R','X','O','P'],
     correct: 2,
-    exp: 'The left face (▲) is opposite the right face (■). They are on either side of the centre face.',
+    exp: 'The left face (B) is opposite the right face (O). They are on either side of the centre face.',
     promptSvg: netPromptA,
   },
   {
     id: 'T1-D-3',
     subsectionId: 'spatial-cubes',
-    text: 'Which cube could be folded from this net? (Shows three faces meeting at one corner.)',
+    text: 'Which cube could be folded from this net? (Which option shows three mutually adjacent faces?)',
     opts: ['A','B','C','D'],
     correct: 1,
-    exp: 'Option B shows ★, ●, and ■ meeting at a single corner — all three are mutually adjacent in the net. The others pair opposite faces.',
+    exp: 'Option B shows R, X, and O meeting at a single corner — all three are mutually adjacent in the net.',
     promptSvg: netPromptA,
     choicesSvg: [
-      netOption('★','✕','▲'),  // A: ★ opposite ✕ can't share corner
-      netOption('★','●','■'),  // B: correct ✓
-      netOption('●','✕','▲'),  // C: ● opposite ✕ invalid
-      netOption('▲','✕','■'),  // D: ▲ opposite ■ can't share corner
+      netOption('R','P','B'),  // A: R opposite P can't share corner
+      netOption('R','X','O'),  // B: correct ✓
+      netOption('X','P','B'),  // C: invalid pairing
+      netOption('B','P','O'),  // D: B opposite O can't share corner
     ],
   },
   {
     id: 'T1-D-4',
     subsectionId: 'spatial-cubes',
-    text: 'When this second net is folded, which face is <strong>opposite C</strong>?',
-    opts: ['A','B','E','F'],
+    text: 'When this second net is folded, which face is <strong>opposite 3</strong>?',
+    opts: ['1','2','5','6'],
     correct: 2,
-    exp: 'C is the centre face. E is directly below it in the strip. When folded, C and E become opposite faces.',
+    exp: '3 is the centre face. 5 is directly below it in the strip. When folded, 3 and 5 become opposite faces.',
     promptSvg: netPromptB,
   },
   {
     id: 'T1-D-5',
     subsectionId: 'spatial-cubes',
-    text: 'When this second net is folded, which face is <strong>opposite B</strong>?',
-    opts: ['A','C','D','F'],
+    text: 'When this second net is folded, which face is <strong>opposite 2</strong>?',
+    opts: ['1','3','4','6'],
     correct: 2,
-    exp: 'B is the left face and D is the right face of the cross. Left and right faces always fold to opposite sides of the cube.',
+    exp: '2 is the left face and 4 is the right face of the cross. Left and right faces always fold to opposite sides.',
     promptSvg: netPromptB,
   },
   {
@@ -528,13 +528,13 @@ const partD: Question[] = [
     text: 'Which cube could be folded from this second net?',
     opts: ['A','B','C','D'],
     correct: 3,
-    exp: 'Option D shows faces A, C, and D meeting at a corner — A is above C, D is to the right of C. These are all adjacent in the net.',
+    exp: 'Option D shows faces 1, 3, and 4 meeting at a corner — all adjacent in the net.',
     promptSvg: netPromptB,
     choicesSvg: [
-      netOption('A','F','B'),  // A: A opposite F can't share corner
-      netOption('C','F','D'),  // B: C opposite F is valid? No: F is below E which is below C
-      netOption('B','D','E'),  // C: B opposite D can't share corner
-      netOption('A','C','D'),  // D: correct ✓
+      netOption('1','6','2'),  // A: 1 opposite 6 can't share corner
+      netOption('3','6','4'),  // B: invalid
+      netOption('2','4','5'),  // C: 2 opposite 4 can't share corner
+      netOption('1','3','4'),  // D: correct ✓
     ],
   },
 ];

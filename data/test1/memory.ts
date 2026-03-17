@@ -3,198 +3,223 @@ import type { MemoryChallenge } from '@/types';
 export const memoryChallenges: MemoryChallenge[] = [
   {
     id: 'mem1',
-    title: 'Busy Intersection',
+    title: 'Shape Grid',
     studyTime: 60,
     answerTime: 45,
     studyType: 'svg',
-    studySvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="width:100%;border-radius:12px;display:block;background:#1a1a2e">
-  <!-- Sky and street background -->
-  <rect width="600" height="400" fill="#1a1a2e"/>
-  <!-- Sidewalk -->
-  <rect x="0" y="280" width="600" height="120" fill="#3a3a3a"/>
-  <!-- Road stripe -->
-  <rect x="0" y="270" width="600" height="15" fill="#2a2a2a"/>
-  <!-- Buildings background -->
-  <rect x="0" y="50" width="180" height="230" fill="#2c2c3e"/>
-  <rect x="200" y="80" width="160" height="200" fill="#252535"/>
-  <rect x="380" y="40" width="220" height="240" fill="#2c2c3e"/>
-  <!-- Building windows -->
-  <rect x="20" y="70" width="25" height="20" fill="#ffd97020" rx="2"/>
-  <rect x="60" y="70" width="25" height="20" fill="#ffd97040" rx="2"/>
-  <rect x="100" y="70" width="25" height="20" fill="#ffd97020" rx="2"/>
-  <rect x="20" y="110" width="25" height="20" fill="#ffd97030" rx="2"/>
-  <rect x="60" y="110" width="25" height="20" fill="#ffd97020" rx="2"/>
-  <rect x="100" y="110" width="25" height="20" fill="#ffd97040" rx="2"/>
-  <rect x="400" y="60" width="25" height="20" fill="#ffd97020" rx="2"/>
-  <rect x="445" y="60" width="25" height="20" fill="#ffd97040" rx="2"/>
-  <rect x="490" y="60" width="25" height="20" fill="#ffd97020" rx="2"/>
-  <rect x="535" y="60" width="25" height="20" fill="#ffd97030" rx="2"/>
-  <!-- Subway entrance arch -->
-  <rect x="60" y="200" width="130" height="80" fill="#222233" rx="4"/>
-  <path d="M60,240 Q125,190 190,240" fill="none" stroke="#555577" stroke-width="6"/>
-  <text x="125" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#aaaacc" font-weight="bold">SUBWAY</text>
-  <!-- Three red subway circles -->
-  <circle cx="85" cy="255" r="16" fill="#cc1122"/>
-  <text x="85" y="261" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">1</text>
-  <circle cx="125" cy="255" r="16" fill="#cc1122"/>
-  <text x="125" y="261" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">2</text>
-  <circle cx="165" cy="255" r="16" fill="#cc1122"/>
-  <text x="165" y="261" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">3</text>
-  <!-- Seventh Ave street sign -->
-  <rect x="230" y="160" width="140" height="36" fill="#1a5c1a" rx="4"/>
-  <rect x="232" y="162" width="136" height="32" fill="#1a6e1a" rx="3"/>
-  <text x="300" y="184" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold" letter-spacing="1">Seventh Ave</text>
-  <!-- Sign pole -->
-  <rect x="298" y="196" width="4" height="60" fill="#888"/>
-  <!-- Woman figure with green coat and teal headphones -->
-  <!-- Body (green coat) -->
-  <rect x="390" y="220" width="44" height="70" fill="#2a8a2a" rx="8"/>
-  <!-- Head -->
-  <circle cx="412" cy="210" r="18" fill="#d4956a"/>
-  <!-- Teal headphones -->
-  <path d="M394,205 Q412,188 430,205" fill="none" stroke="#20b2aa" stroke-width="5" stroke-linecap="round"/>
-  <rect x="388" y="203" width="10" height="14" fill="#20b2aa" rx="4"/>
-  <rect x="426" y="203" width="10" height="14" fill="#20b2aa" rx="4"/>
-  <!-- Hair -->
-  <path d="M394,208 Q412,195 430,208" fill="#3a2010" stroke="none"/>
-  <!-- Legs -->
-  <rect x="398" y="288" width="12" height="30" fill="#1a5a8a" rx="3"/>
-  <rect x="416" y="288" width="12" height="30" fill="#1a5a8a" rx="3"/>
-  <!-- Shoes -->
-  <rect x="396" y="315" width="16" height="7" fill="#222" rx="2"/>
-  <rect x="414" y="315" width="16" height="7" fill="#222" rx="2"/>
-  <!-- Bag -->
-  <rect x="430" y="240" width="22" height="28" fill="#8a5a1a" rx="4"/>
-  <!-- Street lamp -->
-  <rect x="510" y="100" width="6" height="180" fill="#666"/>
-  <rect x="490" y="100" width="50" height="8" fill="#666" rx="2"/>
-  <ellipse cx="515" cy="100" rx="12" ry="6" fill="#fff9c4" opacity="0.9"/>
-  <!-- Crosswalk stripes -->
-  <rect x="300" y="275" width="30" height="8" fill="#fff" opacity="0.5"/>
-  <rect x="340" y="275" width="30" height="8" fill="#fff" opacity="0.5"/>
-  <rect x="380" y="275" width="30" height="8" fill="#fff" opacity="0.5"/>
+    studySvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width:100%;border-radius:12px;display:block;">
+  <rect width="500" height="300" fill="#f8f9fa"/>
+  <!-- Row 1 labels -->
+  <text x="83" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#888">Top Left</text>
+  <text x="250" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#888">Top Center</text>
+  <text x="417" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#888">Top Right</text>
+  <!-- Row 2 labels -->
+  <text x="83" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#888">Bottom Left</text>
+  <text x="250" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#888">Bottom Center</text>
+  <text x="417" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#888">Bottom Right</text>
+
+  <!-- Top Left: Red Circle -->
+  <circle cx="83" cy="100" r="45" fill="#c8102e"/>
+
+  <!-- Top Center: Blue Triangle -->
+  <polygon points="250,32 205,138 295,138" fill="#2563eb"/>
+
+  <!-- Top Right: Green Square -->
+  <rect x="372" y="38" width="90" height="90" fill="#15803d"/>
+
+  <!-- Bottom Left: Yellow Star (5-point) -->
+  <polygon points="83,200 91,222 115,222 96,236 103,258 83,244 63,258 70,236 51,222 75,222" fill="#d97706"/>
+
+  <!-- Bottom Center: Purple Rectangle -->
+  <rect x="190" y="205" width="120" height="60" fill="#7c3aed"/>
+
+  <!-- Bottom Right: Orange Diamond -->
+  <polygon points="417,195 455,240 417,285 379,240" fill="#ea580c"/>
 </svg>`,
     questions: [
-      { id: '5-1', text: 'What was the coat colour of the woman with headphones?', opts: ['Red','Black','Green','Blue', "I don't know"], correct: 2, exp: 'The woman with teal headphones wore a green coat.' },
-      { id: '5-2', text: 'Which subway line numbers were visible?', opts: ['1, 2, 3','2, 3, 4','1, 3, 5','4, 5, 6', "I don't know"], correct: 0, exp: 'Red circle numbers 1, 2, and 3 were visible on the subway entrance.' },
-      { id: '5-3', text: 'What street name appeared on the sign?', opts: ['Fifth Avenue','Broadway','Seventh Avenue','Park Avenue', "I don't know"], correct: 2, exp: 'The sign read Seventh Ave above the subway line numbers.' },
+      { id: 'mem1-1', text: 'What color was the triangle?', opts: ['Red', 'Blue', 'Green', 'Yellow'], correct: 1, exp: 'The triangle in the top center was blue.' },
+      { id: 'mem1-2', text: 'What shape was orange?', opts: ['Circle', 'Star', 'Square', 'Diamond'], correct: 3, exp: 'The orange shape was a diamond in the bottom right.' },
+      { id: 'mem1-3', text: 'Which shape was in the top left?', opts: ['Triangle', 'Square', 'Circle', 'Star'], correct: 2, exp: 'The red circle was in the top left position.' },
     ],
   },
   {
     id: 'mem2',
-    title: 'City Street Scene',
+    title: 'Object Layout',
     studyTime: 60,
     answerTime: 45,
     studyType: 'svg',
-    studySvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="width:100%;border-radius:12px;display:block;background:#4a4a4a">
-  <!-- Sky -->
-  <rect width="600" height="200" fill="#b0c4d8"/>
-  <!-- Buildings background -->
-  <rect x="0" y="60" width="200" height="145" fill="#d4c4a0"/>
-  <rect x="210" y="80" width="160" height="125" fill="#c8b890"/>
-  <rect x="390" y="50" width="210" height="155" fill="#d4c4a0"/>
-  <!-- Building windows -->
-  <rect x="20" y="80" width="20" height="25" fill="#8899aa" rx="1"/>
-  <rect x="55" y="80" width="20" height="25" fill="#8899aa" rx="1"/>
-  <rect x="90" y="80" width="20" height="25" fill="#8899aa" rx="1"/>
-  <rect x="125" y="80" width="20" height="25" fill="#7788aa" rx="1"/>
-  <rect x="20" y="120" width="20" height="25" fill="#8899aa" rx="1"/>
-  <rect x="55" y="120" width="20" height="25" fill="#8899aa" rx="1"/>
-  <rect x="90" y="120" width="20" height="25" fill="#7788aa" rx="1"/>
-  <rect x="410" y="70" width="20" height="25" fill="#8899aa" rx="1"/>
-  <rect x="445" y="70" width="20" height="25" fill="#8899aa" rx="1"/>
-  <rect x="480" y="70" width="20" height="25" fill="#7788aa" rx="1"/>
-  <rect x="515" y="70" width="20" height="25" fill="#8899aa" rx="1"/>
-  <!-- Tram tracks -->
-  <rect x="0" y="195" width="600" height="5" fill="#888"/>
-  <rect x="0" y="215" width="600" height="5" fill="#888"/>
-  <!-- Road (grey) -->
-  <rect x="0" y="200" width="600" height="200" fill="#6a6a6a"/>
-  <!-- Tram rails detail -->
-  <rect x="100" y="200" width="4" height="200" fill="#555"/>
-  <rect x="160" y="200" width="4" height="200" fill="#555"/>
-  <!-- Green tram -->
-  <rect x="60" y="130" width="320" height="80" fill="#2e7d32" rx="6"/>
-  <!-- Tram windows -->
-  <rect x="75" y="140" width="50" height="35" fill="#b0d8f0" rx="3"/>
-  <rect x="140" y="140" width="50" height="35" fill="#b0d8f0" rx="3"/>
-  <rect x="205" y="140" width="50" height="35" fill="#b0d8f0" rx="3"/>
-  <rect x="270" y="140" width="50" height="35" fill="#b0d8f0" rx="3"/>
-  <!-- Tram number -->
-  <rect x="335" y="145" width="32" height="28" fill="#fff" rx="3"/>
-  <text x="351" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#2e7d32" font-weight="bold">2</text>
-  <!-- Tram bottom detail -->
-  <rect x="60" y="205" width="320" height="10" fill="#1b5e20"/>
-  <!-- Tram wheels -->
-  <circle cx="110" cy="213" r="8" fill="#333"/>
-  <circle cx="200" cy="213" r="8" fill="#333"/>
-  <circle cx="300" cy="213" r="8" fill="#333"/>
-  <!-- Tram overhead wire -->
-  <line x1="0" y1="110" x2="600" y2="110" stroke="#888" stroke-width="2"/>
-  <line x1="220" y1="110" x2="220" y2="133" stroke="#888" stroke-width="2"/>
-  <!-- Red small car -->
-  <rect x="430" y="258" width="100" height="45" fill="#cc1122" rx="6"/>
-  <!-- Car windows -->
-  <rect x="445" y="262" width="35" height="22" fill="#99bbcc" rx="2"/>
-  <rect x="487" y="262" width="30" height="22" fill="#99bbcc" rx="2"/>
-  <!-- Car wheels -->
-  <circle cx="450" cy="305" r="13" fill="#222"/>
-  <circle cx="450" cy="305" r="6" fill="#555"/>
-  <circle cx="510" cy="305" r="13" fill="#222"/>
-  <circle cx="510" cy="305" r="6" fill="#555"/>
-  <!-- Car bumper/lights -->
-  <rect x="428" y="268" width="6" height="10" fill="#ffee00" rx="1"/>
-  <rect x="526" y="268" width="6" height="10" fill="#ff4444" rx="1"/>
-  <!-- Parking signs post -->
-  <rect x="28" y="240" width="5" height="130" fill="#999"/>
-  <!-- Parking sign Anfos (pointing right) -->
-  <rect x="30" y="245" width="80" height="28" fill="white" rx="3"/>
-  <polygon points="110,259 120,248 120,270" fill="white"/>
-  <text x="70" y="264" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#222" font-weight="bold">Anfos</text>
-  <!-- Parking sign Drachen (pointing right) -->
-  <rect x="30" y="285" width="85" height="28" fill="white" rx="3"/>
-  <polygon points="115,299 125,288 125,310" fill="white"/>
-  <text x="72" y="304" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#222" font-weight="bold">Drachen</text>
-  <!-- Parking P symbol -->
-  <circle cx="15" cy="270" r="14" fill="#1565c0"/>
-  <text x="15" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">P</text>
+    studySvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width:100%;border-radius:12px;display:block;">
+  <rect width="500" height="300" fill="#f0f0f0"/>
+  <text x="250" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#444" font-weight="bold">Study these objects and their positions</text>
+
+  <!-- Top row -->
+  <!-- Tennis Racket (teal) -->
+  <rect x="20" y="45" width="130" height="80" fill="#0d9488" rx="8"/>
+  <text x="85" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="bold">Tennis Racket</text>
+
+  <!-- Target (red) -->
+  <rect x="185" y="45" width="130" height="80" fill="#dc2626" rx="8"/>
+  <text x="250" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="bold">Target</text>
+
+  <!-- Book (blue) -->
+  <rect x="350" y="45" width="130" height="80" fill="#2563eb" rx="8"/>
+  <text x="415" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="bold">Book</text>
+
+  <!-- Bottom row -->
+  <!-- Football (green) -->
+  <rect x="20" y="170" width="130" height="80" fill="#16a34a" rx="8"/>
+  <text x="85" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="bold">Football</text>
+
+  <!-- Key (yellow) -->
+  <rect x="185" y="170" width="130" height="80" fill="#ca8a04" rx="8"/>
+  <text x="250" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="bold">Key</text>
+
+  <!-- Clock (purple) -->
+  <rect x="350" y="170" width="130" height="80" fill="#7c3aed" rx="8"/>
+  <text x="415" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="bold">Clock</text>
+
+  <!-- Row labels -->
+  <text x="250" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#666">— Top Row —</text>
+  <text x="250" y="265" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#666">— Bottom Row —</text>
 </svg>`,
     questions: [
-      { id: '5-4', text: 'What number was displayed on the tram?', opts: ['1','2','3','4', "I don't know"], correct: 1, exp: 'The green tram displayed the number 2.' },
-      { id: '5-5', text: 'What colour was the small car?', opts: ['Blue','White','Silver','Red', "I don't know"], correct: 3, exp: 'A small red Fiat was parked in the right foreground.' },
-      { id: '5-6', text: 'Which destinations were listed on the parking sign?', opts: ['Drachen and Pilzli','Anfos and Drachen','Anfos and Coiffeur','Nord and Sud', "I don't know"], correct: 1, exp: 'The white arrow signs pointed to Anfos and Drachen parking.' },
+      { id: 'mem2-1', text: 'Which object was beside the tennis racket?', opts: ['Key', 'Target', 'Football', 'Clock'], correct: 1, exp: 'The Target was directly beside (right of) the Tennis Racket in the top row.' },
+      { id: 'mem2-2', text: 'What color was the box containing the Key?', opts: ['Red', 'Blue', 'Yellow', 'Green'], correct: 2, exp: 'The Key was in a yellow box.' },
+      { id: 'mem2-3', text: 'Which object was in the bottom right?', opts: ['Football', 'Key', 'Clock', 'Target'], correct: 2, exp: 'The Clock was in the bottom right position.' },
     ],
   },
   {
     id: 'mem3',
-    title: 'Incident Report',
-    studyTime: 60,
+    title: 'Colour Sequence',
+    studyTime: 45,
     answerTime: 45,
-    studyType: 'text',
-    studyContent: 'On Thursday evening at 19:42, Constable Pelletier responded to a disturbance at 88 Harbour Drive. Upon arrival she observed two males arguing outside a grey pickup truck bearing New Brunswick plate KMX-447. The registered owner, Brian Fossett, age 31, stated his wallet containing $280 cash and two credit cards had been stolen. A witness, Carol Ng, reported seeing a heavyset male in a dark hoodie flee northbound on foot at approximately 19:35. EMS was not required. The scene was cleared at 20:17.',
+    studyType: 'svg',
+    studySvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" style="width:100%;border-radius:12px;display:block;">
+  <rect width="500" height="200" fill="#f8f9fa"/>
+  <text x="250" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#444" font-weight="bold">Remember the colour of each numbered circle</text>
+
+  <!-- Circle 1: Red -->
+  <circle cx="50" cy="120" r="40" fill="#c8102e"/>
+  <text x="50" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555" font-weight="bold">1</text>
+  <text x="50" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">1</text>
+
+  <!-- Circle 2: Blue -->
+  <circle cx="150" cy="120" r="40" fill="#2563eb"/>
+  <text x="150" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555" font-weight="bold">2</text>
+  <text x="150" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">2</text>
+
+  <!-- Circle 3: Yellow -->
+  <circle cx="250" cy="120" r="40" fill="#d97706"/>
+  <text x="250" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555" font-weight="bold">3</text>
+  <text x="250" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">3</text>
+
+  <!-- Circle 4: Green -->
+  <circle cx="350" cy="120" r="40" fill="#15803d"/>
+  <text x="350" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555" font-weight="bold">4</text>
+  <text x="350" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">4</text>
+
+  <!-- Circle 5: Purple -->
+  <circle cx="450" cy="120" r="40" fill="#7c3aed"/>
+  <text x="450" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555" font-weight="bold">5</text>
+  <text x="450" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="white" font-weight="bold">5</text>
+</svg>`,
     questions: [
-      { id: '5-7', text: 'What was the licence plate?', opts: ['KMX-474','KXM-447','KMX-447','MKX-447', "I don't know"], correct: 2, exp: 'The pickup truck bore New Brunswick plate KMX-447.' },
-      { id: '5-8', text: 'How much cash was stolen?', opts: ['$240','$280','$320','$380', "I don't know"], correct: 1, exp: 'Brian Fossett reported that $280 cash was in the stolen wallet.' },
-      { id: '5-9', text: 'What time was the scene cleared?', opts: ['19:42','19:55','20:07','20:17', "I don't know"], correct: 3, exp: 'The report states the scene was cleared at 20:17.' },
+      { id: 'mem3-1', text: 'What colour was circle number 3?', opts: ['Red', 'Blue', 'Yellow', 'Green'], correct: 2, exp: 'Circle 3 was yellow.' },
+      { id: 'mem3-2', text: 'Which number was the green circle?', opts: ['2', '3', '4', '5'], correct: 2, exp: 'Green was circle number 4.' },
+      { id: 'mem3-3', text: 'What colour was beside the yellow circle on its right?', opts: ['Red', 'Blue', 'Green', 'Purple'], correct: 2, exp: 'Circle 4 (green) was directly to the right of circle 3 (yellow).' },
     ],
   },
   {
     id: 'mem4',
-    title: 'Licence Plates',
+    title: 'Room Layout',
+    studyTime: 60,
+    answerTime: 45,
+    studyType: 'svg',
+    studySvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width:100%;border-radius:12px;display:block;">
+  <rect width="500" height="300" fill="#e5e7eb"/>
+  <!-- Room border -->
+  <rect x="20" y="30" width="460" height="250" fill="#f3f4f6" stroke="#9ca3af" stroke-width="3" rx="6"/>
+  <text x="250" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555" font-weight="bold">Room Layout (top-down view)</text>
+
+  <!-- Bed (blue rect) - top left -->
+  <rect x="40" y="50" width="140" height="80" fill="#2563eb" rx="6"/>
+  <text x="110" y="95" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">Bed</text>
+
+  <!-- Desk (brown rect) - top right -->
+  <rect x="320" y="50" width="140" height="80" fill="#92400e" rx="6"/>
+  <text x="390" y="95" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">Desk</text>
+
+  <!-- Chair (red rect) - bottom left -->
+  <rect x="40" y="185" width="100" height="75" fill="#dc2626" rx="6"/>
+  <text x="90" y="227" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">Chair</text>
+
+  <!-- Table (green rect) - bottom center -->
+  <rect x="190" y="185" width="120" height="75" fill="#16a34a" rx="6"/>
+  <text x="250" y="227" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">Table</text>
+
+  <!-- Lamp (yellow circle) - bottom right -->
+  <circle cx="400" cy="222" r="40" fill="#ca8a04"/>
+  <text x="400" y="227" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="bold">Lamp</text>
+</svg>`,
+    questions: [
+      { id: 'mem4-1', text: 'What was in the top right of the room?', opts: ['Bed', 'Lamp', 'Chair', 'Desk'], correct: 3, exp: 'The Desk was in the top right corner of the room.' },
+      { id: 'mem4-2', text: 'What color was the Chair?', opts: ['Blue', 'Green', 'Red', 'Yellow'], correct: 2, exp: 'The Chair was red.' },
+      { id: 'mem4-3', text: 'Which furniture item was yellow?', opts: ['Table', 'Chair', 'Lamp', 'Desk'], correct: 2, exp: 'The Lamp was yellow.' },
+    ],
+  },
+  {
+    id: 'mem5',
+    title: 'Number Board',
     studyTime: 45,
     answerTime: 45,
-    studyType: 'table',
-    studyRows: [
-      ['Ontario', 'BKX 291'],
-      ['Quebec', 'T44-829'],
-      ['Nova Scotia', 'DPR 067'],
-      ['Alberta', 'XWQ 554'],
-      ['Manitoba', 'LNZ 183'],
-    ],
+    studyType: 'svg',
+    studySvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width:100%;border-radius:12px;display:block;">
+  <rect width="500" height="300" fill="#f8f9fa"/>
+  <text x="250" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#444" font-weight="bold">Remember which number is in each coloured box</text>
+
+  <!-- Row 1 -->
+  <!-- 1: red -->
+  <rect x="30" y="45" width="120" height="70" fill="#c8102e" rx="8"/>
+  <text x="90" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">1</text>
+
+  <!-- 2: blue -->
+  <rect x="190" y="45" width="120" height="70" fill="#2563eb" rx="8"/>
+  <text x="250" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">2</text>
+
+  <!-- 3: green -->
+  <rect x="350" y="45" width="120" height="70" fill="#15803d" rx="8"/>
+  <text x="410" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">3</text>
+
+  <!-- Row 2 -->
+  <!-- 4: yellow -->
+  <rect x="30" y="130" width="120" height="70" fill="#d97706" rx="8"/>
+  <text x="90" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">4</text>
+
+  <!-- 5: purple -->
+  <rect x="190" y="130" width="120" height="70" fill="#7c3aed" rx="8"/>
+  <text x="250" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">5</text>
+
+  <!-- 6: orange -->
+  <rect x="350" y="130" width="120" height="70" fill="#ea580c" rx="8"/>
+  <text x="410" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">6</text>
+
+  <!-- Row 3 -->
+  <!-- 7: teal -->
+  <rect x="30" y="215" width="120" height="70" fill="#0d9488" rx="8"/>
+  <text x="90" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">7</text>
+
+  <!-- 8: pink -->
+  <rect x="190" y="215" width="120" height="70" fill="#db2777" rx="8"/>
+  <text x="250" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">8</text>
+
+  <!-- 9: gray -->
+  <rect x="350" y="215" width="120" height="70" fill="#6b7280" rx="8"/>
+  <text x="410" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="bold">9</text>
+</svg>`,
     questions: [
-      { id: '5-10', text: 'Which was the Alberta plate?', opts: ['BKX 291','XWQ 554','LNZ 183','T44-829', "I don't know"], correct: 1, exp: 'The Alberta row showed XWQ 554.' },
-      { id: '5-11', text: 'Which province matched DPR 067?', opts: ['Ontario','Quebec','Nova Scotia','Alberta', "I don't know"], correct: 2, exp: 'DPR 067 appeared beside Nova Scotia.' },
-      { id: '5-12', text: 'Which was the Manitoba plate?', opts: ['T44-829','BKX 291','XWQ 554','LNZ 183', "I don't know"], correct: 3, exp: 'The Manitoba row showed LNZ 183.' },
+      { id: 'mem5-1', text: 'What number was in the purple box?', opts: ['4', '5', '6', '7'], correct: 1, exp: 'The number 5 was in the purple box.' },
+      { id: 'mem5-2', text: 'What color was the box containing number 7?', opts: ['Orange', 'Pink', 'Gray', 'Teal'], correct: 3, exp: 'Number 7 was in the teal box.' },
+      { id: 'mem5-3', text: 'Which number was in the top right?', opts: ['1', '3', '7', '9'], correct: 1, exp: 'The number 3 was in the top right position of the grid.' },
     ],
   },
 ];

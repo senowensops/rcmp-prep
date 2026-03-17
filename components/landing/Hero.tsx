@@ -34,7 +34,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
-            Practice tests built to mirror the structure, timing, and question types of the real RCMP Online Assessment. No shortcuts. No fluff.
+            Practice tests built to mirror the structure, timing, and question types of the real RCMP Online Assessment. Candidates who don&apos;t prepare risk deferral — don&apos;t leave it to chance.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
