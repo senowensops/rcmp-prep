@@ -9,6 +9,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "RCMP Prep",
   description: "Train like the test is tomorrow.",
+  metadataBase: new URL("https://rcmp-prep.vercel.app"),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

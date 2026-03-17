@@ -44,3 +44,5 @@ a { color: inherit; text-decoration: none; }
 }
 .review-html strong { font-weight: 700; }
 .review-html .expr { font-family: "JetBrains Mono", monospace; font-size: 1.15rem; }
+.founding-bar { height: 8px; background: #222; border-radius: 4px; }
+.founding-fill { height: 100%; background: linear-gradient(90deg, #C8102E, #D4900A); }
