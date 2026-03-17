@@ -97,10 +97,10 @@ export default function TestPage() {
   const Renderer = currentSection.type === "memory" ? null : renderers[currentSection.type as keyof typeof renderers];
 
   useEffect(() => {
-    if (globalQuestionIndex >= 3 && !isPaid) {
+    if (testId !== 'sample' && globalQuestionIndex >= 3 && !isPaid) {
       setShowPaywall(true);
     }
-  }, [globalQuestionIndex, isPaid]);
+  }, [globalQuestionIndex, isPaid, testId]);
 
   if (!hydrated) return null;
 
