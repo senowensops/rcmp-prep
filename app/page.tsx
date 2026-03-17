@@ -9,7 +9,7 @@ import { WhyItWorks } from "@/components/landing/WhyItWorks";
 export const metadata: Metadata = {
   title: "RCMP Online Assessment Practice Test | RCMP Prep",
   description:
-    "The most realistic RCMP Online Assessment practice test. 3 full-length tests, 6 sections, timed. Try free — no account needed.",
+    "The most realistic RCMP Online Assessment practice test. 6 sections, timed. Try free — no account needed.",
   keywords: [
     "rcmp online assessment practice test",
     "rcmp assessment prep",

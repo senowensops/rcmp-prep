@@ -7,7 +7,7 @@ interface Props {
 }
 
 const FEATURES = [
-  'All 3 full-length practice tests',
+  'All 3 practice tests',
   '6 sections per test — fully timed',
   'Detailed answer explanations',
   'Progress tracking across tests',
