@@ -16,6 +16,7 @@ import { BusinessSection } from "@/components/sections/BusinessSection";
 import { useTestState } from "@/hooks/useTestState";
 import { useTimer } from "@/hooks/useTimer";
 import { getSectionsForTest } from "@/lib/testData";
+import { PaywallModal } from "@/components/ui/PaywallModal";
 
 const renderers = {
   workstyle: WorkstyleSection,
@@ -36,6 +37,8 @@ export default function TestPage() {
   const [resumeReady, setResumeReady] = useState(false);
   const [lockedSubsections, setLockedSubsections] = useState<Record<string, boolean>>({});
   const [lockedChallenges, setLockedChallenges] = useState<Record<string, boolean>>({});
+  const [isPaid, setIsPaid] = useState(false);
+  const [showPaywall, setShowPaywall] = useState(false);
   const questionSubsection = currentQuestion.subsectionId;
   const activeSubsection = currentSection.subsections?.find((sub) => sub.id === questionSubsection) ?? currentSection.subsections?.[0];
   const challenge = currentSection.challengeMap?.[currentQuestion.id];
@@ -45,6 +48,12 @@ export default function TestPage() {
     setOriented(window.localStorage.getItem('rcmp-oriented') === '1');
     setResumeReady(Boolean(window.localStorage.getItem(`rcmp-progress-${testId}`)));
   }, [testId]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsPaid(localStorage.getItem('rcmp-access-unlocked') === '1');
+    }
+  }, []);
 
   const { secondsLeft: subsectionTime, setSecondsLeft: setSubsectionTime } = useTimer(activeSubsection?.timerSeconds ?? null, Boolean(activeSubsection?.timerSeconds && !studyActive && !lockedSubsections[activeSubsection.id]), () => {
     if (activeSubsection) setLockedSubsections((prev) => ({ ...prev, [activeSubsection.id]: true }));
@@ -79,10 +88,19 @@ export default function TestPage() {
 
   const answered = Object.keys(state.answers).length;
   const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
+  const globalQuestionIndex = sections
+    .slice(0, sections.indexOf(currentSection))
+    .reduce((sum: number, s: typeof currentSection) => sum + s.questions.length, 0) + state.currentQuestionIndex;
   const answeredMap = Object.fromEntries(sections.map((section) => [section.id, section.questions.filter((q) => q.id in state.answers).length]));
   const progress = Math.round((answered / total) * 100);
   const locked = Boolean((activeSubsection && lockedSubsections[activeSubsection.id]) || (challenge && lockedChallenges[challenge.id]));
   const Renderer = currentSection.type === "memory" ? null : renderers[currentSection.type as keyof typeof renderers];
+
+  useEffect(() => {
+    if (globalQuestionIndex >= 3 && !isPaid) {
+      setShowPaywall(true);
+    }
+  }, [globalQuestionIndex, isPaid]);
 
   if (!hydrated) return null;
 
@@ -134,6 +152,12 @@ export default function TestPage() {
           </div>
         </section>
       </div>
+      {showPaywall && (
+        <PaywallModal
+          onClose={() => { setShowPaywall(false); window.location.href = '/'; }}
+          onUnlock={() => { setIsPaid(true); setShowPaywall(false); }}
+        />
+      )}
     </main>
   );
 }
