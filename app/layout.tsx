@@ -7,8 +7,8 @@ import "@fontsource/barlow-condensed/700.css";
 import "@fontsource/barlow-condensed/800.css";
 import "./globals.css";
 
-// GA4 Measurement ID — replace with real ID from analytics.google.com
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
+// GA4 Measurement ID
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-C60PNKEMZX";
 
 export const metadata: Metadata = {
   title: {
