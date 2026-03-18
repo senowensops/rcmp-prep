@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Do I need an account?",
     answer:
-      "Not to try the free sample. You will need to create an account to purchase and access the full tests.",
+      "No account required. Enter your email at checkout, and your access is tied to that email. You can restore it from any device using the link in your confirmation email.",
   },
   {
     question: "Is payment secure?",

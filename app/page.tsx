@@ -7,15 +7,21 @@ import { SectionBreakdown } from "@/components/landing/SectionBreakdown";
 import { WhyItWorks } from "@/components/landing/WhyItWorks";
 
 export const metadata: Metadata = {
-  title: "RCMP Online Assessment Practice Test | RCMP Prep",
+  title: "RCMP Online Assessment Practice Test | RCMPPrep.ca",
   description:
-    "The most realistic RCMP Online Assessment practice test. 6 sections, timed. Try free — no account needed.",
+    "Practice tests built to mirror the real RCMP Online Assessment — all 6 sections, timed, with full answer explanations. Try 3 questions per section free. No account needed.",
   keywords: [
     "rcmp online assessment practice test",
     "rcmp assessment prep",
     "rcmp online test questions",
     "rcmp aptitude test",
+    "rcmp prep test canada",
+    "rcmp police test",
+    "rcmp entrance exam practice",
   ],
+  alternates: {
+    canonical: "https://rcmpprep.ca",
+  },
 };
 
 export default function HomePage() {
