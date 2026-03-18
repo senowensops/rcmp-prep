@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FoundingMemberCounter } from "@/components/landing/FoundingMemberCounter";
 
 const features = [
   "All 3 practice tests",
@@ -48,13 +47,15 @@ export function Pricing() {
 
         <div className="mt-10 w-full max-w-[400px] rounded-[2rem] border border-white/12 bg-white/[0.04] p-7 shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
           <div className="inline-flex rounded-full border border-[var(--gold)]/30 bg-[var(--gold)]/10 px-3 py-1 font-head text-xs font-bold uppercase tracking-[0.18em] text-[var(--gold)]">
-            Founding Member
+            Limited Time
           </div>
 
           <div className="mt-5 flex items-end gap-3">
             <div className="font-head text-5xl font-extrabold uppercase tracking-[0.04em] text-white">$29 CAD</div>
-            <div className="pb-1 text-lg text-white/35 line-through">$39</div>
+            <div className="pb-1 text-lg text-white/35 line-through">$97</div>
           </div>
+
+          <p className="mt-2 text-sm text-white/50">Regular price returns after launch week.</p>
 
           <div className="my-6 h-px bg-white/10" />
 
@@ -98,7 +99,6 @@ export function Pricing() {
             )}
           </button>
 
-          <FoundingMemberCounter />
         </div>
 
         <div className="mt-6 text-center text-sm leading-7 text-white/58">

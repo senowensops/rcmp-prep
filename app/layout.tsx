@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "@fontsource/barlow/400.css";
 import "@fontsource/barlow/500.css";
 import "@fontsource/barlow/600.css";
 import "@fontsource/barlow-condensed/700.css";
 import "@fontsource/barlow-condensed/800.css";
 import "./globals.css";
+
+// GA4 Measurement ID — replace with real ID from analytics.google.com
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 
 export const metadata: Metadata = {
   title: {
@@ -39,6 +43,24 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">{`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', {
+                page_path: window.location.pathname,
+              });
+            `}</Script>
+          </>
+        )}
+      </head>
       <body>{children}</body>
     </html>
   );
