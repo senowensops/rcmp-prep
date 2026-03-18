@@ -1,6 +1,6 @@
 export function FoundingMemberCounter() {
   // TODO Phase 2: fetch from /api/founding-count
-  const claimed = 2;
+  const claimed = 8;
   const total = 10;
   const remaining = Math.max(total - claimed, 0);
   const progress = Math.min((claimed / total) * 100, 100);
