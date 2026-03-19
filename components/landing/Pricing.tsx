@@ -6,7 +6,7 @@ import { useState } from "react";
 const features = [
   "All 3 practice tests",
   "6 sections per test",
-  "Timed sections matching real assessment",
+  "Timed sections for each skill area",
   "Answer explanations on every question",
   "Progress tracking across all 3 tests",
   "Lifetime access",

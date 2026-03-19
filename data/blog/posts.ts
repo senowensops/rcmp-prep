@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     author: 'RCMP Prep Team',
     readTime: '6 min read',
     category: 'Assessment Prep',
-    excerpt: 'The RCMP Online Assessment tests six distinct skill areas in a single sitting. Here\'s exactly what each section measures and how to prepare strategically.',
+    excerpt: 'The RCMP Online Assessment covers six distinct skill areas in a single sitting. Here\'s what each area involves and how to prepare strategically.',
     coverImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
     content: `
 <p>The RCMP Online Assessment (OEA) is the first major filter in the application process — and it catches a lot of candidates off guard. Many applicants assume it's a straightforward aptitude test. It isn't. It's a multi-dimensional evaluation that probes cognitive ability, personality fit, spatial reasoning, memory, and business judgment all in one sitting.</p>
@@ -52,7 +52,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The most effective preparation combines familiarity with each section's format, timed repetition, and honest self-reflection on the workstyle component. Generic aptitude tests don't cut it — the OEA has a specific structure and question style that you need to get comfortable with.</p>
 
-<p>At <a href="https://rcmpprep.ca">RCMPPrep.ca</a>, our practice tests mirror the real assessment across all six sections, with full answer explanations and section-by-section performance tracking. Try the free sample — no account required.</p>
+<p>At <a href="https://rcmpprep.ca">RCMPPrep.ca</a>, our unofficial practice tests cover all six skill areas with full answer explanations and section-by-section performance tracking. Try the free sample — no account required.</p>
 
 <blockquote>Candidates who don't prepare risk deferral. With structured practice, you go in knowing what to expect — and that changes everything.</blockquote>
     `,
@@ -290,9 +290,9 @@ export const blogPosts: BlogPost[] = [
 
 <ol>
   <li><strong>Practice with a timer from day one</strong> — Untimed memory practice builds memory. Timed memory practice builds the specific skill you need for the test. There's a big difference. Set your phone for 60 seconds and work within that constraint every time.</li>
-  <li><strong>Practice the delay too</strong> — In the real test, there's a gap between encoding and recall. That gap is specifically designed to let your short-term memory degrade. Practice by encoding a scene, doing something else for 2–3 minutes, then trying to recall. This trains your consolidation, not just your attention.</li>
+  <li><strong>Practice the delay too</strong> — Police entrance assessments typically include a gap between encoding and recall — specifically to test whether your memory holds under distraction. Practice by encoding a scene, doing something else for 2–3 minutes, then trying to recall. This trains your consolidation, not just your attention.</li>
   <li><strong>Review what you missed — specifically</strong> — After each practice session, note which type of detail you consistently miss (colour? quantity? position?). That's where your technique isn't working. Adjust your encoding strategy for that attribute category.</li>
-  <li><strong>Use the practice tests at RCMPPrep.ca</strong> — Our memory section is built to mirror the format and timing of the real OEA. The best practice is format-specific practice — general memory games will help, but test-format reps will help more.</li>
+  <li><strong>Use the practice tests at RCMPPrep.ca</strong> — Our memory section is built to develop the same skills tested in police entrance assessments — timed recall, scene detail, object attributes. The best practice is format-specific practice — general memory games will help, but structured reps will help more.</li>
 </ol>
 
 <h2>An Example to Try Right Now</h2>
@@ -311,7 +311,7 @@ export const blogPosts: BlogPost[] = [
 
 <blockquote>Memory isn't fixed. It's a trained skill. Candidates who spend two weeks practicing specific memory techniques with timed conditions consistently outperform candidates who rely on natural recall. Don't walk in cold.</blockquote>
 
-<p>Try our memory practice section at <a href="https://rcmpprep.ca">RCMPPrep.ca</a> — built to the same format and timing as the real OEA. Start with the <a href="/sample">free sample</a>.</p>
+<p>Try our memory practice section at <a href="https://rcmpprep.ca">RCMPPrep.ca</a> — designed to sharpen the same skills tested in police entrance assessments. Start with the <a href="/sample">free sample</a>.</p>
     `,
   },
 ];

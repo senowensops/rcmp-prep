@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "Is this the official RCMP test?",
     answer:
-      "No. This is an unofficial practice resource built to mirror the structure and question types of the RCMP Online Assessment. It is not affiliated with the RCMP or the Government of Canada.",
+      "No. This is an unofficial practice resource covering skill areas commonly assessed in police entrance evaluations. It is not affiliated with the RCMP or the Government of Canada, and does not claim to replicate any official test.",
   },
   {
     question: "How many tests do I get?",
