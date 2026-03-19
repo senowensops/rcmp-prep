@@ -36,16 +36,13 @@ export function BlogSlider() {
           </Link>
         </div>
 
-        {/* Cards — snap scroll on mobile, 3-col grid on desktop */}
-        <div
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0"
-          style={{ scrollbarWidth: 'none' }}
-        >
+        {/* Cards — simple grid, stacks on mobile */}
+        <div className="grid gap-6 sm:grid-cols-3">
           {recent.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex w-[80vw] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#161616] transition hover:-translate-y-1 hover:border-white/20 sm:w-auto"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#161616] transition hover:-translate-y-1 hover:border-white/20"
             >
               <div className="relative h-44 w-full overflow-hidden">
                 <Image

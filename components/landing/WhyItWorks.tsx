@@ -1,10 +1,10 @@
 const bullets = [
-  "Mirrors the real format — same section order, same timing, same question types",
-  "3 practice tests — practice once, compare progress, build confidence",
-  "Memory section uses real photos — not generic diagrams",
-  "Detailed explanations on every question — learn, don't just drill",
-  "Real scenarios — situations and examples drawn from actual police assessment content",
-  "One-time price — no subscription, no recurring charges",
+  "All 6 skill areas covered — workstyle, language, numerical, spatial, memory, and reasoning",
+  "3 full-length practice tests — track your progress and build confidence over time",
+  "Timed sections — practice the way you'll be tested: under real time pressure",
+  "Detailed explanations on every question — understand why, not just what",
+  "Memory section with scene recall — the format most candidates are least prepared for",
+  "One-time price — no subscription, no recurring charges, lifetime access",
 ];
 
 export function WhyItWorks() {

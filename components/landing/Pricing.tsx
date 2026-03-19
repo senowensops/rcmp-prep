@@ -79,7 +79,7 @@ export function Pricing() {
           <button
             onClick={handleUnlock}
             disabled={loading}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--red)] px-6 py-4 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+            className="unlock-cta inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--red)] px-6 py-5 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
             {loading ? (
               <>
@@ -95,9 +95,12 @@ export function Pricing() {
                 Redirecting...
               </>
             ) : (
-              'Unlock Full Access →'
+              '🔓 Unlock Full Access — $29 CAD'
             )}
           </button>
+          <p className="mt-3 text-center text-sm font-semibold text-[var(--gold)]">
+            Instant access · 2 spots left at founding price
+          </p>
 
         </div>
 
