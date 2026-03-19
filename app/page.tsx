@@ -5,6 +5,7 @@ import { Hero } from "@/components/landing/Hero";
 import { Pricing } from "@/components/landing/Pricing";
 import { SectionBreakdown } from "@/components/landing/SectionBreakdown";
 import { WhyItWorks } from "@/components/landing/WhyItWorks";
+import { BlogSlider } from "@/components/landing/BlogSlider";
 
 export const metadata: Metadata = {
   title: "RCMP Online Assessment Practice Test | RCMPPrep.ca",
@@ -30,6 +31,7 @@ export default function HomePage() {
       <Hero />
       <SectionBreakdown />
       <WhyItWorks />
+      <BlogSlider />
       <Pricing />
       <FAQ />
       <Footer />

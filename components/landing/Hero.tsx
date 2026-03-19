@@ -15,6 +15,12 @@ export function Hero() {
             RCMP<span className="text-[var(--red)]">PREP</span>
           </Link>
           <Link
+            href="/blog"
+            className="font-head text-sm font-bold uppercase tracking-[0.12em] text-white/70 transition hover:text-white"
+          >
+            Blog
+          </Link>
+          <Link
             href="/sample"
             className="rounded-full border border-[var(--red)] bg-[var(--red)] px-5 py-2.5 font-head text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[var(--red-dk)]"
           >
