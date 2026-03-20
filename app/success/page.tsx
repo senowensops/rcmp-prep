@@ -11,11 +11,23 @@ interface Props {
   searchParams: Promise<{ session_id?: string }>;
 }
 
+const SECTION_LABELS: Record<string, string> = {
+  workstyle: 'Workstyle',
+  language: 'Language',
+  numerical: 'Numerical',
+  spatial: 'Spatial',
+  memory: 'Memory',
+  business: 'Verbal Reasoning',
+};
+
 export default async function SuccessPage({ searchParams }: Props) {
   const { session_id } = await searchParams;
 
-  // Verify session server-side only when real Stripe keys are configured
+  // Retrieve session metadata to determine plan type
   let verified = false;
+  let plan = 'full';
+  let section = '';
+
   if (session_id && process.env.STRIPE_SECRET_KEY && !process.env.STRIPE_SECRET_KEY.includes('placeholder')) {
     try {
       const Stripe = (await import('stripe')).default;
@@ -23,15 +35,18 @@ export default async function SuccessPage({ searchParams }: Props) {
       const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2025-01-27.acrobat' as any });
       const session = await stripe.checkout.sessions.retrieve(session_id);
       verified = session.payment_status === 'paid';
+      plan = session.metadata?.plan ?? 'full';
+      section = session.metadata?.section ?? '';
     } catch (err) {
       console.error('Could not verify Stripe session:', err);
-      // Fail open — don't block user if verification fails
       verified = true;
     }
   } else {
-    // Placeholder keys or missing session_id — trust Stripe's redirect
     verified = true;
   }
+
+  const isSection = plan === 'section' && section;
+  const sectionLabel = isSection ? (SECTION_LABELS[section] ?? section) : '';
 
   return (
     <main
@@ -45,8 +60,7 @@ export default async function SuccessPage({ searchParams }: Props) {
         fontFamily: 'sans-serif',
       }}
     >
-      {/* Client component that sets localStorage on mount */}
-      <AccessUnlocker />
+      <AccessUnlocker plan={plan} section={section} />
 
       <div
         style={{
@@ -60,11 +74,9 @@ export default async function SuccessPage({ searchParams }: Props) {
           textAlign: 'center',
         }}
       >
-        {/* Gold top bar */}
         <div style={{ height: '3px', background: 'linear-gradient(90deg, #d4900a, #f0b429)' }} />
 
         <div style={{ padding: '3rem 2rem' }}>
-          {/* Checkmark circle */}
           <div
             style={{
               width: '72px',
@@ -108,7 +120,9 @@ export default async function SuccessPage({ searchParams }: Props) {
               margin: '0 0 2rem',
             }}
           >
-            You now have lifetime access to RCMP Prep
+            {isSection
+              ? `You now have lifetime access to the ${sectionLabel} section`
+              : 'You now have lifetime access to RCMP Prep'}
           </p>
 
           {verified && (

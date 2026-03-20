@@ -9,8 +9,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ found: false });
   }
 
+  // Fetch all purchases for this email to determine access level
   const res = await fetch(
-    `${SUPABASE_URL}/rest/v1/purchases?email=eq.${encodeURIComponent(email)}&select=email&limit=1`,
+    `${SUPABASE_URL}/rest/v1/purchases?email=eq.${encodeURIComponent(email)}&select=product`,
     {
       headers: {
         apikey: SUPABASE_KEY,
@@ -22,5 +23,31 @@ export async function GET(req: NextRequest) {
 
   if (!res.ok) return NextResponse.json({ found: false });
   const data = await res.json();
-  return NextResponse.json({ found: Array.isArray(data) && data.length > 0 });
+  if (!Array.isArray(data) || data.length === 0) {
+    return NextResponse.json({ found: false });
+  }
+
+  // Aggregate access: check for full access and collect unlocked sections
+  let fullAccess = false;
+  const unlockedSections: string[] = [];
+
+  for (const row of data) {
+    const product = row.product as string;
+    if (product === 'rcmp-prep-full-access') {
+      fullAccess = true;
+      break;
+    }
+    if (product.startsWith('rcmp-prep-section-')) {
+      const section = product.replace('rcmp-prep-section-', '');
+      if (!unlockedSections.includes(section)) {
+        unlockedSections.push(section);
+      }
+    }
+  }
+
+  return NextResponse.json({
+    found: true,
+    fullAccess,
+    unlockedSections: fullAccess ? [] : unlockedSections,
+  });
 }

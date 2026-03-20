@@ -17,7 +17,14 @@ function AccessPageInner() {
       .then(r => r.json())
       .then(d => {
         if (d.found) {
-          localStorage.setItem("rcmp-access-unlocked", "1");
+          if (d.fullAccess) {
+            localStorage.setItem("rcmp-access-unlocked", "1");
+          } else if (d.unlockedSections && d.unlockedSections.length > 0) {
+            // Merge with any existing sections
+            const existing = JSON.parse(localStorage.getItem("rcmp-unlocked-sections") ?? "[]") as string[];
+            const merged = [...new Set([...existing, ...d.unlockedSections])];
+            localStorage.setItem("rcmp-unlocked-sections", JSON.stringify(merged));
+          }
           setStatus("granted");
           setTimeout(() => router.push("/test/1"), 1500);
         } else {

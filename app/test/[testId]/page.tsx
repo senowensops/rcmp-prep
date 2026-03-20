@@ -40,6 +40,7 @@ export default function TestPage() {
   const [hasStudied, setHasStudied] = useState<Record<string, boolean>>({});
   const currentChallengeIdRef = useRef<string | null>(null);
   const [isPaid, setIsPaid] = useState(false);
+  const [unlockedSections, setUnlockedSections] = useState<string[]>([]);
   const [showPaywall, setShowPaywall] = useState(false);
   const questionSubsection = currentQuestion.subsectionId;
   const activeSubsection = currentSection.subsections?.find((sub) => sub.id === questionSubsection) ?? currentSection.subsections?.[0];
@@ -53,7 +54,14 @@ export default function TestPage() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setIsPaid(localStorage.getItem('rcmp-access-unlocked') === '1');
+      const fullAccess = localStorage.getItem('rcmp-access-unlocked') === '1';
+      setIsPaid(fullAccess);
+      if (!fullAccess) {
+        try {
+          const sections = JSON.parse(localStorage.getItem('rcmp-unlocked-sections') ?? '[]') as string[];
+          setUnlockedSections(sections);
+        } catch { /* ignore parse errors */ }
+      }
     }
   }, []);
 
@@ -108,10 +116,15 @@ export default function TestPage() {
   const Renderer = currentSection.type === "memory" ? null : renderers[currentSection.type as keyof typeof renderers];
 
   useEffect(() => {
-    if (testId !== 'sample' && globalQuestionIndex >= 3 && !isPaid) {
+    if (testId === 'sample' || isPaid) return;
+    if (unlockedSections.includes(currentSection.id)) {
+      setShowPaywall(false);
+      return;
+    }
+    if (globalQuestionIndex >= 3) {
       setShowPaywall(true);
     }
-  }, [globalQuestionIndex, isPaid, testId]);
+  }, [globalQuestionIndex, isPaid, testId, unlockedSections, currentSection.id]);
 
   if (!hydrated) return null;
 
@@ -168,6 +181,7 @@ export default function TestPage() {
         <PaywallModal
           onClose={() => { setShowPaywall(false); window.location.href = '/'; }}
           onUnlock={() => { setIsPaid(true); setShowPaywall(false); }}
+          currentSectionId={currentSection.id}
         />
       )}
     </main>
