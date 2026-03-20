@@ -11,7 +11,7 @@ function getStripe() {
 const SUPABASE_URL = process.env.SUPABASE_URL ?? 'https://oganoylgybihscjfmrqt.supabase.co';
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY ?? '';
 
-async function storeAccess(email: string, sessionId: string) {
+async function storeAccess(email: string, sessionId: string, product: string) {
   const res = await fetch(`${SUPABASE_URL}/rest/v1/purchases`, {
     method: 'POST',
     headers: {
@@ -23,7 +23,7 @@ async function storeAccess(email: string, sessionId: string) {
     body: JSON.stringify({
       email,
       stripe_session_id: sessionId,
-      product: 'rcmp-prep-full-access',
+      product,
       purchased_at: new Date().toISOString(),
     }),
   });
@@ -84,12 +84,16 @@ export async function POST(req: NextRequest) {
     const session = event.data.object as Stripe.Checkout.Session;
     const customerEmail = session.customer_email ?? session.customer_details?.email ?? '';
     const customerName = session.customer_details?.name ?? '';
+    const metadata = session.metadata ?? {};
 
-    console.log('[stripe-webhook] ✅ Payment completed:', session.id, customerEmail);
+    // Determine product identifier from metadata
+    const product = metadata.product ?? 'rcmp-prep-full-access';
+
+    console.log('[stripe-webhook] ✅ Payment completed:', session.id, customerEmail, product);
 
     if (customerEmail) {
       await Promise.allSettled([
-        storeAccess(customerEmail, session.id),
+        storeAccess(customerEmail, session.id, product),
         sendConfirmationEmail(customerEmail, customerName),
       ]);
     }

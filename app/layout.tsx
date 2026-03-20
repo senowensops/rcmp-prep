@@ -70,15 +70,26 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "RCMP Prep",
-              url: "https://rcmpprep.ca",
-              description: "Unofficial practice tests for the RCMP Online Assessment. Covers all 6 sections with timed practice and answer explanations.",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://rcmpprep.ca/blog?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  name: "RCMP Prep",
+                  url: "https://rcmpprep.ca",
+                  description: "Unofficial practice tests for the RCMP Online Assessment. Covers all 6 sections with timed practice and answer explanations.",
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: "https://rcmpprep.ca/blog?q={search_term_string}",
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+                {
+                  "@type": "Organization",
+                  name: "RCMP Prep",
+                  url: "https://rcmpprep.ca",
+                  description: "Unofficial, independent practice resource for the RCMP Online Assessment. Not affiliated with the Royal Canadian Mounted Police.",
+                  sameAs: [],
+                },
+              ],
             }),
           }}
         />
