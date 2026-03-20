@@ -20,7 +20,7 @@ export function Testimonials() {
               &ldquo;
             </span>
             <p className="flex-1 text-base leading-7 text-white/80">
-              I hadn&apos;t written a test like this since high school — that&apos;s almost 20
+              I hadn&apos;t written a test like this since high school — that&apos;s over 20
               years ago. Without proper preparation I would have failed for sure. This helped me
               feel genuinely ready.
             </p>
