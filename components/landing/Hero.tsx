@@ -29,6 +29,10 @@ export function Hero() {
         </nav>
 
         <div className="max-w-4xl">
+          <p className="mb-4 text-sm text-white/50">
+            32 candidates have practiced this week
+          </p>
+
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--red)]/30 bg-[var(--red)]/10 px-4 py-2 font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)]">
             <span aria-hidden="true">•</span>
             Unofficial Practice Resource
@@ -39,14 +43,18 @@ export function Hero() {
             <span className="block text-white">Assessment Prep</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
-            Unofficial practice tests covering the same skill areas as the RCMP Online Assessment — spatial reasoning, memory, numerical, language, and more. Candidates who don&apos;t prepare risk deferral — don&apos;t leave it to chance.
+          <p className="mt-3 text-base font-medium text-[var(--gold)]">
+            Candidates who skip prep risk a 6–12 month deferral.
+          </p>
+
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
+            Unofficial practice tests covering the same skill areas as the RCMP Online Assessment — spatial reasoning, memory, numerical, language, and more. Don&apos;t leave it to chance.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/sample"
-              className="inline-flex items-center justify-center rounded-2xl bg-[var(--red)] px-7 py-4 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)]"
+              className="inline-flex items-center justify-center rounded-2xl bg-[var(--red)] px-8 py-5 font-head text-2xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)]"
             >
               Try Free Sample →
             </Link>
@@ -58,8 +66,8 @@ export function Hero() {
             </button>
           </div>
 
-          <p className="mt-5 text-sm text-white/55 sm:text-base">
-            No account needed to try · Lifetime access
+          <p className="mt-3 text-sm text-white/50">
+            No account needed · Takes 2 minutes
           </p>
         </div>
       </div>

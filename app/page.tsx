@@ -7,6 +7,7 @@ import { SectionBreakdown } from "@/components/landing/SectionBreakdown";
 import { WhyItWorks } from "@/components/landing/WhyItWorks";
 import { BlogSlider } from "@/components/landing/BlogSlider";
 import { Testimonials } from "@/components/landing/Testimonials";
+import { StickyTrialBar } from "@/components/landing/StickyTrialBar";
 
 export const metadata: Metadata = {
   title: "RCMP Online Assessment Practice Test | RCMPPrep.ca",
@@ -88,6 +89,7 @@ export default function HomePage() {
       <Pricing />
       <FAQ />
       <Footer />
+      <StickyTrialBar />
     </main>
   );
 }
