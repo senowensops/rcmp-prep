@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import '@fontsource/barlow-condensed/700.css';
 import '@fontsource/barlow-condensed/800.css';
 import { AccessUnlocker } from './AccessUnlocker';
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 interface Props {
   searchParams: Promise<{ session_id?: string }>;

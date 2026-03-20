@@ -59,6 +59,7 @@ export function FAQ() {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
+                  aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-4 rounded-[1rem] px-5 py-4 text-left"
                 >
                   <span className="font-head text-xl font-bold uppercase tracking-[0.03em] text-white">{faq.question}</span>

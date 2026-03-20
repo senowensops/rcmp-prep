@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Free Sample Test | RCMP Prep",
   description: "Try the first 3 questions from each RCMP Online Assessment section — free, no account required.",
+  alternates: {
+    canonical: "https://rcmpprep.ca/sample",
+  },
 };
 
 

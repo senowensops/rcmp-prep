@@ -117,6 +117,7 @@ export default function TestPage() {
 
   return (
     <main className="min-h-screen">
+      <head><meta name="robots" content="noindex, nofollow" /></head>
       <TopBar answered={answered} total={total} section={currentSection} progress={progress} />
       {!oriented ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6">
@@ -143,7 +144,7 @@ export default function TestPage() {
           <div className="surface-card mb-4 p-6">
             <div className="font-head text-xs font-bold uppercase tracking-[0.2em] text-[var(--red)]">Test {testId}</div>
             <h1 className="mt-2 font-head text-4xl font-extrabold uppercase">{currentSection.label}</h1>
-            <p className="mt-2 text-[var(--muted)]">Question {state.currentQuestionIndex + 1} of {currentSection.questions.length}</p>
+            <p className="mt-2 text-[var(--muted)]" aria-live="polite" aria-atomic="true">Question {state.currentQuestionIndex + 1} of {currentSection.questions.length}</p>
             {activeSubsection ? <p className="mt-2 font-head text-sm uppercase tracking-[0.08em] text-[var(--gold)]">{activeSubsection.label}</p> : null}
             {currentSection.bannerNote ? <p className="mt-3 rounded-xl bg-[var(--surface2)] p-3 text-sm text-[var(--muted)]">{currentSection.bannerNote}</p> : null}
           </div>

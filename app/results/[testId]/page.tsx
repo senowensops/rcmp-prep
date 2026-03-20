@@ -19,6 +19,7 @@ export default function ResultsPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
+      <head><meta name="robots" content="noindex, nofollow" /></head>
       {/* 1. Score hero */}
       <section className="surface-card p-8 text-center">
         <div className="font-head text-sm font-bold uppercase tracking-[0.2em] text-[var(--red)]">Results</div>

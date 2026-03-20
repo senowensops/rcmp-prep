@@ -29,6 +29,7 @@ function AccessPageInner() {
 
   return (
     <main className="min-h-screen bg-[var(--dark)] flex items-center justify-center px-6">
+      <head><meta name="robots" content="noindex, nofollow" /></head>
       <div className="text-center max-w-md">
         {status === "checking" && (
           <>

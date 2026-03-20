@@ -61,7 +61,29 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </>
         )}
       </head>
-      <body>{children}</body>
+      <body>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-lg focus:bg-[var(--red)] focus:px-4 focus:py-2 focus:text-white">
+          Skip to content
+        </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "RCMP Prep",
+              url: "https://rcmpprep.ca",
+              description: "Unofficial practice tests for the RCMP Online Assessment. Covers all 6 sections with timed practice and answer explanations.",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://rcmpprep.ca/blog?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

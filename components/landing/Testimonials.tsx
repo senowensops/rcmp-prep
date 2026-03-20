@@ -19,11 +19,11 @@ export function Testimonials() {
             >
               &ldquo;
             </span>
-            <p className="flex-1 text-base leading-7 text-white/80">
+            <blockquote className="flex-1 text-base leading-7 text-white/80">
               I hadn&apos;t written a test like this since high school — that&apos;s over 20
               years ago. Without proper preparation I would have failed for sure. This helped me
               feel genuinely ready.
-            </p>
+            </blockquote>
             <div className="mt-6 border-t border-white/10 pt-5">
               <p className="font-head text-base font-bold uppercase tracking-[0.05em] text-white">
                 Jordan

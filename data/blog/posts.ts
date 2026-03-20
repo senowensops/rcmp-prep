@@ -314,4 +314,95 @@ export const blogPosts: BlogPost[] = [
 <p>Try our memory practice section at <a href="https://rcmpprep.ca">RCMPPrep.ca</a> — designed to sharpen the same skills tested in police entrance assessments. Start with the <a href="/sample">free sample</a>.</p>
     `,
   },
+  {
+    slug: 'rcmp-application-requirements-2025',
+    title: 'RCMP Application Requirements in Canada (2025 Guide)',
+    subtitle: 'Everything you need to qualify, apply, and move through the process',
+    date: '2025-03-15',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'A complete breakdown of the eligibility requirements, documentation, and assessment stages every RCMP applicant needs to know in 2025.',
+    coverImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
+    content: `
+<p>Applying to the RCMP is one of the most rigorous law enforcement application processes in Canada. Before you submit your application, you need to confirm you meet every eligibility requirement — and understand the assessment stages that follow. This guide covers the full picture for 2025 applicants.</p>
+
+<h2>Eligibility Requirements</h2>
+
+<p>To apply to the RCMP as a Regular Member, you must meet all of the following requirements at the time of application:</p>
+
+<ul>
+  <li><strong>Canadian citizenship</strong> — You must be a Canadian citizen. Permanent residents are not eligible to apply.</li>
+  <li><strong>Age</strong> — You must be at least 19 years old at the time of application. There is no upper age limit, though the physical demands of training and the role are significant.</li>
+  <li><strong>Criminal record</strong> — You must have no criminal convictions for which a pardon or record suspension has not been granted. Any undisclosed criminal history discovered during the background investigation will result in disqualification.</li>
+  <li><strong>Driver's licence</strong> — You must hold a valid, unrestricted Canadian driver's licence (not a learner's permit or graduated licence with restrictions).</li>
+  <li><strong>Education</strong> — A Canadian high school diploma or equivalent is the minimum requirement. Post-secondary education is not required but is considered an asset. International credentials must be assessed for Canadian equivalency.</li>
+  <li><strong>Language proficiency</strong> — You must be proficient in English or French. Bilingual candidates are considered an asset, particularly for postings in bilingual regions.</li>
+  <li><strong>Physical fitness</strong> — You must be in good physical condition. While there is no formal fitness test at the application stage, you must pass a comprehensive medical examination later in the process, and Depot training is physically demanding.</li>
+  <li><strong>Good character</strong> — You must demonstrate integrity, honesty, and suitability for police work throughout the entire application process.</li>
+</ul>
+
+<h2>Quick Eligibility Checklist</h2>
+
+<ul>
+  <li>✓ Canadian citizen</li>
+  <li>✓ 19 years of age or older</li>
+  <li>✓ No unresolved criminal convictions</li>
+  <li>✓ Valid, unrestricted Canadian driver's licence</li>
+  <li>✓ High school diploma or equivalent</li>
+  <li>✓ Proficient in English or French</li>
+  <li>✓ Good physical health</li>
+  <li>✓ Willing to relocate anywhere in Canada</li>
+</ul>
+
+<h2>Language Requirements</h2>
+
+<p>The RCMP operates in both official languages. You must be proficient in at least one — English or French. The Online Assessment (OEA) is available in both languages. Bilingual candidates are particularly competitive for postings in Quebec, New Brunswick, and the National Capital Region. If English or French is not your first language, ensure your proficiency level allows you to complete timed reading comprehension and business reasoning scenarios under pressure.</p>
+
+<h2>Education Requirements</h2>
+
+<p>The minimum education requirement is a Canadian high school diploma or an equivalent recognized by a Canadian educational institution. If your education was completed outside Canada, you'll need to have your credentials assessed by a recognized agency such as WES (World Education Services). While a university degree is not required, candidates with post-secondary education — especially in criminology, law, psychology, or social sciences — are often viewed favourably during the suitability interview.</p>
+
+<h2>Physical Requirements</h2>
+
+<p>There is no standardized fitness test at the initial application stage, but physical fitness matters at every phase. The medical examination will assess your vision, hearing, cardiovascular health, and overall physical condition. Depot training in Regina includes rigorous physical conditioning — running, defensive tactics, and obstacle courses. Candidates with a background in competitive athletics, military service, or consistent fitness training tend to adapt more quickly. Start building or maintaining a strong fitness routine well before you apply.</p>
+
+<h2>The Online Assessment (OEA) — The Key Filter</h2>
+
+<p>Once your application is accepted, you'll be invited to complete the RCMP Online Assessment. This is the first major screening stage, and the one that defers the most candidates. The OEA covers six sections:</p>
+
+<ol>
+  <li><strong>Workstyle</strong> — Personality and behavioural preferences</li>
+  <li><strong>Language Comprehension</strong> — Reading and inference under time pressure</li>
+  <li><strong>Numerical Reasoning</strong> — Data interpretation from charts, tables, and graphs</li>
+  <li><strong>Spatial Reasoning</strong> — 2D rotation, 3D assembly, and mechanical reasoning</li>
+  <li><strong>Memory</strong> — Timed recall of scenes, objects, and sequences</li>
+  <li><strong>Business Reasoning</strong> — Situational judgment and workplace decision-making</li>
+</ol>
+
+<blockquote>Candidates who fail the OEA are typically deferred for 6 to 12 months. It is the single most preparation-responsive stage of the entire application — and the one most candidates underestimate.</blockquote>
+
+<p>You can try a <a href="/sample">free practice test</a> covering all six sections at RCMPPrep.ca to see what the format looks like before your real test date.</p>
+
+<h2>Medical and Psychological Assessment</h2>
+
+<p>After passing the OEA, candidates undergo a comprehensive medical examination and a psychological assessment. The medical exam checks vision (correctable to at least 20/30 in each eye), hearing, cardiovascular health, and general physical condition. The psychological assessment evaluates emotional stability, stress tolerance, and fitness for the demands of police work. Both assessments are pass/fail and deferrals at this stage are typically longer to resolve than OEA deferrals.</p>
+
+<h2>Security Clearance and Background Investigation</h2>
+
+<p>The background investigation is the longest phase of the process — often taking 6 to 12 months on its own. An RCMP investigator will verify your employment history, contact references and family members, review your financial records, and check for criminal associations. Complete honesty in your application forms is critical. Inconsistencies between what you disclosed and what the investigation reveals are one of the most common reasons for disqualification. A clean background, full disclosure, and stable personal references will help this stage move as smoothly as possible.</p>
+
+<h2>Tips for a Strong Application</h2>
+
+<ol>
+  <li><strong>Prepare for the OEA before you receive the invitation</strong> — The window to complete it is limited. Don't wait until you're invited to start studying.</li>
+  <li><strong>Be thorough and honest in every form</strong> — Inconsistencies are flagged and investigated. Disclose proactively.</li>
+  <li><strong>Build a fitness baseline now</strong> — Depot training is physically intense. The earlier you start conditioning, the better.</li>
+  <li><strong>Choose your references carefully</strong> — Pick people who know you well, will respond promptly, and can speak to your character with specific examples.</li>
+  <li><strong>Research the role honestly</strong> — The RCMP wants candidates who understand what policing actually involves, not just the idea of it. Read, talk to serving members, and reflect on whether this career truly aligns with your values.</li>
+</ol>
+
+<p>Ready to start preparing for the Online Assessment? Try our <a href="/sample">free sample test</a> — no account required. It covers all six sections so you can see exactly what to expect.</p>
+    `,
+  },
 ];
