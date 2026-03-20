@@ -13,16 +13,28 @@ import { NextRequest, NextResponse } from 'next/server';
 //    (verify rcmpprep.ca so emails come from noreply@rcmpprep.ca)
 // ============================================================
 
-function buildEmailHtml(name: string, email: string): string {
+function buildEmailHtml(name: string, email: string, plan: string, section: string): string {
   const displayName = name && name.trim() ? name.split(' ')[0] : 'there';
   const accessUrl = `https://rcmpprep.ca/access?email=${encodeURIComponent(email)}`;
+  const isSection = plan === 'section' && section;
+  const sectionLabel = isSection ? section.charAt(0).toUpperCase() + section.slice(1) : '';
+  const emailTitle = isSection
+    ? `You're in — RCMP Prep ${sectionLabel} Section Unlocked`
+    : "You're in — RCMP Prep Full Access Unlocked";
+  const bodyCopy = isSection
+    ? `Your ${sectionLabel} section is now unlocked across all 3 practice tests.`
+    : 'Full access is now active. This is a serious move — and you made it. The RCMP selection process is competitive, and the candidates who commit early are the ones who show up prepared.';
+  const featureLine = isSection
+    ? `Full access to the ${sectionLabel} section — across all 3 tests`
+    : '6 test sections — Written Communication, Composition, Memory, Problem Solving, Judgement, and more';
+  const ctaText = isSection ? `Start ${sectionLabel} Practice →` : 'Start Practicing Now →';
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>You're in — RCMP Prep Full Access Unlocked</title>
+  <title>${emailTitle}</title>
 </head>
 <body style="margin:0;padding:0;background-color:#0a0a0f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#0a0a0f;min-height:100vh;">
@@ -58,7 +70,7 @@ function buildEmailHtml(name: string, email: string): string {
                 You're in, ${displayName}.
               </h1>
               <p style="margin:0;color:rgba(255,255,255,0.65);font-size:16px;line-height:1.7;">
-                Full access is now active. This is a serious move — and you made it. The RCMP selection process is competitive, and the candidates who commit early are the ones who show up prepared.
+                ${bodyCopy}
               </p>
             </td>
           </tr>
@@ -86,7 +98,7 @@ function buildEmailHtml(name: string, email: string): string {
                           <table cellpadding="0" cellspacing="0">
                             <tr>
                               <td style="width:22px;color:#c8102e;font-size:16px;vertical-align:top;">✓</td>
-                              <td style="color:rgba(255,255,255,0.8);font-size:15px;line-height:1.5;">6 test sections — Written Communication, Composition, Memory, Problem Solving, Judgement, and more</td>
+                              <td style="color:rgba(255,255,255,0.8);font-size:15px;line-height:1.5;">${featureLine}</td>
                             </tr>
                           </table>
                         </td>
@@ -139,7 +151,7 @@ function buildEmailHtml(name: string, email: string): string {
           <tr>
             <td style="padding:36px 48px 0;" align="center">
               <a href="https://rcmpprep.ca" style="display:inline-block;background:linear-gradient(135deg,#c8102e 0%,#a00d24 100%);color:#fff;padding:16px 40px;border-radius:10px;font-weight:800;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:none;">
-                Start Practicing Now →
+                ${ctaText}
               </a>
             </td>
           </tr>
@@ -184,7 +196,7 @@ function buildEmailHtml(name: string, email: string): string {
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, name } = await req.json();
+    const { email, name, plan, section } = await req.json();
 
     if (!email) {
       return NextResponse.json({ error: 'email is required' }, { status: 400 });
@@ -204,7 +216,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const html = buildEmailHtml(name ?? '', email);
+    const emailPlan = plan ?? 'full';
+    const emailSection = section ?? '';
+    const isSection = emailPlan === 'section' && emailSection;
+    const sectionLabel = isSection ? emailSection.charAt(0).toUpperCase() + emailSection.slice(1) : '';
+    const emailSubject = isSection
+      ? `You're in — RCMP Prep ${sectionLabel} Section Unlocked`
+      : "You're in — RCMP Prep Full Access Unlocked";
+    const html = buildEmailHtml(name ?? '', email, emailPlan, emailSection);
 
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -215,7 +234,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: 'RCMP Prep <noreply@rcmpprep.ca>',
         to: [email],
-        subject: "You're in — RCMP Prep Full Access Unlocked",
+        subject: emailSubject,
         html,
       }),
     });

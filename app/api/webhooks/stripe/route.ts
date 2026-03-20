@@ -34,7 +34,7 @@ async function storeAccess(email: string, sessionId: string, product: string) {
   }
 }
 
-async function sendConfirmationEmail(email: string, name: string) {
+async function sendConfirmationEmail(email: string, name: string, plan: string, section: string) {
   // ============================================================
   // TODO: Add RESEND_API_KEY to Vercel environment variables
   // 1. Go to https://resend.com — create a free account
@@ -50,7 +50,7 @@ async function sendConfirmationEmail(email: string, name: string) {
   const res = await fetch(`${baseUrl}/api/send-confirmation`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, name }),
+    body: JSON.stringify({ email, name, plan, section }),
   });
 
   if (!res.ok) {
@@ -94,7 +94,7 @@ export async function POST(req: NextRequest) {
     if (customerEmail) {
       await Promise.allSettled([
         storeAccess(customerEmail, session.id, product),
-        sendConfirmationEmail(customerEmail, customerName),
+        sendConfirmationEmail(customerEmail, customerName, metadata.plan ?? "full", metadata.section ?? ""),
       ]);
     }
   }
