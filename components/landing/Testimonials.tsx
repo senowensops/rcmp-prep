@@ -26,7 +26,7 @@ export function Testimonials() {
             </p>
             <div className="mt-6 border-t border-white/10 pt-5">
               <p className="font-head text-base font-bold uppercase tracking-[0.05em] text-white">
-                Jordan O.
+                Jordan
               </p>
               <p className="mt-1 text-sm text-[var(--gold)]">RCMP Applicant</p>
             </div>
