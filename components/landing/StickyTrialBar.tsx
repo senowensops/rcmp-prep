@@ -30,7 +30,7 @@ export function StickyTrialBar() {
     <div
       className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ${
         visible ? 'translate-y-0' : 'translate-y-full'
-      } lg:bottom-auto lg:top-0`}
+      }`}
     >
       <div className="flex items-center justify-between gap-4 bg-[#1a1a1a]/95 px-4 py-3 backdrop-blur-sm sm:px-6">
         <p className="font-head text-sm font-bold uppercase tracking-[0.08em] text-white/80 sm:text-base">
