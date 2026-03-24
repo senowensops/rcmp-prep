@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const jsonLd = {
+  const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
@@ -72,25 +72,45 @@ export default async function BlogPostPage({ params }: PageProps) {
     dateModified: post.date,
     author: {
       '@type': 'Organization',
-      name: post.author,
+      name: 'RCMPPrep.ca',
     },
     publisher: {
       '@type': 'Organization',
       name: 'RCMPPrep.ca',
       url: 'https://rcmpprep.ca',
     },
+    url: `https://rcmpprep.ca/blog/${post.slug}`,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://rcmpprep.ca/blog/${post.slug}`,
     },
   };
 
+  const faqJsonLd = post.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  } : null;
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <div className="min-h-screen bg-[var(--dark)] text-white">
         {/* Nav */}
         <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-6 sm:px-8">
@@ -165,6 +185,27 @@ export default async function BlogPostPage({ params }: PageProps) {
             className="prose mt-10"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* FAQ Section */}
+          {post.faqs.length > 0 && (
+            <section className="mt-14 border-t border-white/10 pt-10">
+              <h2 className="font-head text-2xl font-extrabold uppercase tracking-[0.04em] text-white">
+                Frequently Asked Questions
+              </h2>
+              <dl className="mt-6 space-y-0 divide-y divide-white/10">
+                {post.faqs.map((faq, i) => (
+                  <div key={i} className="py-5">
+                    <dt className="text-lg font-semibold text-white/90">
+                      {faq.question}
+                    </dt>
+                    <dd className="mt-2 text-base leading-relaxed text-white/55">
+                      {faq.answer}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
 
           {/* Share */}
           <div className="mt-12 border-t border-white/10 pt-8">
