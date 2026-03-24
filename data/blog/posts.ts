@@ -541,4 +541,77 @@ export const blogPosts: BlogPost[] = [
 <p>Want to practice RCMP-style judgment questions with explanations? Start with the <a href="/sample">free sample test</a> or jump into the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
     `,
   },
+  {
+    slug: 'rcmp-memory-section-training',
+    title: 'RCMP Memory Section Training: How to Actually Get Better at Recall',
+    subtitle: 'A practical way to train short-term visual memory for one of the most overlooked OEA sections',
+    date: '2026-03-24',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Assessment Prep',
+    excerpt: 'The RCMP memory section is not about having a “photographic memory.” It tests short-term visual recall — and with the right drills, most candidates can improve noticeably before test day.',
+    coverImage: 'https://images.unsplash.com/photo-1494172961521-33799ddd43a5?w=800&q=80',
+    faqs: [
+      { question: 'What is tested in the RCMP memory section?', answer: 'The RCMP memory section typically tests short-term visual recall. Candidates may need to remember details from a scene, object layout, sequence, or set of visual information and answer questions after a short delay.' },
+      { question: 'Can you improve for the RCMP memory section?', answer: 'Yes. Most candidates can improve by practicing short visual observation drills, chunking information, and reviewing scenes in a structured way instead of trying to memorize everything equally.' },
+      { question: 'How should I study for the RCMP memory test?', answer: 'Train with short recall exercises: look at a scene for a limited time, hide it, then write down positions, colours, quantities, and standout details. Review what you missed and repeat.' },
+      { question: 'Is the RCMP memory section hard?', answer: 'It can be challenging because the amount of detail is higher than most people expect. Candidates who go in untrained often feel overwhelmed, but practice usually improves both confidence and accuracy.' },
+    ],
+    content: `
+<p>The RCMP memory section tests short-term visual recall, not supernatural memory. In practice, that means noticing the right details quickly, organizing them mentally, and recalling them under pressure. The good news is that this skill is trainable — and most candidates improve when they stop trying to memorize everything at once.</p>
+
+<p>A lot of applicants underestimate the memory section because it sounds simple. You look at a scene, object set, or sequence, then answer questions about what you saw. No equations. No reading comprehension. No personality statements. Just memory.</p>
+
+<p>But that simplicity is exactly why it trips people up. The RCMP is not testing whether you can vaguely remember the scene. It is testing whether you can hold onto <em>specific</em> details after a short delay: colours, positions, quantities, order, and distinguishing features.</p>
+
+<h2>What the RCMP Memory Section Usually Demands</h2>
+
+<p>While the exact question format can vary, most memory tasks follow the same pattern:</p>
+
+<ul>
+  <li>you view information for a limited time</li>
+  <li>the image or sequence disappears</li>
+  <li>you answer detail-based questions from recall</li>
+</ul>
+
+<p>That means your challenge is not just remembering more — it is remembering <strong>the right categories of detail</strong>. Candidates often waste attention on random features and miss the things the questions are more likely to target.</p>
+
+<h2>4 Things to Notice First</h2>
+
+<ol>
+  <li><strong>Position</strong> — Where was each item located? Left or right, top or bottom, near or far, first or last. Position-based questions are common because they are easy to verify objectively.</li>
+  <li><strong>Quantity</strong> — How many of something were there? People often remember that an object existed but not whether there were two, three, or four.</li>
+  <li><strong>Colour and appearance</strong> — If two items are similar, colour and shape are often what separate the right answer from the trap answer.</li>
+  <li><strong>Standout anomalies</strong> — Anything unusual, out of place, or visually distinct deserves extra attention because it is more likely to be tested.</li>
+</ol>
+
+<h2>How to Train for the RCMP Memory Section</h2>
+
+<ol>
+  <li><strong>Use short observation drills</strong> — Look at a photo, diagram, or set of objects for 10 to 20 seconds. Hide it, then write down everything you remember. Do not just think about it — write it. Writing exposes the gaps immediately.</li>
+  <li><strong>Group details into chunks</strong> — Instead of memorizing twelve separate details, group them into categories: top row, bottom row, red objects, left side, sequence order. Chunking reduces mental overload and helps recall stay organized.</li>
+  <li><strong>Practice delayed recall</strong> — After viewing the image, wait 15 to 30 seconds before answering. That small delay better reflects the pressure of the actual assessment than instant recall does.</li>
+  <li><strong>Review misses, not just scores</strong> — Improvement comes from seeing what you consistently miss. Are you forgetting colours? Positions? Quantities? Once you know the pattern, you can train the weak spot directly.</li>
+</ol>
+
+<blockquote>The memory section rewards structure more than raw talent. Candidates who scan scenes deliberately and organize what they see usually outperform candidates who rely on instinct alone.</blockquote>
+
+<h2>3 Mistakes Candidates Make</h2>
+
+<ol>
+  <li><strong>Trying to memorize everything equally</strong> — That usually leads to overload. Prioritize position, quantity, colour, and anything unusual.</li>
+  <li><strong>Practicing too casually</strong> — Glancing at an image and saying “yeah, I got it” is not training. Real improvement comes when you force yourself to recall details under a timer.</li>
+  <li><strong>Ignoring fatigue</strong> — The memory section appears inside a broader assessment. If you only practice fresh, your prep may not reflect test-day conditions. Mix memory drills into longer study sessions sometimes.</li>
+</ol>
+
+<h2>A Simple Weekly Training Plan</h2>
+
+<p>For one week, do one short drill per day. Spend 10 minutes on visual recall using photos, object layouts, or screenshot-based exercises. For week two, increase the difficulty by shortening viewing time or adding a delay before recall. That is enough for many candidates to feel noticeably sharper.</p>
+
+<p>You do not need a perfect memory to do well here. You need a repeatable method: scan deliberately, group details, and recall in an organized way.</p>
+
+<p>If you want to train the full RCMP Online Assessment format — not just memory in isolation — try the <a href="/sample">free sample test</a> and see how your recall holds up under realistic conditions.</p>
+    `,
+  },
+
 ];
