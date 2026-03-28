@@ -15,7 +15,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/8 pt-6 text-sm text-white/48 sm:flex-row">
           <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
-            <Link href="/sample" className="transition hover:text-white">/sample</Link>
+            <Link href="/test/1" className="transition hover:text-white">/practice</Link>
             <Link href="/terms" className="transition hover:text-white">/terms</Link>
             <Link href="/privacy-policy" className="transition hover:text-white">/privacy-policy</Link>
           </div>

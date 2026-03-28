@@ -1,21 +1,59 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams } from "next/navigation";
 import { RadarChart } from "@/components/ui/RadarChart";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { getResults } from "@/lib/testData";
 import type { TestState } from "@/types";
 
+function SupportModal({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6">
+      <div className="relative max-w-md w-full rounded-2xl bg-[var(--surface)] border border-[var(--border)] p-8 text-center">
+        <h2 className="font-head text-3xl font-extrabold uppercase text-white">Nice work!</h2>
+        <p className="mt-4 text-lg text-[var(--muted)]">
+          This app is completely free. If it helped you prepare, consider supporting it.
+        </p>
+        <a
+          href="https://buymeacoffee.com/rcmpprep"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-block rounded-lg bg-green-600 hover:bg-green-700 px-8 py-3 font-semibold text-lg text-white transition-colors"
+        >
+          Support the App
+        </a>
+        <button
+          onClick={onClose}
+          className="mt-4 block w-full text-sm text-white/50 hover:text-white/80 transition"
+        >
+          No thanks, close
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function ResultsPage() {
   const params = useParams<{ testId: string }>();
   const [state] = useLocalStorage<TestState>(`rcmp-progress-${params.testId}`, { testId: params.testId, currentSectionId: 'workstyle', currentQuestionIndex: 0, answers: {}, flags: {}, timestamps: { updatedAt: new Date().toISOString() } });
   const results = useMemo(() => getResults(params.testId, state.answers), [params.testId, state.answers]);
   const heroClass = results.overallPct >= 80 ? 'text-[var(--gold)]' : results.overallPct >= 60 ? 'text-[var(--blue)]' : 'text-[var(--muted)]';
+  const [showSupport, setShowSupport] = useState(false);
 
   const flaggedIds = Object.keys(state.flags ?? {}).filter(id => (state.flags as Record<string, boolean>)[id]);
   const flaggedQuestions = results.review.filter(({ question }) => flaggedIds.includes(question.id));
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (sessionStorage.getItem('supportModalShown') === 'true') return;
+    const timer = setTimeout(() => {
+      setShowSupport(true);
+      sessionStorage.setItem('supportModalShown', 'true');
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
@@ -35,9 +73,7 @@ export default function ResultsPage() {
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href={`/test/${params.testId}`} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">Retake</Link>
-          {params.testId === 'sample' ? (
-            <Link href="/test/1" className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Try Full Test →</Link>
-          ) : Number(params.testId) < 3 ? (
+          {Number(params.testId) < 3 ? (
             <Link href={`/test/${Number(params.testId) + 1}`} className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Try Test {Number(params.testId) + 1}</Link>
           ) : null}
           <Link href="/" className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Back to Dashboard</Link>
@@ -70,7 +106,7 @@ export default function ResultsPage() {
           <div className="mt-6 space-y-4">
             {flaggedQuestions.map(({ question, selected, isCorrect }) => (
               <div key={question.id} className="relative rounded-2xl border border-[var(--border)] bg-[var(--surface2)] p-5">
-                <span className="absolute right-4 top-4 text-xl">🚩</span>
+                <span className="absolute right-4 top-4 text-xl">&#x1F6A9;</span>
                 <div className="font-head text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">{question.id}</div>
                 <div className="review-html mt-2" dangerouslySetInnerHTML={{ __html: question.text }} />
                 <div className="mt-4 space-y-2">
@@ -109,6 +145,8 @@ export default function ResultsPage() {
           </div>
         </details>
       </section>
+
+      {showSupport && <SupportModal onClose={() => setShowSupport(false)} />}
     </main>
   );
 }

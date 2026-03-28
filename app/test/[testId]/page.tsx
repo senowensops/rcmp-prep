@@ -16,7 +16,6 @@ import { BusinessSection } from "@/components/sections/BusinessSection";
 import { useTestState } from "@/hooks/useTestState";
 import { useTimer } from "@/hooks/useTimer";
 import { getSectionsForTest } from "@/lib/testData";
-import { PaywallModal } from "@/components/ui/PaywallModal";
 
 const renderers = {
   workstyle: WorkstyleSection,
@@ -39,9 +38,6 @@ export default function TestPage() {
   const [lockedChallenges, setLockedChallenges] = useState<Record<string, boolean>>({});
   const [hasStudied, setHasStudied] = useState<Record<string, boolean>>({});
   const currentChallengeIdRef = useRef<string | null>(null);
-  const [isPaid, setIsPaid] = useState(false);
-  const [unlockedSections, setUnlockedSections] = useState<string[]>([]);
-  const [showPaywall, setShowPaywall] = useState(false);
   const questionSubsection = currentQuestion.subsectionId;
   const activeSubsection = currentSection.subsections?.find((sub) => sub.id === questionSubsection) ?? currentSection.subsections?.[0];
   const challenge = currentSection.challengeMap?.[currentQuestion.id];
@@ -51,19 +47,6 @@ export default function TestPage() {
     setOriented(window.localStorage.getItem('rcmp-oriented') === '1');
     setResumeReady(Boolean(window.localStorage.getItem(`rcmp-progress-${testId}`)));
   }, [testId]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const fullAccess = localStorage.getItem('rcmp-access-unlocked') === '1';
-      setIsPaid(fullAccess);
-      if (!fullAccess) {
-        try {
-          const sections = JSON.parse(localStorage.getItem('rcmp-unlocked-sections') ?? '[]') as string[];
-          setUnlockedSections(sections);
-        } catch { /* ignore parse errors */ }
-      }
-    }
-  }, []);
 
   const { secondsLeft: subsectionTime, setSecondsLeft: setSubsectionTime } = useTimer(activeSubsection?.timerSeconds ?? null, Boolean(activeSubsection?.timerSeconds && !studyActive && !lockedSubsections[activeSubsection.id]), () => {
     if (activeSubsection) setLockedSubsections((prev) => ({ ...prev, [activeSubsection.id]: true }));
@@ -107,24 +90,10 @@ export default function TestPage() {
 
   const answered = Object.keys(state.answers).length;
   const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
-  const globalQuestionIndex = sections
-    .slice(0, sections.indexOf(currentSection))
-    .reduce((sum: number, s: typeof currentSection) => sum + s.questions.length, 0) + state.currentQuestionIndex;
   const answeredMap = Object.fromEntries(sections.map((section) => [section.id, section.questions.filter((q) => q.id in state.answers).length]));
   const progress = Math.round((answered / total) * 100);
   const locked = Boolean((activeSubsection && lockedSubsections[activeSubsection.id]) || (challenge && lockedChallenges[challenge.id]));
   const Renderer = currentSection.type === "memory" ? null : renderers[currentSection.type as keyof typeof renderers];
-
-  useEffect(() => {
-    if (testId === 'sample' || isPaid) return;
-    if (unlockedSections.includes(currentSection.id)) {
-      setShowPaywall(false);
-      return;
-    }
-    if (globalQuestionIndex >= 3) {
-      setShowPaywall(true);
-    }
-  }, [globalQuestionIndex, isPaid, testId, unlockedSections, currentSection.id]);
 
   if (!hydrated) return null;
 
@@ -138,13 +107,13 @@ export default function TestPage() {
             <div className="font-head text-sm font-bold uppercase tracking-[0.2em] text-[var(--red)]">Before you begin</div>
             <h2 className="mt-2 font-head text-4xl font-extrabold uppercase">Orientation</h2>
             <ul className="mt-5 space-y-3 text-[var(--muted)]">
-              <li>• Numerical Level 1 — 3 min</li>
-              <li>• Numerical Level 2 — 3 min</li>
-              <li>• Spatial 2D Rotation — 3 min</li>
-              <li>• Spatial 3D Shapes — 3 min</li>
-              <li>• Spatial Mechanical — 4 min</li>
-              <li>• Spatial Cubes — 5 min</li>
-              <li>• Memory answers — 45 seconds per challenge</li>
+              <li>&bull; Numerical Level 1 — 3 min</li>
+              <li>&bull; Numerical Level 2 — 3 min</li>
+              <li>&bull; Spatial 2D Rotation — 3 min</li>
+              <li>&bull; Spatial 3D Shapes — 3 min</li>
+              <li>&bull; Spatial Mechanical — 4 min</li>
+              <li>&bull; Spatial Cubes — 5 min</li>
+              <li>&bull; Memory answers — 45 seconds per challenge</li>
             </ul>
             <button onClick={() => { window.localStorage.setItem("rcmp-oriented", "1"); setOriented(true); }} className="mt-6 rounded-2xl bg-[var(--red)] px-6 py-4 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">I&apos;m Ready — Start the Test</button>
           </div>
@@ -177,13 +146,6 @@ export default function TestPage() {
           </div>
         </section>
       </div>
-      {showPaywall && (
-        <PaywallModal
-          onClose={() => { setShowPaywall(false); window.location.href = '/'; }}
-          onUnlock={() => { setIsPaid(true); setShowPaywall(false); }}
-          currentSectionId={currentSection.id}
-        />
-      )}
     </main>
   );
 }

@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import { FAQ } from "@/components/landing/FAQ";
 import { Footer } from "@/components/landing/Footer";
 import { Hero } from "@/components/landing/Hero";
+import { Pricing } from "@/components/landing/Pricing";
 import { SectionBreakdown } from "@/components/landing/SectionBreakdown";
 import { WhyItWorks } from "@/components/landing/WhyItWorks";
 import { BlogSlider } from "@/components/landing/BlogSlider";
 import { Testimonials } from "@/components/landing/Testimonials";
+import { StickyTrialBar } from "@/components/landing/StickyTrialBar";
 
 export const metadata: Metadata = {
   title: "RCMP Online Assessment Practice Test | RCMPPrep.ca",
   description:
-    "Unofficial RCMP Online Assessment practice — all 6 skill areas, timed, with full answer explanations. 100% free, no account needed.",
+    "Unofficial RCMP Online Assessment practice — all 6 skill areas, timed, with full answer explanations. Try free, no account needed.",
   keywords: [
     "rcmp online assessment practice test",
     "rcmp assessment prep",
@@ -50,7 +52,15 @@ const faqJsonLd = {
       name: "How much does RCMPPrep.ca cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RCMPPrep.ca is 100% free. All practice tests and sections are available at no cost.",
+        text: "Lifetime access is $29 CAD — a one-time payment with no subscription. You get access to 3 full practice tests covering all 6 sections.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I try it before buying?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The free sample lets you try questions from every section with no account required.",
       },
     },
     {
@@ -76,25 +86,10 @@ export default function HomePage() {
       <WhyItWorks />
       <Testimonials />
       <BlogSlider />
+      <Pricing />
       <FAQ />
-
-      {/* Support CTA */}
-      <section className="py-16 bg-gray-900 text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-4">This app is 100% free.</h2>
-          <p className="text-gray-300 text-lg mb-8">If it helped you prep for your RCMP exam, consider buying us a coffee</p>
-          <a
-            href="https://buymeacoffee.com/rcmpprep"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-colors"
-          >
-            Support the App
-          </a>
-        </div>
-      </section>
-
       <Footer />
+      <StickyTrialBar />
     </main>
   );
 }
