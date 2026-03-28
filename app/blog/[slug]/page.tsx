@@ -207,6 +207,27 @@ export default async function BlogPostPage({ params }: PageProps) {
             </section>
           )}
 
+          {/* Sources */}
+          {post.sources && post.sources.length > 0 && (
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <h3 className="text-sm font-semibold text-white/40 uppercase tracking-wide mb-4">Sources</h3>
+              <ol className="list-decimal list-inside space-y-2">
+                {post.sources.map((source, i) => (
+                  <li key={i} className="text-sm text-white/50">
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--red)] hover:underline"
+                    >
+                      {source.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
           {/* Share */}
           <div className="mt-12 border-t border-white/10 pt-8">
             <BlogShareButtons title={post.title} slug={post.slug} />

@@ -164,121 +164,129 @@ const partA: Question[] = [
   {
     id: 'T1-A-1',
     subsectionId: 'spatial-2d',
-    text: 'The arrow points <strong>right</strong>. Which option shows it after a <strong>90° clockwise</strong> rotation?',
+    text: 'The arrow points <strong>right</strong>. Which option shows it after a <strong>90° clockwise</strong> rotation, then a <strong>180° counter-clockwise</strong> rotation, then a <strong>90° counter-clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
-    correct: 1,
-    exp: 'Rotating right-pointing arrow 90° clockwise makes it point downward. Option B shows the arrow pointing down.',
+    correct: 2,
+    // 0 + 90 - 180 - 90 = -180 → 180°
+    exp: 'Step-by-step: 0° → +90° CW = 90° → −180° CCW = −90° (270°) → −90° CCW = −180° (180°). The arrow ends pointing left. Option C is correct.',
     promptSvg: qSvg(rotQ(ARR_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(ARR_O, 0)),    // A: unchanged (right)
-      oSvg(rotO(ARR_O, 90)),   // B: 90° CW = down ✓
-      oSvg(rotO(ARR_O, 180)),  // C: 180° = left
-      oSvg(rotO(ARR_O, 270)),  // D: 270° CW = up
+      oSvg(rotO(ARR_O, 90)),   // A: after step 1 only
+      oSvg(rotO(ARR_O, 270)),  // B: after step 2 only
+      oSvg(rotO(ARR_O, 180)),  // C: final (180°) ✓
+      oSvg(rotO(ARR_O, 0)),    // D: unchanged
     ],
   },
   {
     id: 'T1-A-2',
     subsectionId: 'spatial-2d',
-    text: 'Which option shows the <strong>T-shape</strong> after a <strong>180°</strong> rotation?',
+    text: 'Which option shows the <strong>T-shape</strong> after a <strong>90° counter-clockwise</strong> rotation, then a <strong>180° clockwise</strong> rotation, then a <strong>90° clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
     correct: 2,
-    exp: 'A 180° rotation flips the T upside-down — the crossbar moves to the bottom. Option C shows this result.',
+    // 0 - 90 + 180 + 90 = 180°
+    exp: 'Step-by-step: 0° → −90° CCW = 270° → +180° CW = 450° (90°) → +90° CW = 180°. The T is upside-down. Option C is correct.',
     promptSvg: qSvg(rotQ(T_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(T_O, 90)),   // A: 90° CW
-      oSvg(rotO(T_O, 270)),  // B: 90° CCW
-      oSvg(rotO(T_O, 180)),  // C: 180° ✓
+      oSvg(rotO(T_O, 270)),  // A: after step 1 only
+      oSvg(rotO(T_O, 90)),   // B: after step 2 only
+      oSvg(rotO(T_O, 180)),  // C: final (180°) ✓
       oSvg(rotO(T_O, 0)),    // D: unchanged
     ],
   },
   {
     id: 'T1-A-3',
     subsectionId: 'spatial-2d',
-    text: 'Which option shows the <strong>L-shape</strong> after a <strong>90° counter-clockwise</strong> rotation?',
+    text: 'Which option shows the <strong>L-shape</strong> after a <strong>90° clockwise</strong> rotation, then another <strong>90° clockwise</strong> rotation, then a <strong>180° counter-clockwise</strong> rotation, then a <strong>90° clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
-    correct: 0,
-    exp: '90° CCW = 270° CW. The foot of the L swings from the bottom-right to the top-right. Option A is correct.',
+    correct: 3,
+    // 0 + 90 + 90 - 180 + 90 = 90°
+    exp: 'Step-by-step: 0° → +90° = 90° → +90° = 180° → −180° = 0° → +90° = 90°. The L ends at 90° CW. Option D is correct.',
     promptSvg: qSvg(rotQ(L_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(L_O, 270)),  // A: 90° CCW ✓
-      oSvg(rotO(L_O, 90)),   // B: 90° CW
-      oSvg(rotO(L_O, 180)),  // C: 180°
-      oSvg(rotO(L_O, 0)),    // D: unchanged
+      oSvg(rotO(L_O, 0)),    // A: after step 3 (back to start)
+      oSvg(rotO(L_O, 180)),  // B: after step 2
+      oSvg(rotO(L_O, 270)),  // C: 270°
+      oSvg(rotO(L_O, 90)),   // D: final (90°) ✓
     ],
   },
   {
     id: 'T1-A-4',
     subsectionId: 'spatial-2d',
-    text: 'Which option shows the <strong>Z-shape</strong> after a <strong>90° clockwise</strong> rotation?',
+    text: 'Which option shows the <strong>Z-shape</strong> after a <strong>90° clockwise</strong> rotation, then a <strong>180° clockwise</strong> rotation, then a <strong>90° counter-clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
     correct: 3,
-    exp: 'Rotating the Z shape 90° clockwise makes it look like an S-shape on its side. Option D is correct.',
+    // 0 + 90 + 180 - 90 = 180°
+    exp: 'Step-by-step: 0° → +90° CW = 90° → +180° CW = 270° → −90° CCW = 180°. Option D is correct.',
     promptSvg: qSvg(rotQ(Z_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(Z_O, 180)),  // A: 180°
-      oSvg(rotO(Z_O, 270)),  // B: 90° CCW
+      oSvg(rotO(Z_O, 90)),   // A: after step 1
+      oSvg(rotO(Z_O, 270)),  // B: after step 2
       oSvg(rotO(Z_O, 0)),    // C: unchanged
-      oSvg(rotO(Z_O, 90)),   // D: 90° CW ✓
+      oSvg(rotO(Z_O, 180)),  // D: final (180°) ✓
     ],
   },
   {
     id: 'T1-A-5',
     subsectionId: 'spatial-2d',
-    text: 'Which option shows the <strong>plus sign</strong> after a <strong>90° clockwise</strong> rotation?',
+    text: 'Which option shows the <strong>plus sign</strong> after a <strong>90° clockwise</strong> rotation, then a <strong>90° counter-clockwise</strong> rotation, then a <strong>180° clockwise</strong> rotation, then a <strong>90° clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
-    correct: 2,
-    exp: 'A plus sign looks identical after any 90° rotation. Option C is the only one drawn at the correct scale and position matching a 90° CW rotation.',
+    correct: 3,
+    // 0 + 90 - 90 + 180 + 90 = 270°
+    exp: 'Step-by-step: 0° → +90° = 90° → −90° = 0° → +180° = 180° → +90° = 270°. Option D is correct.',
     promptSvg: qSvg(rotQ(PLUS_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(PLUS_O, 0)),    // A: unchanged
-      oSvg(rotO(PLUS_O, 180)),  // B: 180°
-      oSvg(rotO(PLUS_O, 90)),   // C: 90° CW ✓
-      oSvg(rotO(PLUS_O, 270)),  // D: 90° CCW
+      oSvg(rotO(PLUS_O, 0)),    // A: after step 2 (back to start)
+      oSvg(rotO(PLUS_O, 180)),  // B: after step 3
+      oSvg(rotO(PLUS_O, 90)),   // C: after step 1
+      oSvg(rotO(PLUS_O, 270)),  // D: final (270°) ✓
     ],
   },
   {
     id: 'T1-A-6',
     subsectionId: 'spatial-2d',
-    text: 'Which option shows the <strong>pentagon</strong> after a <strong>180°</strong> rotation?',
+    text: 'Which option shows the <strong>pentagon</strong> after a <strong>90° clockwise</strong> rotation, then a <strong>180° counter-clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
-    correct: 1,
-    exp: 'The pentagon\'s flat base is at the bottom. After 180°, the point is at the bottom and the flat edge is at the top. Option B shows this.',
+    correct: 2,
+    // 0 + 90 - 180 = -90 → 270°
+    exp: 'Step-by-step: 0° → +90° CW = 90° → −180° CCW = −90° (270°). The point ends up facing left. Option C is correct.',
     promptSvg: qSvg(rotQ(PENT_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(PENT_O, 90)),   // A: 90° CW
-      oSvg(rotO(PENT_O, 180)),  // B: 180° ✓
-      oSvg(rotO(PENT_O, 270)),  // C: 90° CCW
-      oSvg(rotO(PENT_O, 0)),    // D: unchanged
+      oSvg(rotO(PENT_O, 90)),   // A: after step 1
+      oSvg(rotO(PENT_O, 0)),    // B: unchanged
+      oSvg(rotO(PENT_O, 270)),  // C: final (270°) ✓
+      oSvg(rotO(PENT_O, 180)),  // D: 180°
     ],
   },
   {
     id: 'T1-A-7',
     subsectionId: 'spatial-2d',
-    text: 'Which option shows the <strong>hook shape</strong> after a <strong>270° clockwise</strong> rotation?',
+    text: 'Which option shows the <strong>hook shape</strong> after a <strong>90° counter-clockwise</strong> rotation, then a <strong>180° clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
-    correct: 0,
-    exp: '270° clockwise equals 90° counter-clockwise. The hook opening shifts from the right side to the top. Option A is correct.',
+    correct: 1,
+    // 0 - 90 + 180 = 90°
+    exp: 'Step-by-step: 0° → −90° CCW = 270° → +180° CW = 450° (90°). The hook ends at 90° CW. Option B is correct.',
     promptSvg: qSvg(rotQ(HOOK_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(HOOK_O, 270)),  // A: 270° CW = 90° CCW ✓
-      oSvg(rotO(HOOK_O, 0)),    // B: unchanged
-      oSvg(rotO(HOOK_O, 90)),   // C: 90° CW
+      oSvg(rotO(HOOK_O, 270)),  // A: after step 1
+      oSvg(rotO(HOOK_O, 90)),   // B: final (90°) ✓
+      oSvg(rotO(HOOK_O, 0)),    // C: unchanged
       oSvg(rotO(HOOK_O, 180)),  // D: 180°
     ],
   },
   {
     id: 'T1-A-8',
     subsectionId: 'spatial-2d',
-    text: 'Which option shows the <strong>staircase shape</strong> after a <strong>90° clockwise</strong> rotation?',
+    text: 'Which option shows the <strong>staircase shape</strong> after a <strong>90° clockwise</strong> rotation, then a <strong>90° counter-clockwise</strong> rotation, then a <strong>180° clockwise</strong> rotation?',
     opts: ['A','B','C','D'],
     correct: 3,
-    exp: 'The staircase steps from left to right. After 90° CW, the steps descend from top to bottom. Option D is correct.',
+    // 0 + 90 - 90 + 180 = 180°
+    exp: 'Step-by-step: 0° → +90° CW = 90° → −90° CCW = 0° → +180° CW = 180°. Option D is correct.',
     promptSvg: qSvg(rotQ(STEP_Q, 0)),
     choicesSvg: [
-      oSvg(rotO(STEP_O, 0)),    // A: unchanged
-      oSvg(rotO(STEP_O, 180)),  // B: 180°
-      oSvg(rotO(STEP_O, 270)),  // C: 90° CCW
-      oSvg(rotO(STEP_O, 90)),   // D: 90° CW ✓
+      oSvg(rotO(STEP_O, 90)),   // A: after step 1
+      oSvg(rotO(STEP_O, 0)),    // B: after step 2 (back to start)
+      oSvg(rotO(STEP_O, 270)),  // C: 270°
+      oSvg(rotO(STEP_O, 180)),  // D: final (180°) ✓
     ],
   },
 ];

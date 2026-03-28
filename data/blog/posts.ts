@@ -15,6 +15,7 @@ export interface BlogPost {
   coverImage: string;
   content: string;
   faqs: FAQ[];
+  sources?: { label: string; url: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -29,9 +30,9 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'The RCMP Online Assessment covers six distinct skill areas in a single sitting. Here\'s what each area involves and how to prepare strategically.',
     coverImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
     faqs: [
-      { question: 'How long is the RCMP online assessment?', answer: 'The RCMP online assessment typically takes 2.5 to 3.5 hours to complete. It is untimed per section but most candidates complete it in one sitting.' },
+      { question: 'How long is the RCMP online assessment?', answer: 'The RCMP online assessment typically takes approximately 55 to 70 minutes to complete. It should be finished in one sitting, as there are several timed portions.' },
       { question: 'What sections are on the RCMP online assessment?', answer: 'The RCMP online assessment includes cognitive ability tests (numerical, verbal, spatial reasoning), a memory test, situational judgment questions, and a workstyle/personality section.' },
-      { question: 'Can you retake the RCMP online assessment if you fail?', answer: 'If you are deferred on the RCMP online assessment, you must wait 6 months before reapplying. There is no immediate retake option.' },
+      { question: 'Can you retake the RCMP online assessment if you fail?', answer: 'If you are deferred on the RCMP online assessment, you must wait a minimum of 3 months before reapplying. There is no immediate retake option.' },
       { question: 'What score do you need to pass the RCMP online assessment?', answer: 'The RCMP does not publish a specific passing score. Candidates are assessed relative to other applicants, and scores in the top percentiles are most competitive.' },
       { question: 'How do I prepare for the RCMP online assessment?', answer: 'Prepare by practicing numerical and spatial reasoning questions under timed conditions, studying RCMP values for the workstyle section, and reviewing memory retention strategies.' },
     ],
@@ -71,6 +72,10 @@ export const blogPosts: BlogPost[] = [
 
 <blockquote>Candidates who don't prepare risk deferral. With structured practice, you go in knowing what to expect — and that changes everything.</blockquote>
     `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
   },
   {
     slug: 'rcmp-application-process-complete-guide',
@@ -84,8 +89,8 @@ export const blogPosts: BlogPost[] = [
     coverImage: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=800&q=80',
     faqs: [
       { question: 'How long does the RCMP application process take?', answer: 'The RCMP application process typically takes 12 to 24 months from initial application to an offer of employment, depending on the candidate and current hiring volumes.' },
-      { question: 'What are the steps in the RCMP application process?', answer: 'The RCMP application process includes: online application, online assessment, RPAB interview, polygraph, psychological assessment, medical and physical fitness testing, and security clearance.' },
-      { question: 'What is the RPAB interview in the RCMP application?', answer: 'The RPAB (Regular Member applicant) interview is a structured behavioral interview that assesses core competencies including community values, effective communication, and self-confidence.' },
+      { question: 'What are the steps in the RCMP application process?', answer: 'The RCMP application process includes: online application, online assessment, suitability interview, polygraph, psychological assessment, medical and physical fitness testing, and security clearance.' },
+      { question: 'What is the suitability interview in the RCMP application?', answer: 'The suitability interview (formerly called the RMSI) is a structured behavioral interview that assesses core competencies including integrity, communication, teamwork, and self-control under pressure.' },
       { question: 'Do you need a degree to join the RCMP?', answer: 'You do not need a university degree to join the RCMP. You must have a Canadian high school diploma or equivalent and be a Canadian citizen.' },
       { question: 'What disqualifies you from joining the RCMP?', answer: 'Criminal convictions, recent drug use, dishonesty during the process, poor driving record, or failure to meet medical and physical fitness standards can disqualify an applicant.' },
     ],
@@ -102,9 +107,9 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Online Application (GCjobs)</strong> — The process starts at GCjobs.ca. You'll submit a basic application confirming you meet the eligibility requirements: Canadian citizenship, age 19+, valid driver's licence, no criminal record, high school diploma or equivalent. This is a pass/fail eligibility screen — get it right and move on.</li>
   <li><strong>RCMP Online Assessment (OEA)</strong> — This is the first real filter. Once your application is accepted, you'll be invited to complete the OEA — six sections covering workstyle, language, numerical, spatial, memory, and business reasoning. You have a limited window to complete it. Candidates who are deferred here must typically wait 6–12 months before reapplying. This is the stage preparation matters most.</li>
   <li><strong>Application Forms & Documentation</strong> — If you pass the OEA, you'll receive a detailed package of forms covering your life history: employment, education, travel, relationships, finances, and more. Be thorough and honest. Inconsistencies are flagged and can disqualify you even at this early stage.</li>
-  <li><strong>Suitability Interview</strong> — A structured behavioural interview conducted by RCMP members. You'll be asked to provide specific examples from your past that demonstrate key competencies: teamwork, ethical decision-making, stress management, community service orientation. The STAR format (Situation, Task, Action, Result) is your best prep tool here.</li>
+  <li><strong>Suitability Interview</strong> — A structured behavioural interview conducted by RCMP members, consisting of two parts: the Attribute Evaluation Interview (competency-based behavioural questions) and the Regular Member Applicant Questionnaire (RMAQ) interview (background and integrity review). You'll be asked to provide specific examples from your past that demonstrate key competencies: teamwork, ethical decision-making, stress management, and service orientation. The STAR format (Situation, Task, Action, Result) is your best prep tool here.</li>
   <li><strong>Medical & Psychological Assessments</strong> — A comprehensive medical exam ensures you meet the physical standards for police work. The psychological assessment evaluates mental fitness and emotional regulation. Both are non-negotiable — deferrals at this stage are typically longer and harder to reverse.</li>
-  <li><strong>Polygraph Examination</strong> — Not every candidate is polygraphed, but many are. The exam covers criminal history, drug use, integrity, and honesty. The goal isn't to catch you — it's to verify that your documentation is consistent and complete. Honesty throughout the process is the only strategy that works.</li>
+  <li><strong>Polygraph Examination (Pre-Employment Polygraph)</strong> — All Regular Member applicants are required to complete a polygraph examination. The exam covers criminal history, drug use, integrity, and honesty. The goal isn't to catch you — it's to verify that your documentation is consistent and complete. Honesty throughout the process is the only strategy that works.</li>
   <li><strong>Background Investigation</strong> — This is the longest phase. An RCMP investigator will contact your references, previous employers, family members, and acquaintances. They'll verify your financial history, check for criminal associations, and assess your overall character. This stage alone can take 6–12 months.</li>
 </ol>
 
@@ -124,6 +129,11 @@ export const blogPosts: BlogPost[] = [
 
 <p>Ready to pass the OEA? Start with our <a href="/sample">free practice test</a> and see where you stand today.</p>
     `,
+    sources: [
+      { label: 'RCMP — How to Apply', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+      { label: 'RCMP — Meet Basic Requirements', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-meet-basic-requirements' },
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+    ],
   },
   {
     slug: 'rcmp-online-assessment-workstyle-section',
@@ -185,6 +195,10 @@ export const blogPosts: BlogPost[] = [
 
 <p>Want to practice the full OEA format, including workstyle scenarios? Try our <a href="/sample">free sample test</a> at RCMPPrep.ca.</p>
     `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
   },
   {
     slug: 'rcmp-spatial-reasoning-tips',
@@ -239,6 +253,10 @@ export const blogPosts: BlogPost[] = [
 
 <p>Our practice tests at <a href="https://rcmpprep.ca">RCMPPrep.ca</a> include full spatial sections with timed conditions. Start with the <a href="/sample">free sample</a> to see where you're starting from.</p>
     `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
   },
   {
     slug: 'what-happens-if-you-get-deferred-rcmp',
@@ -251,13 +269,13 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Getting deferred by the RCMP is more common than most people realize. Here\'s what different types of deferrals mean, why they happen, and what to do next.',
     coverImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
     faqs: [
-      { question: 'What does deferred mean on RCMP application?', answer: 'A deferral means you did not meet the required standard on a section of the RCMP assessment at this time. It is not a permanent rejection — you can reapply after 6 months.' },
-      { question: 'How long do I have to wait after RCMP deferral?', answer: 'After an RCMP deferral, you must wait a minimum of 6 months before resubmitting a new application.' },
+      { question: 'What does deferred mean on RCMP application?', answer: 'A deferral means you did not meet the required standard on a section of the RCMP assessment at this time. It is not a permanent rejection — the minimum waiting period to reapply depends on the stage, but OEA deferrals typically require 3 months.' },
+      { question: 'How long do I have to wait after RCMP deferral?', answer: 'The waiting period depends on where you were deferred. OEA deferrals typically require a minimum of 3 months. Later-stage deferrals (interview, polygraph, background) can range from 6 months to several years depending on the reason.' },
       { question: 'Can you appeal an RCMP deferral?', answer: 'RCMP deferrals cannot be formally appealed. The recommended path is to address the areas where you were deferred and reapply after the waiting period.' },
       { question: 'How many times can you apply to the RCMP?', answer: 'There is no official limit on how many times you can apply to the RCMP, as long as you wait the required time between applications after a deferral.' },
     ],
     content: `
-<p>An RCMP deferral means you did not meet the required standard at this time — but it is not a permanent rejection. Most deferrals require a 6-month waiting period before reapplying, and candidates who use that time for structured preparation frequently pass on their next attempt.</p>
+<p>An RCMP deferral means you did not meet the required standard at this time — but it is not a permanent rejection. The waiting period depends on where you were deferred: OEA deferrals typically require a minimum of 3 months, while later-stage deferrals can range from 6 months to several years. Candidates who use that time for structured preparation frequently pass on their next attempt.</p>
 
 <p>Getting a deferral from the RCMP is discouraging — especially when you've been working toward this goal for months. But here's the important truth: a deferral is not a permanent rejection. For many candidates, it's a detour, not a dead end. The key is understanding what happened and what to do next.</p>
 
@@ -266,7 +284,7 @@ export const blogPosts: BlogPost[] = [
 <h2>3 Types of RCMP Deferrals</h2>
 
 <ol>
-  <li><strong>Short-term deferral (typically 6 months)</strong> — Usually issued after the OEA. You didn't meet the required threshold in one or more sections, but the result wasn't severe enough to warrant a longer wait. The message is essentially: come back prepared. This is the most recoverable type of deferral, and structured preparation before reapplying makes a real difference.</li>
+  <li><strong>Short-term deferral (typically 3–6 months)</strong> — OEA deferrals typically require a minimum 3-month wait before reapplying. Other early-stage deferrals may be 6 months depending on the reason. This is the most recoverable type of deferral, and structured preparation before reapplying makes a real difference.</li>
   <li><strong>Long-term deferral (12–24+ months)</strong> — Issued after the suitability interview, psychological assessment, or background investigation. These deferrals reflect more substantive concerns — either about your profile, your history, or information that surfaced during the investigation. They're harder to reverse, but not impossible.</li>
   <li><strong>Indefinite deferral</strong> — Rare, but it happens. Usually reserved for serious integrity or criminal history issues. If you receive an indefinite deferral, seek specific legal or professional guidance before attempting to reapply.</li>
 </ol>
@@ -294,6 +312,11 @@ export const blogPosts: BlogPost[] = [
 
 <p>If your deferral came at the OEA stage, our <a href="/sample">practice tests</a> are specifically designed to help you close the gap before your next attempt. No account required to start.</p>
     `,
+    sources: [
+      { label: 'RCMP — How to Apply', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
   },
   {
     slug: 'rcmp-memory-section-study-guide',
@@ -367,6 +390,10 @@ export const blogPosts: BlogPost[] = [
 
 <p>Try our memory practice section at <a href="https://rcmpprep.ca">RCMPPrep.ca</a> — designed to sharpen the same skills tested in police entrance assessments. Start with the <a href="/sample">free sample</a>.</p>
     `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
   },
   {
     slug: 'rcmp-online-assessment-practice-questions',
@@ -451,6 +478,113 @@ export const blogPosts: BlogPost[] = [
 
 <p>Want to feel the format for yourself? Start with the <a href="/sample">free RCMP practice test sample</a>, then move into the full <a href="/test/1">practice assessment</a> on <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
     `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+      { label: 'RCMP — Meet Basic Requirements', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-meet-basic-requirements' },
+    ],
+  },
+  {
+    slug: 'rcmp-numerical-reasoning-practice',
+    title: 'RCMP Numerical Reasoning Practice: What to Expect and How to Prepare',
+    subtitle: 'A focused guide to the data interpretation and math skills tested in the RCMP online assessment',
+    date: '2026-03-24',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Assessment Prep',
+    excerpt: 'The RCMP numerical reasoning section trips up candidates who haven\'t practiced interpreting charts and data under time pressure. Here\'s exactly what\'s tested, where people lose points, and how to close the gap before test day.',
+    coverImage: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80',
+    faqs: [
+      { question: 'What is the RCMP numerical reasoning section?', answer: 'The RCMP numerical reasoning section tests your ability to read and interpret data from tables, charts, and graphs and answer practical math questions — including percentages, ratios, and basic arithmetic — accurately and under time pressure.' },
+      { question: 'Is the RCMP numerical reasoning test hard?', answer: 'The math itself is not advanced, but the time pressure and data-heavy format trip up many candidates who haven\'t practiced reading charts quickly. With 2 to 3 weeks of focused practice, most candidates see significant improvement.' },
+      { question: 'What math do I need for the RCMP numerical reasoning test?', answer: 'You need a solid grasp of percentages, fractions, ratios, basic averages, and reading information from bar charts, pie charts, and tables. No calculus or algebra is required.' },
+      { question: 'How do I practice RCMP numerical reasoning?', answer: 'Practice with timed data interpretation questions — focus on chart reading, percentage calculations, and ratio problems. RCMPPrep.ca offers numerical reasoning practice as part of the full mock assessment.' },
+      { question: 'How much of the RCMP online assessment is numerical reasoning?', answer: 'Numerical reasoning is one of six sections in the RCMP online assessment. While it is not the longest section, a poor score here directly affects your overall competitiveness.' },
+    ],
+    content: `
+<p>The RCMP numerical reasoning section tests practical data interpretation and arithmetic under time pressure — not advanced math. Candidates who struggle here usually haven't practiced reading charts and tables quickly, not because the math is beyond them. With targeted preparation, this is one of the most improvable sections of the entire OEA.</p>
+
+<p>When candidates think about studying for the RCMP Online Assessment, they usually focus on spatial reasoning or memory. Numerical reasoning gets underestimated — because most people assume they're "fine at math." And they are, abstractly. But the numerical section doesn't test abstract math. It tests whether you can extract specific numbers from a graph, calculate a percentage correctly on the first try, and do it all fast enough to not run out of time.</p>
+
+<p>Those are different skills. And if you haven't practiced them specifically, the section will feel harder than it should.</p>
+
+<h2>What the RCMP Numerical Reasoning Section Actually Tests</h2>
+
+<p>The section is built around data interpretation — not algebra or memorized formulas. You'll typically be given:</p>
+
+<ul>
+  <li>Bar charts comparing categories across time periods</li>
+  <li>Tables with multiple rows and columns of figures</li>
+  <li>Pie charts showing proportional distribution</li>
+  <li>Line graphs tracking change over time</li>
+</ul>
+
+<p>From that data, you'll be asked to calculate or compare values. The specific math involved almost always falls into one of these categories:</p>
+
+<ol>
+  <li><strong>Percentages and percentage change</strong> — What is the percentage increase from one year to the next? What fraction of the total does this category represent?</li>
+  <li><strong>Ratios and proportions</strong> — If one division has twice the staff of another, and the total is 150, how many are in each?</li>
+  <li><strong>Averages</strong> — What is the average monthly incident count across a 6-month period?</li>
+  <li><strong>Simple arithmetic with large numbers</strong> — Adding, subtracting, multiplying, or dividing values pulled from a table, often involving thousands or decimals.</li>
+  <li><strong>Reading across multiple data sources</strong> — Some questions require combining data from two charts or a chart and a table. This is where candidates slow down dangerously.</li>
+</ol>
+
+<h2>Where Candidates Lose Points</h2>
+
+<p>Numerical reasoning errors cluster around the same mistakes across thousands of practice attempts. Here are the patterns that cost candidates the most:</p>
+
+<ol>
+  <li><strong>Misreading the axis scale</strong> — A bar chart where the y-axis starts at 400 instead of 0 can make a bar that looks twice as tall as another represent only a 5% difference. Always check the scale before reading off any value. This single mistake accounts for a disproportionate share of wrong answers.</li>
+  <li><strong>Confusing absolute and percentage change</strong> — Questions often ask for the percentage change, not the raw difference. Calculating the number difference and moving on is a very common error. Read the question twice: does it ask how much, or how much as a percentage?</li>
+  <li><strong>Using the wrong row or column in a table</strong> — Dense tables with many rows and columns are easy to navigate incorrectly under pressure. Run your finger (or cursor) across the row deliberately — don't let your eye drift.</li>
+  <li><strong>Rounding prematurely</strong> — If you round off a number mid-calculation and then multiply, small errors compound. Carry the full number as long as possible, especially when the answer choices are close together.</li>
+  <li><strong>Running over time</strong> — The numerical section has a time constraint. Candidates who spend 3–4 minutes on a single complex question often don't finish. If you're stuck, make your best estimate and move on. An unanswered question scores the same as a wrong one.</li>
+</ol>
+
+<h2>A Practical Framework for Answering Numerical Questions</h2>
+
+<p>For every question, run this sequence before you calculate anything:</p>
+
+<ol>
+  <li><strong>Read the question first, not the chart</strong> — Know exactly what you need before you look at the data. This prevents you from absorbing irrelevant information or reading the wrong data.</li>
+  <li><strong>Identify which part of the chart answers it</strong> — Locate the specific row, column, bar, or slice you need. Note the units and the scale.</li>
+  <li><strong>Do the calculation cleanly and check the unit</strong> — Percentage? Ratio? Absolute number? Confirm the format matches what the question is asking for.</li>
+  <li><strong>Eliminate obvious wrong answers before confirming</strong> — If your answer is 42% and two of the options are 8% and 85%, you can quickly sense-check whether your result is in the right range before selecting.</li>
+</ol>
+
+<p>This approach adds a few seconds per question but dramatically reduces the kind of careless errors that come from rushing straight to calculation.</p>
+
+<h2>How to Practice RCMP Numerical Reasoning</h2>
+
+<p>Passive review of math concepts does almost nothing for this section. What works is timed repetition with real data interpretation questions. Here's a practical prep plan:</p>
+
+<ol>
+  <li><strong>Start with a diagnostic run</strong> — Take a timed numerical section cold to establish your current accuracy and speed. Don't guess your weaknesses — measure them.</li>
+  <li><strong>Drill percentages until they're automatic</strong> — Percentage change is in nearly every numerical test. Practice calculating it quickly and correctly without a calculator. The formula is simple: (new − old) ÷ old × 100. Internalize it until it's reflex.</li>
+  <li><strong>Practice reading charts fast</strong> — Find data interpretation questions online and read them under a 90-second timer per question. Speed at extracting data from visuals is a specific skill that improves quickly with repetition.</li>
+  <li><strong>Do mixed sessions late in your prep</strong> — Once you've drilled the individual skills, practice answering a variety of question types in a single session. This mirrors what the real test feels like and trains your brain to switch fluidly between chart types.</li>
+  <li><strong>Review every wrong answer in detail</strong> — The value is not just in getting the right answer but in understanding the error type. Did you misread the axis? Use the wrong formula? Rush and copy the wrong figure? Name the pattern and it becomes something you can consciously avoid.</li>
+</ol>
+
+<h2>Quick Reference: Formulas Worth Knowing Cold</h2>
+
+<ul>
+  <li><strong>Percentage change:</strong> (New − Old) ÷ Old × 100</li>
+  <li><strong>Percentage of a total:</strong> Part ÷ Whole × 100</li>
+  <li><strong>Simple average:</strong> Sum of values ÷ Number of values</li>
+  <li><strong>Ratio conversion:</strong> If the ratio is 3:2 and the total is 50, the larger share is 3 ÷ 5 × 50 = 30</li>
+</ul>
+
+<p>None of these require a calculator. They require familiarity. Practice them until you can apply them in under ten seconds without having to recall the steps consciously.</p>
+
+<blockquote>The numerical reasoning section is not a math test. It's a data literacy test under time pressure. Candidates who practice reading charts fast and calculating cleanly — rather than just reviewing formulas — consistently outperform those who don't.</blockquote>
+
+<p>Want to see what the numerical section actually feels like? Try the <a href="/sample">free RCMP practice test sample</a> or start the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>. Both include timed numerical reasoning questions with full answer explanations.</p>
+    `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
   },
   {
     slug: 'rcmp-business-reasoning-test-tips',
@@ -540,6 +674,334 @@ export const blogPosts: BlogPost[] = [
 
 <p>Want to practice RCMP-style judgment questions with explanations? Start with the <a href="/sample">free sample test</a> or jump into the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
     `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
+  },
+  {
+    slug: 'how-to-prepare-for-rcmp-oea-after-deferral',
+    title: 'How to Prepare for the RCMP OEA After a Deferral',
+    subtitle: 'A smart 6-month comeback plan for candidates who want to reapply stronger',
+    date: '2026-03-25',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Assessment Prep',
+    excerpt: 'Got deferred on the RCMP online assessment? Here’s how to use the waiting period properly, what to train first, and how to come back with a stronger score instead of just more hope.',
+    coverImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
+    faqs: [
+      { question: 'Can you reapply after failing the RCMP online assessment?', answer: 'Yes. If you are deferred after the RCMP online assessment, you can typically reapply after the required waiting period. For many candidates, that period is 6 months.' },
+      { question: 'How do I prepare for the RCMP OEA after a deferral?', answer: 'Start by identifying the sections most likely to have hurt your score, then train those skills with timed, section-specific practice. The best approach is a structured plan covering numerical, spatial, memory, business reasoning, and workstyle reflection.' },
+      { question: 'Why do people get deferred on the RCMP OEA?', answer: 'Most RCMP OEA deferrals happen because candidates underestimate the test, perform poorly in one or more sections, or answer the workstyle portion inconsistently. Preparation and self-awareness reduce that risk significantly.' },
+      { question: 'Is 6 months enough to improve for the RCMP test?', answer: 'Yes. Six months is enough time for most candidates to make major gains if they practice consistently. Even 20 to 30 focused minutes per day compounds meaningfully over that period.' },
+      { question: 'What should I study first after an RCMP deferral?', answer: 'Start with your weakest or most neglected sections — usually spatial reasoning, memory, or numerical reasoning — while also reviewing your approach to the workstyle and business reasoning sections.' },
+    ],
+    content: `
+<p>If you were deferred on the RCMP Online Entrance Assessment (OEA), the best move is not to wait passively for your reapplication window — it is to train with a plan. Most candidates can make meaningful gains over a 6-month deferral period by improving the exact sections that usually cause weak scores: spatial reasoning, memory, numerical reasoning, business judgment, and workstyle consistency.</p>
+
+<p>Getting deferred on the RCMP OEA stings. Most people take it personally for a few days. That's normal. But if you want the practical truth: a deferral is often less about your potential and more about your preparation. The OEA is designed to catch people who assume they can "wing it." If you came up short, your next shot should feel completely different.</p>
+
+<p>The goal now is simple: don't just reapply older. Reapply better.</p>
+
+<h2>Step 1: Treat the Deferral as Feedback, Not a Verdict</h2>
+
+<p>The RCMP usually won't tell you exactly which section hurt you most. That frustrates a lot of people, but it doesn't leave you powerless. You can still infer a lot from how the test felt.</p>
+
+<ul>
+  <li>If you felt rushed and sloppy, numerical reasoning or language may have dragged you down.</li>
+  <li>If parts of the test felt completely unfamiliar, spatial reasoning was likely a weak point.</li>
+  <li>If you blanked on scene details, memory probably needs focused work.</li>
+  <li>If multiple business reasoning answers looked equally right, judgment-style practice is needed.</li>
+  <li>If you answered the workstyle section quickly without much reflection, that may have been a hidden issue.</li>
+</ul>
+
+<p>You do not need perfect certainty to build a smart study plan. You just need honesty about what felt weak.</p>
+
+<h2>Step 2: Build a 6-Month RCMP OEA Comeback Plan</h2>
+
+<p>You do not need to grind for hours a day. What matters is consistency and specificity. A realistic plan looks more like 20 to 40 minutes per day, 4 to 5 days per week.</p>
+
+<ol>
+  <li><strong>Month 1: Diagnose and rebuild basics</strong> — Take a realistic sample test. Figure out which sections feel weakest. Review percentage change, ratios, and chart reading for numerical. Reintroduce yourself to cube nets, rotations, and mechanical diagrams for spatial. Start short memory drills with timed recall.</li>
+  <li><strong>Month 2: Section-by-section reps</strong> — Spend each week emphasizing one area: spatial, memory, numerical, language, then business reasoning. Keep workstyle reflection in the background. The goal is not variety — it's reps.</li>
+  <li><strong>Month 3: Add time pressure</strong> — Once you understand the format, start practicing at realistic pace. This is where the training starts to feel like the real thing instead of a study session.</li>
+  <li><strong>Month 4: Fix the recurring error patterns</strong> — By now you should know your traps. Maybe you misread chart axes, confuse mirrored shapes with rotated ones, or miss colours and positions in memory scenes. Name the pattern, then attack it directly.</li>
+  <li><strong>Month 5: Mixed assessment sessions</strong> — Start doing blended sessions that force you to switch from one skill type to another. That transition cost is part of the real OEA experience, and most candidates never practice it.</li>
+  <li><strong>Month 6: Full simulation and confidence reps</strong> — In the last month before reapplying, run full-length sessions periodically and tighten the weak spots that remain. You want familiarity, pace, and calm — not last-minute panic.</li>
+</ol>
+
+<h2>Step 3: Focus on the Most Trainable Sections First</h2>
+
+<p>If you're not sure where to start, start where the returns are highest.</p>
+
+<ol>
+  <li><strong>Spatial reasoning</strong> — This is one of the fastest-improving OEA sections when you practice consistently. Two to three weeks of daily reps can noticeably sharpen your pattern recognition and mental rotation.</li>
+  <li><strong>Memory</strong> — Most candidates improve quickly once they learn chunking, association, and spatial anchoring instead of relying on raw recall.</li>
+  <li><strong>Numerical reasoning</strong> — The math is usually not the real problem. Speed, chart reading, and avoiding careless mistakes are. Those are very trainable.</li>
+  <li><strong>Business reasoning</strong> — This improves once you learn the scoring logic: calm, proportionate, collaborative, chain-of-command aware.</li>
+  <li><strong>Workstyle</strong> — You do not "study" this section the same way, but you can prepare by reflecting honestly on your habits, motivations, and consistency.</li>
+</ol>
+
+<h2>Step 4: Don't Waste the Deferral Window</h2>
+
+<p>The biggest mistake candidates make after a deferral is doing nothing for five months and then panicking in the last two weeks. Familiarity with the test is not preparation. Real improvement comes from repeated exposure, answer review, and timed practice over time.</p>
+
+<p>If you use the deferral period properly, you come back with three major advantages:</p>
+
+<ul>
+  <li>you know what the test environment feels like</li>
+  <li>your weak sections are no longer unfamiliar</li>
+  <li>your confidence is based on practice, not optimism</li>
+</ul>
+
+<h2>Step 5: Measure Progress, Not Just Effort</h2>
+
+<p>Studying feels productive. Measured progress is productive. Track simple metrics as you go:</p>
+
+<ul>
+  <li>accuracy by section</li>
+  <li>average time per question type</li>
+  <li>most common error pattern</li>
+  <li>which sections still create mental fatigue fastest</li>
+</ul>
+
+<p>This matters because "I've been studying" is not the same as "I'm now 18% more accurate on spatial questions and finishing numerical sets faster." One is a feeling. The other is evidence.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>If you were deferred on the RCMP OEA, use the waiting period like a training block. The candidates who pass on their next attempt are usually not the smartest ones — they're the ones who came back with a plan, repeated reps, and a better understanding of how the test actually works.</p>
+
+<blockquote>A deferral can either become six months of frustration or six months of compounding improvement. The better choice is obvious.</blockquote>
+
+<p>Want a structured place to start? Try the <a href="/sample">free RCMP practice test sample</a> and then train with the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
+    `,
+    sources: [
+      { label: 'RCMP — How to Apply', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
+  },
+  {
+    slug: 'how-long-is-the-rcmp-online-assessment',
+    title: 'How Long Is the RCMP Online Assessment?',
+    subtitle: 'What to expect for total test time, section pacing, and how to avoid energy crashes mid-assessment',
+    date: '2026-03-26',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Assessment Prep',
+    excerpt: 'Wondering how long the RCMP online assessment takes? Here’s the realistic time range, how each section feels, and how to prepare so the length doesn’t become the thing that hurts your score.',
+    coverImage: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=800&q=80',
+    faqs: [
+      { question: 'How long does the RCMP online assessment take?', answer: 'Most candidates complete the RCMP online assessment in about 2.5 to 3.5 hours. The exact time varies based on reading speed, decision-making pace, and how much time you need in each section.' },
+      { question: 'Is the RCMP online assessment timed?', answer: 'The RCMP online assessment has timing and pacing expectations within the overall session, but many candidates experience it as one long sitting with several sections that reward efficient work rather than slow perfectionism.' },
+      { question: 'Can you take breaks during the RCMP online assessment?', answer: 'You should follow the official instructions in your assessment invitation. In practice, most candidates should plan to complete the assessment in one focused sitting and treat it like a continuous exam block.' },
+      { question: 'What makes the RCMP online assessment feel long?', answer: 'The RCMP online assessment feels long because it shifts between very different mental tasks — workstyle, reading, numerical reasoning, spatial reasoning, memory, and business judgment — which creates cognitive fatigue even if the clock time is manageable.' },
+      { question: 'How should I prepare for the length of the RCMP online assessment?', answer: 'Practice in longer blocks, do at least one full-length simulation before test day, and build habits around pacing, hydration, and concentration so fatigue does not cause careless mistakes late in the test.' },
+    ],
+    content: `
+<p>The RCMP online assessment usually takes about <strong>2.5 to 3.5 hours</strong> for most candidates. Some finish a bit faster, some take longer, but the important truth is this: the test feels long not just because of the clock, but because it asks your brain to switch repeatedly between very different types of thinking.</p>
+
+<p>That matters because candidates often prepare for the question types without preparing for the <em>length</em> of the experience. Then they hit the second half of the test mentally flat, start rushing, and lose points to fatigue instead of ability.</p>
+
+<p>If you're asking how long the RCMP online assessment is, you're really asking two questions:</p>
+
+<ul>
+  <li>how much time should I set aside?</li>
+  <li>how do I make sure the length does not hurt my score?</li>
+</ul>
+
+<p>Let's answer both.</p>
+
+<h2>The Realistic Time Range</h2>
+
+<p>Most applicants should block off <strong>at least 3.5 hours</strong> of uninterrupted time, even if they expect to finish sooner. A lot of candidates land in the 2.5 to 3.5 hour range, but trying to squeeze the assessment into a tight window is a bad idea. You want breathing room before and after, not pressure from another appointment hanging over you.</p>
+
+<p>Why the range? Because the RCMP OEA includes multiple sections that pull on different strengths:</p>
+
+<ul>
+  <li><strong>workstyle</strong> — slower, reflective decision-making</li>
+  <li><strong>language</strong> — reading speed and comprehension</li>
+  <li><strong>numerical reasoning</strong> — careful chart reading and calculation</li>
+  <li><strong>spatial reasoning</strong> — intense mental rotation and pattern tracking</li>
+  <li><strong>memory</strong> — concentration and detail retention</li>
+  <li><strong>business reasoning</strong> — judgment and situational logic</li>
+</ul>
+
+<p>A strong reader may move quickly through language but slow down on numerical. Someone comfortable with charts might still lose time on spatial or memory. That's why there is no single perfect completion time.</p>
+
+<h2>Why the RCMP Online Assessment Feels So Long</h2>
+
+<p>The RCMP OEA is not long in the same way a simple multiple-choice quiz is long. It feels long because the cognitive load keeps changing. You are not just repeating one skill for three hours. You are switching gears over and over.</p>
+
+<ol>
+  <li><strong>Reflection fatigue</strong> — The workstyle section can seem easy, but it quietly drains focus because it requires self-assessment and consistency.</li>
+  <li><strong>Precision fatigue</strong> — Numerical and memory sections punish little mistakes, which increases mental tension.</li>
+  <li><strong>Visualization fatigue</strong> — Spatial reasoning burns energy fast if you are not practiced.</li>
+  <li><strong>Judgment fatigue</strong> — Business reasoning questions often present multiple plausible answers, so your brain stays in evaluation mode.</li>
+</ol>
+
+<p>That mix is exactly why some candidates feel surprisingly drained halfway through even if the total time does not sound terrible on paper.</p>
+
+<h2>How to Pace Yourself Properly</h2>
+
+<p>The goal is not to move slowly and perfectly. The goal is to work efficiently and stay mentally steady from the first section to the last.</p>
+
+<ol>
+  <li><strong>Block off more time than you think you'll need</strong> — Give yourself a clean test window with no calls, errands, or interruptions looming.</li>
+  <li><strong>Don't over-invest in early questions</strong> — Candidates sometimes burn too much energy trying to be perfect near the start, then pay for it later.</li>
+  <li><strong>Stay calm when a section feels hard</strong> — A difficult section does not mean the whole test is going badly. Reset mentally instead of spiraling.</li>
+  <li><strong>Protect the second half of the test</strong> — The candidates who perform well late usually treat pacing as an energy-management problem, not just a speed problem.</li>
+</ol>
+
+<h2>How to Train for the Length Before Test Day</h2>
+
+<p>If you only practice in 10-minute bursts, the real assessment will feel heavier than it should. You need at least some prep that matches the endurance demand of the actual test.</p>
+
+<ol>
+  <li><strong>Do one full simulation</strong> — Before your real test, complete a practice session that approximates the real duration and section variety as closely as possible.</li>
+  <li><strong>Practice mixed sections</strong> — Do not only drill one skill at a time. Part of the challenge is switching between cognitive modes.</li>
+  <li><strong>Build concentration habits</strong> — Quiet room, phone away, browser distractions closed, water nearby. Train in conditions that resemble the real thing.</li>
+  <li><strong>Notice when you fade</strong> — If your accuracy drops after 70 minutes, that is useful data. It tells you what kind of stamina you need to build.</li>
+</ol>
+
+<h2>Simple Test-Day Setup That Helps</h2>
+
+<ul>
+  <li>eat something light beforehand so you're not distracted by hunger</li>
+  <li>use the washroom before you begin</li>
+  <li>silence notifications and close every irrelevant tab</li>
+  <li>have water nearby</li>
+  <li>treat the assessment like a real performance event, not a casual website quiz</li>
+</ul>
+
+<p>That last point matters. The candidates who do best usually respect the event. They don't approach it loosely.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>If you're wondering how long the RCMP online assessment is, the safe answer is: plan for a focused <strong>3.5-hour block</strong>, expect roughly <strong>2.5 to 3.5 hours</strong> of actual testing, and prepare for the mental endurance as much as the question content.</p>
+
+<blockquote>The RCMP online assessment is not just a skill test. It is also a concentration test. Candidates who prepare for both usually score better.</blockquote>
+
+<p>Want to get used to the format before the real thing? Start with the <a href="/sample">free sample test</a> or try the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
+    `,
+    sources: [
+      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
+  },
+  {
+    slug: 'rcmp-polygraph-test-what-to-expect',
+    title: 'RCMP Polygraph Test: What to Expect',
+    subtitle: 'How the RCMP polygraph fits into the application process, what gets discussed, and how to prepare honestly',
+    date: '2026-03-26',
+    author: 'RCMP Prep Team',
+    readTime: '8 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP polygraph test checks whether your forms, disclosures, and interview answers stay consistent. Here’s what to expect and how to prepare honestly.',
+    coverImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=800&q=80',
+    faqs: [
+      { question: 'What is the RCMP polygraph test for?', answer: 'The RCMP polygraph test is used to examine whether your disclosures, forms, and statements are complete and consistent. It focuses on integrity, not on catching nervous people for being nervous.' },
+      { question: 'Do all RCMP applicants take a polygraph?', answer: 'Yes. The polygraph (Pre-Employment Polygraph) is mandatory for all Regular Member applicants. Declining to take it will result in the application being discontinued.' },
+      { question: 'How long is the RCMP polygraph test?', answer: 'Candidates often report the full RCMP polygraph appointment taking several hours, commonly around 3 to 4 hours including review, consent, discussion, and the exam itself.' },
+      { question: 'Can you fail the RCMP polygraph for being nervous?', answer: 'Nervousness alone is not the issue. The bigger risk is incomplete disclosure, contradictions, or trying to manage the test instead of answering directly and honestly.' },
+      { question: 'What kinds of topics come up in the RCMP polygraph?', answer: 'Applicants commonly report questions about past drug use, criminal activity, theft, honesty, relationships, finances, employment history, and anything disclosed in their background forms.' },
+    ],
+    content: `
+<p>The <strong>RCMP polygraph test</strong> is used to check whether your background forms, disclosures, and interview answers are complete and consistent. For most applicants, the safest way to prepare is simple: review your file carefully, disclose honestly, and walk in understanding that the exam is mainly about integrity, not performance tricks.</p>
+
+<p>The RCMP polygraph sits inside the broader security and suitability screening process for Regular Member applicants. It is not the first stage, and it is not a standalone "gotcha" event. Its job is to help the RCMP evaluate whether what you have said about your history matches what you continue to say when the details are reviewed closely.</p>
+
+<p>If you are searching for what to expect on the RCMP polygraph test, you are probably worried about two things: what they ask, and how much one appointment can affect your file. Both matter. The good news is that strong candidates usually do best by being organized, calm, and fully honest — not by trying to outsmart the process.</p>
+
+<h2>What the RCMP Polygraph Test Is Actually Looking For</h2>
+
+<p>The RCMP polygraph test is less about proving you are a perfectly stress-free person and more about checking integrity. Investigators want to see whether your disclosures remain consistent across your application package, interviews, and security screening.</p>
+
+<p>Topics commonly reported by applicants include:</p>
+
+<ul>
+  <li>past drug use, including frequency and recency</li>
+  <li>criminal behaviour, charges, or undisclosed incidents</li>
+  <li>theft, fraud, or dishonesty in school or at work</li>
+  <li>employment history and reasons for leaving jobs</li>
+  <li>financial issues such as debt, collections, or bankruptcy</li>
+  <li>relationships, associations, and anything relevant to background screening</li>
+</ul>
+
+<p>That is why the <strong>RCMP polygraph test</strong> feels intense for some candidates: the conversation is detailed, personal, and built around areas where omissions or half-truths tend to surface.</p>
+
+<h2>How the RCMP Polygraph Test Appointment Usually Works</h2>
+
+<p>While each file can vary, many applicants describe the RCMP polygraph test appointment as taking roughly <strong>3 to 4 hours</strong> from start to finish. Some appointments are shorter and some run longer depending on how complex the file is and how much needs to be clarified.</p>
+
+<ol>
+  <li><strong>Pre-test review</strong> — The examiner explains the process, goes over consent and expectations, and reviews your forms or earlier disclosures. This is often where details get clarified before any sensors are involved.</li>
+  <li><strong>Question discussion</strong> — You may go through topic areas in advance so the examiner can make sure the questions are clear and not confusing. This is not a speed test. Clarity matters more than rushing.</li>
+  <li><strong>The exam phase</strong> — The actual instrument portion is only one part of the overall appointment. The examiner asks structured questions while monitoring physiological responses.</li>
+  <li><strong>Post-test follow-up</strong> — If something seems unclear or inconsistent, you may be asked to explain further. Many candidates say this conversation is just as important as the test itself.</li>
+</ol>
+
+<p>Notice the pattern: the RCMP polygraph test is not just about sitting in a chair answering yes/no questions. It is a full integrity interview process wrapped around the instrumented portion.</p>
+
+<h2>What Hurts Applicants Most at the RCMP Polygraph Stage</h2>
+
+<ol>
+  <li><strong>Incomplete disclosure</strong> — The most common problem is not "failing because of nerves." It is leaving something out earlier and then getting cornered by your own omission later.</li>
+  <li><strong>Minimizing behaviour</strong> — Candidates sometimes try to make a past event sound smaller, rarer, or less serious than it was. That usually creates more problems than the original conduct itself.</li>
+  <li><strong>Inconsistency across forms</strong> — If your timelines, drug-use history, job exits, travel, or finances shift from one version to another, that becomes the issue.</li>
+  <li><strong>Trying to game the RCMP polygraph test</strong> — Reading "countermeasure" advice online is a bad idea. It signals poor judgment and misses the core point of the stage entirely.</li>
+</ol>
+
+<h2>How to Prepare for the RCMP Polygraph Test the Right Way</h2>
+
+<p>The best preparation for the <strong>RCMP polygraph test</strong> is administrative and personal, not tactical.</p>
+
+<ol>
+  <li><strong>Review your forms carefully</strong> — Go back through your background package, timelines, and any disclosures you already made. Make sure your memory is refreshed before the appointment.</li>
+  <li><strong>Correct omissions before they become contradictions</strong> — If you realize you left something out, the smarter move is to disclose it properly than to hope it never comes up.</li>
+  <li><strong>Answer directly</strong> — Rambling, hedging, or trying to sound perfect usually creates confusion. Direct, accurate answers help more.</li>
+  <li><strong>Sleep and show up regulated</strong> — You do not need to be zen-master calm, but you do want to be rested enough to think clearly for a long appointment.</li>
+  <li><strong>Stop obsessing over the machine</strong> — The instrument is part of the process, but the bigger issue is still honesty and consistency.</li>
+</ol>
+
+<h2>Can You Pass the RCMP Polygraph If You Have a Messy Past?</h2>
+
+<p>Sometimes, yes. A complicated history is not automatically worse than a hidden one. Many policing applicants worry that any past mistake is disqualifying, but in practice the RCMP is often more concerned with patterns, recency, severity, and whether you were honest about it from the start.</p>
+
+<p>That does <em>not</em> mean everything is acceptable. Serious criminal conduct, major integrity issues, or recent problematic behaviour can absolutely damage an application. But the lesson is still the same: the RCMP polygraph test is usually hardest on applicants who are trying to curate a cleaner story than the real one.</p>
+
+<h2>How This Stage Fits Into the Bigger RCMP Process</h2>
+
+<p>The polygraph is one checkpoint inside a much longer file that can easily stretch beyond <strong>12 months</strong> and in many cases closer to <strong>400+ days</strong> from application to offer. It does not replace the suitability interview, medical review, psychological assessment, or background investigation. It supports them.</p>
+
+<p>That broader context matters because candidates sometimes over-focus on the RCMP polygraph test and under-prepare for everything else. If you are still early in the process, your bigger leverage is often performing well on the online assessment first. Start with the <a href="/sample">free sample</a> or work through the full <a href="/test/1">practice assessment</a> so you actually reach the later stages with momentum.</p>
+
+<h2>RCMP Polygraph Test FAQ</h2>
+
+<p><strong>Q: How should I prepare the day before the RCMP polygraph test?</strong><br />
+A: Review your forms, get a normal night's sleep, and avoid trying to cram clever tactics from the internet. The best preparation is to make sure your disclosures are accurate and fresh in your mind.</p>
+
+<p><strong>Q: Does the RCMP polygraph test ask only yes or no questions?</strong><br />
+A: The exam portion often uses tightly structured questions, but the overall appointment includes discussion and clarification. Expect a mix of formal questions and broader follow-up conversation.</p>
+
+<p><strong>Q: What if I forgot to disclose something earlier in my RCMP application?</strong><br />
+A: It is generally better to correct an omission proactively than to let it become a contradiction later. If you are unsure how to handle it, communicate clearly and honestly with the recruiting process.</p>
+
+<p><strong>Q: Is the RCMP polygraph test the same as a criminal interrogation?</strong><br />
+A: No. It is a screening step within a hiring process. It is serious, but its purpose is to evaluate integrity and consistency within your application file.</p>
+
+<p><strong>Q: What matters more at the RCMP polygraph stage: being calm or being honest?</strong><br />
+A: Honesty matters more. Most candidates are at least somewhat nervous. What creates bigger problems is inconsistency, concealment, or trying to control the outcome instead of answering truthfully.</p>
+
+<blockquote>The RCMP polygraph test is not a stage you beat with tricks. It is a stage you get through by having nothing in your story that needs protecting.</blockquote>
+
+<p>If you are still preparing for the earlier stages, start where it matters most: the OEA. Try the <a href="/sample">free sample test</a> or jump into the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
+    `,
+    sources: [
+      { label: 'RCMP — Pre-Employment Polygraph Information', url: 'https://www.rcmp-grc.gc.ca/sites/default/files/doc/5096e.pdf' },
+      { label: 'RCMP — Complete the Suitability Assessment Interview', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-suitability-assessment-interview' },
+      { label: 'RCMP — How to Apply', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+    ],
   },
   {
     slug: 'rcmp-memory-section-training',
