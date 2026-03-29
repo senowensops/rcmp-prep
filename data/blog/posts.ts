@@ -1004,6 +1004,123 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     ],
   },
   {
+    slug: 'rcmp-suitability-interview-guide',
+    title: 'RCMP Suitability Interview Guide: How to Prepare for the RMSI',
+    subtitle: 'What the Attribute Evaluation Interview and RMAQ are really testing — and how to prepare for both',
+    date: '2026-03-29',
+    author: 'RCMP Prep Team',
+    readTime: '8 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP suitability interview (RMSI) is the first time you sit across from an RCMP member and defend who you are. Here\'s exactly what it covers, how it\'s scored, and how to prepare stories that actually land.',
+    coverImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80',
+    faqs: [
+      { question: 'What is the RCMP suitability interview?', answer: 'The RCMP suitability interview (formally called the Regular Member Suitability Interview or RMSI) is a structured behavioural interview that evaluates your core competencies — problem-solving, teamwork, communication, and self-control — using real examples from your past.' },
+      { question: 'What is the RMAQ in the RCMP application?', answer: 'The RMAQ (Regular Member Applicant Questionnaire) is part of the suitability interview process. It reviews your background — employment, relationships, conduct, finances — and is used to identify any integrity or suitability concerns.' },
+      { question: 'How do I prepare for the RCMP suitability interview?', answer: 'Prepare by identifying 6 to 8 strong behavioural examples from your work, volunteer, sports, or personal life that demonstrate each core competency. Practice answering them in STAR format: Situation, Task, Action, Result.' },
+      { question: 'What are the 4 competencies assessed in the RCMP suitability interview?', answer: 'The four core competencies evaluated in the RCMP suitability interview are: Problem-Solving, Teamwork, Communication, and Self-Control and Composure.' },
+      { question: 'What is the STAR method for RCMP interview questions?', answer: 'STAR stands for Situation, Task, Action, Result. It is the recommended format for answering behavioural questions in the RCMP interview — describe the context, your role, the specific actions you took, and the outcome.' },
+      { question: 'Can you fail the RCMP suitability interview?', answer: 'Yes. Candidates who do not meet the required standard on the suitability interview are deferred. Common reasons include weak behavioural examples, inconsistencies with background forms, or a profile that raises integrity concerns.' },
+    ],
+    content: `
+<p>The RCMP suitability interview — formally called the Regular Member Suitability Interview (RMSI) — is a structured behavioural assessment designed to evaluate whether your past actions demonstrate the core competencies the RCMP needs in an officer. It is conducted by trained RCMP members and consists of two distinct parts: the Attribute Evaluation Interview and the Regular Member Applicant Questionnaire (RMAQ).</p>
+
+<p>After the OEA, this is the first major face-to-face filter. Candidates who pass the online assessment often underestimate what comes next. The suitability interview is longer, more personal, and less predictable than a standard job interview. The RCMP is not looking for perfect answers — they are looking for self-aware candidates who can demonstrate competency through specific, honest examples from their real history.</p>
+
+<h2>The Two Parts of the RCMP Suitability Interview</h2>
+
+<ol>
+  <li><strong>The Attribute Evaluation Interview</strong> — This is the structured behavioural portion. You will be asked a series of competency-based questions requiring you to describe specific situations from your past. The RCMP uses your actual stories — not hypotheticals — to evaluate whether your natural tendencies align with the competencies of a RCMP officer. Expect 4 to 6 questions per competency, and plan for this portion to take 90 minutes or more.</li>
+  <li><strong>The Regular Member Applicant Questionnaire (RMAQ) Interview</strong> — This is a detailed review of your background. An interviewer goes through your life history forms and asks follow-up questions about employment gaps, past relationships, financial issues, conduct history, and anything else flagged during the screening process. This part is not about performing well — it is about being fully honest and consistent with what you already disclosed.</li>
+</ol>
+
+<h2>The 4 Core Competencies the RCMP Is Evaluating</h2>
+
+<p>Every behavioural question in the suitability interview is designed to assess one or more of these four competencies:</p>
+
+<ol>
+  <li><strong>Problem-Solving</strong> — Your ability to analyze complex situations, break problems into parts, identify the root cause, weigh options under pressure, and make decisions — especially when information is incomplete. The RCMP wants officers who think methodically, not impulsively.</li>
+  <li><strong>Teamwork</strong> — Your ability to collaborate, share responsibility, resolve interpersonal friction, support others, and achieve goals as a unit rather than as an individual. Officers work in structured teams. Lone-wolf candidates are a red flag.</li>
+  <li><strong>Communication</strong> — Your ability to receive information accurately, convey ideas clearly across different audiences, adjust your approach when the situation demands it, and ensure mutual understanding — not just that you spoke, but that you were genuinely understood.</li>
+  <li><strong>Self-Control and Composure</strong> — Your ability to stay regulated under stress, frustration, danger, or provocation. This is often the competency candidates underestimate. It is not just about staying calm — it is about staying functional, professional, and measured when most people would react differently.</li>
+</ol>
+
+<h2>What Behavioural Questions Actually Sound Like</h2>
+
+<p>The RCMP does not release its actual question bank, but the format is consistent and well-documented. Expect questions that begin with:</p>
+
+<ul>
+  <li>"Tell me about a time when..."</li>
+  <li>"Give me an example of a situation where..."</li>
+  <li>"Describe a time when you had to..."</li>
+  <li>"Walk me through a situation where..."</li>
+</ul>
+
+<p>Representative examples by competency:</p>
+
+<ul>
+  <li><strong>Problem-Solving:</strong> "Tell me about a difficult or complex problem you had to solve, and how you gathered the required information to find an effective solution."</li>
+  <li><strong>Teamwork:</strong> "Describe a situation where team members were having difficulty working together. What was your role and what did you do to help?"</li>
+  <li><strong>Communication:</strong> "Tell me about a time when you had a difficult message to deliver, and how you made sure it was understood."</li>
+  <li><strong>Self-Control:</strong> "Describe a situation where you were under significant pressure or provocation. How did you handle it and what was the outcome?"</li>
+</ul>
+
+<h2>How to Use the STAR Method Effectively</h2>
+
+<p>The STAR method is not just a template — it is a structure that ensures your answer contains the information the interviewers are actually scoring.</p>
+
+<ol>
+  <li><strong>Situation</strong> — Set the scene concisely. Who was involved, what was the context, why did the situation matter? Do not spend more than 60 seconds here. The situation is background — not the story.</li>
+  <li><strong>Task</strong> — What was your specific role or responsibility in this situation? What were you expected to do or decide? This matters because the interviewers need to understand your level of agency in the story.</li>
+  <li><strong>Action</strong> — This is the most important part. What did you specifically do? Be precise. Do not say "we worked together" — say what you personally contributed, decided, or initiated. Interviewers will probe here if your answer is vague.</li>
+  <li><strong>Result</strong> — What happened? What was the outcome? What did you learn? If the result was not perfect, that is often fine — how you handled a difficult outcome can demonstrate more than a clean win.</li>
+</ol>
+
+<h2>4 Mistakes That Cost Candidates the Interview</h2>
+
+<ol>
+  <li><strong>Using hypothetical answers</strong> — "What I would do is..." is not an acceptable answer format. The RCMP wants what you actually did. If you don't have a strong example, you need to build your story bank before the interview.</li>
+  <li><strong>Vague actions</strong> — Candidates often describe situations and results clearly but give fuzzy actions: "I helped the team" or "I tried to stay calm." Interviewers follow up on vague actions. Prepare specific ones.</li>
+  <li><strong>Stories that don't actually demonstrate the competency</strong> — Make sure your chosen story clearly shows the behaviour being assessed. A teamwork story where you worked alone is not a teamwork story.</li>
+  <li><strong>Inconsistency with your RMAQ</strong> — If you describe a relationship in the RMAQ differently than it surfaces in your stories, it raises flags. Your whole file should tell a consistent story about who you are.</li>
+</ol>
+
+<h2>How to Build Your Story Bank Before the Interview</h2>
+
+<p>The most practical thing you can do is identify 6 to 8 strong examples from your past that can flex across multiple competencies. Strong stories often work for 2 or 3 different questions.</p>
+
+<p>Look at your entire history: hockey or other sports teams, military or first responder experience if applicable, previous jobs, volunteering, school projects, coaching roles, family situations. The RCMP values depth of self-reflection more than prestige of setting. A strong story from your hockey career can outperform a generic corporate story.</p>
+
+<p>For each story, work through STAR in writing before the interview. Then practice saying it out loud — not reading it, saying it naturally. The goal is that the stories feel like genuine memory recall, not a rehearsed script.</p>
+
+<h2>3 Qualities That Make Stories Stand Out</h2>
+
+<ol>
+  <li><strong>They are specific</strong> — Real details, real names (if appropriate), real consequences. Generic stories feel rehearsed and often score lower because they sound coached.</li>
+  <li><strong>They are honest about difficulty</strong> — Stories where everything went smoothly feel flat. Stories where things got hard, you made a judgment call, and you saw a meaningful result are more compelling.</li>
+  <li><strong>They reflect self-awareness</strong> — Mentioning what you learned, how you'd approach it differently, or why it mattered to you signals maturity and genuineness.</li>
+</ol>
+
+<h2>Preparing for the RMAQ Portion</h2>
+
+<p>The RMAQ interview is different in nature from the behavioural portion. You are not performing here — you are being verified. The best preparation is:</p>
+
+<ul>
+  <li>Review your background forms thoroughly before the interview</li>
+  <li>Make sure your timelines, employment history, and disclosed information are accurate and complete</li>
+  <li>If there are difficult areas in your past — financial issues, prior relationships, prior conduct — prepare to discuss them honestly and without defensiveness</li>
+  <li>Do not try to frame your history more favourably than it was; inconsistency is a bigger problem than a complicated past</li>
+</ul>
+
+<blockquote>The RCMP suitability interview is not designed to trick you. It is designed to find out whether the person you say you are is the person you actually were — across years of real decisions and real situations. Candidates who know their own stories and can tell them clearly almost always perform better than those who arrive hoping to improvise.</blockquote>
+
+<p>If you are still working toward the earlier stages, pass the OEA first. Try the <a href="/sample">free practice test</a> or start the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
+    `,
+    sources: [
+      { label: 'RCMP — Complete the Suitability Assessment Interview', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-suitability-assessment-interview' },
+      { label: 'RCMP — How to Apply', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+    ],
+  },
+  {
     slug: 'rcmp-memory-section-training',
     title: 'RCMP Memory Section Training: How to Actually Get Better at Recall',
     subtitle: 'A practical way to train short-term visual memory for one of the most overlooked OEA sections',
