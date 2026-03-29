@@ -150,12 +150,12 @@ const netPromptB = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(
 
 const netOption = (top: string, front: string, right: string) =>
   oSvg(`
-    <polygon points="17,24 30,17 43,24 30,31" fill="#f8fafc" stroke="#333" strokeWidth="1.5"/>
-    <polygon points="17,24 17,38 30,45 30,31" fill="#e2e8f0" stroke="#333" strokeWidth="1.5"/>
-    <polygon points="30,31 43,24 43,38 30,45" fill="#cbd5e1" stroke="#333" strokeWidth="1.5"/>
-    <text x="30" y="28" textAnchor="middle" fontSize="8" fill="#111" fontWeight="700">${top}</text>
-    <text x="23" y="37" textAnchor="middle" fontSize="8" fill="#111" fontWeight="700">${front}</text>
-    <text x="37" y="37" textAnchor="middle" fontSize="8" fill="#111" fontWeight="700">${right}</text>
+    <polygon points="10,28 30,16 50,28 30,40" fill="#f8fafc" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="10,28 10,48 30,56 30,40" fill="#e2e8f0" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="30,40 50,28 50,48 30,56" fill="#cbd5e1" stroke="#333" strokeWidth="1.5"/>
+    <text x="30" y="32" textAnchor="middle" fontSize="9" fill="#111" fontWeight="700">${top}</text>
+    <text x="19" y="47" textAnchor="middle" fontSize="9" fill="#333" fontWeight="700">${front}</text>
+    <text x="41" y="47" textAnchor="middle" fontSize="9" fill="#444" fontWeight="700">${right}</text>
   `);
 
 // ─── Part A: 2D rotations ─────────────────────────────────────────────────────
