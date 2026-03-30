@@ -1192,5 +1192,131 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 <p>If you want to train the full RCMP Online Assessment format — not just memory in isolation — try the <a href="/sample">free sample test</a> and see how your recall holds up under realistic conditions.</p>
     `,
   },
+  {
+    slug: 'rcmp-pare-test-requirements-training',
+    title: 'RCMP PARE Test: Requirements, Standards, and How to Train',
+    subtitle: 'The Physical Abilities Requirement Evaluation is pass/fail — here\'s what the course looks like and how to hit the cutoff',
+    date: '2026-03-30',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP PARE test is a timed physical fitness obstacle course. To pass, you need to complete it within the cutoff time. Here\'s exactly what the course involves and how to train for it.',
+    coverImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
+    faqs: [
+      { question: 'What is the RCMP PARE test?', answer: 'The PARE (Physical Abilities Requirement Evaluation) is a timed fitness test used by the RCMP to ensure candidates have the physical capacity for police work. It involves an obstacle course, push-and-pull simulation, and a controlled fall exercise.' },
+      { question: 'What is the passing time for the RCMP PARE test?', answer: 'The PARE test must be completed in 4 minutes and 45 seconds or less. Some positions may have different time standards — confirm the requirement for your specific intake.' },
+      { question: 'How many times can you retake the RCMP PARE test?', answer: 'The RCMP typically allows candidates to retake the PARE test if they fail. However, there is usually a waiting period and a limited number of attempts. Contact your recruiter for specifics.' },
+      { question: 'How do I train for the RCMP PARE test?', answer: 'Train the specific movement patterns: stair climbing, low crawls, and quick directional changes. Supplement with cardiovascular conditioning (running, rowing, cycling) and leg strength training. Aim to complete the course well under the cutoff, not just at it.' },
+      { question: 'Where do I take the RCMP PARE test?', answer: 'PARE testing is done at designated RCMP testing sites and some accredited police fitness centres across Canada. Your recruiter will arrange the test location and date as part of your application process.' },
+      { question: 'Is the PARE test the same as the POPAT?', answer: 'No. The PARE and POPAT (Police Officer Physical Abilities Test) are different tests used by different agencies. The RCMP uses the PARE, while some provincial forces use the POPAT. They have different course designs and time standards.' },
+    ],
+    content: `
+<p>The RCMP PARE test is a pass/fail physical fitness assessment. You have <strong>4 minutes and 45 seconds</strong> to complete the course. If you're not training specifically for this, that number can catch you off guard. Here's everything you need to know.</p>
+
+<h2>What is the PARE Test?</h2>
+
+<p>PARE stands for <strong>Physical Abilities Requirement Evaluation</strong>. It was developed to simulate the physical demands of police work — specifically the type of sustained effort and functional movement required during foot pursuits, arrests, and emergency response.</p>
+
+<p>The test is used by the RCMP and several other Canadian law enforcement agencies. It's administered at certified testing sites and is a mandatory step in the RCMP application process after the written and suitability stages.</p>
+
+<h2>The PARE Course — What Happens</h2>
+
+<p>The PARE consists of three components completed back-to-back with no rest between them:</p>
+
+<h3>1. The Obstacle Course (6 laps)</h3>
+
+<p>You complete six laps of a standardized obstacle course that includes:</p>
+
+<ul>
+  <li><strong>Stair climb</strong> — ascending and descending a set of stairs</li>
+  <li><strong>Vault</strong> — stepping over a low obstacle</li>
+  <li><strong>Low crawl</strong> — getting down and under a barrier</li>
+  <li><strong>180° turns</strong> — sharp direction changes throughout the course</li>
+  <li><strong>Jump</strong> — a controlled leap over a gap or obstacle</li>
+</ul>
+
+<p>This portion alone makes up most of the time on the clock. Six laps of continuous movement covering all major movement patterns. Conditioning and familiarity with the route matter a lot.</p>
+
+<h3>2. Push-Pull Exercise</h3>
+
+<p>Immediately following the obstacle course, you perform a series of push-and-pull repetitions on a weighted sled/apparatus. This simulates controlling a resistant subject. You push forward and pull back a set number of times, typically 6 repetitions in each direction.</p>
+
+<p>Upper body endurance is key here — especially after you've already taxed your legs and lungs on the course.</p>
+
+<h3>3. Controlled Fall and Recovery</h3>
+
+<p>The final component involves a controlled fall to the ground — simulating a takedown or being taken down — followed by standing back up and completing one final sprint segment. This tests your ability to get up quickly under fatigue, which is directly relevant to real police scenarios.</p>
+
+<h2>The Time Standard</h2>
+
+<p>The cutoff for most RCMP applicants is <strong>4 minutes and 45 seconds</strong>. This is a hard cutoff — miss it and you fail, regardless of how close you were.</p>
+
+<p>For context: completing the course in 4:15 to 4:30 is considered solid. Under 4:00 is excellent. Experienced candidates who train specifically for the PARE regularly hit 3:30 to 3:50.</p>
+
+<p>The gap between "I can jog 5km" and "I can pass the PARE" is real. General fitness helps, but the course rewards specific conditioning and movement efficiency.</p>
+
+<h2>Why Candidates Fail</h2>
+
+<ol>
+  <li><strong>Underestimating the crawl</strong> — The low crawl is exhausting when your heart rate is already high. Candidates who've never practiced it often lose significant time here.</li>
+  <li><strong>Losing form on the stairs</strong> — Rushing the stairs can lead to stumbles, wasted motion, or worse, an injury. Six laps means twelve trips on the stairs. Stay controlled.</li>
+  <li><strong>Push-pull fatigue</strong> — By the time you hit the push-pull, your arms are warmed up but your grip and chest are starting to tire. If you haven't done any pulling/pushing work in training, this component will take more out of you than expected.</li>
+  <li><strong>Panic on the clock</strong> — Some candidates see the timer and start rushing sloppily. Rushing usually costs time, not saves it. Smooth, deliberate movement is faster than frantic movement.</li>
+  <li><strong>Only training cardio</strong> — Running helps, but the PARE is about functional movement and muscular endurance. Candidates who only run and do no functional strength work often struggle on the push-pull and crawl.</li>
+</ol>
+
+<h2>How to Train for the PARE</h2>
+
+<h3>Phase 1: Build Your Base (Weeks 1–4)</h3>
+
+<p>Focus on cardiovascular conditioning and building leg/core strength. Aim for 4 sessions per week:</p>
+
+<ul>
+  <li>2 cardio days: 20–30 min runs, bike intervals, or rowing at moderate effort</li>
+  <li>1 strength day: squats, lunges, step-ups, push-ups, rows, farmer carries</li>
+  <li>1 active recovery: walking, light stretching, mobility</li>
+</ul>
+
+<h3>Phase 2: PARE-Specific Movement (Weeks 5–8)</h3>
+
+<p>Introduce the specific patterns from the course:</p>
+
+<ul>
+  <li><strong>Stair sprints</strong> — Find a set of stairs. Sprint up, walk down, repeat 8–10 times. Add this to two sessions per week.</li>
+  <li><strong>Crawl practice</strong> — Set a low clearance (a table works). Crawl under it repeatedly. Your hips and coordination adapt quickly with practice.</li>
+  <li><strong>Push-pull simulation</strong> — Band-resisted pushes and pulls, sled work if available, or a cable machine. Build up to 3 sets of 10 per side.</li>
+  <li><strong>Ground-to-stand drills</strong> — Deliberately fall to the ground and stand up quickly. Practice this while breathing hard.</li>
+</ul>
+
+<h3>Phase 3: Full Runs (Weeks 9–12)</h3>
+
+<p>Simulate the full PARE experience as closely as possible. Map out a course at a gym or facility. Timed runs once per week. The other sessions stay conditioning-focused to avoid overtraining.</p>
+
+<p>Target: comfortably completing your simulated course under 4:30 before test day. Don't aim to squeak by — aim to have margin.</p>
+
+<h2>What to Do the Week Before</h2>
+
+<ul>
+  <li>Reduce training volume — no hard workouts the last 4–5 days</li>
+  <li>Sleep 7–9 hours every night</li>
+  <li>Stay hydrated and eat normally (no strange pre-test diets)</li>
+  <li>Visualize the course: stair–vault–crawl–turn–jump. Know the sequence cold.</li>
+  <li>Arrive warmed up — dynamic stretching and a light jog beforehand</li>
+</ul>
+
+<h2>Where the PARE Fits in the Application</h2>
+
+<p>The PARE test typically comes after you've passed the Online Assessment and completed the Suitability Interview. By the time you're scheduled for the PARE, you've already invested months in the application — this is not the place to be underprepared.</p>
+
+<p>The physical component of the RCMP application is pass/fail, but it's also the most directly trainable part of the process. Unlike cognitive tests where your ceiling matters, the PARE just requires you to meet a standard. With the right preparation, that's entirely achievable.</p>
+
+<blockquote>Most candidates who fail the PARE didn't lack the fitness — they lacked the specific conditioning for the course patterns. Train the PARE, not just your general fitness level.</blockquote>
+
+<p>You've already done the hard work getting through the OEA and the suitability interview. Don't leave the physical test to chance. Start your PARE prep early, and go in with margin to spare.</p>
+    `,
+    sources: [
+      { label: 'RCMP — Physical Abilities Requirement Evaluation', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/physical-abilities-requirement-evaluation-pare' },
+    ],
+  },
 
 ];
