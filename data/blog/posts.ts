@@ -1194,129 +1194,128 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
   },
   {
     slug: 'rcmp-pare-test-requirements-training',
-    title: 'RCMP PARE Test: Requirements, Standards, and How to Train',
-    subtitle: 'The Physical Abilities Requirement Evaluation is pass/fail — here\'s what the course looks like and how to hit the cutoff',
+    title: 'RCMP Police Fitness Assessment (PFA): What Replaced the PARE Test',
+    subtitle: 'The RCMP replaced the PARE with the Police Fitness Assessment in April 2024 — here\'s what the new test involves and how to train for it',
     date: '2026-03-30',
     author: 'RCMP Prep Team',
-    readTime: '7 min read',
+    readTime: '8 min read',
     category: 'Application Guide',
-    excerpt: 'The RCMP PARE test is a timed physical fitness obstacle course. To pass, you need to complete it within the cutoff time. Here\'s exactly what the course involves and how to train for it.',
+    excerpt: 'The RCMP replaced the PARE test with the Police Fitness Assessment (PFA) on April 1, 2024. The PFA has 4 stations simulating real policing tasks. Here\'s what to expect and how to prepare.',
     coverImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
     faqs: [
-      { question: 'What is the RCMP PARE test?', answer: 'The PARE (Physical Abilities Requirement Evaluation) is a timed fitness test used by the RCMP to ensure candidates have the physical capacity for police work. It involves an obstacle course, push-and-pull simulation, and a controlled fall exercise.' },
-      { question: 'What is the passing time for the RCMP PARE test?', answer: 'The PARE test must be completed in 4 minutes and 45 seconds or less. Some positions may have different time standards — confirm the requirement for your specific intake.' },
-      { question: 'How many times can you retake the RCMP PARE test?', answer: 'The RCMP typically allows candidates to retake the PARE test if they fail. However, there is usually a waiting period and a limited number of attempts. Contact your recruiter for specifics.' },
-      { question: 'How do I train for the RCMP PARE test?', answer: 'Train the specific movement patterns: stair climbing, low crawls, and quick directional changes. Supplement with cardiovascular conditioning (running, rowing, cycling) and leg strength training. Aim to complete the course well under the cutoff, not just at it.' },
-      { question: 'Where do I take the RCMP PARE test?', answer: 'PARE testing is done at designated RCMP testing sites and some accredited police fitness centres across Canada. Your recruiter will arrange the test location and date as part of your application process.' },
-      { question: 'Is the PARE test the same as the POPAT?', answer: 'No. The PARE and POPAT (Police Officer Physical Abilities Test) are different tests used by different agencies. The RCMP uses the PARE, while some provincial forces use the POPAT. They have different course designs and time standards.' },
+      { question: 'Did the RCMP replace the PARE test?', answer: 'Yes. The RCMP officially replaced the PARE with the Police Fitness Assessment (PFA) on April 1, 2024. The PFA better reflects the actual physical demands of policing.' },
+      { question: 'What is the RCMP Police Fitness Assessment (PFA)?', answer: 'The PFA has 4 stations — Foot Pursuit, Physical Control, Emergency Assistance, and High Priority Task — each simulating a real policing scenario. It is performed in police uniform and duty kit.' },
+      { question: 'Do RCMP applicants need to pass the PFA before Depot?', answer: 'You are not required to pass the PFA before cadet training begins. However, you will need to pass it periodically throughout the 26-week Depot program. A field version may be used during recruiting as a readiness check.' },
+      { question: 'What are the self-assessment fitness standards for RCMP applicants?', answer: 'Applicants should aim to run 5km in under 30 minutes (target: 23:30–26:30) and complete at least 10 continuous push-ups (target: 25–40). These are preparatory benchmarks provided by your recruiter.' },
+      { question: 'What is the difference between the PFA gold standard and field version?', answer: 'The gold standard (cadet version) uses full policing equipment — fence climbs, truck loading, sled push/pull, mannequin takedown. The field version is portable and may be used during recruiting to predict your Depot readiness.' },
+      { question: 'How do I prepare for the RCMP Police Fitness Assessment?', answer: 'Train 3–5 cardio sessions and 2–3 resistance sessions per week. Focus on running, lifting, carrying, and sustained elevated heart rate. Practice the specific movement patterns: fence climbs, heavy carries, stair sprints, and push/pull work.' },
     ],
     content: `
-<p>The RCMP PARE test is a pass/fail physical fitness assessment. You have <strong>4 minutes and 45 seconds</strong> to complete the course. If you're not training specifically for this, that number can catch you off guard. Here's everything you need to know.</p>
+<p>If you've been searching for the RCMP PARE test, here's what you need to know: <strong>the PARE was replaced on April 1, 2024.</strong> The RCMP now uses the <strong>Police Fitness Assessment (PFA)</strong> — a four-station test that directly simulates the physical demands of police work. Here's everything you need to know.</p>
 
-<h2>What is the PARE Test?</h2>
+<h2>Why the RCMP Replaced the PARE</h2>
+<p>The PARE was a timed obstacle course measuring general physical ability. The RCMP replaced it with the PFA to create a more realistic simulation of actual police tasks: foot pursuits, physical control of a subject, emergency evacuation, and rapid response under load. The PFA is performed in a police uniform and duty kit, so test conditions accurately reflect on-the-job demands.</p>
 
-<p>PARE stands for <strong>Physical Abilities Requirement Evaluation</strong>. It was developed to simulate the physical demands of police work — specifically the type of sustained effort and functional movement required during foot pursuits, arrests, and emergency response.</p>
+<h2>The 4 Stations of the Police Fitness Assessment</h2>
 
-<p>The test is used by the RCMP and several other Canadian law enforcement agencies. It's administered at certified testing sites and is a mandatory step in the RCMP application process after the written and suitability stages.</p>
+<h3>1. Foot Pursuit</h3>
+<p>A <strong>500-metre run</strong> with directional changes, including a <strong>1.4-metre chain-link fence climb</strong> at the halfway point. Simulates chasing a suspect on foot and clearing an obstacle mid-pursuit.</p>
 
-<h2>The PARE Course — What Happens</h2>
-
-<p>The PARE consists of three components completed back-to-back with no rest between them:</p>
-
-<h3>1. The Obstacle Course (6 laps)</h3>
-
-<p>You complete six laps of a standardized obstacle course that includes:</p>
-
+<h3>2. Physical Control</h3>
+<p>Two parts completed without stopping:</p>
 <ul>
-  <li><strong>Stair climb</strong> — ascending and descending a set of stairs</li>
-  <li><strong>Vault</strong> — stepping over a low obstacle</li>
-  <li><strong>Low crawl</strong> — getting down and under a barrier</li>
-  <li><strong>180° turns</strong> — sharp direction changes throughout the course</li>
-  <li><strong>Jump</strong> — a controlled leap over a gap or obstacle</li>
+  <li><strong>Sled push and pull</strong> — alternately pushing and pulling a sled against <strong>37 kg of resistance</strong>, with one position change (drop to ground, stand back up) at the halfway point.</li>
+  <li><strong>Mannequin takedown</strong> — pulling down a weighted mannequin requiring <strong>54 kg of force</strong>.</li>
+</ul>
+<p>Simulates physically controlling a non-compliant subject.</p>
+
+<h3>3. Emergency Assistance</h3>
+<p>Two parts:</p>
+<ul>
+  <li><strong>Load 15 objects</strong> weighing <strong>23 kg each</strong> into a truck bed (5 different shapes/styles), completed for time.</li>
+  <li><strong>Stretcher carry</strong> — run 50 metres, then carry a weight replicating half a stretcher with an adult casualty. Repeat <strong>3 times for time</strong>.</li>
+</ul>
+<p>Simulates evacuating casualties or moving equipment during an emergency.</p>
+
+<h3>4. High Priority Task</h3>
+<p>While wearing hard body armour (or equivalent weight) and carrying a <strong>4.5 kg weight</strong>:</p>
+<ul>
+  <li>Sprint <strong>150 metres</strong></li>
+  <li>Climb <strong>2 flights of stairs</strong></li>
+  <li>Complete an additional short sprint</li>
+</ul>
+<p>Must be completed in <strong>90 seconds</strong>. Simulates urgent response to a high-priority call under load.</p>
+
+<h2>Gold Standard vs. Field Version</h2>
+<p>The PFA comes in two versions:</p>
+<ul>
+  <li><strong>Gold Standard (Cadet Version)</strong> — The full version used at RCMP Depot in Regina. Uses actual equipment: real fence, truck bed, sled, and mannequin. Cadets must pass this during training.</li>
+  <li><strong>Field Version (Regular Member Version)</strong> — A portable version that may be used during recruiting to assess your readiness. Substitutes some equipment (e.g., weighted items on a wall instead of a truck, medicine ball tosses instead of the sled).</li>
+</ul>
+<p>As an applicant, you are <strong>not required to pass the PFA before entering Depot</strong>. But you may complete the field version as a readiness check, and you'll need to pass the full version periodically once at Depot.</p>
+
+<h2>RCMP Fitness Self-Assessment Standards</h2>
+<p>Your recruiter will ask you to track fitness against two benchmarks throughout the application:</p>
+
+<h3>5 km Run</h3>
+<ul>
+  <li>Minimum: 30 minutes</li>
+  <li>Target: 23:30 – 26:30</li>
+  <li>Superior: 20:20 – 23:00</li>
 </ul>
 
-<p>This portion alone makes up most of the time on the clock. Six laps of continuous movement covering all major movement patterns. Conditioning and familiarity with the route matter a lot.</p>
+<h3>Push-Up Test</h3>
+<ul>
+  <li>Minimum: 10 continuous reps</li>
+  <li>Target: 25 – 40 continuous reps</li>
+  <li>Superior: 40 – 60 continuous reps</li>
+</ul>
+<p>These are preparatory benchmarks, not the PFA itself. Aim for at least the target range before your Depot date.</p>
 
-<h3>2. Push-Pull Exercise</h3>
-
-<p>Immediately following the obstacle course, you perform a series of push-and-pull repetitions on a weighted sled/apparatus. This simulates controlling a resistant subject. You push forward and pull back a set number of times, typically 6 repetitions in each direction.</p>
-
-<p>Upper body endurance is key here — especially after you've already taxed your legs and lungs on the course.</p>
-
-<h3>3. Controlled Fall and Recovery</h3>
-
-<p>The final component involves a controlled fall to the ground — simulating a takedown or being taken down — followed by standing back up and completing one final sprint segment. This tests your ability to get up quickly under fatigue, which is directly relevant to real police scenarios.</p>
-
-<h2>The Time Standard</h2>
-
-<p>The cutoff for most RCMP applicants is <strong>4 minutes and 45 seconds</strong>. This is a hard cutoff — miss it and you fail, regardless of how close you were.</p>
-
-<p>For context: completing the course in 4:15 to 4:30 is considered solid. Under 4:00 is excellent. Experienced candidates who train specifically for the PARE regularly hit 3:30 to 3:50.</p>
-
-<p>The gap between "I can jog 5km" and "I can pass the PARE" is real. General fitness helps, but the course rewards specific conditioning and movement efficiency.</p>
-
-<h2>Why Candidates Fail</h2>
-
-<ol>
-  <li><strong>Underestimating the crawl</strong> — The low crawl is exhausting when your heart rate is already high. Candidates who've never practiced it often lose significant time here.</li>
-  <li><strong>Losing form on the stairs</strong> — Rushing the stairs can lead to stumbles, wasted motion, or worse, an injury. Six laps means twelve trips on the stairs. Stay controlled.</li>
-  <li><strong>Push-pull fatigue</strong> — By the time you hit the push-pull, your arms are warmed up but your grip and chest are starting to tire. If you haven't done any pulling/pushing work in training, this component will take more out of you than expected.</li>
-  <li><strong>Panic on the clock</strong> — Some candidates see the timer and start rushing sloppily. Rushing usually costs time, not saves it. Smooth, deliberate movement is faster than frantic movement.</li>
-  <li><strong>Only training cardio</strong> — Running helps, but the PARE is about functional movement and muscular endurance. Candidates who only run and do no functional strength work often struggle on the push-pull and crawl.</li>
-</ol>
-
-<h2>How to Train for the PARE</h2>
+<h2>How to Train for the PFA</h2>
 
 <h3>Phase 1: Build Your Base (Weeks 1–4)</h3>
-
-<p>Focus on cardiovascular conditioning and building leg/core strength. Aim for 4 sessions per week:</p>
-
+<p>3–5 cardio sessions and 2–3 resistance sessions per week:</p>
 <ul>
-  <li>2 cardio days: 20–30 min runs, bike intervals, or rowing at moderate effort</li>
-  <li>1 strength day: squats, lunges, step-ups, push-ups, rows, farmer carries</li>
-  <li>1 active recovery: walking, light stretching, mobility</li>
+  <li>Running: 3–5 km at a consistent pace, 3x/week</li>
+  <li>Strength: squats, lunges, deadlifts, push-ups, rows, farmer carries</li>
+  <li>At least one session per week should keep your heart rate high for 20–30 minutes straight</li>
 </ul>
 
-<h3>Phase 2: PARE-Specific Movement (Weeks 5–8)</h3>
-
-<p>Introduce the specific patterns from the course:</p>
-
+<h3>Phase 2: PFA-Specific Conditioning (Weeks 5–9)</h3>
+<p>Train the specific demands of each station:</p>
 <ul>
-  <li><strong>Stair sprints</strong> — Find a set of stairs. Sprint up, walk down, repeat 8–10 times. Add this to two sessions per week.</li>
-  <li><strong>Crawl practice</strong> — Set a low clearance (a table works). Crawl under it repeatedly. Your hips and coordination adapt quickly with practice.</li>
-  <li><strong>Push-pull simulation</strong> — Band-resisted pushes and pulls, sled work if available, or a cable machine. Build up to 3 sets of 10 per side.</li>
-  <li><strong>Ground-to-stand drills</strong> — Deliberately fall to the ground and stand up quickly. Practice this while breathing hard.</li>
+  <li><strong>Foot Pursuit</strong> — interval runs with direction changes, agility drills, fence/wall climbs</li>
+  <li><strong>Physical Control</strong> — sled work, cable push/pull, getting up from the floor quickly under fatigue</li>
+  <li><strong>Emergency Assistance</strong> — loaded carries: sandbags, dumbbells, awkward objects; farmer walks, bear hug carries, deadlifts</li>
+  <li><strong>High Priority Task</strong> — stair sprints in a weighted vest, 150m all-out sprints carrying weight</li>
 </ul>
 
-<h3>Phase 3: Full Runs (Weeks 9–12)</h3>
+<h3>Phase 3: Integrated Effort (Weeks 10–12)</h3>
+<p>Chain multiple high-effort exercises without rest to simulate the full test. Example: sprint 200m → 10 push-ups → carry 20 kg for 50m → 2 flights of stairs → repeat. Build comfort with sustained physical stress while staying controlled.</p>
 
-<p>Simulate the full PARE experience as closely as possible. Map out a course at a gym or facility. Timed runs once per week. The other sessions stay conditioning-focused to avoid overtraining.</p>
-
-<p>Target: comfortably completing your simulated course under 4:30 before test day. Don't aim to squeak by — aim to have margin.</p>
-
-<h2>What to Do the Week Before</h2>
-
+<h2>The Week Before</h2>
 <ul>
-  <li>Reduce training volume — no hard workouts the last 4–5 days</li>
-  <li>Sleep 7–9 hours every night</li>
-  <li>Stay hydrated and eat normally (no strange pre-test diets)</li>
-  <li>Visualize the course: stair–vault–crawl–turn–jump. Know the sequence cold.</li>
-  <li>Arrive warmed up — dynamic stretching and a light jog beforehand</li>
+  <li>Cut training volume — no intense sessions the last 4–5 days</li>
+  <li>Sleep 7–9 hours each night</li>
+  <li>Stay hydrated, eat normally</li>
+  <li>Mentally rehearse all 4 stations in sequence</li>
+  <li>Arrive warmed up — 10 minutes of dynamic movement before you start</li>
 </ul>
 
-<h2>Where the PARE Fits in the Application</h2>
+<h2>Where Fitness Fits in the Application</h2>
+<p>Your recruiter will monitor your fitness readiness throughout the process. You'll keep a fitness log and complete self-assessments periodically. The formal PFA happens at Depot — but the expectation is clear: you need to arrive ready.</p>
 
-<p>The PARE test typically comes after you've passed the Online Assessment and completed the Suitability Interview. By the time you're scheduled for the PARE, you've already invested months in the application — this is not the place to be underprepared.</p>
+<p>Depot is not a beginner fitness program. The RCMP is explicit about this. You need to arrive comfortable with running, lifting, carrying, and daily moderate-to-intense physical exercise. If you're not there yet, the time to build is now.</p>
 
-<p>The physical component of the RCMP application is pass/fail, but it's also the most directly trainable part of the process. Unlike cognitive tests where your ceiling matters, the PARE just requires you to meet a standard. With the right preparation, that's entirely achievable.</p>
+<blockquote>The PFA isn't testing whether you're an elite athlete. It's testing whether you have the functional fitness to do the job safely — on day one and every day after.</blockquote>
 
-<blockquote>Most candidates who fail the PARE didn't lack the fitness — they lacked the specific conditioning for the course patterns. Train the PARE, not just your general fitness level.</blockquote>
-
-<p>You've already done the hard work getting through the OEA and the suitability interview. Don't leave the physical test to chance. Start your PARE prep early, and go in with margin to spare.</p>
+<p>Start your preparation early, track your progress against the self-assessment benchmarks, and arrive at Depot with margin — not just enough to get by.</p>
     `,
     sources: [
-      { label: 'RCMP — Physical Abilities Requirement Evaluation', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/physical-abilities-requirement-evaluation-pare' },
+      { label: 'RCMP — Physical Standards to Become an RCMP Officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/physical-standards-become-rcmp-officer' },
+      { label: 'RCMP Gazette — RCMP Revamps Fitness Assessment', url: 'https://rcmp.ca/en/gazette/rcmp-revamps-fitness-assessment-reflect-duty-demands-officers' },
     ],
-  },
+  }
 
 ];
