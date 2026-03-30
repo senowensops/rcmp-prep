@@ -295,97 +295,103 @@ const partA: Question[] = [
   },
 ];
 
-// ─── Part B: 3D block matching ────────────────────────────────────────────────
+// ─── Part B: Reflection / mirror questions ───────────────────────────────────
+
+const flipH_O = (d: string) =>
+  oSvg(`<path d="${d}" fill="#eff6ff" stroke="#2563eb" strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round" transform="scale(-1,1) translate(-60,0)"/>`);
+
+const flipV_O = (d: string) =>
+  oSvg(`<path d="${d}" fill="#eff6ff" stroke="#2563eb" strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round" transform="scale(1,-1) translate(0,-60)"/>`);
 
 const partB: Question[] = [
   {
     id: 'T2-B-1',
-    subsectionId: 'spatial-3d',
-    text: 'Which option matches this <strong>flat row</strong> of 4 cubes?',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>chevron</strong> reflected across the <strong>vertical axis</strong> (flipped left-right)?',
     opts: ['A','B','C','D'],
     correct: 0,
-    exp: 'Four cubes in a straight line. Option A shows exactly that.',
-    promptSvg: qSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 8, 58, 0.85)),
+    exp: 'Flipping the chevron left-right reverses its direction — it now points left. Option A is correct.',
+    promptSvg: qSvg(rotQ(CHEV_Q, 0)),
     choicesSvg: [
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),     // A: correct ✓
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[2,-1]], 4, 34, 0.7)),    // B: row + 1 rising
-      oSvg(cubeRow([[0,0],[1,0],[1,-1],[2,-1]], 4, 36, 0.7)),   // C: Z-shape
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[1,1]], 4, 30, 0.7)),     // D: T-shape
+      flipH_O(CHEV_O),           // A: horizontal flip ✓
+      oSvg(rotO(CHEV_O, 180)),   // B: 180° rotation
+      oSvg(rotO(CHEV_O, 90)),    // C: 90° rotation
+      oSvg(rotO(CHEV_O, 270)),   // D: 270° rotation
     ],
   },
   {
     id: 'T2-B-2',
-    subsectionId: 'spatial-3d',
-    text: 'Which option matches this <strong>2×2 square base</strong> of cubes?',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>flag shape</strong> reflected across the <strong>horizontal axis</strong> (flipped top-bottom)?',
     opts: ['A','B','C','D'],
     correct: 3,
-    exp: 'Four cubes in a 2×2 grid (no height). Option D shows that footprint correctly.',
-    promptSvg: qSvg(cubeRow([[0,0],[1,0],[0,1],[1,1]], 20, 58)),
+    exp: 'Flipping the flag top-to-bottom mirrors it vertically — the pole and flag flip upside-down. Option D is correct.',
+    promptSvg: qSvg(rotQ(FLAG_Q, 0)),
     choicesSvg: [
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),    // A: straight row
-      oSvg(cubeRow([[0,0],[1,0],[0,-1],[1,-1]], 8, 40, 0.88)), // B: 2×2 but different orientation
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[1,1]], 4, 30, 0.7)),    // C: T-shape
-      oSvg(cubeRow([[0,0],[1,0],[0,1],[1,1]], 10, 36, 0.88)),  // D: correct ✓
+      oSvg(rotO(FLAG_O, 90)),    // A: 90° rotation
+      oSvg(rotO(FLAG_O, 180)),   // B: 180° rotation
+      oSvg(rotO(FLAG_O, 270)),   // C: 270° rotation
+      flipV_O(FLAG_O),           // D: vertical flip ✓
     ],
   },
   {
     id: 'T2-B-3',
-    subsectionId: 'spatial-3d',
-    text: 'Which option matches this <strong>S-shaped</strong> 4-cube arrangement?',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>key shape</strong> reflected across the <strong>vertical axis</strong> (flipped left-right)?',
     opts: ['A','B','C','D'],
-    correct: 1,
-    exp: 'The S-shape has two cubes offset in opposite directions. Option B reproduces that correctly.',
-    promptSvg: qSvg(cubeRow([[0,0],[0,-1],[1,-1],[1,-2]], 28, 66)),
+    correct: 2,
+    exp: 'Flipping the key left-right mirrors it horizontally. Option C is correct.',
+    promptSvg: qSvg(rotQ(KEY_Q, 0)),
     choicesSvg: [
-      oSvg(cubeRow([[0,0],[1,0],[1,-1],[2,-1]], 8, 40, 0.88)),  // A: Z-shape
-      oSvg(cubeRow([[0,0],[0,-1],[1,-1],[1,-2]], 14, 42, 0.88)),// B: correct ✓
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),     // C: flat row
-      oSvg(cubeRow([[0,0],[0,-1],[0,-2],[1,-2]], 16, 44, 0.88)),// D: L-tower shape
+      oSvg(rotO(KEY_O, 90)),    // A: 90° rotation
+      oSvg(rotO(KEY_O, 180)),   // B: 180° rotation
+      flipH_O(KEY_O),           // C: horizontal flip ✓
+      oSvg(rotO(KEY_O, 270)),   // D: 270° rotation
     ],
   },
   {
     id: 'T2-B-4',
-    subsectionId: 'spatial-3d',
-    text: 'Which option matches this <strong>pyramid</strong> (3 on base, 1 on top-middle)?',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>fork shape</strong> reflected across the <strong>horizontal axis</strong> (flipped top-bottom)?',
     opts: ['A','B','C','D'],
-    correct: 2,
-    exp: 'Three cubes form the base row and one cube sits on top of the middle cube. Option C shows that arrangement.',
-    promptSvg: qSvg(cubeRow([[0,0],[1,0],[2,0],[1,-1]], 18, 58)),
+    correct: 1,
+    exp: 'Flipping the fork top-to-bottom mirrors it vertically. Option B is correct.',
+    promptSvg: qSvg(rotQ(FORK_Q, 0)),
     choicesSvg: [
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[0,-1]], 6, 36, 0.88)),  // A: tower on left
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[2,-1]], 6, 36, 0.88)),  // B: tower on right
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[1,-1]], 6, 36, 0.88)),  // C: correct ✓
-      oSvg(cubeRow([[0,0],[1,0],[2,0],[3,0]], 4, 34, 0.7)),    // D: flat row of 4
+      oSvg(rotO(FORK_O, 90)),    // A: 90° rotation
+      flipV_O(FORK_O),           // B: vertical flip ✓
+      oSvg(rotO(FORK_O, 180)),   // C: 180° rotation
+      oSvg(rotO(FORK_O, 270)),   // D: 270° rotation
     ],
   },
   {
     id: 'T2-B-5',
-    subsectionId: 'spatial-3d',
-    text: 'Which option matches this <strong>L-tower</strong> (2 cubes stacked on left, 1 cube at bottom-right)?',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>asymmetric cross</strong> reflected across the <strong>vertical axis</strong> (flipped left-right)?',
     opts: ['A','B','C','D'],
     correct: 3,
-    exp: 'Two cubes stacked vertically on the left, one cube beside the bottom. Option D has that layout.',
-    promptSvg: qSvg(cubeRow([[0,0],[0,-1],[1,0]], 28, 64)),
+    exp: 'The asymmetric cross has wider arms on one side. Flipping it left-right swaps which side is wider. Option D is correct.',
+    promptSvg: qSvg(rotQ(ASYM_CROSS_Q, 0)),
     choicesSvg: [
-      oSvg(cubeRow([[0,0],[1,0],[0,-1],[0,-2]], 10, 42, 0.88)), // A: different L-tower
-      oSvg(cubeRow([[0,0],[1,0],[2,0]], 8, 34, 0.88)),          // B: flat row
-      oSvg(cubeRow([[0,0],[0,-1],[0,-2]], 20, 44, 0.88)),       // C: vertical tower of 3
-      oSvg(cubeRow([[0,0],[0,-1],[1,0]], 14, 40, 0.88)),        // D: correct ✓
+      oSvg(rotO(ASYM_CROSS_O, 90)),    // A: 90° rotation
+      oSvg(rotO(ASYM_CROSS_O, 180)),   // B: 180° rotation
+      oSvg(rotO(ASYM_CROSS_O, 270)),   // C: 270° rotation
+      flipH_O(ASYM_CROSS_O),           // D: horizontal flip ✓
     ],
   },
   {
     id: 'T2-B-6',
-    subsectionId: 'spatial-3d',
-    text: 'Which option matches this <strong>staggered pair</strong> (one cube front-left, one cube back-right, raised one level)?',
+    subsectionId: 'spatial-2d',
+    text: 'Which option shows the <strong>C-shape</strong> reflected across the <strong>horizontal axis</strong> (flipped top-bottom)?',
     opts: ['A','B','C','D'],
     correct: 0,
-    exp: 'Two cubes diagonally offset with one raised. Option A preserves that exact relationship.',
-    promptSvg: qSvg(cubeRow([[0,0],[1,-1]], 30, 64)),
+    exp: 'The C-shape is symmetric top-to-bottom, so a vertical flip looks identical. Option A (the flip) is correct.',
+    promptSvg: qSvg(rotQ(C_Q, 0)),
     choicesSvg: [
-      oSvg(cubeRow([[0,0],[1,-1]], 14, 38, 0.88)),  // A: correct ✓
-      oSvg(cubeRow([[0,0],[1,0]], 14, 38, 0.88)),   // B: side by side
-      oSvg(cubeRow([[0,0],[0,-1]], 22, 40, 0.88)),  // C: stacked vertically
-      oSvg(cubeRow([[0,-1],[1,0]], 14, 40, 0.88)),  // D: reversed offset
+      flipV_O(C_O),           // A: vertical flip ✓ (same as original for symmetric C)
+      oSvg(rotO(C_O, 90)),    // B: 90° rotation
+      oSvg(rotO(C_O, 180)),   // C: 180° rotation
+      oSvg(rotO(C_O, 270)),   // D: 270° rotation
     ],
   },
 ];
