@@ -1316,6 +1316,143 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Physical Standards to Become an RCMP Officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/physical-standards-become-rcmp-officer' },
       { label: 'RCMP Gazette — RCMP Revamps Fitness Assessment', url: 'https://rcmp.ca/en/gazette/rcmp-revamps-fitness-assessment-reflect-duty-demands-officers' },
     ],
+  },
+  {
+    slug: 'rcmp-medical-requirements',
+    title: 'RCMP Medical Requirements: What the Health Assessment Looks For',
+    subtitle: 'Vision, hearing, mental health, medications, and what can disqualify you — explained clearly',
+    date: '2026-03-31',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP medical exam covers vision, hearing, cardiovascular health, mental health history, and more. Here\'s what to expect and what can affect your eligibility.',
+    coverImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    faqs: [
+      {
+        question: 'What does the RCMP medical exam test for?',
+        answer: 'The RCMP medical exam assesses overall physical health including vision, hearing, cardiovascular fitness, musculoskeletal health, neurological function, and mental health history. It also reviews medications and any history of conditions that could affect duty performance.',
+      },
+      {
+        question: 'What vision is required to join the RCMP?',
+        answer: 'The RCMP requires corrected visual acuity of at least 6/6 (20/20) in one eye and 6/9 (20/30) in the other. Colour vision must be sufficient to distinguish traffic lights and emergency signals. Laser eye surgery (LASIK/PRK) is generally acceptable if healing is complete and vision is stable.',
+      },
+      {
+        question: 'Does having a mental health diagnosis disqualify you from the RCMP?',
+        answer: 'Not automatically. A past diagnosis does not automatically disqualify you. The RCMP assesses current functional capacity, treatment status, and whether the condition is likely to affect duty performance. Candidates are evaluated individually, not by diagnosis alone.',
+      },
+      {
+        question: 'Can you join the RCMP if you take medication?',
+        answer: 'It depends on the medication and condition. Some medications are compatible with duty requirements; others are not. Disclose all current medications honestly — the RCMP evaluates each case individually based on whether the condition and treatment are compatible with the demands of the role.',
+      },
+      {
+        question: 'What hearing level is required for the RCMP?',
+        answer: 'The RCMP requires candidates to have hearing that allows them to perform the duties of a police officer safely. A formal audiometric test is conducted. Candidates must be able to hear clearly in operational environments, including when wearing protective equipment.',
+      },
+      {
+        question: 'Can you fail the RCMP medical exam for past injuries?',
+        answer: 'Old injuries don\'t automatically disqualify you. The examiner assesses whether the injury has fully healed and whether any lasting impairment would affect your ability to perform police duties safely. Chronic conditions that limit mobility, strength, or endurance are more likely to raise concerns.',
+      },
+    ],
+    content: `
+<p>The RCMP medical assessment evaluates whether you can safely perform the duties of a police officer — not whether you have a perfect health history. A past diagnosis, old injury, or managed condition won't automatically disqualify you. What matters is current functional capacity and whether your health profile is compatible with the demands of the role.</p>
+
+<p>Most applicants know the RCMP does a medical exam but aren't sure what it actually looks for. This guide breaks it down clearly — what gets tested, what can raise flags, and what to expect at each point in the process.</p>
+
+<h2>When the Medical Exam Happens</h2>
+
+<p>The RCMP medical assessment comes after the suitability interview and polygraph, but before Depot. At this stage, you've already cleared the cognitive, behavioral, and integrity filters. The medical evaluation is one of the final pre-Depot gates.</p>
+
+<p>You'll be referred to a designated RCMP medical officer or authorized clinic. The exam is comprehensive — expect it to take several hours, and expect to bring documentation for any existing conditions, surgeries, or medications.</p>
+
+<h2>What the Medical Exam Covers</h2>
+
+<h3>Vision</h3>
+<p>The RCMP requires corrected visual acuity of at least <strong>6/6 (20/20) in one eye and 6/9 (20/30) in the other</strong>. If you wear glasses or contacts, bring them. Colour vision is also assessed — you need to reliably distinguish traffic signals, coloured evidence, and emergency lights.</p>
+
+<p><strong>Laser eye surgery?</strong> Generally acceptable. LASIK and PRK are both considered, provided the procedure is complete, healing is confirmed, and your vision has been stable for a prescribed period. Disclose it upfront and bring any post-op records.</p>
+
+<h3>Hearing</h3>
+<p>A formal audiometric test is conducted. You need to hear well enough to communicate in operational environments, including noisy scenes, over radio, and while wearing protective equipment. Moderate hearing loss that can be corrected isn't always disqualifying — functional hearing in duty conditions is what's evaluated.</p>
+
+<h3>Cardiovascular Health</h3>
+<p>Blood pressure, resting heart rate, and general cardiovascular function are reviewed. Uncontrolled hypertension is a flag. A history of cardiac events or arrhythmias will be evaluated based on current stability, treatment, and prognosis. Being physically fit going into the exam works in your favour — the exam isn't just checking boxes, it's forming a picture of your overall health.</p>
+
+<h3>Musculoskeletal Health</h3>
+<p>Past injuries — especially to knees, back, shoulders, and ankles — are reviewed. The examiner assesses whether healing is complete, whether there is residual functional limitation, and whether the condition is likely to be aggravated by the physical demands of police work. Old injuries that are fully healed and non-limiting are typically not an issue. Chronic conditions that affect strength, range of motion, or endurance are more likely to raise concerns.</p>
+
+<h3>Neurological Function</h3>
+<p>A history of seizures, significant head injuries, or neurological conditions will be reviewed carefully. Active epilepsy or seizure disorders are generally disqualifying for operational police roles. A single past seizure with no recurrence and a clear medical explanation is evaluated differently than an ongoing condition.</p>
+
+<h3>Mental Health History</h3>
+<p>This is the area candidates worry about most — and it's the one most misunderstood.</p>
+
+<p><strong>A mental health diagnosis does not automatically disqualify you.</strong></p>
+
+<p>The RCMP is legally required to assess applicants individually, not by diagnosis category. What matters is current functional capacity: Are you stable? Are you managing effectively? Does the condition or its treatment affect your ability to perform police duties safely?</p>
+
+<p>Common conditions that are evaluated individually include:</p>
+<ul>
+  <li>Anxiety disorders (managed and stable)</li>
+  <li>Depression (past or managed)</li>
+  <li>ADHD (assessed based on treatment and functional impact)</li>
+  <li>PTSD (depends on severity, treatment, and triggers)</li>
+</ul>
+
+<p>Conditions that are more likely to raise concerns:</p>
+<ul>
+  <li>Active psychosis or schizophrenia spectrum disorders</li>
+  <li>Bipolar I with recent episodes or unstable management</li>
+  <li>Substance use disorders without sustained recovery</li>
+  <li>Personality disorders affecting impulse control or judgment</li>
+</ul>
+
+<p>The psychological assessment (a separate step) digs deeper into mental fitness. The medical exam mostly surfaces history and current treatment status.</p>
+
+<h3>Medications</h3>
+<p>You are required to disclose all current medications. This includes prescription medications, ongoing supplements, and any substances used to manage chronic conditions.</p>
+
+<p>Medications are evaluated in the context of the condition they treat. Some psychiatric medications are compatible with police duties; some are not. Some ADHD medications are evaluated based on whether controlled use affects performance and judgment under pressure.</p>
+
+<p>The guiding principle: <strong>be honest and let the process work</strong>. Concealing medications or conditions and having them surface later is a guaranteed disqualification — not because of the condition, but because of the dishonesty.</p>
+
+<h2>What Can Disqualify You</h2>
+
+<p>Not all conditions are disqualifying — but some patterns reliably cause problems:</p>
+
+<ul>
+  <li><strong>Uncontrolled chronic conditions</strong> that are likely to worsen or affect duty performance</li>
+  <li><strong>Active substance use disorders</strong> — including recent heavy drug use disclosed or discovered during the process</li>
+  <li><strong>Neurological conditions</strong> causing seizures or unpredictable loss of consciousness</li>
+  <li><strong>Severe vision or hearing impairment</strong> that can't be corrected to operational standards</li>
+  <li><strong>Mental health conditions</strong> with significant functional impairment or high risk of escalation under stress</li>
+  <li><strong>Concealment of any of the above</strong> — dishonesty is the fastest disqualifier in the RCMP process</li>
+</ul>
+
+<h2>How to Prepare</h2>
+
+<p>You can't cram for a medical exam — but you can go in prepared:</p>
+
+<ol>
+  <li><strong>Get a current physical</strong> from your family doctor before the RCMP exam. Flag anything that might come up and get documentation ready.</li>
+  <li><strong>Bring complete records</strong> — past surgeries, mental health treatment notes, medication lists, post-op reports if you've had eye surgery or joint procedures.</li>
+  <li><strong>Be consistent and honest.</strong> The medical examiner communicates with the RCMP. Anything that contradicts your application forms will be noted.</li>
+  <li><strong>Don't self-disqualify.</strong> Many candidates with managed health conditions are accepted. Don't assume a diagnosis is a door closing — let the process determine that.</li>
+</ol>
+
+<h2>The Bigger Picture</h2>
+
+<p>The RCMP medical assessment isn't designed to filter out anyone with a health history. It's designed to assess whether you can safely do the job — for yourself, your colleagues, and the public you serve.</p>
+
+<p>Candidates who come in physically fit, mentally prepared, and transparent about their history give themselves the best chance. Depot is demanding. The medical standard is about making sure you can meet it — and sustain it over a career.</p>
+
+<blockquote>The medical exam isn't about being perfect. It's about being ready. Come in honest, come in prepared, and let your health speak for itself.</blockquote>
+
+<p>Still preparing for the Online Assessment before you get to the medical stage? Our <a href="/sample">free practice test</a> covers all six sections — no account required.</p>
+    `,
+    sources: [
+      { label: 'RCMP — Medical Requirements to Become an RCMP Officer', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-meet-basic-requirements' },
+      { label: 'RCMP — Become an RCMP Officer: Full Process Overview', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer' },
+    ],
   }
 
 ];
