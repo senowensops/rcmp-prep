@@ -1453,6 +1453,140 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Medical Requirements to Become an RCMP Officer', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-meet-basic-requirements' },
       { label: 'RCMP — Become an RCMP Officer: Full Process Overview', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer' },
     ],
-  }
+  },
+  {
+    slug: 'rcmp-cannabis-drug-use-policy',
+    title: 'RCMP Drug Use Policy: Will Past Cannabis Use Disqualify You?',
+    subtitle: 'Cannabis is legal in Canada — but the RCMP has strict standards. Here is exactly what they look at and what could disqualify you.',
+    date: '2026-04-01',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'Canada legalized cannabis in 2018 — but the RCMP has strict standards around drug use. Here is what the background check actually looks at, what can disqualify you, and how to handle disclosure honestly.',
+    coverImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
+    content: `
+<p>One of the most common concerns among RCMP applicants is drug use — specifically cannabis, which has been legal in Canada since October 2018. The RCMP\'s position is nuanced: past use does not automatically disqualify you, but the details matter enormously. Frequency, recency, honesty on disclosure, and judgment around use all factor into the suitability evaluation.</p>
 
+<p>Here is what you actually need to know.</p>
+
+<h2>Is Cannabis Use a Disqualifier?</h2>
+
+<p>Not automatically. The RCMP acknowledges that cannabis is legal in Canada and that many applicants have used it. What the RCMP evaluates is <strong>how recently</strong> you used it, <strong>how frequently</strong>, whether use occurred in contexts that show poor judgment, and whether you are honest about it during the background investigation.</p>
+
+<p>The short version: a few uses years ago will not end your application. Recent heavy use, use in prohibited contexts, or dishonesty about it almost certainly will.</p>
+
+<h2>The RCMP\'s Drug Use Framework</h2>
+
+<p>The RCMP assesses drug use under the broader suitability evaluation — specifically, your judgment, honesty, and decision-making history. Drug use is not treated as a single yes/no checkbox. Investigators look at the full picture:</p>
+
+<ul>
+  <li><strong>Recency</strong> — How long ago did the use occur? Use that ended years before your application is viewed more favorably than use that continued until recently.</li>
+  <li><strong>Frequency</strong> — Experimentation is treated differently from habitual or daily use. The more frequent and sustained the use, the more scrutiny it receives.</li>
+  <li><strong>Circumstances</strong> — Did use occur in prohibited settings? On duty in any professional context? While operating a vehicle? These factors compound the concern.</li>
+  <li><strong>Other substances</strong> — Hard drug use (cocaine, MDMA, methamphetamine, opioids, etc.) is evaluated far more seriously than cannabis. Any recent use of hard drugs is almost certainly disqualifying.</li>
+  <li><strong>Age and maturity</strong> — Use during teenage years or early adulthood is considered in context. Juvenile experimentation that ended cleanly looks different than adult use in professional settings.</li>
+</ul>
+
+<h2>Informal RCMP Guidelines on Cannabis</h2>
+
+<p>While the RCMP does not publish a hard cutoff publicly, information from background investigators and current officers points to the following general guidelines:</p>
+
+<ul>
+  <li><strong>No use within the past 12 months</strong> — ideally longer before applying. Candidates who stopped using cannabis well before beginning the application process are viewed more favorably.</li>
+  <li><strong>Limited lifetime use</strong> — Experimental use (a handful of times) is treated differently than regular use over years.</li>
+  <li><strong>No use while in any position of trust or authority</strong> — If you used cannabis while working in law enforcement, security, youth services, or other trust-based roles, this is a serious flag.</li>
+  <li><strong>No use while driving or in other prohibited contexts</strong> — This directly speaks to judgment and compliance with the law.</li>
+</ul>
+
+<p>These are general patterns — not published rules. The background investigator has discretion, and the full picture of your character and history matters.</p>
+
+<h2>Other Controlled Substances</h2>
+
+<p>For drugs beyond cannabis, the standards are much stricter:</p>
+
+<ul>
+  <li><strong>Cocaine, MDMA, methamphetamine:</strong> Any recent use (within several years) is generally disqualifying. Even older isolated use will be scrutinized heavily and must be fully disclosed.</li>
+  <li><strong>Psychedelics (LSD, psilocybin, etc.):</strong> Treated similarly to hard drugs — any use will be disclosed during the polygraph and background check.</li>
+  <li><strong>Prescription drug misuse:</strong> Using prescription medications outside their prescribed purpose — or using someone else\'s prescription — is a flag, even if the substance itself is legal.</li>
+  <li><strong>IV drug use:</strong> Any history of intravenous drug use is likely disqualifying.</li>
+</ul>
+
+<p>The RCMP\'s concern with hard drug use is not just about substance use itself — it is about the judgment, the criminal associations that sometimes come with drug culture, and the potential for compromise or blackmail in a policing role.</p>
+
+<h2>Honesty Is the Non-Negotiable</h2>
+
+<p>This cannot be overstated: <strong>lying about drug use during the background investigation or polygraph will end your application</strong> — and likely bar you from future applications as well.</p>
+
+<p>The background investigation is thorough. The polygraph is specifically designed to surface dishonesty around past behavior. Investigators speak with references, former employers, friends, and others who may have knowledge of your history. If discrepancies emerge between what you say and what others report, that dishonesty becomes the issue — not just the original drug use.</p>
+
+<p>Many candidates who used cannabis occasionally and disclosed it honestly have proceeded in the process. Candidates who were dishonest about minor use have not. The RCMP has a single absolute standard: they need to be able to trust you. Dishonesty about anything during the application process demonstrates exactly the opposite of what they are looking for.</p>
+
+<h2>The Polygraph and Drug Disclosure</h2>
+
+<p>The RCMP polygraph covers drug use directly. Examiners will ask about past use of specific substances — cannabis, cocaine, MDMA, and others — including frequency, recency, and context. This is not a fishing expedition; it is a structured examination where baseline honesty is established and deception is measured physiologically.</p>
+
+<p>Candidates who have already been honest in their application and background questionnaire typically perform better on the polygraph — because there is nothing to hide. Candidates who have been selective or omissive often show stress responses that prompt further questioning.</p>
+
+<p>Approach the polygraph as a continuation of your honest disclosure, not a separate challenge to manage.</p>
+
+<h2>What to Do If You Have Used Drugs</h2>
+
+<p>If you have a history of cannabis or drug use, here is the practical approach:</p>
+
+<ol>
+  <li><strong>Stop using now.</strong> If you are still using cannabis or any substance, stop immediately. The longer your clean period before applying, the stronger your application. There is no workaround for recent use.</li>
+  <li><strong>Document your history honestly in your own mind.</strong> Before filling out any application forms, have a clear and honest account of what you used, when, how often, and in what contexts. Inconsistencies later create the appearance of deception.</li>
+  <li><strong>Disclose fully and accurately.</strong> When the application asks about drug use, answer truthfully. Do not minimize or omit. The background check and polygraph are designed to surface exactly this kind of information.</li>
+  <li><strong>Be prepared to contextualize, not make excuses.</strong> If asked about past use during an interview, acknowledge it directly, explain the context briefly and honestly (experimental, younger, stopped when), and demonstrate how your current values and judgment align with RCMP standards. Own it; do not run from it.</li>
+</ol>
+
+<h2>Current RCMP Officers and Cannabis</h2>
+
+<p>Active RCMP officers are prohibited from consuming cannabis. This is a condition of employment — not just a policy recommendation. Officers who test positive while on duty, or who use cannabis in ways that affect their reliability or judgment, face serious disciplinary consequences including dismissal.</p>
+
+<p>If you are applying to the RCMP and you enjoy cannabis as a regular part of your lifestyle, that is something to consider seriously. Becoming an RCMP officer means giving it up permanently as long as you are serving.</p>
+
+<h2>Bottom Line</h2>
+
+<p>Past cannabis use — if it was not recent, not heavy, and is fully disclosed — does not automatically disqualify you from the RCMP. Many current officers experimented with cannabis before applying. What the RCMP cannot tolerate is recent regular use, use that showed poor judgment, hard drug use without a clear and clean break, or any form of dishonesty about what happened.</p>
+
+<p>If you are preparing for the RCMP process and want to strengthen your readiness on the assessment itself, rcmpprep.ca offers practice tests covering the full Online Entrance Assessment — the first major filter in the RCMP application process.</p>
+    `,
+    faqs: [
+      {
+        question: 'Will cannabis use disqualify me from the RCMP?',
+        answer: 'Not automatically. The RCMP considers recency, frequency, context, and your honesty during disclosure. Occasional past use that ended cleanly is treated very differently from recent regular use. Full, honest disclosure is non-negotiable.',
+      },
+      {
+        question: 'How long before applying to the RCMP should I stop using cannabis?',
+        answer: 'There is no publicly published cutoff, but the general guidance from background investigators is at least 12 months — and ideally longer. The cleaner and more distant your last use, the stronger your application.',
+      },
+      {
+        question: 'What happens if I lie about drug use on the RCMP application?',
+        answer: 'Dishonesty will almost certainly end your application — and may bar future applications. The background investigation and polygraph are specifically designed to surface exactly this kind of discrepancy. The RCMP can accept past use; they cannot accept deception.',
+      },
+      {
+        question: 'Does the RCMP polygraph ask about drug use?',
+        answer: 'Yes. The polygraph covers past drug use directly, including cannabis, cocaine, and other substances. Examiners ask about frequency, recency, and context. Candidates who have disclosed honestly beforehand typically fare better.',
+      },
+      {
+        question: 'Can RCMP officers use cannabis while employed?',
+        answer: 'No. Active RCMP officers are prohibited from using cannabis. This is a condition of employment. Applicants who use cannabis regularly should understand that joining the RCMP means giving it up for the duration of their career.',
+      },
+      {
+        question: 'What about other drugs like cocaine or MDMA?',
+        answer: 'Hard drug use is evaluated far more seriously than cannabis. Any recent use of cocaine, MDMA, methamphetamine, or similar substances is likely disqualifying. Even older use must be fully disclosed. Dishonesty about it will end your application.',
+      },
+    ],
+    sources: [
+      {
+        label: 'RCMP — Background Investigation',
+        url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-background-investigation',
+      },
+      {
+        label: 'Government of Canada — Cannabis Legalization',
+        url: 'https://www.canada.ca/en/health-canada/services/drugs-medication/cannabis.html',
+      },
+    ],
+  },
 ];
