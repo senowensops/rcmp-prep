@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | RCMP Prep",
-  description: "Privacy Policy for RCMP Prep. We collect only your email, never sell data, and use Stripe for secure payments.",
+  description: "Privacy Policy for RCMP Prep. We collect minimal data, never sell it, and the platform is completely free to use.",
 };
 
 import Link from "next/link";
@@ -34,11 +34,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-head text-xl font-bold uppercase tracking-[0.06em] text-white mb-3">2. Information We Collect</h2>
             <h3 className="font-head text-base font-bold uppercase tracking-[0.04em] text-white/80 mb-2 mt-4">Email Address (Optional)</h3>
             <p>
-              When you enter your email address in the paywall modal or checkout flow, we may store it to send you purchase confirmations or product updates. Providing your email is optional and not required for purchase.
-            </p>
-            <h3 className="font-head text-base font-bold uppercase tracking-[0.04em] text-white/80 mb-2 mt-4">Payment Information</h3>
-            <p>
-              All payment processing is handled by <strong className="text-white">Stripe</strong>. RCMP Prep never sees, stores, or has access to your payment card details. Stripe&apos;s privacy policy governs the handling of your payment information: <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[var(--gold)] hover:underline">stripe.com/privacy</a>.
+              RCMP Prep is free and requires no payment or account. If you choose to contact us via support@rcmpprep.ca, we may retain your email to respond to your inquiry. No email is collected through the platform itself.
             </p>
             <h3 className="font-head text-base font-bold uppercase tracking-[0.04em] text-white/80 mb-2 mt-4">Local Browser Data</h3>
             <p>
@@ -48,12 +44,10 @@ export default function PrivacyPolicyPage() {
 
           <section>
             <h2 className="font-head text-xl font-bold uppercase tracking-[0.06em] text-white mb-3">3. How We Use Your Information</h2>
-            <p>Any personal information we collect (email address) is used solely for:</p>
+            <p>Any personal information we collect (email address via support contact) is used solely for:</p>
             <ul className="mt-3 space-y-2 list-disc list-inside">
-              <li>Delivering your purchase confirmation</li>
-              <li>Providing access to the platform</li>
-              <li>Sending occasional product updates (you can unsubscribe at any time)</li>
               <li>Responding to support requests</li>
+              <li>Sending occasional product updates if you opt in (you can unsubscribe at any time)</li>
             </ul>
             <p className="mt-3">
               We do not use your email address for third-party advertising or share it with data brokers.
@@ -81,7 +75,6 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-head text-xl font-bold uppercase tracking-[0.06em] text-white mb-3">6. Third-Party Services</h2>
             <p>We use the following third-party services:</p>
             <ul className="mt-3 space-y-2 list-disc list-inside">
-              <li><strong className="text-white">Stripe</strong> — payment processing. They handle all card data securely.</li>
               <li><strong className="text-white">Vercel</strong> — hosting and server infrastructure.</li>
             </ul>
             <p className="mt-3">

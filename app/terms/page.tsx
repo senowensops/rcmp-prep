@@ -26,7 +26,7 @@ export default function TermsPage() {
               RCMP Prep (<strong className="text-white">rcmpprep.ca</strong>) is an independent digital practice test platform designed to help individuals prepare for the Royal Canadian Mounted Police (RCMP) written assessment. The platform provides timed practice questions across multiple cognitive and aptitude domains, including verbal reasoning, numerical reasoning, spatial reasoning, memory recall, and situational judgement.
             </p>
             <p className="mt-3">
-              Access to the full platform is provided upon a one-time purchase. A free sample test is available without purchase.
+              RCMP Prep is completely free to use. No payment or account is required.
             </p>
           </section>
 
@@ -41,15 +41,12 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="font-head text-xl font-bold uppercase tracking-[0.06em] text-white mb-3">3. Payment Terms</h2>
+            <h2 className="font-head text-xl font-bold uppercase tracking-[0.06em] text-white mb-3">3. Free Access</h2>
             <p>
-              Full access to RCMP Prep is available for a one-time payment of <strong className="text-white">$29 CAD</strong> (subject to change for new purchases). This payment grants you lifetime access to all available practice tests on the platform.
+              RCMP Prep is provided free of charge. All three practice tests and all sections are available at no cost. No payment information is collected or required.
             </p>
             <p className="mt-3">
-              <strong className="text-white">All sales are final and non-refundable.</strong> By completing your purchase, you acknowledge that you are receiving immediate access to digital content and waive any right to a refund under applicable consumer protection legislation, to the extent permitted by law.
-            </p>
-            <p className="mt-3">
-              Payments are processed securely by Stripe. RCMP Prep does not store your payment card information.
+              If you choose to support the platform voluntarily via the "Support the App" link, that contribution is entirely optional and non-refundable. No additional access or benefits are provided in exchange.
             </p>
           </section>
 
@@ -64,7 +61,7 @@ export default function TermsPage() {
               <li>Use automated tools (bots, scripts, scrapers) to access the platform</li>
             </ul>
             <p className="mt-3">
-              Violation of these terms may result in immediate termination of your access without refund.
+              Violation of these terms may result in immediate termination of your access.
             </p>
           </section>
 

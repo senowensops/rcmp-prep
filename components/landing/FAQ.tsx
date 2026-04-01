@@ -9,6 +9,10 @@ const faqs = [
       "No. This is an unofficial practice resource covering skill areas commonly assessed in police entrance evaluations. It is not affiliated with the RCMP or the Government of Canada, and does not claim to replicate any official test.",
   },
   {
+    question: "Is this really free?",
+    answer: "Yes — completely free. No payment, no account, no catch. Just start the test.",
+  },
+  {
     question: "How many tests do I get?",
     answer: "Three complete practice tests, each with all 6 sections. No question repeats across tests.",
   },
@@ -20,20 +24,11 @@ const faqs = [
   {
     question: "Can I retake the tests?",
     answer:
-      "Yes — as many times as you like. Your progress is saved so you can compare your scores across attempts.",
+      "Yes — as many times as you like.",
   },
   {
     question: "Do I need an account?",
-    answer:
-      "No account required. Enter your email at checkout, and your access is tied to that email. You can restore it from any device using the link in your confirmation email.",
-  },
-  {
-    question: "Is payment secure?",
-    answer: "Yes. Payments are processed by Stripe. We never see or store your card details.",
-  },
-  {
-    question: "Is the price in Canadian dollars?",
-    answer: "Yes. All prices are in CAD.",
+    answer: "No account required. Just go to the test and start. Nothing to sign up for.",
   },
 ];
 
