@@ -1542,7 +1542,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 
 <h2>Current RCMP Officers and Cannabis</h2>
 
-<p>Active RCMP officers are prohibited from consuming cannabis. This is a condition of employment — not just a policy recommendation. Officers who test positive while on duty, or who use cannabis in ways that affect their reliability or judgment, face serious disciplinary consequences including dismissal.</p>
+<p>As of January 2024, RCMP members are permitted to use cannabis <strong>off-duty</strong>, provided they are not impaired when reporting for work or performing their duties. The previous 28-day abstinence requirement was replaced with a <strong>"fit for duty" standard</strong> — the same approach used by most Canadian police forces. Officers who are impaired on duty, or whose off-duty use affects their reliability or judgment, still face serious disciplinary consequences.</p>
 
 <p>If you are applying to the RCMP and you enjoy cannabis as a regular part of your lifestyle, that is something to consider seriously. Becoming an RCMP officer means giving it up permanently as long as you are serving.</p>
 
@@ -1571,7 +1571,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       },
       {
         question: 'Can RCMP officers use cannabis while employed?',
-        answer: 'No. Active RCMP officers are prohibited from using cannabis. This is a condition of employment. Applicants who use cannabis regularly should understand that joining the RCMP means giving it up for the duration of their career.',
+        answer: 'As of January 2024, RCMP members may use cannabis off-duty under a "fit for duty" policy — they cannot be impaired when on duty or reporting to work. The previous 28-day abstinence requirement was removed. However, applicants with recent or heavy use should be aware it will be discussed during the background investigation and polygraph.',
       },
       {
         question: 'What about other drugs like cocaine or MDMA?',
