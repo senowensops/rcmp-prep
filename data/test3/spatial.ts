@@ -76,10 +76,10 @@ const leverSvg = (fulcrumX: number, leftX: number, rightX: number, leftW: string
   mechSvg(`
     <line x1="12" y1="62" x2="88" y2="62" stroke="#555" strokeWidth="3" strokeLinecap="round"/>
     <polygon points="${fulcrumX},62 ${fulcrumX-5},76 ${fulcrumX+5},76" fill="#9ca3af" stroke="#555" strokeWidth="1.2"/>
-    <circle cx="${leftX}" cy="54" r="7" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-    <text x="${leftX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">${leftW}</text>
-    <circle cx="${rightX}" cy="54" r="7" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="2.5 1.5"/>
-    <text x="${rightX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#2563eb">${rightW}</text>
+    <rect x="${leftX-10}" y="43" width="20" height="14" rx="3" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+    <text x="${leftX}" y="53" textAnchor="middle" fontSize="7" fontWeight="700" fill="#111">${leftW}</text>
+    <rect x="${rightX-10}" y="43" width="20" height="14" rx="3" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="2.5 1.5"/>
+    <text x="${rightX}" y="53" textAnchor="middle" fontSize="7" fontWeight="700" fill="#2563eb">${rightW}</text>
   `);
 
 // Gear train: A drives B which drives C (different sizes)
@@ -96,7 +96,7 @@ const angledPulleySvg = mechSvg(`
   <circle cx="50" cy="22" r="2.8" fill="#6b7280"/>
   <line x1="39" y1="22" x2="39" y2="75" stroke="#555" strokeWidth="2"/>
   <rect x="30" y="75" width="18" height="13" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-  <text x="39" y="84" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">75kg</text>
+  <text x="39" y="71" textAnchor="middle" fontSize="7" fontWeight="700" fill="#c8102e">75 kg</text>
   <line x1="61" y1="22" x2="78" y2="60" stroke="#2563eb" strokeWidth="2"/>
   <path d="M73,54 L80,62 L86,54" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
   <text x="84" y="66" fontSize="7" fontWeight="700" fill="#2563eb">?</text>
@@ -112,7 +112,7 @@ const triplePulleySvg = mechSvg(`
   <line x1="47" y1="22" x2="41" y2="50" stroke="#555" strokeWidth="1.8"/>
   <line x1="53" y1="22" x2="59" y2="22" stroke="#555" strokeWidth="1.8"/>
   <rect x="32" y="62" width="36" height="14" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-  <text x="50" y="72" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">90kg</text>
+  <text x="50" y="58" textAnchor="middle" fontSize="7" fontWeight="700" fill="#c8102e">90 kg</text>
   <line x1="71" y1="22" x2="82" y2="50" stroke="#2563eb" strokeWidth="1.8"/>
   <path d="M77,44 L83,52 L89,44" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
   <text x="86" y="56" fontSize="7" fontWeight="700" fill="#2563eb">?</text>

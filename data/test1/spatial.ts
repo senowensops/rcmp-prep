@@ -80,10 +80,10 @@ const leverSvg = (fulcrumX: number, leftX: number, rightX: number, leftW: string
   mechSvg(`
     <line x1="12" y1="62" x2="88" y2="62" stroke="#555" strokeWidth="3" strokeLinecap="round"/>
     <polygon points="${fulcrumX},62 ${fulcrumX-5},76 ${fulcrumX+5},76" fill="#9ca3af" stroke="#555" strokeWidth="1.2"/>
-    <circle cx="${leftX}" cy="54" r="7" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-    <text x="${leftX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">${leftW}</text>
-    <circle cx="${rightX}" cy="54" r="7" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="2.5 1.5"/>
-    <text x="${rightX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#2563eb">${rightW}</text>
+    <rect x="${leftX-10}" y="43" width="20" height="14" rx="3" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+    <text x="${leftX}" y="53" textAnchor="middle" fontSize="7" fontWeight="700" fill="#111">${leftW}</text>
+    <rect x="${rightX-10}" y="43" width="20" height="14" rx="3" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="2.5 1.5"/>
+    <text x="${rightX}" y="53" textAnchor="middle" fontSize="7" fontWeight="700" fill="#2563eb">${rightW}</text>
   `);
 
 // Belt/chain SVG
@@ -98,31 +98,31 @@ const beltSvg = mechSvg(`
 
 // Fixed pulley SVG
 const fixedPulleySvg = mechSvg(`
-  <rect x="34" y="8" width="32" height="5" rx="2" fill="#9ca3af"/>
-  <circle cx="50" cy="24" r="11" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
-  <circle cx="50" cy="24" r="3" fill="#6b7280"/>
-  <line x1="39" y1="24" x2="39" y2="72" stroke="#555" strokeWidth="2"/>
-  <rect x="31" y="72" width="16" height="12" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-  <text x="39" y="81" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">60kg</text>
-  <line x1="61" y1="24" x2="61" y2="64" stroke="#2563eb" strokeWidth="2"/>
-  <path d="M56,58 L61,66 L66,58" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
-  <text x="72" y="66" fontSize="7" fontWeight="700" fill="#2563eb">?</text>
+  <rect x="34" y="6" width="32" height="5" rx="2" fill="#9ca3af"/>
+  <circle cx="50" cy="22" r="11" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
+  <circle cx="50" cy="22" r="3" fill="#6b7280"/>
+  <line x1="39" y1="22" x2="39" y2="62" stroke="#555" strokeWidth="2"/>
+  <rect x="30" y="62" width="18" height="12" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+  <text x="39" y="58" textAnchor="middle" fontSize="7" fontWeight="700" fill="#c8102e">60 kg</text>
+  <line x1="61" y1="22" x2="61" y2="56" stroke="#2563eb" strokeWidth="2"/>
+  <path d="M56,50 L61,58 L66,50" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
+  <text x="74" y="46" fontSize="8" fontWeight="700" fill="#2563eb">?</text>
 `);
 
 // Movable pulley SVG (2:1 MA)
 const movePulleySvg = mechSvg(`
-  <rect x="28" y="8" width="44" height="5" rx="2" fill="#9ca3af"/>
-  <circle cx="42" cy="24" r="9" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
-  <circle cx="42" cy="24" r="2.5" fill="#6b7280"/>
-  <circle cx="42" cy="56" r="9" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
-  <circle cx="42" cy="56" r="2.5" fill="#6b7280"/>
-  <line x1="33" y1="24" x2="33" y2="56" stroke="#555" strokeWidth="2"/>
-  <line x1="51" y1="24" x2="51" y2="56" stroke="#555" strokeWidth="2"/>
-  <rect x="28" y="66" width="28" height="14" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-  <text x="42" y="76" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">100kg</text>
-  <line x1="51" y1="56" x2="72" y2="80" stroke="#2563eb" strokeWidth="2"/>
-  <path d="M67,74 L73,82 L79,74" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
-  <text x="76" y="86" fontSize="7" fontWeight="700" fill="#2563eb">?</text>
+  <rect x="28" y="6" width="44" height="5" rx="2" fill="#9ca3af"/>
+  <circle cx="42" cy="22" r="9" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
+  <circle cx="42" cy="22" r="2.5" fill="#6b7280"/>
+  <circle cx="42" cy="50" r="9" fill="#f3f4f6" stroke="#555" strokeWidth="2"/>
+  <circle cx="42" cy="50" r="2.5" fill="#6b7280"/>
+  <line x1="33" y1="22" x2="33" y2="50" stroke="#555" strokeWidth="2"/>
+  <line x1="51" y1="22" x2="51" y2="50" stroke="#555" strokeWidth="2"/>
+  <rect x="28" y="60" width="28" height="12" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+  <text x="42" y="56" textAnchor="middle" fontSize="7" fontWeight="700" fill="#c8102e">100 kg</text>
+  <line x1="51" y1="50" x2="70" y2="74" stroke="#2563eb" strokeWidth="2"/>
+  <path d="M65,68 L71,76 L77,68" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
+  <text x="74" y="64" fontSize="8" fontWeight="700" fill="#2563eb">?</text>
 `);
 
 // ─── Cube net data ────────────────────────────────────────────────────────────

@@ -79,10 +79,10 @@ const leverSvg = (fulcrumX: number, leftX: number, rightX: number, leftW: string
   mechSvg(`
     <line x1="12" y1="62" x2="88" y2="62" stroke="#555" strokeWidth="3" strokeLinecap="round"/>
     <polygon points="${fulcrumX},62 ${fulcrumX-5},76 ${fulcrumX+5},76" fill="#9ca3af" stroke="#555" strokeWidth="1.2"/>
-    <circle cx="${leftX}" cy="54" r="7" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-    <text x="${leftX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">${leftW}</text>
-    <circle cx="${rightX}" cy="54" r="7" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="2.5 1.5"/>
-    <text x="${rightX}" y="57" textAnchor="middle" fontSize="6" fontWeight="700" fill="#2563eb">${rightW}</text>
+    <rect x="${leftX-10}" y="43" width="20" height="14" rx="3" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
+    <text x="${leftX}" y="53" textAnchor="middle" fontSize="7" fontWeight="700" fill="#111">${leftW}</text>
+    <rect x="${rightX-10}" y="43" width="20" height="14" rx="3" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="2.5 1.5"/>
+    <text x="${rightX}" y="53" textAnchor="middle" fontSize="7" fontWeight="700" fill="#2563eb">${rightW}</text>
   `);
 
 // Inclined plane / wedge SVG
@@ -104,7 +104,7 @@ const compoundPulleySvg = mechSvg(`
   <line x1="40" y1="22" x2="40" y2="50" stroke="#555" strokeWidth="1.8"/>
   <line x1="60" y1="22" x2="60" y2="50" stroke="#555" strokeWidth="1.8"/>
   <rect x="34" y="62" width="32" height="14" fill="#fee2e2" stroke="#c8102e" strokeWidth="1.5"/>
-  <text x="50" y="72" textAnchor="middle" fontSize="6" fontWeight="700" fill="#111">120kg</text>
+  <text x="50" y="58" textAnchor="middle" fontSize="7" fontWeight="700" fill="#c8102e">120 kg</text>
   <line x1="60" y1="50" x2="78" y2="78" stroke="#2563eb" strokeWidth="1.8"/>
   <path d="M73,73 L79,81 L85,73" fill="none" stroke="#2563eb" strokeWidth="1.8"/>
   <text x="82" y="84" fontSize="7" fontWeight="700" fill="#2563eb">?</text>
