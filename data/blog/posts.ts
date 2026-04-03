@@ -1787,4 +1787,183 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Undergo a field investigation and security assessment', url: 'https://rcmp.ca/en/careers-rcmp/become-police-officer-with-federal-policing-undergo-field-investigation-security-assessment' },
     ],
   },
+  {
+    slug: 'rcmp-salary-and-benefits',
+    title: 'RCMP Salary and Benefits: What You Actually Get Paid',
+    subtitle: 'From cadet training allowance to full pension — the complete breakdown of RCMP compensation as of 2026',
+    date: '2026-04-03',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'RCMP pay starts at $71,191 as a Constable and climbs to $115,350 within 36 months. Add a defined benefit pension, full health coverage, and isolated post allowances — and the total package is stronger than most people realize.',
+    coverImage: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+    content: `
+<p>RCMP salary starts at $71,191 when you complete Depot training and are sworn in as a Constable. Within 36 months of service, you will typically be earning $115,350 per year — plus a full benefits package that includes a defined benefit pension, medical and dental coverage, and paid allowances for bilingualism and remote postings.</p>
+
+<p>This page breaks down the complete compensation picture: cadet pay, constable pay steps, other ranks, and every major benefit that comes with being an RCMP regular member. All figures are sourced directly from <a href="https://rcmp.ca/en/careers-rcmp/police-officer-careers/pay-and-benefits" target="_blank">rcmp.ca</a> and the Treasury Board collective agreement as of April 2026.</p>
+
+<h2>Cadet Training Allowance (Depot)</h2>
+
+<p>Before you are sworn in as a Constable, you spend 26 weeks at RCMP Depot in Regina, Saskatchewan. During that time, you are not yet a police officer — you are a cadet. As of April 1, 2026, cadets receive <strong>$1,000 per week</strong>, paid bi-weekly ($2,000 every two weeks). The maximum allowance over the full 26-week program is $26,000.</p>
+
+<p>On top of the allowance, the RCMP covers:</p>
+<ul>
+  <li>Room and board at Depot</li>
+  <li>Your uniform</li>
+  <li>All training courses and materials</li>
+  <li>Insurance during training</li>
+  <li>Travel to and from Depot</li>
+</ul>
+
+<p>The allowance increased significantly in 2026 (up from $525/week). The RCMP made this change to make the program more competitive given the cost of living. Note: cadets who leave during training for Code of Conduct violations or to join another police service are required to repay the full allowance received.</p>
+
+<h2>Constable Salary: The 5-Step Pay Scale</h2>
+
+<p>When you complete Depot and are offered employment, you are hired as a Constable at Step 1. The five steps are based on months of service (not performance) and progress automatically:</p>
+
+<table>
+  <thead>
+    <tr><th>Step</th><th>Service Milestone</th><th>Annual Salary</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Step 1</td><td>Upon hire</td><td>$71,191</td></tr>
+    <tr><td>Step 2</td><td>6 months</td><td>$92,497</td></tr>
+    <tr><td>Step 3</td><td>12 months</td><td>$100,356</td></tr>
+    <tr><td>Step 4</td><td>24 months</td><td>$108,220</td></tr>
+    <tr><td>Step 5</td><td>36 months</td><td>$115,350</td></tr>
+  </tbody>
+</table>
+
+<p>These figures are effective April 1, 2024, following an arbitration decision that granted an 8% increase over two years (4% in 2023, 4% in 2024). The jump from Step 1 to Step 2 is the biggest single increase — $21,306 in just six months — which reflects the rapid growth in competency expected in the first year on the job.</p>
+
+<h2>Higher Ranks: Corporal, Sergeant, and Beyond</h2>
+
+<p>Promotion from Constable to Corporal and beyond is based on a combination of experience, performance, and competition. Salaries for higher ranks as of 2026:</p>
+
+<ul>
+  <li><strong>Corporal Step 1:</strong> $121,691/year</li>
+  <li><strong>Corporal Step 2:</strong> $126,311/year</li>
+  <li><strong>Sergeant:</strong> $133,677/year</li>
+  <li><strong>Staff Sergeant:</strong> $146,019/year</li>
+  <li><strong>Sergeant Major:</strong> $150,524/year</li>
+</ul>
+
+<p>Full pay details for all ranks below Inspector are published in <a href="https://www.canada.ca/en/treasury-board-secretariat/topics/pay/collective-agreements/rm.html" target="_blank">Appendix A of the RCMP Regular Members Collective Agreement</a> on the Treasury Board of Canada website.</p>
+
+<h2>Extra-Duty Pay</h2>
+
+<p>Beyond base salary, you may earn additional pay for:</p>
+<ul>
+  <li><strong>Overtime</strong> — when required to work beyond scheduled hours</li>
+  <li><strong>Shift premiums</strong> — for evening, night, and weekend shifts</li>
+  <li><strong>Callback pay</strong> — when called back to duty outside your scheduled shift</li>
+  <li><strong>Court duty pay</strong> — when required to attend court on days off</li>
+  <li><strong>Travel time and transportation allowances</strong></li>
+</ul>
+
+<p>Overtime and shift premiums can meaningfully increase total annual earnings, particularly in detachments with 24/7 coverage requirements.</p>
+
+<h2>Isolated Post Allowances</h2>
+
+<p>RCMP members are often posted to remote and isolated communities — northern towns, First Nations reserves, and areas where living costs are significantly higher than in major cities. Isolated post allowances are designed to compensate for this. There are five types of allowance that can apply:</p>
+<ol>
+  <li>Environment allowance</li>
+  <li>Living cost differential</li>
+  <li>Fuel and utilities differential</li>
+  <li>Shelter cost differential</li>
+  <li>Special cost allowance</li>
+</ol>
+
+<p>Amounts vary depending on the post and whether you have dependents. For some remote northern postings, these allowances can add tens of thousands of dollars annually to your effective compensation.</p>
+
+<h2>Other Paid Allowances</h2>
+
+<ul>
+  <li><strong>Bilingual bonus:</strong> $800/year if you are proficient in both English and French</li>
+  <li><strong>Operational clothing allowance:</strong> Up to $1,500/year for special clothing required by your role</li>
+  <li><strong>Tuition reimbursement:</strong> Up to $1,500/year for relevant part-time education from accredited institutions</li>
+</ul>
+
+<h2>Vacation Days</h2>
+
+<p>Annual leave accrues based on years of service:</p>
+<ul>
+  <li><strong>0–5 years:</strong> 15 days/year</li>
+  <li><strong>5–10 years:</strong> 20 days/year</li>
+  <li><strong>10–22 years:</strong> 25 days/year</li>
+  <li><strong>23+ years:</strong> 30 days/year</li>
+</ul>
+
+<p>Additionally, members receive 8 hours of wellness leave per fiscal year and 40 hours of family-related leave per year — regardless of rank.</p>
+
+<h2>Pension Plan</h2>
+
+<p>The RCMP pension is a <strong>defined benefit pension</strong> — one of the strongest available in Canada. Key milestones:</p>
+<ul>
+  <li><strong>20 years of service:</strong> Eligible to retire with a reduced pension</li>
+  <li><strong>25 years of service:</strong> Full pension</li>
+  <li><strong>35 years of service:</strong> Maximum pension benefit</li>
+</ul>
+
+<p>If you already have a Canadian registered pension plan from a previous employer, you may be able to transfer it to the RCMP Pension Plan. For many candidates, the pension alone represents hundreds of thousands of dollars in long-term value over a career.</p>
+
+<h2>Health and Family Benefits</h2>
+
+<p>RCMP members receive full supplemental health and dental coverage for themselves and their dependents at no cost. This includes:</p>
+<ul>
+  <li>Supplemental health care benefits (prescription drugs, vision, paramedical services)</li>
+  <li>Dental plan</li>
+  <li>Group life insurance</li>
+  <li>Occupational health care for work-related injuries</li>
+</ul>
+
+<p>For new parents, the RCMP offers a maternity allowance of 93% of weekly pay for up to 17 weeks, and a parental allowance of 93% of weekly pay for up to 37 weeks — both subject to specific conditions.</p>
+
+<h2>Government Housing</h2>
+
+<p>For members posted to locations where suitable private housing is limited, the Government of Canada provides employee housing. This is most common in remote and northern postings where the RCMP delivers government policing programs. Government housing reduces your cost of living in areas where rental markets are thin or expensive.</p>
+
+<h2>Total Compensation: Putting It Together</h2>
+
+<p>When you add it all up, the RCMP compensation package is considerably stronger than the base salary figure suggests. A 3-year constable earning $115,350 base, with shift premiums, operational clothing, and bilingual allowances, may be bringing in $120,000–$130,000+ in total compensation — backed by a defined benefit pension, full health coverage, and paid parental leave.</p>
+
+<p>For candidates posted to isolated communities, total compensation can be substantially higher due to cost-of-living allowances. For those who pursue promotion to Sergeant or above, $130,000–$150,000+ in base pay is achievable within a 10–15 year career.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>The RCMP is not the highest-paying police service in Canada — large municipal forces like Toronto, Calgary, and Vancouver typically pay more at senior levels. But the combination of salary progression, defined benefit pension, health coverage, and posting allowances makes RCMP compensation strong, particularly for candidates who value career mobility, mission-driven work, and long-term security over maximizing peak earnings.</p>
+
+<p>If you are in the application process and focused on clearing the first major hurdle, <a href="https://rcmpprep.ca">rcmpprep.ca</a> has practice tests for every section of the RCMP Online Entrance Assessment — the first thing standing between you and the rest of this career.</p>
+    `,
+    faqs: [
+      {
+        question: 'What is the starting salary for an RCMP officer in 2026?',
+        answer: 'When you complete Depot training and are hired as a Constable, your starting salary is $71,191/year. This is Step 1 of a five-step pay scale. Within 36 months, your salary automatically progresses to $115,350/year at Step 5.',
+      },
+      {
+        question: 'How much do RCMP cadets get paid during training at Depot?',
+        answer: 'As of April 1, 2026, RCMP cadets receive $1,000 per week during the 26-week training program at Depot in Regina, Saskatchewan. The maximum total allowance is $26,000. Room, board, uniform, training, and travel are all covered separately by the RCMP.',
+      },
+      {
+        question: 'Does the RCMP have a pension plan?',
+        answer: 'Yes. RCMP regular members are enrolled in a defined benefit pension plan. Members can retire with a reduced pension at 20 years of service, a full pension at 25 years, and the maximum pension at 35 years of service. It is one of the strongest pension plans available in Canada.',
+      },
+      {
+        question: 'What benefits do RCMP officers receive?',
+        answer: 'RCMP officers receive supplemental health care and dental coverage for themselves and dependents, group life insurance, operational clothing allowances (up to $1,500/year), bilingual bonus ($800/year), tuition reimbursement (up to $1,500/year), paid parental leave, and isolated post allowances for remote postings.',
+      },
+      {
+        question: 'How much does an RCMP Sergeant make?',
+        answer: 'As of 2026, an RCMP Sergeant earns $133,677/year in base salary. A Corporal starts at $121,691/year, and a Staff Sergeant earns $146,019/year. These figures are from the RCMP Regular Members Collective Agreement.',
+      },
+      {
+        question: 'Is RCMP pay competitive with municipal police in Canada?',
+        answer: 'RCMP pay is competitive but generally below what major municipal forces like Toronto Police, Calgary Police, or Vancouver Police pay at senior levels. However, the RCMP offers broader career mobility (federal jurisdiction, international postings, specialized units), a strong defined benefit pension, and isolated post allowances that can significantly increase total compensation for members posted to remote communities.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Pay and benefits for police officers', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/pay-and-benefits' },
+      { label: 'Treasury Board — RCMP Regular Members Collective Agreement', url: 'https://www.canada.ca/en/treasury-board-secretariat/topics/pay/collective-agreements/rm.html' },
+    ],
+  },
 ];
