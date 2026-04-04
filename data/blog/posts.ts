@@ -1966,4 +1966,155 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'Treasury Board — RCMP Regular Members Collective Agreement', url: 'https://www.canada.ca/en/treasury-board-secretariat/topics/pay/collective-agreements/rm.html' },
     ],
   },
+  {
+    slug: 'rcmp-psychological-assessment',
+    title: 'RCMP Psychological Assessment: What It Tests and How to Prepare',
+    subtitle: 'The RCMP Psychological Suitability Screening evaluates your emotional stability, judgment, and integrity. Here is what to expect at every step.',
+    date: '2026-04-04',
+    author: 'RCMP Prep Team',
+    readTime: '8 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP psychological assessment (Psychological Suitability Screening) is Step 8 of the application process. It includes standardized testing, a clinical interview with a registered psychologist, and a pre-interview questionnaire. Here is how to approach it.',
+    coverImage: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&q=80',
+    content: `
+<p>The RCMP Psychological Suitability Screening (PSS) is Step 8 of the RCMP application process. It comes after your suitability interview and before the field investigation and security clearance. The purpose is direct: determine whether you currently possess the psychological attributes required for a career in federal policing. The RCMP conducts the assessment through a registered psychologist and covers the cost.</p>
+
+<p>This post covers exactly what the screening involves, what the psychologist is evaluating, and how to approach each component with the right mindset.</p>
+
+<h2>Where the Psychological Assessment Fits</h2>
+
+<p>The full RCMP application process has 9 major steps. The psychological assessment sits at Step 8:</p>
+
+<ol>
+  <li>Online application</li>
+  <li>Before you apply (eligibility check)</li>
+  <li>Submit required forms and documents</li>
+  <li>Watch career presentation</li>
+  <li>Complete Online Entrance Assessment (OEA)</li>
+  <li>Submit additional required documents</li>
+  <li>Complete a suitability interview</li>
+  <li><strong>Undergo medical and psychological suitability assessments ← you are here</strong></li>
+  <li>Field investigation and security clearance</li>
+</ol>
+
+<p>Step 8 has two components that run in sequence: you must pass the <strong>Psychological Suitability Screening first</strong>, then proceed to the Medical Screening Process. If you do not pass the PSS, you do not advance to medical or to the field investigation.</p>
+
+<h2>The Three Components of the PSS</h2>
+
+<p>According to the RCMP, the Psychological Suitability Screening consists of three distinct elements:</p>
+
+<h3>1. Pre-Interview Questionnaire</h3>
+
+<p>Before your clinical interview, you complete a written questionnaire disclosing all past and present psychological conditions and concerns, as well as relevant health information. This includes:</p>
+
+<ul>
+  <li>Any history of anxiety, depression, PTSD, or other mental health diagnoses</li>
+  <li>Past or current therapy, counselling, or psychiatric treatment</li>
+  <li>Current and historical medications</li>
+  <li>Any hospitalizations related to mental health</li>
+  <li>Prior psychological or neuropsychological assessments</li>
+</ul>
+
+<p>The RCMP is explicit: <strong>serious gaps, omissions, inconsistencies, or inaccuracies are grounds to terminate your application.</strong> This form becomes part of your permanent medical file and will be cross-referenced against your polygraph results, your background investigation, and what your references say. Disclose completely and accurately.</p>
+
+<h3>2. Standardized Psychological Testing</h3>
+
+<p>You will complete one or more standardized psychological tests — the same types used in clinical and occupational psychology. The RCMP does not publicly specify which instruments it uses, but Canadian law enforcement agencies commonly use tools such as the MMPI-2 (Minnesota Multiphasic Personality Inventory), which measures a broad range of psychological traits and clinical indicators across hundreds of questions.</p>
+
+<p>These tests are designed to detect inconsistent patterns, exaggerated presentations (trying to appear too perfect), and minimization of real concerns. <strong>The right approach is to answer honestly.</strong> Do not try to game the test by providing what you imagine the ideal officer would answer. These instruments are specifically designed to flag that pattern. Authentic, consistent responses from someone who is genuinely psychologically healthy will outperform a managed performance every time.</p>
+
+<h3>3. Clinical Interview with a Registered Psychologist</h3>
+
+<p>The clinical interview is conducted by an RCMP-designated registered psychologist. It draws on your Pre-Interview Questionnaire, your test results, and information gathered throughout the application process — your suitability interview responses, polygraph results, reference checks, and medical information.</p>
+
+<p>The interview is a conversation, not an interrogation. The psychologist is evaluating:</p>
+
+<ul>
+  <li><strong>Emotional stability</strong> — how you regulate emotions under stress, conflict, and high-pressure situations typical in policing</li>
+  <li><strong>Integrity and honesty</strong> — consistency between what you say and what the documentation shows</li>
+  <li><strong>Judgment</strong> — your decision-making history, especially in ethically complex or ambiguous situations</li>
+  <li><strong>Resilience</strong> — your capacity to handle trauma exposure, personal setbacks, and occupational stress over a career</li>
+  <li><strong>Interpersonal functioning</strong> — how you relate to authority, colleagues, and people you disagree with</li>
+  <li><strong>Self-awareness</strong> — your ability to reflect honestly on your own behavior, acknowledge mistakes, and demonstrate growth</li>
+</ul>
+
+<h2>What Can Disqualify You Psychologically</h2>
+
+<p>The RCMP is explicit that a history of psychological difficulties does not automatically disqualify you. Many people who have experienced depression, anxiety, or therapy go on to become officers. The assessment focuses on your <em>current</em> suitability — your present stability, self-awareness, and resilience.</p>
+
+<p>Factors that raise serious concern include:</p>
+
+<ul>
+  <li>Active or recently-treated conditions that significantly affect judgment or functioning</li>
+  <li>A history of violence, impulse control problems, or significant recurring interpersonal conflict</li>
+  <li>Dishonesty or inconsistency between your disclosure and what the investigation surfaces</li>
+  <li>Poor stress tolerance or difficulty accepting authority and direction</li>
+  <li>Presenting as psychologically too perfect — a pattern standardized tests are built to detect</li>
+</ul>
+
+<p>The psychologist's findings are shared with the broader Suitability team and contribute to a global suitability recommendation. You receive medical clearance only after successfully completing this stage.</p>
+
+<h2>No Results, No Feedback</h2>
+
+<p>One detail that surprises many candidates: <strong>you will not receive the results of your Psychological Suitability Screening.</strong> You must sign a consent form acknowledging this before the assessment begins. No reports, no test results, no feedback from the psychologist.</p>
+
+<p>This is standard for employment-based psychological assessments. The evaluation is commissioned by the RCMP as a suitability review — not a therapeutic or diagnostic process. You will know the outcome only by whether your application continues to move forward.</p>
+
+<h2>How to Prepare</h2>
+
+<p>There is no study guide for the psychological assessment, and you should be skeptical of anything claiming to let you "pass" it through scripted answers. The best preparation is genuine:</p>
+
+<ul>
+  <li><strong>Know your own history.</strong> Review any mental health history, past therapy or counselling, medications, and significant life events before completing the Pre-Interview Questionnaire. Being clear on your own timeline means consistent, accurate disclosure.</li>
+  <li><strong>Practice honest self-reflection.</strong> The clinical interview will ask how you have handled stress, conflict, trauma, and difficult decisions. Think through real examples — not fabricated stories, but honest accounts of how you have grown through challenges.</li>
+  <li><strong>Answer standardized tests authentically.</strong> Respond as you genuinely are, not as you imagine an ideal officer would. Attempts to construct a perfect profile typically backfire.</li>
+  <li><strong>Be consistent across all steps.</strong> Your suitability interview, polygraph, references, and PSS questionnaire should tell the same story. Small inconsistencies prompt deeper questioning.</li>
+  <li><strong>Show up rested and present.</strong> This is not a trivia test. Arrive calm and ready to engage honestly.</li>
+</ul>
+
+<h2>A Note on Mental Health and Stigma</h2>
+
+<p>Many candidates are reluctant to disclose past mental health treatment because they fear it will automatically end their application. That concern is largely unfounded for candidates who are genuinely stable today.</p>
+
+<p>Seeking help for depression, anxiety, or grief — working through it and arriving at this process as a self-aware, stable person — is not a disqualifier. It can actually demonstrate the resilience and self-awareness the RCMP values. What the RCMP cannot tolerate is dishonesty. A candidate who discloses past counselling honestly and reflects thoughtfully on it is far better positioned than a candidate who hides the same history and is caught out during the background investigation or polygraph.</p>
+
+<p>Preparing for the Online Entrance Assessment — the first major filter in the RCMP process? Our <a href="/sample">free practice test</a> covers all six sections of the OEA, no account required.</p>
+    `,
+    faqs: [
+      {
+        question: 'What is the RCMP psychological assessment?',
+        answer: 'The RCMP Psychological Suitability Screening (PSS) is Step 8 of the application process. It consists of a Pre-Interview Questionnaire, standardized psychological testing, and a clinical interview with a registered RCMP-designated psychologist. Its purpose is to determine whether you currently have the psychological attributes required for federal policing.',
+      },
+      {
+        question: 'Will a history of depression or anxiety disqualify me from the RCMP?',
+        answer: 'Not automatically. The RCMP assesses your current psychological suitability, not just your history. Many candidates with past mental health treatment become officers. What matters is your present stability, self-awareness, and honest disclosure. Attempting to hide a history is far riskier than disclosing it.',
+      },
+      {
+        question: 'What does the RCMP psychologist look for in the clinical interview?',
+        answer: 'The psychologist evaluates emotional stability, integrity, judgment, resilience, interpersonal functioning, and self-awareness. They draw on your Pre-Interview Questionnaire, standardized test results, and earlier application steps including the suitability interview and polygraph. The goal is to assess current suitability for policing — not to diagnose or treat.',
+      },
+      {
+        question: 'Can I see my RCMP psychological assessment results?',
+        answer: 'No. You must sign a consent form before the assessment begins acknowledging that you will not receive access to any reports, test results, or feedback. You will know the outcome only by whether your application advances to the next stage.',
+      },
+      {
+        question: 'How should I answer the standardized psychological tests?',
+        answer: 'Answer honestly and authentically. Do not try to present a perfect profile — standardized psychological instruments are specifically designed to detect over-managed or inconsistent responses. Genuine, consistent answers from someone who is psychologically healthy will outperform a manufactured performance.',
+      },
+      {
+        question: 'What happens if I fail the RCMP psychological assessment?',
+        answer: 'If you are not deemed psychologically qualified, your application will not advance to the Medical Screening Process or the field investigation. You may receive a deferral — a waiting period before you can reapply. Deferrals at the PSS stage are typically longer than those issued earlier in the process.',
+      },
+    ],
+    sources: [
+      {
+        label: 'RCMP — Undergo Medical and Psychological Suitability Assessments',
+        url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-undergo-medical-psychological-suitability-assessments',
+      },
+      {
+        label: 'RCMP — Become an RCMP Officer: Full Process Overview',
+        url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer',
+      },
+    ],
+  },
 ];
