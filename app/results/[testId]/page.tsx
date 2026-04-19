@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 import { RadarChart } from "@/components/ui/RadarChart";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { getResults } from "@/lib/testData";
+import { trackTestComplete } from "@/lib/tracking";
 import type { TestState } from "@/types";
 
 function SupportModal({ onClose }: { onClose: () => void }) {
@@ -54,6 +55,30 @@ export default function ResultsPage() {
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const completeKey = `rcmp-test-completed-${params.testId}`;
+    if (sessionStorage.getItem(completeKey)) return;
+
+    const startTime = sessionStorage.getItem(`rcmp-test-start-${params.testId}`);
+    const durationSeconds = startTime
+      ? Math.round((Date.now() - Number.parseInt(startTime, 10)) / 1000)
+      : 0;
+
+    void trackTestComplete({
+      testId: params.testId,
+      totalQuestions: results.totalScored,
+      answeredQuestions: Object.keys(state.answers).length,
+      correctAnswers: results.overallCorrect,
+      scorePercent: results.overallPct,
+      durationSeconds,
+      sections: results.sections,
+    });
+
+    sessionStorage.setItem(completeKey, "1");
+  }, [params.testId, results, state.answers]);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">

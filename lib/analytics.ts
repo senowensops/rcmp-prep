@@ -22,6 +22,13 @@ export const analytics = {
   startFreeSample: () =>
     trackEvent("begin_sample", { event_category: "engagement" }),
 
+  // User starts a tracked full test attempt
+  testStarted: (testId: string) =>
+    trackEvent("test_started", {
+      test_id: testId,
+      event_category: "engagement",
+    }),
+
   // User clicks unlock / goes to checkout
   initiateCheckout: () =>
     trackEvent("begin_checkout", {
@@ -39,10 +46,42 @@ export const analytics = {
       event_category: "conversion",
     }),
 
+  // User lands on checkout for the tracked offer flow
+  checkoutStarted: () =>
+    trackEvent("checkout_started", {
+      currency: "CAD",
+      value: 29,
+      event_category: "conversion",
+    }),
+
+  // Custom purchase completion event for non-GA ecommerce reporting
+  purchaseComplete: (sessionId: string, amount: number) =>
+    trackEvent("purchase_complete", {
+      transaction_id: sessionId,
+      value: amount,
+      currency: "CAD",
+      event_category: "conversion",
+    }),
+
   // User completes a full practice test
   completePracticeTest: (testId: string) =>
     trackEvent("complete_test", {
       test_id: testId,
+      event_category: "engagement",
+    }),
+
+  // Full completion event with result metadata
+  testCompleted: (params: {
+    testId: string;
+    score: number;
+    questionsAnswered: number;
+    durationSeconds: number;
+  }) =>
+    trackEvent("test_completed", {
+      test_id: params.testId,
+      score: params.score,
+      questions_answered: params.questionsAnswered,
+      duration_seconds: params.durationSeconds,
       event_category: "engagement",
     }),
 

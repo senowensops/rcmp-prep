@@ -16,6 +16,7 @@ import { BusinessSection } from "@/components/sections/BusinessSection";
 import { useTestState } from "@/hooks/useTestState";
 import { useTimer } from "@/hooks/useTimer";
 import { getSectionsForTest } from "@/lib/testData";
+import { trackTestStart } from "@/lib/tracking";
 
 const renderers = {
   workstyle: WorkstyleSection,
@@ -46,6 +47,17 @@ export default function TestPage() {
     if (typeof window === 'undefined') return;
     setOriented(window.localStorage.getItem('rcmp-oriented') === '1');
     setResumeReady(Boolean(window.localStorage.getItem(`rcmp-progress-${testId}`)));
+  }, [testId]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const startKey = `rcmp-test-started-${testId}`;
+    if (sessionStorage.getItem(startKey)) return;
+
+    void trackTestStart(testId);
+    sessionStorage.setItem(startKey, "1");
+    sessionStorage.setItem(`rcmp-test-start-${testId}`, Date.now().toString());
   }, [testId]);
 
   const { secondsLeft: subsectionTime, setSecondsLeft: setSubsectionTime } = useTimer(activeSubsection?.timerSeconds ?? null, Boolean(activeSubsection?.timerSeconds && !studyActive && !lockedSubsections[activeSubsection.id]), () => {
