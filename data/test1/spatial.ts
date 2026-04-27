@@ -127,35 +127,37 @@ const movePulleySvg = mechSvg(`
 
 // ─── Cube net data ────────────────────────────────────────────────────────────
 
+// Face colours for NET_A (used in question text & netOption lookup)
+const NA = { top:'#c8102e', left:'#2563eb', center:'#111827', right:'#d97706', below:'#15803d', bottom:'#7c3aed' };
 const NET_A = {
-  top:    { symbol: 'R', color: '#c8102e' },   // Red R
-  left:   { symbol: 'B', color: '#2563eb' },   // Blue B
-  center: { symbol: 'X', color: '#111'    },   // Black X
-  right:  { symbol: 'O', color: '#d97706' },   // Orange O
-  below:  { symbol: 'G', color: '#15803d' },   // Green G
-  bottom: { symbol: 'P', color: '#7c3aed' },   // Purple P
+  top:    { symbol: '', color: NA.top    },   // Red
+  left:   { symbol: '', color: NA.left   },   // Blue
+  center: { symbol: '', color: NA.center },   // Black
+  right:  { symbol: '', color: NA.right  },   // Orange
+  below:  { symbol: '', color: NA.below  },   // Green
+  bottom: { symbol: '', color: NA.bottom },   // Purple
 };
 
+// Face colours for NET_B
+const NB = { top:'#c8102e', left:'#2563eb', center:'#111827', right:'#d97706', below:'#15803d', bottom:'#7c3aed' };
 const NET_B = {
-  top:    { symbol: '1', color: '#c8102e' },
-  left:   { symbol: '2', color: '#2563eb' },
-  center: { symbol: '3', color: '#111'    },
-  right:  { symbol: '4', color: '#d97706' },
-  below:  { symbol: '5', color: '#15803d' },
-  bottom: { symbol: '6', color: '#7c3aed' },
+  top:    { symbol: '', color: NB.top    },   // Red
+  left:   { symbol: '', color: NB.left   },   // Blue
+  center: { symbol: '', color: NB.center },   // Black
+  right:  { symbol: '', color: NB.right  },   // Orange
+  below:  { symbol: '', color: NB.below  },   // Green
+  bottom: { symbol: '', color: NB.bottom },   // Purple
 };
 
 const netPromptA = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(NET_A, 55)}</g>`);
 const netPromptB = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(NET_B, 55)}</g>`);
 
-const netOption = (top: string, front: string, right: string) =>
+// netOption: pass hex colours for each visible face
+const netOption = (topCol: string, frontCol: string, rightCol: string) =>
   oSvg(`
-    <polygon points="10,28 30,16 50,28 30,40" fill="#f8fafc" stroke="#333" strokeWidth="1.5"/>
-    <polygon points="10,28 10,48 30,56 30,40" fill="#e2e8f0" stroke="#333" strokeWidth="1.5"/>
-    <polygon points="30,40 50,28 50,48 30,56" fill="#cbd5e1" stroke="#333" strokeWidth="1.5"/>
-    <text x="30" y="32" textAnchor="middle" fontSize="9" fill="#111" fontWeight="700">${top}</text>
-    <text x="19" y="47" textAnchor="middle" fontSize="9" fill="#333" fontWeight="700">${front}</text>
-    <text x="41" y="47" textAnchor="middle" fontSize="9" fill="#444" fontWeight="700">${right}</text>
+    <polygon points="10,28 30,16 50,28 30,40" fill="${topCol}" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="10,28 10,48 30,56 30,40" fill="${frontCol}" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="30,40 50,28 50,48 30,56" fill="${rightCol}" stroke="#333" strokeWidth="1.5"/>
   `);
 
 // ─── Part A: 2D rotations ─────────────────────────────────────────────────────
@@ -488,52 +490,56 @@ const partD: Question[] = [
   {
     id: 'T1-D-1',
     subsectionId: 'spatial-cubes',
-    text: 'When this net is folded, which face is <strong>opposite R</strong> (the red face)?',
-    opts: ['P','B','G','O'],
+    text: 'When this net is folded, which face is <strong>opposite the red face</strong>?',
+    opts: ['Purple','Blue','Green','Orange'],
     correct: 0,
-    exp: 'In a vertical cross net, the top face (R) folds opposite the bottom face (P). They end up on opposite sides of the cube.',
+    exp: 'In a vertical cross net, the top face (red) folds opposite the bottom face (purple). They end up on opposite sides of the cube.',
+    // NA colours: top=red, bottom=purple → correct=0
     promptSvg: netPromptA,
   },
   {
     id: 'T1-D-2',
     subsectionId: 'spatial-cubes',
-    text: 'When this net is folded, which face is <strong>opposite B</strong> (the blue face)?',
-    opts: ['R','X','O','P'],
+    text: 'When this net is folded, which face is <strong>opposite the blue face</strong>?',
+    opts: ['Red','Black','Orange','Purple'],
     correct: 2,
-    exp: 'The left face (B) is opposite the right face (O). They are on either side of the centre face.',
+    exp: 'The left face (blue) is opposite the right face (orange). They are on either side of the centre face.',
+    // NA: left=blue, right=orange → correct=2
     promptSvg: netPromptA,
   },
   {
     id: 'T1-D-3',
     subsectionId: 'spatial-cubes',
-    text: 'Which cube could be folded from this net? (Which option shows three mutually adjacent faces?)',
+    text: 'Which cube could be folded from this net?',
     opts: ['A','B','C','D'],
     correct: 1,
-    exp: 'Option B shows R, X, and O meeting at a single corner — all three are mutually adjacent in the net.',
+    exp: 'Option B shows red (top), black (front), and orange (right) meeting at a corner — all three are mutually adjacent in the net.',
     promptSvg: netPromptA,
     choicesSvg: [
-      netOption('R','P','B'),  // A: R opposite P can't share corner
-      netOption('R','X','O'),  // B: correct ✓
-      netOption('X','P','B'),  // C: invalid pairing
-      netOption('B','P','O'),  // D: B opposite O can't share corner
+      netOption(NA.top, NA.bottom, NA.left),   // A: red top + purple + blue — red & purple opposite, invalid
+      netOption(NA.top, NA.center, NA.right),  // B: red top + black front + orange right ✓
+      netOption(NA.center, NA.bottom, NA.left),// C: black + purple + blue — invalid
+      netOption(NA.left, NA.bottom, NA.right), // D: blue + purple + orange — blue & orange opposite, invalid
     ],
   },
   {
     id: 'T1-D-4',
     subsectionId: 'spatial-cubes',
-    text: 'When this second net is folded, which face is <strong>opposite 3</strong>?',
-    opts: ['1','2','5','6'],
+    text: 'When this second net is folded, which face is <strong>opposite the black face</strong>?',
+    opts: ['Red','Blue','Green','Purple'],
     correct: 2,
-    exp: '3 is the centre face. 5 is directly below it in the strip. When folded, 3 and 5 become opposite faces.',
+    exp: 'The black face is the centre of the cross. The green face is directly below it. When folded, they become opposite faces.',
+    // NB: center=black, below=green → correct=2
     promptSvg: netPromptB,
   },
   {
     id: 'T1-D-5',
     subsectionId: 'spatial-cubes',
-    text: 'When this second net is folded, which face is <strong>opposite 2</strong>?',
-    opts: ['1','3','4','6'],
+    text: 'When this second net is folded, which face is <strong>opposite the blue face</strong>?',
+    opts: ['Red','Black','Orange','Purple'],
     correct: 2,
-    exp: '2 is the left face and 4 is the right face of the cross. Left and right faces always fold to opposite sides.',
+    exp: 'The blue face is on the left arm and the orange face is on the right arm of the cross. They fold to opposite sides of the cube.',
+    // NB: left=blue, right=orange → correct=2
     promptSvg: netPromptB,
   },
   {
@@ -542,13 +548,13 @@ const partD: Question[] = [
     text: 'Which cube could be folded from this second net?',
     opts: ['A','B','C','D'],
     correct: 3,
-    exp: 'Option D shows faces 1, 3, and 4 meeting at a corner — all adjacent in the net.',
+    exp: 'Option D shows red (top), black (front), and orange (right) meeting at a corner — all three are adjacent in the net.',
     promptSvg: netPromptB,
     choicesSvg: [
-      netOption('1','6','2'),  // A: 1 opposite 6 can't share corner
-      netOption('3','6','4'),  // B: invalid
-      netOption('2','4','5'),  // C: 2 opposite 4 can't share corner
-      netOption('1','3','4'),  // D: correct ✓
+      netOption(NB.top, NB.bottom, NB.left),    // A: red + purple + blue — top & bottom opposite, invalid
+      netOption(NB.center, NB.bottom, NB.right), // B: black + purple + orange — invalid
+      netOption(NB.left, NB.right, NB.below),   // C: blue + orange + green — left & right opposite, invalid
+      netOption(NB.top, NB.center, NB.right),   // D: red + black + orange ✓
     ],
   },
 ];

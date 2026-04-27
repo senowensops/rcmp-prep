@@ -32,8 +32,11 @@ export function cubeNetSVG(faces: CubeFaces, size?: number) {
   const col1 = pad, col2 = pad + s + gap, col3 = pad + 2 * (s + gap);
   const row1 = pad, row2 = pad + s + gap, row3 = pad + 2 * (s + gap), row4 = pad + 3 * (s + gap);
   function box(x: number, y: number, face?: CubeFace) {
-    let r = `<rect x="${x}" y="${y}" width="${s}" height="${s}" fill="#fff" stroke="#333" stroke-width="2.5"/>`;
-    if (face) r += `<text x="${x + s / 2}" y="${y + s / 2 + 8}" text-anchor="middle" font-size="28" fill="${face.color}" font-weight="700">${face.symbol}</text>`;
+    // Fill with the face colour; white text label centred on it
+    const fill = face ? face.color : '#f3f4f6';
+    const textFill = face ? 'rgba(255,255,255,0.75)' : '#bbb';
+    let r = `<rect x="${x}" y="${y}" width="${s}" height="${s}" fill="${fill}" stroke="#333" stroke-width="2.5"/>`;
+    if (face) r += `<text x="${x + s / 2}" y="${y + s / 2 + 8}" text-anchor="middle" font-size="20" fill="${textFill}" font-weight="700" font-family="Arial,sans-serif">${face.symbol}</text>`;
     return r;
   }
   let svg = `<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">`;

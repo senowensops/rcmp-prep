@@ -131,35 +131,37 @@ const wheelAxleSvg = mechSvg(`
 
 // ─── Cube net data ────────────────────────────────────────────────────────────
 
+// Face colours for NET_C
+const NC = { top:'#c8102e', left:'#2563eb', center:'#111827', right:'#d97706', below:'#15803d', bottom:'#7c3aed' };
 const NET_C = {
-  top:    { symbol: '1', color: '#c8102e' },
-  left:   { symbol: '2', color: '#2563eb' },
-  center: { symbol: '3', color: '#111'    },
-  right:  { symbol: '4', color: '#d97706' },
-  below:  { symbol: '5', color: '#15803d' },
-  bottom: { symbol: '6', color: '#7c3aed' },
+  top:    { symbol: '', color: NC.top    },   // Red
+  left:   { symbol: '', color: NC.left   },   // Blue
+  center: { symbol: '', color: NC.center },   // Black
+  right:  { symbol: '', color: NC.right  },   // Orange
+  below:  { symbol: '', color: NC.below  },   // Green
+  bottom: { symbol: '', color: NC.bottom },   // Purple
 };
 
+// NET_D uses a different colour palette for variety
+const ND = { top:'#0891b2', left:'#16a34a', center:'#dc2626', right:'#7c3aed', below:'#d97706', bottom:'#374151' };
 const NET_D = {
-  top:    { symbol: '◯', color: '#c8102e' },
-  left:   { symbol: '△', color: '#2563eb' },
-  center: { symbol: '□', color: '#111'    },
-  right:  { symbol: '◇', color: '#d97706' },
-  below:  { symbol: '☆', color: '#15803d' },
-  bottom: { symbol: '⬟', color: '#7c3aed' },
+  top:    { symbol: '', color: ND.top    },   // Teal
+  left:   { symbol: '', color: ND.left   },   // Green
+  center: { symbol: '', color: ND.center },   // Red
+  right:  { symbol: '', color: ND.right  },   // Purple
+  below:  { symbol: '', color: ND.below  },   // Gold
+  bottom: { symbol: '', color: ND.bottom },   // Dark grey
 };
 
 const netPromptC = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(NET_C, 55)}</g>`);
 const netPromptD = qSvg(`<g transform="translate(6,2) scale(0.29)">${cubeNetSVG(NET_D, 55)}</g>`);
 
-const netOption = (top: string, front: string, right: string) =>
+// netOption: pass hex colour strings for each visible face
+const netOption = (topCol: string, frontCol: string, rightCol: string) =>
   oSvg(`
-    <polygon points="10,28 30,16 50,28 30,40" fill="#f8fafc" stroke="#333" strokeWidth="1.5"/>
-    <polygon points="10,28 10,48 30,56 30,40" fill="#e2e8f0" stroke="#333" strokeWidth="1.5"/>
-    <polygon points="30,40 50,28 50,48 30,56" fill="#cbd5e1" stroke="#333" strokeWidth="1.5"/>
-    <text x="30" y="32" textAnchor="middle" fontSize="9" fill="#111" fontWeight="700">${top}</text>
-    <text x="19" y="47" textAnchor="middle" fontSize="9" fill="#333" fontWeight="700">${front}</text>
-    <text x="41" y="47" textAnchor="middle" fontSize="9" fill="#444" fontWeight="700">${right}</text>
+    <polygon points="10,28 30,16 50,28 30,40" fill="${topCol}" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="10,28 10,48 30,56 30,40" fill="${frontCol}" stroke="#333" strokeWidth="1.5"/>
+    <polygon points="30,40 50,28 50,48 30,56" fill="${rightCol}" stroke="#333" strokeWidth="1.5"/>
   `);
 
 // ─── Part A: 2D Rotations ─────────────────────────────────────────────────────
@@ -488,19 +490,19 @@ const partD: Question[] = [
   {
     id: 'T2-D-1',
     subsectionId: 'spatial-cubes',
-    text: 'When this net is folded, which face is <strong>opposite 1</strong>?',
-    opts: ['6','2','4','5'],
+    text: 'When this net is folded, which face is <strong>opposite the red face</strong>?',
+    opts: ['Purple','Blue','Orange','Green'],
     correct: 0,
-    exp: 'In a vertical cross net, 1 (top) is opposite 6 (bottom). They are at opposite ends of the centre strip.',
+    exp: 'In a vertical cross net, the red face (top) is opposite the purple face (bottom). They are at opposite ends of the centre strip.',
     promptSvg: netPromptC,
   },
   {
     id: 'T2-D-2',
     subsectionId: 'spatial-cubes',
-    text: 'When this net is folded, which face is <strong>opposite 2</strong>?',
-    opts: ['1','3','4','5'],
+    text: 'When this net is folded, which face is <strong>opposite the blue face</strong>?',
+    opts: ['Red','Black','Orange','Purple'],
     correct: 2,
-    exp: '2 is the left face and 4 is the right face of the cross. Left and right fold to opposite sides.',
+    exp: 'The blue face is on the left arm and the orange face is on the right arm of the cross. They fold to opposite sides.',
     promptSvg: netPromptC,
   },
   {
@@ -509,31 +511,31 @@ const partD: Question[] = [
     text: 'Which cube could be folded from this net?',
     opts: ['A','B','C','D'],
     correct: 2,
-    exp: 'Option C shows faces 1, 3, and 4 at a corner — 1 is above 3 in the strip, 4 is to the right of 3. These are all adjacent.',
+    exp: 'Option C shows red (top), black (front), and orange (right) at a corner — red is above black in the strip, orange is to the right of black. All three are adjacent.',
     promptSvg: netPromptC,
     choicesSvg: [
-      netOption('1','6','2'),  // A: 1 opposite 6 → can't share corner
-      netOption('2','4','3'),  // B: 2 opposite 4 → can't share corner
-      netOption('1','3','4'),  // C: correct ✓
-      netOption('5','6','2'),  // D: 5 opposite? invalid
+      netOption(NC.top, NC.bottom, NC.left),    // A: red + purple + blue — top & bottom opposite, invalid
+      netOption(NC.left, NC.right, NC.center),  // B: blue + orange + black — left & right opposite, invalid
+      netOption(NC.top, NC.center, NC.right),   // C: red + black + orange ✓
+      netOption(NC.below, NC.bottom, NC.left),  // D: green + purple + blue — invalid
     ],
   },
   {
     id: 'T2-D-4',
     subsectionId: 'spatial-cubes',
-    text: 'When this second net is folded, which face is <strong>opposite ◯</strong>?',
-    opts: ['⬟','△','□','☆'],
+    text: 'When this second net is folded, which face is <strong>opposite the teal face</strong>?',
+    opts: ['Dark grey','Green','Red','Gold'],
     correct: 0,
-    exp: 'In a vertical cross net, ◯ (top) and ⬟ (bottom) are at opposite ends of the strip — they become opposite faces.',
+    exp: 'In a vertical cross net, the teal face (top) and the dark grey face (bottom) are at opposite ends of the strip — they become opposite faces.',
     promptSvg: netPromptD,
   },
   {
     id: 'T2-D-5',
     subsectionId: 'spatial-cubes',
-    text: 'When this second net is folded, which face is <strong>opposite △</strong>?',
-    opts: ['◯','□','◇','⬟'],
+    text: 'When this second net is folded, which face is <strong>opposite the green face</strong>?',
+    opts: ['Teal','Red','Purple','Gold'],
     correct: 2,
-    exp: '△ is the left face and ◇ is the right face. Left and right faces of a cross net are always opposite.',
+    exp: 'The green face is on the left arm and the purple face is on the right arm. Left and right faces of a cross net always become opposite.',
     promptSvg: netPromptD,
   },
   {
@@ -542,13 +544,13 @@ const partD: Question[] = [
     text: 'Which cube could be folded from the second net?',
     opts: ['A','B','C','D'],
     correct: 1,
-    exp: 'Option B shows ◯, □, and △ at one corner — ◯ is above □ in the strip, △ is to the left of □. All three are adjacent.',
+    exp: 'Option B shows teal (top), red (front), and green (left) at one corner — teal is above red in the strip, green is to the left of red. All three are adjacent.',
     promptSvg: netPromptD,
     choicesSvg: [
-      netOption('◯','⬟','△'),  // A: ◯ opposite ⬟ → can't share corner
-      netOption('◯','□','△'),  // B: correct ✓
-      netOption('△','◇','☆'),  // C: △ opposite ◇ → can't share corner
-      netOption('☆','□','◇'),  // D: ☆ opposite □? invalid
+      netOption(ND.top, ND.bottom, ND.left),    // A: teal + dark grey + green — top & bottom opposite, invalid
+      netOption(ND.top, ND.center, ND.left),    // B: teal + red + green ✓
+      netOption(ND.left, ND.right, ND.below),   // C: green + purple + gold — left & right opposite, invalid
+      netOption(ND.below, ND.bottom, ND.right), // D: gold + dark grey + purple — invalid
     ],
   },
 ];
