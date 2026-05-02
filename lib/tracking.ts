@@ -124,6 +124,22 @@ export async function trackSupportClicked(testId: string) {
   analytics.supportClicked(testId);
 }
 
+export async function trackSupportDismissed(testId: string) {
+  analytics.supportDismissed(testId);
+}
+
+export async function trackResultsViewed(testId: string) {
+  analytics.resultsViewed(testId);
+}
+
+export async function trackRetakeClicked(testId: string) {
+  analytics.retakeClicked(testId);
+}
+
+export async function trackNextTestClicked(testId: string, nextTestId: string) {
+  analytics.nextTestClicked(testId, nextTestId);
+}
+
 export async function trackCheckoutStarted() {
   analytics.checkoutStarted();
 }

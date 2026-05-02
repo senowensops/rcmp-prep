@@ -16,7 +16,7 @@ import { BusinessSection } from "@/components/sections/BusinessSection";
 import { useTestState } from "@/hooks/useTestState";
 import { useTimer } from "@/hooks/useTimer";
 import { getSectionsForTest } from "@/lib/testData";
-import { trackQuestionAnswered, trackSectionAbandoned, trackSectionViewed, trackTestStart } from "@/lib/tracking";
+import { trackQuestionAnswered, trackSectionViewed, trackTestStart } from "@/lib/tracking";
 
 const renderers = {
   workstyle: WorkstyleSection,
@@ -38,6 +38,7 @@ export default function TestPage() {
   const [lockedSubsections, setLockedSubsections] = useState<Record<string, boolean>>({});
   const [lockedChallenges, setLockedChallenges] = useState<Record<string, boolean>>({});
   const [hasStudied, setHasStudied] = useState<Record<string, boolean>>({});
+  const [encouragement, setEncouragement] = useState<string>("");
   const currentChallengeIdRef = useRef<string | null>(null);
   const questionSubsection = currentQuestion.subsectionId;
   const activeSubsection = currentSection.subsections?.find((sub) => sub.id === questionSubsection) ?? currentSection.subsections?.[0];
@@ -65,13 +66,18 @@ export default function TestPage() {
     void trackSectionViewed(testId, activeSubsection.id, state.currentQuestionIndex);
   }, [testId, activeSubsection, state.currentQuestionIndex]);
 
+  const answered = Object.keys(state.answers).length;
+  const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
+  const answeredMap = Object.fromEntries(sections.map((section) => [section.id, section.questions.filter((q) => q.id in state.answers).length]));
+  const progress = Math.round((answered / total) * 100);
+
   useEffect(() => {
-    return () => {
-      if (typeof window === "undefined" || !activeSubsection) return;
-      const answeredInSection = currentSection.questions.filter((q) => q.id in state.answers).length;
-      void trackSectionAbandoned(testId, activeSubsection.id, answeredInSection);
-    };
-  }, [testId, activeSubsection, currentSection.questions, state.answers]);
+    if (progress >= 90) setEncouragement("Final stretch, your results are almost ready.");
+    else if (progress >= 70) setEncouragement("You’re close now, keep going.");
+    else if (progress >= 45) setEncouragement("Nice pace, you’re nearly halfway through.");
+    else if (progress >= 20) setEncouragement("Good start, keep building momentum.");
+    else setEncouragement("");
+  }, [progress]);
 
   const { secondsLeft: subsectionTime, setSecondsLeft: setSubsectionTime } = useTimer(activeSubsection?.timerSeconds ?? null, Boolean(activeSubsection?.timerSeconds && !studyActive && !lockedSubsections[activeSubsection.id]), () => {
     if (activeSubsection) setLockedSubsections((prev) => ({ ...prev, [activeSubsection.id]: true }));
@@ -113,10 +119,6 @@ export default function TestPage() {
     return () => window.removeEventListener("keydown", onKey);
   }, [currentQuestion.id, next, prev, setAnswer, toggleFlag]);
 
-  const answered = Object.keys(state.answers).length;
-  const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
-  const answeredMap = Object.fromEntries(sections.map((section) => [section.id, section.questions.filter((q) => q.id in state.answers).length]));
-  const progress = Math.round((answered / total) * 100);
   const locked = Boolean((activeSubsection && lockedSubsections[activeSubsection.id]) || (challenge && lockedChallenges[challenge.id]));
   const Renderer = currentSection.type === "memory" ? null : renderers[currentSection.type as keyof typeof renderers];
 
@@ -152,8 +154,10 @@ export default function TestPage() {
             <div className="font-head text-xs font-bold uppercase tracking-[0.2em] text-[var(--red)]">Test {testId}</div>
             <h1 className="mt-2 font-head text-4xl font-extrabold uppercase">{currentSection.label}</h1>
             <p className="mt-2 text-[var(--muted)]" aria-live="polite" aria-atomic="true">Question {state.currentQuestionIndex + 1} of {currentSection.questions.length}</p>
+            <p className="mt-2 text-sm text-[var(--muted)]">Your progress is saved automatically, so you can come back if needed.</p>
             {activeSubsection ? <p className="mt-2 font-head text-sm uppercase tracking-[0.08em] text-[var(--gold)]">{activeSubsection.label}</p> : null}
             {currentSection.bannerNote ? <p className="mt-3 rounded-xl bg-[var(--surface2)] p-3 text-sm text-[var(--muted)]">{currentSection.bannerNote}</p> : null}
+            {encouragement ? <p className="mt-3 rounded-xl border border-[var(--border)] bg-[var(--surface2)] p-3 text-sm font-medium text-[var(--dark)]">{encouragement}</p> : null}
           </div>
           <Timer label={activeSubsection ? `${activeSubsection.label} timer` : `${currentSection.label} timer`} secondsLeft={subsectionTime} />
           {currentSection.type === "memory" && !studyActive && hasStudied[challenge?.id ?? ''] ? <div className="mb-4 text-center font-mono text-lg text-[var(--gold)]">Answer timer: {answerRemaining ?? challenge?.answerTime ?? 45}s</div> : null}

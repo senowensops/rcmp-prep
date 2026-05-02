@@ -107,6 +107,31 @@ export const analytics = {
       event_category: "conversion",
     }),
 
+  supportDismissed: (testId: string) =>
+    trackEvent("support_dismissed", {
+      test_id: testId,
+      event_category: "conversion",
+    }),
+
+  resultsViewed: (testId: string) =>
+    trackEvent("results_viewed", {
+      test_id: testId,
+      event_category: "engagement",
+    }),
+
+  retakeClicked: (testId: string) =>
+    trackEvent("retake_clicked", {
+      test_id: testId,
+      event_category: "engagement",
+    }),
+
+  nextTestClicked: (testId: string, nextTestId: string) =>
+    trackEvent("next_test_clicked", {
+      test_id: testId,
+      next_test_id: nextTestId,
+      event_category: "engagement",
+    }),
+
   // Full completion event with result metadata
   testCompleted: (params: {
     testId: string;

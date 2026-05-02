@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { RadarChart } from "@/components/ui/RadarChart";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { getResults } from "@/lib/testData";
-import { trackSupportClicked, trackSupportModalShown, trackTestComplete } from "@/lib/tracking";
+import { trackNextTestClicked, trackResultsViewed, trackRetakeClicked, trackSupportClicked, trackSupportDismissed, trackSupportModalShown, trackTestComplete } from "@/lib/tracking";
 import type { TestState } from "@/types";
 
 function SupportModal({ onClose, testId }: { onClose: () => void; testId: string }) {
@@ -27,7 +27,7 @@ function SupportModal({ onClose, testId }: { onClose: () => void; testId: string
           Support the App
         </a>
         <button
-          onClick={onClose}
+          onClick={() => { void trackSupportDismissed(testId); onClose(); }}
           className="mt-4 block w-full text-sm text-white/50 hover:text-white/80 transition"
         >
           No thanks, close
@@ -49,6 +49,7 @@ export default function ResultsPage() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    void trackResultsViewed(params.testId);
     if (sessionStorage.getItem('supportModalShown') === 'true') return;
     const timer = setTimeout(() => {
       setShowSupport(true);
@@ -101,9 +102,9 @@ export default function ResultsPage() {
           {results.sections.filter((section) => section.label !== 'Workstyle' && section.pct < 80).length === 0 ? <p>You&apos;re in strong shape — keep reviewing for consistency.</p> : results.sections.filter((section) => section.label !== 'Workstyle' && section.pct < 80).map((section) => <p key={section.label}>Focus on <strong>{section.label}</strong> — aim to bring that section above 80% before your next attempt.</p>)}
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href={`/test/${params.testId}`} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">Retake</Link>
+          <Link href={`/test/${params.testId}`} onClick={() => void trackRetakeClicked(params.testId)} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">Retake</Link>
           {Number(params.testId) < 3 ? (
-            <Link href={`/test/${Number(params.testId) + 1}`} className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Try Test {Number(params.testId) + 1}</Link>
+            <Link href={`/test/${Number(params.testId) + 1}`} onClick={() => void trackNextTestClicked(params.testId, String(Number(params.testId) + 1))} className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Try Test {Number(params.testId) + 1}</Link>
           ) : null}
           <Link href="/" className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Back to Dashboard</Link>
         </div>
