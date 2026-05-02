@@ -1967,6 +1967,128 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     ],
   },
   {
+    slug: 'rcmp-vision-requirements',
+    title: 'RCMP Vision Requirements: The Exact Eye Standards You Need to Meet',
+    subtitle: 'Visual acuity, field of vision, colour vision, laser eye surgery wait times, and what can delay you',
+    date: '2026-05-02',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP publishes clear minimum vision standards for applicants. Here is exactly what they are, what the eye exam includes, and how laser surgery affects your timeline.',
+    coverImage: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80',
+    content: `
+<p>The RCMP requires every applicant to meet minimum vision standards before moving deeper into the application process. Those standards cover corrected vision, uncorrected vision, field of vision, colour vision, and overall ocular health. If you do not meet the minimums, you do not meet the vision requirement for appointment as a regular member applicant.</p>
+
+<p>This is one of those steps that creates a lot of unnecessary anxiety because people hear fragments online and fill in the gaps themselves. The good news is the RCMP is actually very specific about what it requires. Here is the exact standard, pulled from RCMP recruiting materials and the RCMP 2180 vision form.</p>
+
+<h2>When the Vision Exam Happens</h2>
+
+<p>The RCMP asks applicants to complete a vision exam before the medical stage is fully underway, as part of the forms and documents package requested after you advance in the process. The exam must be completed by a Canadian optometrist or ophthalmologist using the <strong>Vision Examination of Applicant (RCMP 2180)</strong> form.</p>
+
+<p>The result is valid for <strong>2 years</strong>, and the <strong>cost is paid by the applicant</strong>. The RCMP does not reimburse the exam fee.</p>
+
+<h2>The RCMP Corrected Vision Standard</h2>
+
+<p>Your <strong>corrected vision</strong>, meaning with glasses or contact lenses, must be at least:</p>
+<ul>
+  <li><strong>6/6 (20/20)</strong> in one eye, and</li>
+  <li><strong>6/9 (20/30)</strong> in the other eye</li>
+</ul>
+
+<p>If your corrected vision does not meet that minimum, you do not meet the RCMP standard.</p>
+
+<h2>The RCMP Uncorrected Vision Standard</h2>
+
+<p>The RCMP also requires a minimum <strong>uncorrected</strong> standard, meaning your eyesight without glasses or contact lenses must be at least one of the following:</p>
+<ul>
+  <li><strong>6/18 (20/60)</strong> in each eye, or</li>
+  <li><strong>6/12 (20/40)</strong> in one eye and at least <strong>6/30 (20/100)</strong> in the other eye</li>
+</ul>
+
+<p>This part matters because the RCMP states the minimum uncorrected standard is required for the safe performance of policing duties if glasses or contacts are lost or displaced.</p>
+
+<h2>Field of Vision Requirements</h2>
+
+<p>Your field of vision must be at least:</p>
+<ul>
+  <li><strong>150 degrees continuous</strong> along the horizontal meridian, and</li>
+  <li><strong>20 degrees continuous above and below fixation</strong></li>
+</ul>
+
+<p>The RCMP specifies that this is assessed with <strong>both eyes open and examined together</strong>.</p>
+
+<h2>Colour Vision Requirements</h2>
+
+<p>The RCMP uses the <strong>Ishihara pseudo-isochromatic plates</strong> for colour-vision screening. You are considered to have normal colour vision if you correctly identify at least <strong>17 of 21 patterns</strong>.</p>
+
+<p>If needed, the RCMP allows for further testing using the <strong>Farnsworth D-15 test</strong>. Applicants who pass the Farnsworth D-15 are considered to meet the minimum colour-vision standard.</p>
+
+<h2>Ocular Disease and General Eye Health</h2>
+
+<p>The RCMP also requires applicants to be <strong>free from ocular diseases impairing visual performance</strong>. In some cases, further information may be requested later at the health assessment stage.</p>
+
+<p>In plain English, this means your eye exam is not only about reading the chart. The RCMP also needs confirmation that you do not have an eye condition that would interfere with policing duties.</p>
+
+<h2>If You Had Laser Eye Surgery</h2>
+
+<p>If you have had corrective eye surgery, the RCMP requires a waiting period before your vision exam can be completed:</p>
+<ul>
+  <li><strong>LASIK:</strong> 30 days</li>
+  <li><strong>PRK:</strong> 90 days</li>
+  <li><strong>ICL or PIOL with anterior chamber lens:</strong> 6 months</li>
+  <li><strong>ICL or PIOL with posterior chamber lens:</strong> 12 months</li>
+</ul>
+
+<p>If you are planning surgery and also planning to apply, timing matters. Getting the surgery too close to your recruiting timeline can create an avoidable delay.</p>
+
+<h2>What Usually Trips Applicants Up</h2>
+
+<ul>
+  <li><strong>Assuming corrected vision is all that matters</strong> — it is not. The RCMP checks both corrected and uncorrected vision.</li>
+  <li><strong>Using a non-Canadian provider</strong> — the form must be completed by a Canadian optometrist or ophthalmologist.</li>
+  <li><strong>Booking the exam too early after surgery</strong> — if you are still inside the waiting period, the exam may not count.</li>
+  <li><strong>Forgetting the form</strong> — bring the RCMP 2180 form to the appointment so the practitioner completes the right document.</li>
+</ul>
+
+<h2>The Bottom Line</h2>
+
+<p>The RCMP vision standard is strict, but it is also clear. If your corrected vision, uncorrected vision, field of vision, and colour vision all meet the published minimums, this is a straightforward part of the process. If you are unsure, the smartest move is to book an eye exam early and find out exactly where you stand before the recruiting timeline gets tight.</p>
+
+<p>If you are still preparing for the earlier hurdle, <a href="https://rcmpprep.ca">rcmpprep.ca</a> offers unofficial practice tests for the RCMP Online Entrance Assessment so you can sharpen the part of the process most applicants hit first.</p>
+    `,
+    faqs: [
+      {
+        question: 'Can you wear glasses or contacts in the RCMP?',
+        answer: 'Yes. The RCMP allows glasses and contact lenses, but your corrected vision must still meet the published minimum standard of 6/6 in one eye and 6/9 in the other. You must also meet the uncorrected vision standard without them.',
+      },
+      {
+        question: 'What are the RCMP uncorrected vision requirements?',
+        answer: 'Your uncorrected vision must be at least 6/18 in each eye, or 6/12 in one eye and at least 6/30 in the other eye. The RCMP says this is necessary for safe performance if glasses or contacts are lost or displaced.',
+      },
+      {
+        question: 'Does laser eye surgery disqualify you from the RCMP?',
+        answer: 'No. Laser eye surgery does not automatically disqualify you, but the RCMP requires a waiting period before the vision exam: 30 days for LASIK, 90 days for PRK, 6 months for anterior chamber implanted lenses, and 12 months for posterior chamber implanted lenses.',
+      },
+      {
+        question: 'How does the RCMP test colour vision?',
+        answer: 'The RCMP uses the Ishihara pseudo-isochromatic plates. Passing means correctly identifying at least 17 of 21 patterns. If needed, further testing may be done using the Farnsworth D-15 test.',
+      },
+      {
+        question: 'Who can complete the RCMP vision form?',
+        answer: 'The Vision Examination of Applicant form (RCMP 2180) must be completed by a Canadian optometrist or ophthalmologist.',
+      },
+      {
+        question: 'How long is the RCMP vision exam valid?',
+        answer: 'The results are valid for 2 years, and the applicant is responsible for paying the cost of the exam.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
+      { label: 'RCMP — Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/become-police-officer-with-federal-policing-before-you-apply' },
+      { label: 'RCMP 2180 — Vision Examination of Applicant', url: 'https://rcmp.ca/sites/default/files/doc/2180e.pdf' },
+    ],
+  },
+  {
     slug: 'rcmp-psychological-assessment',
     title: 'RCMP Psychological Assessment: What It Tests and How to Prepare',
     subtitle: 'The RCMP Psychological Suitability Screening evaluates your emotional stability, judgment, and integrity. Here is what to expect at every step.',
