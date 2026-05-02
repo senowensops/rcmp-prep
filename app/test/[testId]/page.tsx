@@ -16,7 +16,7 @@ import { BusinessSection } from "@/components/sections/BusinessSection";
 import { useTestState } from "@/hooks/useTestState";
 import { useTimer } from "@/hooks/useTimer";
 import { getSectionsForTest } from "@/lib/testData";
-import { trackTestStart } from "@/lib/tracking";
+import { trackQuestionAnswered, trackSectionAbandoned, trackSectionViewed, trackTestStart } from "@/lib/tracking";
 
 const renderers = {
   workstyle: WorkstyleSection,
@@ -59,6 +59,19 @@ export default function TestPage() {
     sessionStorage.setItem(startKey, "1");
     sessionStorage.setItem(`rcmp-test-start-${testId}`, Date.now().toString());
   }, [testId]);
+
+  useEffect(() => {
+    if (!activeSubsection) return;
+    void trackSectionViewed(testId, activeSubsection.id, state.currentQuestionIndex);
+  }, [testId, activeSubsection, state.currentQuestionIndex]);
+
+  useEffect(() => {
+    return () => {
+      if (typeof window === "undefined" || !activeSubsection) return;
+      const answeredInSection = currentSection.questions.filter((q) => q.id in state.answers).length;
+      void trackSectionAbandoned(testId, activeSubsection.id, answeredInSection);
+    };
+  }, [testId, activeSubsection, currentSection.questions, state.answers]);
 
   const { secondsLeft: subsectionTime, setSecondsLeft: setSubsectionTime } = useTimer(activeSubsection?.timerSeconds ?? null, Boolean(activeSubsection?.timerSeconds && !studyActive && !lockedSubsections[activeSubsection.id]), () => {
     if (activeSubsection) setLockedSubsections((prev) => ({ ...prev, [activeSubsection.id]: true }));
@@ -145,9 +158,9 @@ export default function TestPage() {
           <Timer label={activeSubsection ? `${activeSubsection.label} timer` : `${currentSection.label} timer`} secondsLeft={subsectionTime} />
           {currentSection.type === "memory" && !studyActive && hasStudied[challenge?.id ?? ''] ? <div className="mb-4 text-center font-mono text-lg text-[var(--gold)]">Answer timer: {answerRemaining ?? challenge?.answerTime ?? 45}s</div> : null}
           {currentSection.type === "memory" ? (
-            <MemorySection question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => setAnswer(currentQuestion.id, value)} onFlag={() => toggleFlag(currentQuestion.id)} challenge={challenge} studying={studyActive} studyRemaining={studyRemaining} onBeginStudy={() => { setStudyRemaining(challenge?.studyTime ?? 60); setStudyActive(true); }} onSkipStudy={() => { setStudyActive(false); if (challenge) setHasStudied(prev => ({ ...prev, [challenge.id]: true })); }} />
+            <MemorySection question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => { setAnswer(currentQuestion.id, value); void trackQuestionAnswered(testId, currentSection.id, currentQuestion.id, value); }} onFlag={() => toggleFlag(currentQuestion.id)} challenge={challenge} studying={studyActive} studyRemaining={studyRemaining} onBeginStudy={() => { setStudyRemaining(challenge?.studyTime ?? 60); setStudyActive(true); }} onSkipStudy={() => { setStudyActive(false); if (challenge) setHasStudied(prev => ({ ...prev, [challenge.id]: true })); }} />
           ) : Renderer ? (
-            <Renderer question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => setAnswer(currentQuestion.id, value)} onFlag={() => toggleFlag(currentQuestion.id)} locked={locked} />
+            <Renderer question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => { setAnswer(currentQuestion.id, value); void trackQuestionAnswered(testId, currentSection.id, currentQuestion.id, value); }} onFlag={() => toggleFlag(currentQuestion.id)} locked={locked} />
           ) : null}
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
             <button onClick={() => prev()} className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Previous</button>

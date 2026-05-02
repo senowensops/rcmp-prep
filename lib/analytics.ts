@@ -70,6 +70,43 @@ export const analytics = {
       event_category: "engagement",
     }),
 
+  sectionViewed: (params: { testId: string; sectionId: string; questionIndex: number }) =>
+    trackEvent("test_section_viewed", {
+      test_id: params.testId,
+      section_id: params.sectionId,
+      question_index: params.questionIndex,
+      event_category: "engagement",
+    }),
+
+  questionAnswered: (params: { testId: string; questionId: string; sectionId: string; answerIndex: number }) =>
+    trackEvent("test_question_answered", {
+      test_id: params.testId,
+      question_id: params.questionId,
+      section_id: params.sectionId,
+      answer_index: params.answerIndex,
+      event_category: "engagement",
+    }),
+
+  sectionAbandoned: (params: { testId: string; sectionId: string; answeredQuestions: number }) =>
+    trackEvent("test_section_abandoned", {
+      test_id: params.testId,
+      section_id: params.sectionId,
+      answered_questions: params.answeredQuestions,
+      event_category: "engagement",
+    }),
+
+  supportModalShown: (testId: string) =>
+    trackEvent("support_modal_shown", {
+      test_id: testId,
+      event_category: "conversion",
+    }),
+
+  supportClicked: (testId: string) =>
+    trackEvent("support_clicked", {
+      test_id: testId,
+      event_category: "conversion",
+    }),
+
   // Full completion event with result metadata
   testCompleted: (params: {
     testId: string;

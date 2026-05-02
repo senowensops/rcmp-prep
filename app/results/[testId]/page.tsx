@@ -6,10 +6,10 @@ import { useParams } from "next/navigation";
 import { RadarChart } from "@/components/ui/RadarChart";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { getResults } from "@/lib/testData";
-import { trackTestComplete } from "@/lib/tracking";
+import { trackSupportClicked, trackSupportModalShown, trackTestComplete } from "@/lib/tracking";
 import type { TestState } from "@/types";
 
-function SupportModal({ onClose }: { onClose: () => void }) {
+function SupportModal({ onClose, testId }: { onClose: () => void; testId: string }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6">
       <div className="relative max-w-md w-full rounded-2xl bg-[var(--surface)] border border-[var(--border)] p-8 text-center">
@@ -21,6 +21,7 @@ function SupportModal({ onClose }: { onClose: () => void }) {
           href="https://buymeacoffee.com/rcmpprep"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => void trackSupportClicked(testId)}
           className="mt-6 inline-block rounded-lg bg-green-600 hover:bg-green-700 px-8 py-3 font-semibold text-lg text-white transition-colors"
         >
           Support the App
@@ -51,6 +52,7 @@ export default function ResultsPage() {
     if (sessionStorage.getItem('supportModalShown') === 'true') return;
     const timer = setTimeout(() => {
       setShowSupport(true);
+      void trackSupportModalShown(params.testId);
       sessionStorage.setItem('supportModalShown', 'true');
     }, 1500);
     return () => clearTimeout(timer);
@@ -75,6 +77,8 @@ export default function ResultsPage() {
       scorePercent: results.overallPct,
       durationSeconds,
       sections: results.sections,
+      sectionTimes: state.timestamps.sectionTimes,
+      lastSectionId: state.currentSectionId,
     });
 
     sessionStorage.setItem(completeKey, "1");
@@ -171,7 +175,7 @@ export default function ResultsPage() {
         </details>
       </section>
 
-      {showSupport && <SupportModal onClose={() => setShowSupport(false)} />}
+      {showSupport && <SupportModal testId={params.testId} onClose={() => setShowSupport(false)} />}
     </main>
   );
 }

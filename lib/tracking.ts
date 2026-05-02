@@ -1,6 +1,8 @@
 import { analytics } from "@/lib/analytics";
 import { supabase } from "@/lib/supabase";
 
+const ATTEMPT_KEY_PREFIX = "rcmp-attempt-id-";
+
 // Generate a session ID for this browser session.
 function getSessionId(): string {
   if (typeof window === "undefined") return "ssr";
@@ -27,6 +29,22 @@ export interface TestAttempt {
     total: number;
     pct: number;
   }>;
+  sectionTimes?: Record<string, number>;
+  lastSectionId?: string;
+}
+
+function getAttemptStorageKey(testId: string) {
+  return `${ATTEMPT_KEY_PREFIX}${testId}`;
+}
+
+function getAttemptId(testId: string): string | null {
+  if (typeof window === "undefined") return null;
+  return sessionStorage.getItem(getAttemptStorageKey(testId));
+}
+
+function setAttemptId(testId: string, attemptId: string) {
+  if (typeof window === "undefined") return;
+  sessionStorage.setItem(getAttemptStorageKey(testId), attemptId);
 }
 
 export async function trackTestStart(testId: string) {
@@ -35,7 +53,11 @@ export async function trackTestStart(testId: string) {
   const sessionId = getSessionId();
 
   try {
+    const attemptId = crypto.randomUUID();
+    setAttemptId(testId, attemptId);
+
     await supabase.from("test_attempts").insert({
+      id: attemptId,
       session_id: sessionId,
       test_id: testId,
       user_agent: typeof navigator !== "undefined" ? navigator.userAgent : null,
@@ -47,6 +69,7 @@ export async function trackTestStart(testId: string) {
 }
 
 export async function trackTestComplete(attempt: TestAttempt) {
+  analytics.completePracticeTest(attempt.testId);
   analytics.testCompleted({
     testId: attempt.testId,
     score: attempt.scorePercent,
@@ -54,10 +77,11 @@ export async function trackTestComplete(attempt: TestAttempt) {
     durationSeconds: attempt.durationSeconds,
   });
 
+  const attemptId = getAttemptId(attempt.testId);
   const sessionId = getSessionId();
 
   try {
-    await supabase
+    const update = supabase
       .from("test_attempts")
       .update({
         completed_at: new Date().toISOString(),
@@ -67,13 +91,37 @@ export async function trackTestComplete(attempt: TestAttempt) {
         correct_answers: attempt.correctAnswers,
         score_percent: attempt.scorePercent,
         sections: attempt.sections,
-      })
-      .eq("session_id", sessionId)
-      .eq("test_id", attempt.testId)
-      .is("completed_at", null);
+        session_id: sessionId,
+      });
+
+    if (attemptId) {
+      await update.eq("id", attemptId).execute();
+    } else {
+      await update.eq("session_id", sessionId).eq("test_id", attempt.testId).is("completed_at", null);
+    }
   } catch (error) {
     console.error("Failed to track test completion:", error);
   }
+}
+
+export async function trackSectionViewed(testId: string, sectionId: string, questionIndex: number) {
+  analytics.sectionViewed({ testId, sectionId, questionIndex });
+}
+
+export async function trackQuestionAnswered(testId: string, sectionId: string, questionId: string, answerIndex: number) {
+  analytics.questionAnswered({ testId, sectionId, questionId, answerIndex });
+}
+
+export async function trackSectionAbandoned(testId: string, sectionId: string, answeredQuestions: number) {
+  analytics.sectionAbandoned({ testId, sectionId, answeredQuestions });
+}
+
+export async function trackSupportModalShown(testId: string) {
+  analytics.supportModalShown(testId);
+}
+
+export async function trackSupportClicked(testId: string) {
+  analytics.supportClicked(testId);
 }
 
 export async function trackCheckoutStarted() {

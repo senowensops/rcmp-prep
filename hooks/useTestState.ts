@@ -13,7 +13,13 @@ export function useTestState(testId: string, sections: SectionDefinition[]) {
     currentQuestionIndex: 0,
     answers: {},
     flags: {},
-    timestamps: { updatedAt: new Date().toISOString() },
+    timestamps: {
+      updatedAt: new Date().toISOString(),
+      startedAt: new Date().toISOString(),
+      sectionEnteredAt: new Date().toISOString(),
+      sectionTimes: {},
+      questionTimes: {},
+    },
   });
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
@@ -21,7 +27,32 @@ export function useTestState(testId: string, sections: SectionDefinition[]) {
   const currentQuestion = currentSection.questions[stored.currentQuestionIndex] ?? currentSection.questions[0];
   const setAnswer = (questionId: string, value: number) => setStored((prev) => ({ ...prev, answers: { ...prev.answers, [questionId]: value }, timestamps: { updatedAt: new Date().toISOString() } }));
   const toggleFlag = (questionId: string) => setStored((prev) => ({ ...prev, flags: { ...prev.flags, [questionId]: !prev.flags[questionId] }, timestamps: { updatedAt: new Date().toISOString() } }));
-  const goTo = (sectionId: string, questionIndex = 0) => setStored((prev) => ({ ...prev, currentSectionId: sectionId, currentQuestionIndex: questionIndex, timestamps: { updatedAt: new Date().toISOString() } }));
+  const goTo = (sectionId: string, questionIndex = 0) =>
+    setStored((prev) => {
+      const now = new Date().toISOString();
+      const previousSectionEnteredAt = prev.timestamps.sectionEnteredAt ? new Date(prev.timestamps.sectionEnteredAt).getTime() : null;
+      const elapsedSeconds = previousSectionEnteredAt ? Math.max(0, Math.round((Date.now() - previousSectionEnteredAt) / 1000)) : 0;
+      const previousSectionId = prev.currentSectionId;
+
+      return {
+        ...prev,
+        currentSectionId: sectionId,
+        currentQuestionIndex: questionIndex,
+        timestamps: {
+          ...prev.timestamps,
+          updatedAt: now,
+          sectionEnteredAt: now,
+          sectionTimes: {
+            ...(prev.timestamps.sectionTimes ?? {}),
+            ...(previousSectionId
+              ? {
+                  [previousSectionId]: (prev.timestamps.sectionTimes?.[previousSectionId] ?? 0) + elapsedSeconds,
+                }
+              : {}),
+          },
+        },
+      };
+    });
   const next = () => {
     const sectionIndex = sections.findIndex((s) => s.id === currentSection.id);
     if (stored.currentQuestionIndex < currentSection.questions.length - 1) return goTo(currentSection.id, stored.currentQuestionIndex + 1);
