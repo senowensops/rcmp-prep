@@ -2089,6 +2089,137 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     ],
   },
   {
+    slug: 'rcmp-required-documents-checklist',
+    title: 'RCMP Required Documents Checklist: What You Need and When They Ask For It',
+    subtitle: 'The exact forms, IDs, records, and certificates RCMP applicants are asked to submit, based on official recruiting guidance',
+    date: '2026-05-02',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'After the online assessment, RCMP applicants can face short deadlines to submit forms and identity documents. Here is the official checklist, what each item is for, and what commonly slows people down.',
+    coverImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    content: `
+<p>Once you advance past the early stages of the RCMP application process, the paperwork gets real very quickly. The RCMP does not just want a few IDs and signatures. It asks for a full package of forms, personal records, and supporting documents, often under tight deadlines. If you are not organized, this stage can delay your file or get it closed.</p>
+
+<p>The good news is that the RCMP tells applicants exactly what is required. This guide pulls the checklist directly from official recruiting materials and explains what to prepare before the request lands.</p>
+
+<h2>When the RCMP Requests Your Documents</h2>
+
+<p>According to RCMP recruiting guidance, once you are contacted by a <strong>Recruiting Analyst</strong>, you have <strong>14 days</strong> to complete the Security Screening Application and submit all required documents through a secure online portal.</p>
+
+<p>The RCMP also says that at this stage, applicants may be asked to submit all forms and documents within <strong>2 working days</strong>. In other words, you should not wait until the request arrives to start getting organized.</p>
+
+<p>The RCMP is also explicit about one more thing: <strong>do not try to submit these forms before they are requested</strong>. You gather them early, but you only submit when instructed.</p>
+
+<h2>The Required RCMP Forms</h2>
+
+<p>The RCMP lists the following forms as part of the required package:</p>
+<ul>
+  <li><strong>Regular Member Applicant Hearing Examination Report (RCMP 6509)</strong></li>
+  <li><strong>Vision Examination of Applicant (RCMP 2180)</strong></li>
+  <li><strong>Regular Member Applicant Questionnaire (RCMP 5096)</strong></li>
+  <li><strong>Suitability Screening Form (RCMP 1980)</strong></li>
+  <li><strong>Acknowledgement of Professional Responsibilities in the Royal Canadian Mounted Police (RCMP 6465)</strong></li>
+</ul>
+
+<p>The RCMP notes that the <strong>Regular Member Applicant Questionnaire</strong> deals with honesty, integrity, and ethics, and specifically asks applicants to complete it as thoroughly and accurately as possible. That is not casual wording. Gaps, contradictions, or half-efforts at this stage can create serious problems later.</p>
+
+<h2>Vision and Hearing Exams</h2>
+
+<p>Applicants must complete both a <strong>vision examination</strong> and a <strong>hearing examination</strong> before reaching the medical stage. The completed forms should be kept until the RCMP asks for them.</p>
+
+<p>Two important details from RCMP.ca:</p>
+<ul>
+  <li>The results are valid for <strong>2 years</strong></li>
+  <li>The costs are the <strong>applicant’s responsibility</strong> and are not reimbursed</li>
+</ul>
+
+<p>The vision form must be completed by a <strong>Canadian optometrist or ophthalmologist</strong>. The hearing form must be completed by a qualified practitioner following the applicable Canadian Standards Association hearing standard.</p>
+
+<h2>The Security Screening Application</h2>
+
+<p>The RCMP also requires an online <strong>Security Screening Application</strong> accessed through <strong>GCKey</strong>. This is part of the deeper vetting process and is separate from simply uploading your supporting documents.</p>
+
+<p>If selected to continue, you will be given instructions on how to create your GCKey and complete the online security screening package. This is not something to guess your way through. Follow the RCMP instructions exactly when your turn comes.</p>
+
+<h2>Required Personal Documents</h2>
+
+<p>The RCMP says <strong>originals must be scanned</strong>. Scans of copies will not be accepted. The required personal documents include:</p>
+<ul>
+  <li><strong>Canadian birth certificate</strong> (front and back), if you were born in Canada</li>
+  <li><strong>Canadian citizenship certificate or permanent resident card</strong>, plus <strong>Confirmation of Permanent Residence (IMM 5292)</strong> if applicable, if you were born outside Canada</li>
+  <li><strong>Social Insurance Number</strong></li>
+  <li><strong>Marriage, divorce, separation, or legal name change certificate</strong>, if applicable</li>
+  <li><strong>2 passport photographs</strong></li>
+  <li><strong>Proof of education</strong>, including Canadian high school transcripts showing graduation, or an equivalency assessment</li>
+  <li><strong>Valid Canadian driver’s licence</strong> (front and back)</li>
+  <li><strong>Statement of Driving Record</strong> from every province or territory where you have lived in the last 3 years</li>
+  <li><strong>Provincial health card</strong></li>
+</ul>
+
+<h2>First Aid and CPR Requirement</h2>
+
+<p>The RCMP also requires a <strong>valid standard first aid certificate</strong>, including <strong>Level C CPR for infant, child and adult</strong>. However, there is an important timing note here: the RCMP says this certificate is requested <strong>closer to the end of the recruiting process</strong> and <strong>should not be submitted in the initial selection package</strong>.</p>
+
+<p>The certificate must be valid for the duration of your <strong>Cadet Training Program</strong> at Depot. That means the smart move is not to rush out and get certified too early, only to have it expire before you need it.</p>
+
+<h2>Submission Rules That Matter</h2>
+
+<p>The RCMP gives applicants several specific instructions that are easy to overlook but important:</p>
+<ul>
+  <li><strong>Incomplete or illegible forms will not be considered</strong></li>
+  <li><strong>Forms must be completed electronically, then printed and signed</strong></li>
+  <li><strong>Some forms require initials after printing</strong></li>
+  <li><strong>Hand-delivered, mailed, or emailed packages will not be accepted</strong></li>
+  <li><strong>Keep the original copies for your records</strong></li>
+  <li><strong>All dates must be entered as YYYY/MM/DD</strong></li>
+</ul>
+
+<p>The RCMP also warns that incorrect or incomplete forms can cause major delays and may result in your file being closed.</p>
+
+<h2>One Practical Tip Most Applicants Miss</h2>
+
+<p>The RCMP notes that many browsers and mobile devices do not handle its PDF forms properly. It specifically advises applicants to <strong>download the PDF to a computer</strong> and open it with <strong>Adobe Reader 10 or newer</strong> in order to fill and save the forms correctly.</p>
+
+<p>That sounds small, but it is exactly the kind of thing that can waste hours if you find it out too late.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>The RCMP documents stage is not hard because the checklist is unclear. It is hard because the deadlines can be tight and the standards are strict. If you start gathering originals, transcripts, driving records, and identity documents early, this stage becomes manageable. If you wait until the email arrives, it becomes a scramble.</p>
+
+<p>If you are still preparing for the earlier screening stage, <a href="https://rcmpprep.ca">rcmpprep.ca</a> offers unofficial practice for the RCMP Online Entrance Assessment so you can clear the first major hurdle before the paperwork phase even begins.</p>
+    `,
+    faqs: [
+      {
+        question: 'How long do you have to submit RCMP documents?',
+        answer: 'According to RCMP recruiting guidance, once contacted by a Recruiting Analyst, applicants have 14 days to complete the Security Screening Application and submit required documents through the secure portal. The RCMP also notes that some forms and documents may need to be submitted within 2 working days at that stage.',
+      },
+      {
+        question: 'What forms do RCMP applicants have to complete?',
+        answer: 'The RCMP lists the following forms: RCMP 6509 Hearing Examination Report, RCMP 2180 Vision Examination of Applicant, RCMP 5096 Regular Member Applicant Questionnaire, RCMP 1980 Suitability Screening Form, and RCMP 6465 Acknowledgement of Professional Responsibilities.',
+      },
+      {
+        question: 'What personal documents do you need for the RCMP application?',
+        answer: 'Applicants may need original scanned documents including a birth certificate or citizenship/permanent resident documents, Social Insurance Number, marriage or name change documents if applicable, passport photos, proof of education, a valid Canadian driver’s licence, driving records from the last 3 years, and a provincial health card.',
+      },
+      {
+        question: 'Do you need first aid and CPR for the RCMP application?',
+        answer: 'Yes, the RCMP requires a valid standard first aid certificate including Level C CPR for infant, child, and adult. However, RCMP.ca says this is requested closer to the end of the recruiting process and should not be submitted in the initial selection package.',
+      },
+      {
+        question: 'Can you fill RCMP forms out on your phone?',
+        answer: 'RCMP.ca says mobile devices such as tablets and cell phones cannot be used to open and fill the PDF forms properly. Applicants are advised to download the forms to a computer and use Adobe Reader 10 or newer.',
+      },
+      {
+        question: 'Will the RCMP accept photocopies of documents?',
+        answer: 'For the required personal documents, the RCMP states that originals must be scanned and that scans of copies will not be accepted.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
+    ],
+  },
+  {
     slug: 'rcmp-psychological-assessment',
     title: 'RCMP Psychological Assessment: What It Tests and How to Prepare',
     subtitle: 'The RCMP Psychological Suitability Screening evaluates your emotional stability, judgment, and integrity. Here is what to expect at every step.',
