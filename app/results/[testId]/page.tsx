@@ -11,8 +11,16 @@ import type { TestState } from "@/types";
 
 function SupportModal({ onClose, testId }: { onClose: () => void; testId: string }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6">
-      <div className="relative max-w-md w-full rounded-2xl bg-[var(--surface)] border border-[var(--border)] p-8 text-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6" onClick={onClose}>
+      <div className="relative max-w-md w-full rounded-2xl bg-[var(--surface)] border border-[var(--border)] p-8 text-center" onClick={(event) => event.stopPropagation()}>
+        <button
+          type="button"
+          aria-label="Close support modal"
+          onClick={() => { void trackSupportDismissed(testId); onClose(); }}
+          className="absolute right-4 top-4 rounded-full px-3 py-1 text-xl text-white/70 transition hover:bg-white/10 hover:text-white"
+        >
+          ×
+        </button>
         <h2 className="font-head text-3xl font-extrabold uppercase text-white">Nice work!</h2>
         <p className="mt-4 text-lg text-[var(--muted)]">
           This app is completely free. If it helped you prepare, consider supporting it.
@@ -50,11 +58,11 @@ export default function ResultsPage() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     void trackResultsViewed(params.testId);
-    if (sessionStorage.getItem('supportModalShown') === 'true') return;
+    if (sessionStorage.getItem(`rcmp-support-modal-shown-${params.testId}`) === 'true') return;
     const timer = setTimeout(() => {
       setShowSupport(true);
       void trackSupportModalShown(params.testId);
-      sessionStorage.setItem('supportModalShown', 'true');
+      sessionStorage.setItem(`rcmp-support-modal-shown-${params.testId}`, 'true');
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
@@ -64,6 +72,7 @@ export default function ResultsPage() {
 
     const completeKey = `rcmp-test-completed-${params.testId}`;
     if (sessionStorage.getItem(completeKey)) return;
+    if (!Object.keys(state.answers).length) return;
 
     const startTime = sessionStorage.getItem(`rcmp-test-start-${params.testId}`);
     const durationSeconds = startTime
@@ -83,7 +92,7 @@ export default function ResultsPage() {
     });
 
     sessionStorage.setItem(completeKey, "1");
-  }, [params.testId, results, state.answers]);
+  }, [params.testId, results, state.answers, state.currentSectionId, state.timestamps.sectionTimes]);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">

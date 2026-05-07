@@ -47,6 +47,13 @@ function setAttemptId(testId: string, attemptId: string) {
   sessionStorage.setItem(getAttemptStorageKey(testId), attemptId);
 }
 
+function clearAttemptState(testId: string) {
+  if (typeof window === "undefined") return;
+  sessionStorage.removeItem(`rcmp-test-completed-${testId}`);
+  sessionStorage.removeItem(`rcmp-results-tracked-${testId}`);
+  sessionStorage.removeItem(`rcmp-support-modal-shown-${testId}`);
+}
+
 export async function trackTestStart(testId: string) {
   analytics.testStarted(testId);
 
@@ -55,6 +62,7 @@ export async function trackTestStart(testId: string) {
   try {
     const attemptId = crypto.randomUUID();
     setAttemptId(testId, attemptId);
+    clearAttemptState(testId);
 
     await supabase.from("test_attempts").insert({
       id: attemptId,
@@ -81,23 +89,39 @@ export async function trackTestComplete(attempt: TestAttempt) {
   const sessionId = getSessionId();
 
   try {
-    const update = supabase
-      .from("test_attempts")
-      .update({
-        completed_at: new Date().toISOString(),
-        duration_seconds: attempt.durationSeconds,
-        total_questions: attempt.totalQuestions,
-        answered_questions: attempt.answeredQuestions,
-        correct_answers: attempt.correctAnswers,
-        score_percent: attempt.scorePercent,
-        sections: attempt.sections,
-        session_id: sessionId,
-      });
+    const values = {
+      completed_at: new Date().toISOString(),
+      duration_seconds: attempt.durationSeconds,
+      total_questions: attempt.totalQuestions,
+      answered_questions: attempt.answeredQuestions,
+      correct_answers: attempt.correctAnswers,
+      score_percent: attempt.scorePercent,
+      sections: attempt.sections,
+      session_id: sessionId,
+    };
+
+    let updatedRows: unknown[] = [];
 
     if (attemptId) {
-      await update.eq("id", attemptId).execute();
-    } else {
-      await update.eq("session_id", sessionId).eq("test_id", attempt.testId).is("completed_at", null);
+      updatedRows = await supabase
+        .from("test_attempts")
+        .update(values)
+        .eq("id", attemptId)
+        .execute();
+    }
+
+    if (!updatedRows.length) {
+      updatedRows = await supabase
+        .from("test_attempts")
+        .update(values)
+        .eq("session_id", sessionId)
+        .eq("test_id", attempt.testId)
+        .is("completed_at", null)
+        .execute();
+    }
+
+    if (!updatedRows.length) {
+      throw new Error(`No attempt row updated for test ${attempt.testId} in session ${sessionId}`);
     }
   } catch (error) {
     console.error("Failed to track test completion:", error);

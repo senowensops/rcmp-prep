@@ -29,12 +29,12 @@ class SupabaseUpdateBuilder {
 
   is(column: string, value: FilterValue) {
     this.filters.set(column, `is.${value === null ? "null" : String(value)}`);
-    return this.execute();
+    return this;
   }
 
   async execute() {
     if (!supabaseUrl || !supabaseAnonKey) {
-      return;
+      return [];
     }
 
     const query = this.filters.toString();
@@ -42,7 +42,7 @@ class SupabaseUpdateBuilder {
       `${supabaseUrl}/rest/v1/${this.table}${query ? `?${query}` : ""}`,
       {
         method: "PATCH",
-        headers: getHeaders("return=minimal"),
+        headers: getHeaders("return=representation"),
         body: JSON.stringify(this.values),
       }
     );
@@ -52,6 +52,8 @@ class SupabaseUpdateBuilder {
         `Supabase update failed: ${response.status} ${response.statusText}`
       );
     }
+
+    return (await response.json()) as Row[];
   }
 }
 
