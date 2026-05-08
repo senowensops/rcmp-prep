@@ -67,6 +67,11 @@ export default function TestPage() {
   }, [testId, activeSubsection, state.currentQuestionIndex]);
 
   const answered = Object.keys(state.answers).length;
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    sessionStorage.setItem(`rcmp-answered-count-${testId}`, String(answered));
+  }, [answered, testId]);
   const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
   const answeredMap = Object.fromEntries(sections.map((section) => [section.id, section.questions.filter((q) => q.id in state.answers).length]));
   const progress = Math.round((answered / total) * 100);

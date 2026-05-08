@@ -134,6 +134,38 @@ export async function trackSectionViewed(testId: string, sectionId: string, ques
 
 export async function trackQuestionAnswered(testId: string, sectionId: string, questionId: string, answerIndex: number) {
   analytics.questionAnswered({ testId, sectionId, questionId, answerIndex });
+
+  const attemptId = getAttemptId(testId);
+  const sessionId = getSessionId();
+
+  try {
+    const values = {
+      session_id: sessionId,
+      answered_questions: Math.max(1, Number.parseInt(sessionStorage.getItem(`rcmp-answered-count-${testId}`) ?? "0", 10)),
+    };
+
+    let updatedRows: unknown[] = [];
+
+    if (attemptId) {
+      updatedRows = await supabase
+        .from("test_attempts")
+        .update(values)
+        .eq("id", attemptId)
+        .execute();
+    }
+
+    if (!updatedRows.length) {
+      await supabase
+        .from("test_attempts")
+        .update(values)
+        .eq("session_id", sessionId)
+        .eq("test_id", testId)
+        .is("completed_at", null)
+        .execute();
+    }
+  } catch (error) {
+    console.error("Failed to track question progress:", error);
+  }
 }
 
 export async function trackSectionAbandoned(testId: string, sectionId: string, answeredQuestions: number) {
