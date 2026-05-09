@@ -2220,6 +2220,113 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     ],
   },
   {
+    slug: 'rcmp-online-assessment-retake-policy',
+    title: 'RCMP Online Assessment Retake Policy: When Can You Rewrite the OEA?',
+    subtitle: 'If you do not advance after the RCMP Online Entrance Assessment, here is the official waiting period and what to do during it',
+    date: '2026-05-09',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP gives applicants 14 days to complete the Online Entrance Assessment and a 3-month wait before reapplying if they are unsuccessful. Here is what that really means and how to use the waiting period well.',
+    coverImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=800&q=80',
+    content: `
+<p>If you do not move forward after the RCMP Online Entrance Assessment, you are not permanently out. According to the RCMP, applicants who are unsuccessful after completing the Online Entrance Assessment are <strong>eligible to re-apply after a waiting period of 3 months</strong>.</p>
+
+<p>That is the short answer. The more useful answer is what the 3-month wait really means, when the clock starts, and how to use that time so your next attempt is stronger instead of just later.</p>
+
+<h2>The Official RCMP Retake Rule</h2>
+
+<p>On its recruiting page for the Online Entrance Assessment, the RCMP states that after you complete the assessment, your score is measured against RCMP standards to determine whether it is competitive. If you are unsuccessful, you are <strong>eligible to re-apply after a waiting period of 3 months</strong>.</p>
+
+<p>That means there is no immediate rewrite and no same-week retry. If you do not meet the competitiveness threshold, you have to wait before starting the process again.</p>
+
+<h2>When the 3-Month Wait Starts</h2>
+
+<p>The RCMP does not publish a more detailed breakdown on that page about whether the 3-month clock starts on the exact date you write the assessment or the date you are formally notified. In practice, applicants should follow the timing provided in their RCMP communication and avoid guessing.</p>
+
+<p>If you receive a deferral or non-advancement notice, use that date and any wording in the recruiter email as your primary reference point. If the timing is unclear, the safest move is to confirm with RCMP recruiting rather than assume you can reapply early.</p>
+
+<h2>You Also Only Get 14 Days to Write It</h2>
+
+<p>One detail many applicants miss is that once the RCMP sends you the Online Entrance Assessment link, you have <strong>14 days</strong> to complete it. The RCMP also recommends that you complete the assessment in <strong>one session</strong>, because there are several timed portions and the full assessment typically takes about <strong>55 to 70 minutes</strong>.</p>
+
+<p>This matters because some people lose valuable ground before they even write. They sit on the invitation, rush at the end of the 14-day window, then perform below what they could have done with a proper plan.</p>
+
+<h2>What the RCMP Is Actually Measuring</h2>
+
+<p>The RCMP is explicit that the OEA is not just an exam in the school sense. It is an assessment of your <strong>personality, behaviour, and cognitive ability</strong>. The six sections are:</p>
+<ul>
+  <li>Workstyle preference</li>
+  <li>Language comprehension</li>
+  <li>Numerical skills</li>
+  <li>Spatial skills</li>
+  <li>Memory quotient</li>
+  <li>Business reasoning</li>
+</ul>
+
+<p>That matters because the right prep strategy is not just “do more math.” A lot of applicants need better spatial practice, stronger pacing, more comfort with memory tasks, and a more thoughtful approach to the workstyle section.</p>
+
+<h2>What to Do During the 3-Month Waiting Period</h2>
+
+<p>If you have to wait 3 months, do not waste it. That is enough time to come back meaningfully stronger if you use it on the right things.</p>
+
+<h3>1. Figure out what likely hurt you</h3>
+<p>If you went in blind, the weak point may simply have been unfamiliarity. If you felt time pressure, pacing may have been the issue. If one section felt especially rough, that is where you start.</p>
+
+<h3>2. Train the sections most people neglect</h3>
+<p>Spatial reasoning and memory are two of the most common weak spots because people do not train them in normal life. Workstyle is another quiet trap because rushed or inconsistent answers can hurt you even if the cognitive sections felt decent.</p>
+
+<h3>3. Simulate the real conditions</h3>
+<p>The RCMP says the OEA has several timed portions and should be completed in one session. So your prep should include timed practice, not just untimed review. You want the test day to feel familiar, not chaotic.</p>
+
+<h3>4. Fix your environment before the next invite arrives</h3>
+<p>Decide in advance where you will write, what device you will use, what time of day you think best, and how you will protect a full uninterrupted hour. That sounds basic, but it removes avoidable friction.</p>
+
+<h2>Does Completing the OEA Guarantee You Move On?</h2>
+
+<p>No. The RCMP says clearly that <strong>completing the Online Entrance Assessment does not guarantee advancement</strong> in the recruiting process. The assessment is competitive. Your result has to be strong enough relative to RCMP standards, not merely finished.</p>
+
+<h2>What Happens If You Pass?</h2>
+
+<p>The RCMP states that if you pass the Online Entrance Assessment, your application is retained until further notice and then undergoes a mandatory verification of basic requirements and a pre-suitability assessment. In other words, passing the OEA is important, but it is not the end of evaluation. It is the gateway to the next screen.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>The RCMP Online Entrance Assessment rewrite policy is simple on paper: if you are unsuccessful, you can re-apply after <strong>3 months</strong>. The mistake is treating those 3 months like dead time. Used properly, they are a reset window that can turn a blind first attempt into a much more competitive second one.</p>
+
+<p>If you want to use that waiting period well, <a href="https://rcmpprep.ca">rcmpprep.ca</a> offers unofficial practice across all six OEA sections so you can come back sharper, faster, and more familiar with the actual demands of the test.</p>
+    `,
+    faqs: [
+      {
+        question: 'How long do you have to wait to retake the RCMP Online Entrance Assessment?',
+        answer: 'According to the RCMP, if you are unsuccessful after completing the Online Entrance Assessment, you are eligible to re-apply after a waiting period of 3 months.',
+      },
+      {
+        question: 'Can you rewrite the RCMP OEA right away?',
+        answer: 'No. The RCMP does not allow an immediate rewrite. Unsuccessful applicants must wait 3 months before reapplying.',
+      },
+      {
+        question: 'How long do you have to complete the RCMP Online Entrance Assessment once you get the link?',
+        answer: 'The RCMP says applicants have 14 days to complete the Online Entrance Assessment from the date they receive the link.',
+      },
+      {
+        question: 'How long does the RCMP Online Entrance Assessment take?',
+        answer: 'The RCMP says the assessment typically takes about 55 to 70 minutes and recommends completing it in one session.',
+      },
+      {
+        question: 'Does finishing the RCMP Online Entrance Assessment guarantee you move forward?',
+        answer: 'No. The RCMP says completing the assessment does not guarantee advancement. Scores are measured against RCMP standards to determine whether they are competitive.',
+      },
+      {
+        question: 'What happens after you pass the RCMP Online Entrance Assessment?',
+        answer: 'The RCMP says that if you pass, your application is retained until further notice and then goes through mandatory verification of basic requirements and a pre-suitability assessment.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+    ],
+  },
+  {
     slug: 'rcmp-psychological-assessment',
     title: 'RCMP Psychological Assessment: What It Tests and How to Prepare',
     subtitle: 'The RCMP Psychological Suitability Screening evaluates your emotional stability, judgment, and integrity. Here is what to expect at every step.',
