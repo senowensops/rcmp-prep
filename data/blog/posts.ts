@@ -2688,5 +2688,88 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
     ],
   },
+  {
+    slug: 'rcmp-age-requirements',
+    title: 'RCMP Age Requirements: Can You Apply at 18 and Is There a Maximum Age?',
+    subtitle: 'The RCMP age rule is simpler than most people think, but there are 2 details that matter a lot',
+    date: '2026-05-11',
+    author: 'RCMP Prep Team',
+    readTime: '5 min read',
+    category: 'Application Guide',
+    excerpt: 'Yes, you can apply to the RCMP at 18. No, there is no maximum age limit. Here is the exact official rule, plus the part many applicants miss about when you can actually be hired.',
+    coverImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80',
+    content: `
+<p>The RCMP age requirement is straightforward: you must be <strong>at least 18 years old to apply</strong>, and there is <strong>no maximum age limit</strong>. The part many people miss is that while you can begin the process and even complete basic training at 18, you <strong>cannot be hired to work as a police officer until you are 19</strong>.</p>
+
+<p>That small distinction matters. A lot of applicants search for “minimum age for RCMP” and stop at the first number they see. But the official recruiting page gives two different age markers: one for applying, and one for actually being hired.</p>
+
+<h2>The Exact RCMP Age Rule</h2>
+
+<p>On its official “Before you apply” recruiting page, the RCMP says applicants must:</p>
+
+<ul>
+  <li>be <strong>at least 18 years of age to apply</strong></li>
+  <li>understand that they <strong>cannot be hired as a police officer until age 19</strong></li>
+  <li>know that there is <strong>no maximum age limit to apply</strong></li>
+</ul>
+
+<p>That means the age question is actually less restrictive than many people assume. The RCMP is not using an upper-age cutoff to screen people out. If you meet the full set of recruiting requirements, age alone is not the thing that disqualifies you once you are past the minimum.</p>
+
+<h2>Can You Really Start the Process at 18?</h2>
+
+<p>Yes. The RCMP says you can apply and go through the <strong>selection process and basic training at 18 years of age</strong>. That is the important practical takeaway for younger applicants. You do not need to sit around waiting until your nineteenth birthday before doing anything.</p>
+
+<p>What you do need to understand is that the end point is different from the start point. The RCMP will not hire you into the role of police officer until you are 19.</p>
+
+<h2>Is There a Maximum Age for the RCMP?</h2>
+
+<p>No. The RCMP states plainly that <strong>there is no maximum age limit to apply</strong>.</p>
+
+<p>For older applicants, that is good news, but it does not mean the process is casual. You still need to meet the same standards as everyone else: fitness, medical and psychological suitability, mobility, driving requirements, education, and character screening. The RCMP is flexible on age ceiling, not on readiness.</p>
+
+<h2>What This Means for Different Applicants</h2>
+
+<ol>
+  <li><strong>If you are 17</strong> — you are too early. You need to wait until you are at least 18 to apply.</li>
+  <li><strong>If you are 18</strong> — you can apply now and move through the process, but you still cannot be hired until 19.</li>
+  <li><strong>If you are in your 30s, 40s, or beyond</strong> — age by itself is not a barrier, because the RCMP does not set a maximum age limit.</li>
+</ol>
+
+<h2>Do Not Look at Age in Isolation</h2>
+
+<p>One trap applicants fall into is treating age as the whole eligibility question. It is not. The same official recruiting page that explains the age rule also lists the broader requirements: you must meet citizenship or permanent resident rules, speak English and/or French, hold a valid unrestricted Canadian driver’s licence, have the required education, meet health and fitness standards, be willing to relocate within Canada, and demonstrate good character.</p>
+
+<p>So if you are age-eligible, great. That answers only the first part of the bigger question.</p>
+
+<blockquote>The short version: you can start at 18, you cannot be hired until 19, and there is no maximum age cap. After that, the real issue is whether the rest of your file is strong enough.</blockquote>
+
+<p>If you are already age-eligible and want to prepare for the first major filter, start with the <a href="/sample">free sample test</a> or try the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
+    `,
+    faqs: [
+      {
+        question: 'What is the minimum age to apply to the RCMP?',
+        answer: 'The RCMP says you must be at least 18 years old to apply.',
+      },
+      {
+        question: 'Can you join the RCMP at 18?',
+        answer: 'You can apply and go through the RCMP selection process and basic training at 18, but you cannot be hired to work as a police officer until you are 19.',
+      },
+      {
+        question: 'Is there a maximum age limit to join the RCMP?',
+        answer: 'No. The RCMP says there is no maximum age limit to apply.',
+      },
+      {
+        question: 'Can older applicants still apply to the RCMP?',
+        answer: 'Yes. Because the RCMP does not set a maximum age limit, older applicants can still apply as long as they meet the other qualifications and requirements.',
+      },
+      {
+        question: 'What else matters besides age in an RCMP application?',
+        answer: 'Age is only one basic requirement. The RCMP also requires citizenship or eligible permanent resident status, language proficiency, a valid unrestricted Canadian driver’s licence, education, health standards, mobility, and good character.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+    ],
+  },
 
 ];
