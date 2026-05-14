@@ -2771,5 +2771,98 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
     ],
   },
+  {
+    slug: 'rcmp-hearing-requirements',
+    title: 'RCMP Hearing Requirements: The Exact Standards Applicants Need to Meet',
+    subtitle: 'When the hearing exam happens, who can do it, the decibel limits, and what can delay you',
+    date: '2026-05-14',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP publishes minimum hearing standards for applicants, including exact decibel limits, testing rules, and when the exam is required in the recruiting process.',
+    coverImage: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&q=80',
+    content: `
+<p>The RCMP requires applicants to meet minimum hearing standards before they reach the medical stage of the recruiting process. The hearing exam must be completed by an audiologist or other qualified practitioner, you cannot use a hearing aid during the test, and the results are valid for <strong>2 years</strong>.</p>
+
+<p>This is one of those requirements people often hear about late, even though the RCMP is fairly specific about it. If you want to avoid delays, it helps to know exactly when the hearing exam is requested, what gets tested, and what the pass standard actually is.</p>
+
+<h2>When the RCMP Hearing Exam Happens</h2>
+
+<p>According to the RCMP, hearing and vision exams are <strong>no longer required at the very start</strong> of the application process. Instead, applicants are required to have them completed <strong>before reaching the medical stage</strong>. A Recruiting Analyst will contact you when those documents are needed.</p>
+
+<p>On the required forms and documents page, the RCMP says applicants need to complete the hearing examination prior to the medical stage and <strong>keep the completed form until they are asked to submit it</strong>.</p>
+
+<h2>Who Can Complete the RCMP Hearing Form?</h2>
+
+<p>The hearing examination must be completed using the <strong>Regular Member Applicant Hearing Examination Report (RCMP 6509)</strong>.</p>
+
+<p>The RCMP says the exam must be completed by a practitioner in accordance with the <strong>Canadian Standards Association Standard on Pure Tone Air Conduction Audiometers for Hearing Conservation and for Screening</strong>. The frequencies tested must include <strong>500 Hz, 1,000 Hz, 2,000 Hz, 3,000 Hz, 4,000 Hz, 6,000 Hz, and 8,000 Hz</strong>.</p>
+
+<p>You <strong>cannot use a hearing aid during the examination</strong>.</p>
+
+<h2>The RCMP Minimum Hearing Standard</h2>
+
+<p>The RCMP publishes two core hearing thresholds for regular member applicants:</p>
+
+<ul>
+  <li><strong>Better ear:</strong> hearing loss no greater than <strong>30 decibels</strong> in the <strong>500 to 3000 hertz</strong> range</li>
+  <li><strong>Worse ear:</strong> hearing loss no greater than <strong>30 decibels</strong> in the <strong>500 to 2900 hertz</strong> range, and <strong>no more than 50 decibels at 3000 hertz</strong></li>
+</ul>
+
+<p>If your test results fall outside those limits, you do not meet the published minimum hearing requirement for RCMP applicants.</p>
+
+<h2>How Long Is the Hearing Exam Valid?</h2>
+
+<p>The RCMP says the results of the hearing examination are valid for <strong>2 years</strong>.</p>
+
+<p>The RCMP also states that <strong>the cost of the exam is the applicant's responsibility</strong> and will not be reimbursed.</p>
+
+<h2>What Usually Delays People</h2>
+
+<ul>
+  <li><strong>Waiting until the last minute</strong>, hearing exams are not required at the very beginning, but once requested, the recruiting timeline can move quickly.</li>
+  <li><strong>Showing up without the RCMP form</strong>, make sure the practitioner completes the official RCMP 6509 form.</li>
+  <li><strong>Assuming hearing aids will solve the issue</strong>, the RCMP says you cannot use a hearing aid during the exam.</li>
+  <li><strong>Submitting old results</strong>, the exam is only valid for 2 years.</li>
+</ul>
+
+<h2>The Bottom Line</h2>
+
+<p>The RCMP hearing requirement is not vague. The organization publishes the exact decibel thresholds, the test frequencies, the no-hearing-aid rule, and when the exam is required in the application process. If you think hearing could become an issue, it is smart to learn where you stand early so it does not become a surprise later.</p>
+
+<p>If you are still preparing for the first big screen in the process, <a href="https://rcmpprep.ca">rcmpprep.ca</a> offers unofficial practice tests for the RCMP Online Entrance Assessment so you can strengthen the part most applicants face before medical paperwork ever shows up.</p>
+    `,
+    faqs: [
+      {
+        question: 'Does the RCMP require a hearing test?',
+        answer: 'Yes. RCMP applicants must complete a hearing examination before reaching the medical stage of the recruiting process, and the completed form is submitted when requested by recruiting.',
+      },
+      {
+        question: 'Can you use a hearing aid during the RCMP hearing exam?',
+        answer: 'No. The RCMP states that you cannot use a hearing aid during the hearing examination.',
+      },
+      {
+        question: 'What are the RCMP hearing standards?',
+        answer: 'The RCMP says hearing loss must be no greater than 30 decibels in the better ear in the 500 to 3000 hertz range. In the worse ear, hearing loss must be no greater than 30 decibels in the 500 to 2900 hertz range and no more than 50 decibels at 3000 hertz.',
+      },
+      {
+        question: 'Who can complete the RCMP hearing form?',
+        answer: 'The hearing exam must be completed on the RCMP 6509 form by a practitioner in accordance with the Canadian Standards Association standard for pure tone air conduction audiometers for hearing conservation and screening.',
+      },
+      {
+        question: 'How long is the RCMP hearing exam valid?',
+        answer: 'The RCMP says the results are valid for 2 years, and the applicant is responsible for paying the cost of the exam.',
+      },
+      {
+        question: 'When do you need the hearing test for the RCMP?',
+        answer: 'The RCMP says hearing exams are no longer required at the start of the process. Applicants must have them completed before reaching the medical stage, and a Recruiting Analyst will request the documents when needed.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
+      { label: 'RCMP 6509 — Regular Member Applicant Hearing Examination Report', url: 'https://rcmp.ca/sites/default/files/2023-09/6509e.pdf' },
+    ],
+  },
 
 ];
