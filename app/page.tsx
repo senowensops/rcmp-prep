@@ -78,16 +78,15 @@ export default function HomePage() {
       <BlogSlider />
       <FAQ />
 
-      {/* Support CTA */}
-      <section className="py-16 bg-gray-900 text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-4">This app is 100% free.</h2>
-          <p className="text-gray-300 text-lg mb-8">If it helped you prep for your RCMP exam, consider buying us a coffee</p>
+      <section className="bg-gray-900 py-16 text-center">
+        <div className="mx-auto max-w-2xl px-6">
+          <h2 className="mb-4 text-3xl font-bold text-white">This app is 100% free.</h2>
+          <p className="mb-8 text-lg text-gray-300">If it helped you prep for your RCMP exam, consider buying us a coffee</p>
           <a
             href="https://buymeacoffee.com/rcmpprep"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-colors"
+            className="inline-block rounded-lg bg-green-600 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-700"
           >
             Support the App
           </a>
