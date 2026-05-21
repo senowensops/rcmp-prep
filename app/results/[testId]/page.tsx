@@ -115,20 +115,6 @@ export default function ResultsPage() {
         </div>
       </section>
 
-      <section className="mt-6 rounded-2xl border border-green-500/20 bg-green-500/10 p-6 text-center">
-        <h2 className="font-head text-2xl font-extrabold uppercase text-white">Support the App</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-[var(--muted)]">This RCMP practice app is free to use. If it helped you feel more prepared, buying a coffee helps keep it online and free for the next applicant too.</p>
-        <a
-          href="https://buymeacoffee.com/rcmpprep"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => void trackSupportClicked(params.testId)}
-          className="mt-5 inline-flex items-center justify-center rounded-2xl bg-green-600 px-6 py-4 font-head text-lg font-bold uppercase tracking-[0.08em] text-white transition hover:bg-green-700"
-        >
-          Support the App
-        </a>
-      </section>
-
       {/* 1. Score hero */}
       <section className="mt-6 surface-card p-8 text-center">
         <div className={`mt-1 font-head text-7xl font-extrabold ${heroClass}`}>{results.overallPct}%</div>
@@ -192,6 +178,20 @@ export default function ResultsPage() {
           </div>
         </section>
       )}
+
+      <section className="mt-6 rounded-2xl border border-green-500/20 bg-green-500/10 p-6 text-center">
+        <h2 className="font-head text-2xl font-extrabold uppercase text-white">Support the App</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-[var(--muted)]">This RCMP practice app is free to use. If it helped you feel more prepared, buying a coffee helps keep it online and free for the next applicant too.</p>
+        <a
+          href="https://buymeacoffee.com/rcmpprep"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => void trackSupportClicked(params.testId)}
+          className="mt-5 inline-flex items-center justify-center rounded-2xl bg-green-600 px-6 py-4 font-head text-lg font-bold uppercase tracking-[0.08em] text-white transition hover:bg-green-700"
+        >
+          Support the App
+        </a>
+      </section>
 
       {/* 5. Full review */}
       <section className="mt-6 surface-card p-6">
