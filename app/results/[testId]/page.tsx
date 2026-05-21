@@ -126,7 +126,7 @@ export default function ResultsPage() {
       <section className="mt-6 surface-card p-6">
         <h2 className="font-head text-2xl font-extrabold uppercase">What to do next</h2>
         <div className="mt-4 rounded-2xl border border-[var(--border)] bg-[var(--surface2)] p-5">
-          <p className="text-lg text-white">
+          <p className="text-lg text-[var(--dark)]">
             {results.overallPct < 50
               ? "Most applicants should not walk into the real test cold. Use this result as your baseline, then practice again with a clear target."
               : results.overallPct < 80

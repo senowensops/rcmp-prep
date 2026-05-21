@@ -1,8 +1,10 @@
-'use client';
-
 import Link from "next/link";
 
-export function Hero() {
+type HeroProps = {
+  weeklyStarts?: number;
+};
+
+export function Hero({ weeklyStarts = 0 }: HeroProps) {
   return (
     <section className="relative overflow-hidden px-6 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-8">
       <div className="mx-auto max-w-6xl">
@@ -18,7 +20,7 @@ export function Hero() {
               Blog
             </Link>
             <Link
-              href="/test/1"
+              href="/sample"
               className="rounded-full border border-[var(--red)] bg-[var(--red)] px-5 py-2.5 font-head text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[var(--red-dk)]"
             >
               Start Practicing
@@ -28,7 +30,7 @@ export function Hero() {
 
         <div className="max-w-4xl">
           <p className="mb-4 text-sm text-white/50">
-            32 candidates have practiced this week
+            {weeklyStarts} candidate{weeklyStarts === 1 ? '' : 's'} have practiced this week
           </p>
 
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--red)]/30 bg-[var(--red)]/10 px-4 py-2 font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)]">
@@ -46,20 +48,26 @@ export function Hero() {
           </p>
 
           <p className="mt-4 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
-            Unofficial practice tests covering the same skill areas as the RCMP Online Assessment — spatial reasoning, memory, numerical, language, and more. 100% free, no account needed.
+            Try 3 sample questions from each RCMP assessment section free, then unlock all 3 full-length practice tests with timed sections, answer explanations, and progress tracking.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
-              href="/test/1"
+              href="/sample"
               className="inline-flex items-center justify-center rounded-2xl bg-[var(--red)] px-8 py-5 font-head text-2xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)]"
             >
-              Start Practicing Free
+              Start Free Sample
             </Link>
+            <a
+              href="#pricing"
+              className="inline-flex items-center justify-center rounded-2xl border-2 border-[var(--red)] bg-transparent px-8 py-5 font-head text-2xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red)]"
+            >
+              Unlock the Full Test
+            </a>
           </div>
 
           <p className="mt-3 text-sm text-white/50">
-            No account needed &middot; Takes 2 minutes
+            No account needed &middot; 3 questions from every section
           </p>
         </div>
       </div>
