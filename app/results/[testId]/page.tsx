@@ -6,40 +6,71 @@ import { useParams } from "next/navigation";
 import { RadarChart } from "@/components/ui/RadarChart";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { getResults } from "@/lib/testData";
-import { trackNextTestClicked, trackResultsViewed, trackRetakeClicked, trackSupportClicked, trackSupportDismissed, trackSupportModalShown, trackTestComplete } from "@/lib/tracking";
+import { trackNextTestClicked, trackResultsViewed, trackRetakeClicked, trackTestComplete } from "@/lib/tracking";
 import type { TestState } from "@/types";
 
-function SupportModal({ onClose, testId }: { onClose: () => void; testId: string }) {
+function ResultsUnlockModal({ onClose }: { onClose: () => void }) {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleUnlock = async () => {
+    setError("");
+    setLoading(true);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ plan: "full" }),
+      });
+      if (!res.ok) throw new Error("Checkout failed");
+      const { url } = await res.json();
+      if (!url) throw new Error("No checkout URL returned");
+      window.location.href = url;
+    } catch {
+      setError("Something went wrong. Please try again.");
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6" onClick={onClose}>
-      <div className="relative max-w-md w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 text-center" onClick={(event) => event.stopPropagation()}>
-        <button
-          type="button"
-          aria-label="Close support modal"
-          onClick={() => { void trackSupportDismissed(testId); onClose(); }}
-          className="absolute right-4 top-4 rounded-full px-3 py-1 text-xl text-white/70 transition hover:bg-white/10 hover:text-white"
-        >
-          ×
-        </button>
-        <h2 className="font-head text-3xl font-extrabold uppercase text-white">Keep the momentum going</h2>
-        <p className="mt-4 text-lg text-[var(--muted)]">
-          Most candidates do better after a second attempt. Review your weak spots, then come back and improve your score.
-        </p>
-        <button
-          onClick={() => { void trackSupportDismissed(testId); onClose(); }}
-          className="mt-6 inline-block rounded-lg bg-[var(--red)] px-8 py-3 font-semibold text-lg text-white transition-colors hover:bg-[var(--red-dk)]"
-        >
-          Continue Reviewing
-        </button>
-        <a
-          href="https://buymeacoffee.com/rcmpprep"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => void trackSupportClicked(testId)}
-          className="mt-4 block w-full text-sm text-white/50 transition hover:text-white/80"
-        >
-          Want to support the project instead?
-        </a>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
+      <div className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#111] shadow-2xl">
+        <div style={{ height: "3px", background: "linear-gradient(90deg, #c8102e, #d4900a)" }} />
+        <div className="p-8 text-center">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute right-4 top-4 text-2xl leading-none text-white/35 transition hover:text-white/70"
+          >
+            ×
+          </button>
+
+          <div className="mb-3 text-4xl">🏅</div>
+          <p className="font-head text-xs font-bold uppercase tracking-[0.2em] text-[var(--red)]">Results Ready</p>
+          <h2 className="mt-3 font-head text-4xl font-extrabold uppercase text-white">Ready to practice for real?</h2>
+          <p className="mx-auto mt-4 max-w-md text-base leading-7 text-white/70">
+            Unlock all 3 full RCMP practice tests, timed sections, and answer explanations for <strong className="text-white">$29 CAD</strong>.
+          </p>
+
+          <button
+            onClick={handleUnlock}
+            disabled={loading}
+            className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--red)] px-6 py-5 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[var(--red-dk)] disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {loading ? "Redirecting..." : "Unlock Full Prep"}
+          </button>
+
+          <button
+            type="button"
+            onClick={onClose}
+            className="mt-4 text-sm text-white/50 transition hover:text-white/80"
+          >
+            No thanks, show my results
+          </button>
+
+          {error ? <p className="mt-4 text-sm text-red-400">{error}</p> : null}
+        </div>
       </div>
     </div>
   );
@@ -50,7 +81,7 @@ export default function ResultsPage() {
   const [state] = useLocalStorage<TestState>(`rcmp-progress-${params.testId}`, { testId: params.testId, currentSectionId: 'workstyle', currentQuestionIndex: 0, answers: {}, flags: {}, timestamps: { updatedAt: new Date().toISOString() } });
   const results = useMemo(() => getResults(params.testId, state.answers), [params.testId, state.answers]);
   const heroClass = results.overallPct >= 80 ? 'text-[var(--gold)]' : results.overallPct >= 60 ? 'text-[var(--blue)]' : 'text-[var(--muted)]';
-  const [showSupport, setShowSupport] = useState(false);
+  const [showResultsGate, setShowResultsGate] = useState(false);
 
   const flaggedIds = Object.keys(state.flags ?? {}).filter(id => (state.flags as Record<string, boolean>)[id]);
   const flaggedQuestions = results.review.filter(({ question }) => flaggedIds.includes(question.id));
@@ -59,13 +90,10 @@ export default function ResultsPage() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     void trackResultsViewed(params.testId);
-    if (sessionStorage.getItem(`rcmp-support-modal-shown-${params.testId}`) === 'true') return;
-    const timer = setTimeout(() => {
-      setShowSupport(true);
-      void trackSupportModalShown(params.testId);
-      sessionStorage.setItem(`rcmp-support-modal-shown-${params.testId}`, 'true');
-    }, 1500);
-    return () => clearTimeout(timer);
+    const fullAccess = window.localStorage.getItem('rcmp-access-unlocked') === '1';
+    if (!fullAccess) {
+      setShowResultsGate(true);
+    }
   }, [params.testId]);
 
   useEffect(() => {
@@ -211,7 +239,7 @@ export default function ResultsPage() {
         </details>
       </section>
 
-      {showSupport && <SupportModal testId={params.testId} onClose={() => setShowSupport(false)} />}
+      {showResultsGate ? <ResultsUnlockModal onClose={() => setShowResultsGate(false)} /> : null}
     </main>
   );
 }
