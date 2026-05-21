@@ -104,14 +104,11 @@ export function PaywallModal({ onClose, onUnlock, currentSectionId }: Props) {
           <div className="text-center mb-5">
             <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>🏅</div>
             <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#c8102e', marginBottom: '0.5rem' }}>
-              Next Step
+              Access Required
             </p>
             <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '1.75rem', fontWeight: 800, textTransform: 'uppercase', color: '#fff' }}>
-              Unlock Full RCMP Prep
+              Unlock to Continue
             </h2>
-            <p style={{ marginTop: '0.75rem', color: 'rgba(255,255,255,0.68)', fontSize: '0.92rem', lineHeight: 1.5 }}>
-              You&apos;ve seen the sample. Now get the full practice flow with all 3 tests, timed sections, and answer explanations.
-            </p>
           </div>
 
           {/* Tab switcher */}
@@ -153,7 +150,6 @@ export function PaywallModal({ onClose, onUnlock, currentSectionId }: Props) {
                   $29 <span style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.4)' }}>CAD</span>
                 </div>
                 <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.35)', marginTop: '0.25rem' }}>One-time · Lifetime access · All sections</div>
-                <div style={{ marginTop: '0.75rem', fontSize: '0.86rem', color: 'rgba(255,255,255,0.68)' }}>Best for serious applicants who want to practice properly before test day.</div>
               </div>
 
               <ul style={{ listStyle: 'none', marginBottom: '1.25rem', padding: 0 }}>
@@ -172,7 +168,6 @@ export function PaywallModal({ onClose, onUnlock, currentSectionId }: Props) {
                   $9 <span style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.4)' }}>CAD</span>
                 </div>
                 <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.35)', marginTop: '0.25rem' }}>One-time · Lifetime access · 1 section across all tests</div>
-              <div style={{ marginTop: '0.75rem', fontSize: '0.86rem', color: 'rgba(255,255,255,0.68)' }}>Good if you only want extra reps in one weak area.</div>
               </div>
 
               <select

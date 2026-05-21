@@ -16,8 +16,7 @@ import { BusinessSection } from "@/components/sections/BusinessSection";
 import { useTestState } from "@/hooks/useTestState";
 import { useTimer } from "@/hooks/useTimer";
 import { getSectionsForTest } from "@/lib/testData";
-import { PaywallModal } from "@/components/ui/PaywallModal";
-import { trackQuestionAnswered, trackSectionViewed, trackTestProgress, trackTestStart } from "@/lib/tracking";
+import { trackQuestionAnswered, trackSectionViewed, trackTestStart } from "@/lib/tracking";
 
 const renderers = {
   workstyle: WorkstyleSection,
@@ -40,8 +39,6 @@ export default function TestPage() {
   const [lockedChallenges, setLockedChallenges] = useState<Record<string, boolean>>({});
   const [hasStudied, setHasStudied] = useState<Record<string, boolean>>({});
   const [encouragement, setEncouragement] = useState<string>("");
-  const [hasAccess, setHasAccess] = useState(false);
-  const [showPaywall, setShowPaywall] = useState(false);
   const currentChallengeIdRef = useRef<string | null>(null);
   const questionSubsection = currentQuestion.subsectionId;
   const activeSubsection = currentSection.subsections?.find((sub) => sub.id === questionSubsection) ?? currentSection.subsections?.[0];
@@ -51,10 +48,7 @@ export default function TestPage() {
     if (typeof window === 'undefined') return;
     setOriented(window.localStorage.getItem('rcmp-oriented') === '1');
     setResumeReady(Boolean(window.localStorage.getItem(`rcmp-progress-${testId}`)));
-    const fullAccess = window.localStorage.getItem('rcmp-access-unlocked') === '1';
-    const unlockedSections = JSON.parse(window.localStorage.getItem('rcmp-unlocked-sections') ?? '[]') as string[];
-    setHasAccess(fullAccess || unlockedSections.includes(currentSection.id));
-  }, [testId, currentSection.id]);
+  }, [testId]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -72,36 +66,7 @@ export default function TestPage() {
     void trackSectionViewed(testId, activeSubsection.id, state.currentQuestionIndex);
   }, [testId, activeSubsection, state.currentQuestionIndex]);
 
-  useEffect(() => {
-    void trackTestProgress(testId, {
-      currentSectionId: state.currentSectionId,
-      currentQuestionId: currentQuestion.id,
-      currentQuestionIndex: state.currentQuestionIndex,
-      answers: state.answers,
-      flags: state.flags,
-      questionOrder: state.questionOrder,
-      questionTimes: state.timestamps.questionTimes,
-      sectionTimes: state.timestamps.sectionTimes,
-      sectionVisits: state.timestamps.sectionVisits,
-      activeDurationSeconds: state.timestamps.activeDurationSeconds,
-      startedAt: state.timestamps.startedAt,
-      updatedAt: state.timestamps.updatedAt,
-    });
-  }, [
-    currentQuestion.id,
-    state.answers,
-    state.currentQuestionIndex,
-    state.currentSectionId,
-    state.flags,
-    state.questionOrder,
-    state.timestamps.questionTimes,
-    state.timestamps.sectionTimes,
-    state.timestamps.updatedAt,
-    testId,
-  ]);
-
   const answered = Object.keys(state.answers).length;
-  const sampleQuestionLimit = testId === 'sample' ? 3 : null;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -160,19 +125,7 @@ export default function TestPage() {
   }, [currentQuestion.id, next, prev, setAnswer, toggleFlag]);
 
   const locked = Boolean((activeSubsection && lockedSubsections[activeSubsection.id]) || (challenge && lockedChallenges[challenge.id]));
-  const shouldGate = testId !== 'sample' && !hasAccess;
   const Renderer = currentSection.type === "memory" ? null : renderers[currentSection.type as keyof typeof renderers];
-
-  useEffect(() => {
-    if (!shouldGate) {
-      setShowPaywall(false);
-      return;
-    }
-
-    if (answered >= 3) {
-      setShowPaywall(true);
-    }
-  }, [answered, shouldGate]);
 
   if (!hydrated) return null;
 
@@ -207,7 +160,6 @@ export default function TestPage() {
             <h1 className="mt-2 font-head text-4xl font-extrabold uppercase">{currentSection.label}</h1>
             <p className="mt-2 text-[var(--muted)]" aria-live="polite" aria-atomic="true">Question {state.currentQuestionIndex + 1} of {currentSection.questions.length}</p>
             <p className="mt-2 text-sm text-[var(--muted)]">Your progress is saved automatically, so you can come back if needed.</p>
-            {sampleQuestionLimit && !hasAccess ? <div className="mt-3 rounded-xl border border-[var(--gold)]/30 bg-[var(--surface2)] p-4 text-left"><p className="text-sm font-semibold text-[var(--gold)]">This free sample is just the starting point.</p><p className="mt-1 text-sm text-[var(--muted)]">You can try 3 questions here, then unlock the full RCMP Prep experience with all 3 practice tests, timed sections, and answer explanations.</p></div> : null}
             {activeSubsection ? <p className="mt-2 font-head text-sm uppercase tracking-[0.08em] text-[var(--gold)]">{activeSubsection.label}</p> : null}
             {currentSection.bannerNote ? <p className="mt-3 rounded-xl bg-[var(--surface2)] p-3 text-sm text-[var(--muted)]">{currentSection.bannerNote}</p> : null}
             {encouragement ? <p className="mt-3 rounded-xl border border-[var(--border)] bg-[var(--surface2)] p-3 text-sm font-medium text-[var(--dark)]">{encouragement}</p> : null}
@@ -219,42 +171,15 @@ export default function TestPage() {
           ) : Renderer ? (
             <Renderer question={currentQuestion} answer={state.answers[currentQuestion.id]} flagged={Boolean(state.flags[currentQuestion.id])} onAnswer={(value) => { setAnswer(currentQuestion.id, value); void trackQuestionAnswered(testId, currentSection.id, currentQuestion.id, value); }} onFlag={() => toggleFlag(currentQuestion.id)} locked={locked} />
           ) : null}
-          {sampleQuestionLimit && !hasAccess && answered >= 2 ? (
-            <div className="mt-6 rounded-2xl border border-[var(--border)] bg-[var(--surface2)] p-4">
-              <p className="font-head text-lg font-bold uppercase text-white">You&apos;re almost at the end of the free sample</p>
-              <p className="mt-2 text-sm text-[var(--muted)]">When this sample ends, the best next step is unlocking the full prep system so you can practice every section properly and retake tests with purpose.</p>
-            </div>
-          ) : null}
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
             <button onClick={() => prev()} className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Previous</button>
             <div className="flex gap-3">
               <Link href="/" className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Exit</Link>
-              <button onClick={() => {
-                if (shouldGate && answered >= 3) {
-                  setShowPaywall(true);
-                  return;
-                }
-                (currentSection.id === sections[sections.length - 1].id && state.currentQuestionIndex === currentSection.questions.length - 1) ? router.push(`/results/${testId}`) : next();
-              }} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">{currentSection.id === sections[sections.length - 1].id && state.currentQuestionIndex === currentSection.questions.length - 1 ? "Finish test" : "Next question"}</button>
+              <button onClick={() => (currentSection.id === sections[sections.length - 1].id && state.currentQuestionIndex === currentSection.questions.length - 1) ? router.push(`/results/${testId}`) : next()} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">{currentSection.id === sections[sections.length - 1].id && state.currentQuestionIndex === currentSection.questions.length - 1 ? "Finish test" : "Next question"}</button>
             </div>
           </div>
         </section>
       </div>
-      {showPaywall ? (
-        <PaywallModal
-          currentSectionId={currentSection.id}
-          onClose={() => {
-            setShowPaywall(false);
-            router.push('/sample');
-          }}
-          onUnlock={() => {
-            const unlockedSections = JSON.parse(window.localStorage.getItem('rcmp-unlocked-sections') ?? '[]') as string[];
-            const fullAccess = window.localStorage.getItem('rcmp-access-unlocked') === '1';
-            setHasAccess(fullAccess || unlockedSections.includes(currentSection.id));
-            setShowPaywall(false);
-          }}
-        />
-      ) : null}
     </main>
   );
 }

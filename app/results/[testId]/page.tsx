@@ -6,123 +6,40 @@ import { useParams } from "next/navigation";
 import { RadarChart } from "@/components/ui/RadarChart";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { getResults } from "@/lib/testData";
-import { trackNextTestClicked, trackResultsViewed, trackRetakeClicked, trackTestComplete } from "@/lib/tracking";
+import { trackNextTestClicked, trackResultsViewed, trackRetakeClicked, trackSupportClicked, trackSupportDismissed, trackSupportModalShown, trackTestComplete } from "@/lib/tracking";
 import type { TestState } from "@/types";
 
-const RESULTS_DISCOUNT_CODE = 'DEPOT2026';
-
-function ResultsUnlockModal({ onClose }: { onClose: () => void }) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [discountCode, setDiscountCode] = useState('');
-  const [discountApplied, setDiscountApplied] = useState(false);
-  const [discountError, setDiscountError] = useState('');
-
-  const handleApplyDiscount = () => {
-    setDiscountError('');
-    if (discountCode.trim().toUpperCase() === RESULTS_DISCOUNT_CODE) {
-      setDiscountApplied(true);
-      window.localStorage.setItem('rcmp-access-unlocked', '1');
-      setTimeout(() => {
-        onClose();
-        window.location.reload();
-      }, 500);
-    } else {
-      setDiscountError('Invalid code');
-    }
-  };
-
-  const handleUnlock = async () => {
-    setError("");
-    setLoading(true);
-    try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan: "full" }),
-      });
-      if (!res.ok) throw new Error("Checkout failed");
-      const { url } = await res.json();
-      if (!url) throw new Error("No checkout URL returned");
-      window.location.href = url;
-    } catch {
-      setError("Something went wrong. Please try again.");
-      setLoading(false);
-    }
-  };
-
+function SupportModal({ onClose, testId }: { onClose: () => void; testId: string }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
-      <div className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#111] shadow-2xl">
-        <div style={{ height: "3px", background: "linear-gradient(90deg, #c8102e, #d4900a)" }} />
-        <div className="p-8 text-center">
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close"
-            className="absolute right-4 top-4 text-2xl leading-none text-white/35 transition hover:text-white/70"
-          >
-            ×
-          </button>
-
-          <div className="mb-3 text-4xl">🏅</div>
-          <p className="font-head text-xs font-bold uppercase tracking-[0.2em] text-[var(--red)]">Results Ready</p>
-          <h2 className="mt-3 font-head text-4xl font-extrabold uppercase text-white">Ready to practice for real?</h2>
-          <p className="mx-auto mt-4 max-w-md text-base leading-7 text-white/70">
-            Unlock all 3 full RCMP practice tests, timed sections, and answer explanations for <strong className="text-white">$29 CAD</strong>.
-          </p>
-
-          <div className="mt-8 flex gap-2">
-            <input
-              type="text"
-              value={discountCode}
-              onChange={(event) => {
-                setDiscountCode(event.target.value);
-                setDiscountError('');
-              }}
-              placeholder="Promo code"
-              disabled={discountApplied}
-              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-[var(--red)] disabled:opacity-70"
-              onKeyDown={(event) => {
-                if (event.key === 'Enter') {
-                  event.preventDefault();
-                  handleApplyDiscount();
-                }
-              }}
-            />
-            <button
-              type="button"
-              onClick={handleApplyDiscount}
-              disabled={discountApplied || !discountCode.trim()}
-              className="rounded-xl border border-white/15 bg-white/7 px-4 py-3 font-head text-sm font-bold uppercase tracking-[0.06em] text-white/80 transition hover:bg-white/10 disabled:cursor-default disabled:opacity-50"
-            >
-              {discountApplied ? 'Applied' : 'Apply'}
-            </button>
-          </div>
-
-          {discountApplied ? <p className="mt-3 text-sm font-semibold text-green-400">Code accepted. Full access unlocked.</p> : null}
-          {discountError ? <p className="mt-3 text-sm text-red-400">{discountError}</p> : null}
-
-          {!discountApplied ? (
-            <button
-              onClick={handleUnlock}
-              disabled={loading}
-              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--red)] px-6 py-5 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[var(--red-dk)] disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {loading ? "Redirecting..." : "Unlock Full Prep"}
-            </button>
-          ) : null}
-
-          <button
-            type="button"
-            onClick={onClose}
-            className="mt-4 text-sm text-white/50 transition hover:text-white/80"
-          >
-            No thanks, show my results
-          </button>
-
-          {error ? <p className="mt-4 text-sm text-red-400">{error}</p> : null}
-        </div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6" onClick={onClose}>
+      <div className="relative max-w-md w-full rounded-2xl bg-[var(--surface)] border border-[var(--border)] p-8 text-center" onClick={(event) => event.stopPropagation()}>
+        <button
+          type="button"
+          aria-label="Close support modal"
+          onClick={() => { void trackSupportDismissed(testId); onClose(); }}
+          className="absolute right-4 top-4 rounded-full px-3 py-1 text-xl text-white/70 transition hover:bg-white/10 hover:text-white"
+        >
+          ×
+        </button>
+        <h2 className="font-head text-3xl font-extrabold uppercase text-white">Nice work!</h2>
+        <p className="mt-4 text-lg text-[var(--muted)]">
+          This app is completely free. If it helped you prepare, consider supporting it.
+        </p>
+        <a
+          href="https://buymeacoffee.com/rcmpprep"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => void trackSupportClicked(testId)}
+          className="mt-6 inline-block rounded-lg bg-green-600 hover:bg-green-700 px-8 py-3 font-semibold text-lg text-white transition-colors"
+        >
+          Support the App
+        </a>
+        <button
+          onClick={() => { void trackSupportDismissed(testId); onClose(); }}
+          className="mt-4 block w-full text-sm text-white/50 hover:text-white/80 transition"
+        >
+          No thanks, close
+        </button>
       </div>
     </div>
   );
@@ -133,20 +50,22 @@ export default function ResultsPage() {
   const [state] = useLocalStorage<TestState>(`rcmp-progress-${params.testId}`, { testId: params.testId, currentSectionId: 'workstyle', currentQuestionIndex: 0, answers: {}, flags: {}, timestamps: { updatedAt: new Date().toISOString() } });
   const results = useMemo(() => getResults(params.testId, state.answers), [params.testId, state.answers]);
   const heroClass = results.overallPct >= 80 ? 'text-[var(--gold)]' : results.overallPct >= 60 ? 'text-[var(--blue)]' : 'text-[var(--muted)]';
-  const [showResultsGate, setShowResultsGate] = useState(false);
+  const [showSupport, setShowSupport] = useState(false);
 
   const flaggedIds = Object.keys(state.flags ?? {}).filter(id => (state.flags as Record<string, boolean>)[id]);
   const flaggedQuestions = results.review.filter(({ question }) => flaggedIds.includes(question.id));
-  const weakSections = results.sections.filter((section) => section.label !== 'Workstyle' && section.pct < 80);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     void trackResultsViewed(params.testId);
-    const fullAccess = window.localStorage.getItem('rcmp-access-unlocked') === '1';
-    if (!fullAccess) {
-      setShowResultsGate(true);
-    }
-  }, [params.testId]);
+    if (sessionStorage.getItem(`rcmp-support-modal-shown-${params.testId}`) === 'true') return;
+    const timer = setTimeout(() => {
+      setShowSupport(true);
+      void trackSupportModalShown(params.testId);
+      sessionStorage.setItem(`rcmp-support-modal-shown-${params.testId}`, 'true');
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -159,8 +78,6 @@ export default function ResultsPage() {
     const durationSeconds = startTime
       ? Math.round((Date.now() - Number.parseInt(startTime, 10)) / 1000)
       : 0;
-    const activeDurationSeconds = state.timestamps.activeDurationSeconds ?? durationSeconds;
-    const completedAt = new Date().toISOString();
 
     void trackTestComplete({
       testId: params.testId,
@@ -169,65 +86,40 @@ export default function ResultsPage() {
       correctAnswers: results.overallCorrect,
       scorePercent: results.overallPct,
       durationSeconds,
-      activeDurationSeconds,
-      startedAt: state.timestamps.startedAt,
-      completedAt,
       sections: results.sections,
       sectionTimes: state.timestamps.sectionTimes,
-      questionTimes: state.timestamps.questionTimes,
-      sectionVisits: state.timestamps.sectionVisits,
       lastSectionId: state.currentSectionId,
-      answers: state.answers,
-      skippedQuestions: (state.questionOrder ?? []).filter((questionId) => !(questionId in state.answers)),
-      questionOrder: state.questionOrder,
     });
 
     sessionStorage.setItem(completeKey, "1");
-    sessionStorage.setItem(`rcmp-test-completed-at-${params.testId}`, completedAt);
-  }, [params.testId, results, state.answers, state.currentSectionId, state.questionOrder, state.timestamps.questionTimes, state.timestamps.sectionTimes]);
+  }, [params.testId, results, state.answers, state.currentSectionId, state.timestamps.sectionTimes]);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
       <head><meta name="robots" content="noindex, nofollow" /></head>
-
+      {/* 1. Score hero */}
       <section className="surface-card p-8 text-center">
         <div className="font-head text-sm font-bold uppercase tracking-[0.2em] text-[var(--red)]">Results</div>
         <div className={`mt-3 font-head text-7xl font-extrabold ${heroClass}`}>{results.overallPct}%</div>
         <p className="mt-2 font-mono text-lg">{results.overallCorrect} of {results.totalScored} correct</p>
-        <p className="mx-auto mt-4 max-w-2xl text-[var(--muted)]">
-          {results.overallPct < 50
-            ? "That score is actually useful. It shows exactly where to focus before the real RCMP assessment."
-            : results.overallPct < 80
-              ? "Solid start. A bit more focused practice should make this score much more consistent."
-              : "Strong result. Keep sharpening the weaker sections so this level holds under pressure."}
-        </p>
       </section>
 
+      {/* 2. Study recommendations + action buttons */}
       <section className="mt-6 surface-card p-6">
-        <h2 className="font-head text-2xl font-extrabold uppercase">What to do next</h2>
-        <div className="mt-4 rounded-2xl border border-[var(--border)] bg-[var(--surface2)] p-5">
-          <p className="text-lg text-[var(--dark)]">
-            {results.overallPct < 50
-              ? "Most applicants should not walk into the real test cold. Use this result as your baseline, then practice again with a clear target."
-              : results.overallPct < 80
-                ? "You are on the right track, but there are still gaps worth tightening before test day."
-                : "You are in a good spot. Now the goal is consistency across every section."}
-          </p>
-          <div className="mt-4 space-y-3 text-[var(--muted)]">
-            {weakSections.length === 0
-              ? <p>You&apos;re in strong shape, keep reviewing for consistency and retake a full test soon.</p>
-              : weakSections.map((section) => <p key={section.label}>Focus on <strong>{section.label}</strong> first, then retake the test and aim to bring that section above 80%.</p>)}
-          </div>
+        <h2 className="font-head text-2xl font-extrabold uppercase">Study recommendations</h2>
+        <div className="mt-4 space-y-3 text-[var(--muted)]">
+          {results.sections.filter((section) => section.label !== 'Workstyle' && section.pct < 80).length === 0 ? <p>You&apos;re in strong shape — keep reviewing for consistency.</p> : results.sections.filter((section) => section.label !== 'Workstyle' && section.pct < 80).map((section) => <p key={section.label}>Focus on <strong>{section.label}</strong> — aim to bring that section above 80% before your next attempt.</p>)}
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href={`/test/${params.testId}`} onClick={() => void trackRetakeClicked(params.testId)} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">Retake this test</Link>
+          <Link href={`/test/${params.testId}`} onClick={() => void trackRetakeClicked(params.testId)} className="rounded-2xl bg-[var(--red)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em] text-white">Retake</Link>
           {Number(params.testId) < 3 ? (
             <Link href={`/test/${Number(params.testId) + 1}`} onClick={() => void trackNextTestClicked(params.testId, String(Number(params.testId) + 1))} className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Try Test {Number(params.testId) + 1}</Link>
           ) : null}
-          <Link href="/" className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Back to dashboard</Link>
+          <Link href="/" className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Back to Dashboard</Link>
         </div>
       </section>
 
+      {/* 3. Radar chart + section breakdown */}
       <section className="mt-6 grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
         <div className="surface-card p-6"><RadarChart data={results.sections.map((section) => ({ section: section.label, score: section.pct }))} /></div>
         <div className="space-y-4">
@@ -246,6 +138,7 @@ export default function ResultsPage() {
         </div>
       </section>
 
+      {/* 4. Flagged Questions */}
       {flaggedQuestions.length > 0 && (
         <section className="mt-6 surface-card p-6">
           <h2 className="font-head text-2xl font-extrabold uppercase">Flagged Questions</h2>
@@ -269,6 +162,7 @@ export default function ResultsPage() {
         </section>
       )}
 
+      {/* 5. Full review */}
       <section className="mt-6 surface-card p-6">
         <details open>
           <summary className="cursor-pointer font-head text-2xl font-extrabold uppercase">Full review</summary>
@@ -291,7 +185,7 @@ export default function ResultsPage() {
         </details>
       </section>
 
-      {showResultsGate ? <ResultsUnlockModal onClose={() => setShowResultsGate(false)} /> : null}
+      {showSupport && <SupportModal testId={params.testId} onClose={() => setShowSupport(false)} />}
     </main>
   );
 }
