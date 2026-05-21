@@ -10,13 +10,21 @@ export function Hero() {
           <Link href="/" className="font-head text-2xl font-extrabold uppercase tracking-[0.08em] text-white">
             RCMP<span className="text-[var(--red)]">PREP</span>
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-4">
             <Link
               href="/blog"
               className="font-head text-sm font-bold uppercase tracking-[0.12em] text-white/70 transition hover:text-white"
             >
               Blog
             </Link>
+            <a
+              href="https://buymeacoffee.com/rcmpprep"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/15 bg-white/8 px-4 py-2.5 font-head text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-white/15"
+            >
+              Support the App
+            </a>
             <Link
               href="/test/1"
               className="rounded-full border border-[var(--red)] bg-[var(--red)] px-5 py-2.5 font-head text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[var(--red-dk)]"

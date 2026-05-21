@@ -12,7 +12,7 @@ import type { TestState } from "@/types";
 function SupportModal({ onClose, testId }: { onClose: () => void; testId: string }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6" onClick={onClose}>
-      <div className="relative max-w-md w-full rounded-2xl bg-[var(--surface)] border border-[var(--border)] p-8 text-center" onClick={(event) => event.stopPropagation()}>
+      <div className="relative w-full max-w-md rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 text-center" onClick={(event) => event.stopPropagation()}>
         <button
           type="button"
           aria-label="Close support modal"
@@ -21,24 +21,24 @@ function SupportModal({ onClose, testId }: { onClose: () => void; testId: string
         >
           ×
         </button>
-        <h2 className="font-head text-3xl font-extrabold uppercase text-white">Nice work!</h2>
-        <p className="mt-4 text-lg text-[var(--muted)]">
-          This app is completely free. If it helped you prepare, consider supporting it.
+        <h2 className="font-head text-3xl font-extrabold uppercase text-white">This app is free. If it helped, support it.</h2>
+        <p className="mt-4 text-base leading-7 text-[var(--muted)]">
+          RCMP Prep is donation-supported so applicants can practice without hitting a paywall. If this helped you feel more ready, buying a coffee helps keep it online.
         </p>
         <a
           href="https://buymeacoffee.com/rcmpprep"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => void trackSupportClicked(testId)}
-          className="mt-6 inline-block rounded-lg bg-green-600 hover:bg-green-700 px-8 py-3 font-semibold text-lg text-white transition-colors"
+          className="mt-6 inline-block rounded-lg bg-green-600 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-green-700"
         >
           Support the App
         </a>
         <button
           onClick={() => { void trackSupportDismissed(testId); onClose(); }}
-          className="mt-4 block w-full text-sm text-white/50 hover:text-white/80 transition"
+          className="mt-4 block w-full text-sm text-white/50 transition hover:text-white/80"
         >
-          No thanks, close
+          No thanks, show my results
         </button>
       </div>
     </div>
@@ -97,10 +97,41 @@ export default function ResultsPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
       <head><meta name="robots" content="noindex, nofollow" /></head>
+      <section className="surface-card p-6 sm:p-8">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <div className="font-head text-sm font-bold uppercase tracking-[0.2em] text-[var(--red)]">Results</div>
+            <h1 className="mt-2 font-head text-4xl font-extrabold uppercase text-white sm:text-5xl">Your Test Results</h1>
+            <p className="mt-2 max-w-2xl text-[var(--muted)]">Before you review your score breakdown, if RCMP Prep helped you practice, you can support the project and help keep it free for future applicants.</p>
+          </div>
+          <a
+            href="https://buymeacoffee.com/rcmpprep"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-2xl bg-green-600 px-5 py-3 font-head text-base font-bold uppercase tracking-[0.08em] text-white transition hover:bg-green-700"
+          >
+            Support the App
+          </a>
+        </div>
+      </section>
+
+      <section className="mt-6 rounded-2xl border border-green-500/20 bg-green-500/10 p-6 text-center">
+        <h2 className="font-head text-2xl font-extrabold uppercase text-white">Support the App</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-[var(--muted)]">This RCMP practice app is free to use. If it helped you feel more prepared, buying a coffee helps keep it online and free for the next applicant too.</p>
+        <a
+          href="https://buymeacoffee.com/rcmpprep"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => void trackSupportClicked(params.testId)}
+          className="mt-5 inline-flex items-center justify-center rounded-2xl bg-green-600 px-6 py-4 font-head text-lg font-bold uppercase tracking-[0.08em] text-white transition hover:bg-green-700"
+        >
+          Support the App
+        </a>
+      </section>
+
       {/* 1. Score hero */}
-      <section className="surface-card p-8 text-center">
-        <div className="font-head text-sm font-bold uppercase tracking-[0.2em] text-[var(--red)]">Results</div>
-        <div className={`mt-3 font-head text-7xl font-extrabold ${heroClass}`}>{results.overallPct}%</div>
+      <section className="mt-6 surface-card p-8 text-center">
+        <div className={`mt-1 font-head text-7xl font-extrabold ${heroClass}`}>{results.overallPct}%</div>
         <p className="mt-2 font-mono text-lg">{results.overallCorrect} of {results.totalScored} correct</p>
       </section>
 
@@ -115,7 +146,7 @@ export default function ResultsPage() {
           {Number(params.testId) < 3 ? (
             <Link href={`/test/${Number(params.testId) + 1}`} onClick={() => void trackNextTestClicked(params.testId, String(Number(params.testId) + 1))} className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Try Test {Number(params.testId) + 1}</Link>
           ) : null}
-          <Link href="/" className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Back to Dashboard</Link>
+          <Link href="/" className="rounded-2xl border border-[var(--border)] bg-[var(--surface2)] px-5 py-3 font-head text-lg font-bold uppercase tracking-[0.08em]">Back to Home</Link>
         </div>
       </section>
 
