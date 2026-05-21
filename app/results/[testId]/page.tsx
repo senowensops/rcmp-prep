@@ -9,9 +9,28 @@ import { getResults } from "@/lib/testData";
 import { trackNextTestClicked, trackResultsViewed, trackRetakeClicked, trackTestComplete } from "@/lib/tracking";
 import type { TestState } from "@/types";
 
+const RESULTS_DISCOUNT_CODE = 'DEPOT2026';
+
 function ResultsUnlockModal({ onClose }: { onClose: () => void }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [discountCode, setDiscountCode] = useState('');
+  const [discountApplied, setDiscountApplied] = useState(false);
+  const [discountError, setDiscountError] = useState('');
+
+  const handleApplyDiscount = () => {
+    setDiscountError('');
+    if (discountCode.trim().toUpperCase() === RESULTS_DISCOUNT_CODE) {
+      setDiscountApplied(true);
+      window.localStorage.setItem('rcmp-access-unlocked', '1');
+      setTimeout(() => {
+        onClose();
+        window.location.reload();
+      }, 500);
+    } else {
+      setDiscountError('Invalid code');
+    }
+  };
 
   const handleUnlock = async () => {
     setError("");
@@ -53,13 +72,46 @@ function ResultsUnlockModal({ onClose }: { onClose: () => void }) {
             Unlock all 3 full RCMP practice tests, timed sections, and answer explanations for <strong className="text-white">$29 CAD</strong>.
           </p>
 
-          <button
-            onClick={handleUnlock}
-            disabled={loading}
-            className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--red)] px-6 py-5 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[var(--red-dk)] disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {loading ? "Redirecting..." : "Unlock Full Prep"}
-          </button>
+          <div className="mt-8 flex gap-2">
+            <input
+              type="text"
+              value={discountCode}
+              onChange={(event) => {
+                setDiscountCode(event.target.value);
+                setDiscountError('');
+              }}
+              placeholder="Promo code"
+              disabled={discountApplied}
+              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-[var(--red)] disabled:opacity-70"
+              onKeyDown={(event) => {
+                if (event.key === 'Enter') {
+                  event.preventDefault();
+                  handleApplyDiscount();
+                }
+              }}
+            />
+            <button
+              type="button"
+              onClick={handleApplyDiscount}
+              disabled={discountApplied || !discountCode.trim()}
+              className="rounded-xl border border-white/15 bg-white/7 px-4 py-3 font-head text-sm font-bold uppercase tracking-[0.06em] text-white/80 transition hover:bg-white/10 disabled:cursor-default disabled:opacity-50"
+            >
+              {discountApplied ? 'Applied' : 'Apply'}
+            </button>
+          </div>
+
+          {discountApplied ? <p className="mt-3 text-sm font-semibold text-green-400">Code accepted. Full access unlocked.</p> : null}
+          {discountError ? <p className="mt-3 text-sm text-red-400">{discountError}</p> : null}
+
+          {!discountApplied ? (
+            <button
+              onClick={handleUnlock}
+              disabled={loading}
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--red)] px-6 py-5 font-head text-xl font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[var(--red-dk)] disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {loading ? "Redirecting..." : "Unlock Full Prep"}
+            </button>
+          ) : null}
 
           <button
             type="button"
