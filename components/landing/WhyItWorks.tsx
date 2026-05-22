@@ -4,7 +4,7 @@ const bullets = [
   "Timed sections — practice the way you'll be tested: under real time pressure",
   "Detailed explanations on every question — understand why, not just what",
   "Memory section with scene recall — the format most candidates are least prepared for",
-  "One-time price — no subscription, no recurring charges, lifetime access",
+  "100% free to use — no subscription, no account, no paywall",
 ];
 
 export function WhyItWorks() {

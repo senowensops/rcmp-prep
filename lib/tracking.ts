@@ -2,8 +2,8 @@ import { analytics } from "@/lib/analytics";
 import { supabase } from "@/lib/supabase";
 
 const ATTEMPT_KEY_PREFIX = "rcmp-attempt-id-";
+const MIN_VALID_COMPLETION_SECONDS = 120;
 
-// Generate a session ID for this browser session.
 function getSessionId(): string {
   if (typeof window === "undefined") return "ssr";
 
@@ -23,6 +23,7 @@ export interface TestAttempt {
   correctAnswers: number;
   scorePercent: number;
   durationSeconds: number;
+  activeDurationSeconds?: number;
   sections: Array<{
     label: string;
     correct: number;
@@ -30,7 +31,14 @@ export interface TestAttempt {
     pct: number;
   }>;
   sectionTimes?: Record<string, number>;
+  questionTimes?: Record<string, number>;
+  sectionVisits?: Record<string, number>;
   lastSectionId?: string;
+  startedAt?: string;
+  completedAt?: string;
+  questionOrder?: string[];
+  answers?: Record<string, number>;
+  skippedQuestions?: string[];
 }
 
 function getAttemptStorageKey(testId: string) {
@@ -52,6 +60,20 @@ function clearAttemptState(testId: string) {
   sessionStorage.removeItem(`rcmp-test-completed-${testId}`);
   sessionStorage.removeItem(`rcmp-results-tracked-${testId}`);
   sessionStorage.removeItem(`rcmp-support-modal-shown-${testId}`);
+  sessionStorage.removeItem(`rcmp-test-start-${testId}`);
+  sessionStorage.removeItem(`rcmp-test-started-${testId}`);
+  sessionStorage.removeItem(`rcmp-answered-count-${testId}`);
+}
+
+function clampAnsweredQuestions(answeredQuestions: number, totalQuestions: number) {
+  return Math.min(Math.max(answeredQuestions, 0), Math.max(totalQuestions, 0));
+}
+
+function isValidCompletion(attempt: TestAttempt) {
+  const answeredQuestions = clampAnsweredQuestions(attempt.answeredQuestions, attempt.totalQuestions);
+  const activeDurationSeconds = attempt.activeDurationSeconds ?? attempt.durationSeconds;
+
+  return answeredQuestions > 0 && activeDurationSeconds >= MIN_VALID_COMPLETION_SECONDS;
 }
 
 export async function trackTestStart(testId: string) {
@@ -68,8 +90,16 @@ export async function trackTestStart(testId: string) {
       id: attemptId,
       session_id: sessionId,
       test_id: testId,
+      started_at: new Date().toISOString(),
       user_agent: typeof navigator !== "undefined" ? navigator.userAgent : null,
       referrer: typeof document !== "undefined" ? document.referrer : null,
+      funnel: {
+        started: true,
+        results_viewed: false,
+        completed: false,
+        support_modal_shown: false,
+        sections_seen: {},
+      },
     });
   } catch (error) {
     console.error("Failed to track test start:", error);
@@ -77,12 +107,26 @@ export async function trackTestStart(testId: string) {
 }
 
 export async function trackTestComplete(attempt: TestAttempt) {
+  const answeredQuestions = clampAnsweredQuestions(attempt.answeredQuestions, attempt.totalQuestions);
+  const skippedQuestions = attempt.skippedQuestions ?? [];
+  const activeDurationSeconds = attempt.activeDurationSeconds ?? attempt.durationSeconds;
+
+  if (!isValidCompletion({ ...attempt, answeredQuestions, activeDurationSeconds })) {
+    console.warn("Skipping invalid completion payload", {
+      testId: attempt.testId,
+      answeredQuestions,
+      totalQuestions: attempt.totalQuestions,
+      activeDurationSeconds,
+    });
+    return;
+  }
+
   analytics.completePracticeTest(attempt.testId);
   analytics.testCompleted({
     testId: attempt.testId,
     score: attempt.scorePercent,
-    questionsAnswered: attempt.answeredQuestions,
-    durationSeconds: attempt.durationSeconds,
+    questionsAnswered: answeredQuestions,
+    durationSeconds: activeDurationSeconds,
   });
 
   const attemptId = getAttemptId(attempt.testId);
@@ -90,14 +134,27 @@ export async function trackTestComplete(attempt: TestAttempt) {
 
   try {
     const values = {
-      completed_at: new Date().toISOString(),
+      completed_at: attempt.completedAt ?? new Date().toISOString(),
+      started_at: attempt.startedAt ?? null,
       duration_seconds: attempt.durationSeconds,
+      active_duration_seconds: activeDurationSeconds,
       total_questions: attempt.totalQuestions,
-      answered_questions: attempt.answeredQuestions,
+      answered_questions: answeredQuestions,
       correct_answers: attempt.correctAnswers,
       score_percent: attempt.scorePercent,
+      skipped_count: skippedQuestions.length,
       sections: attempt.sections,
+      section_times: attempt.sectionTimes ?? {},
+      question_times: attempt.questionTimes ?? {},
+      last_section_id: attempt.lastSectionId ?? null,
       session_id: sessionId,
+      funnel: {
+        started: true,
+        results_viewed: true,
+        completed: true,
+        support_modal_shown: Boolean(sessionStorage.getItem(`rcmp-support-modal-shown-${attempt.testId}`)),
+        sections_seen: attempt.sectionVisits ?? {},
+      },
     };
 
     let updatedRows: unknown[] = [];
@@ -139,9 +196,14 @@ export async function trackQuestionAnswered(testId: string, sectionId: string, q
   const sessionId = getSessionId();
 
   try {
+    const rawAnswered = Number.parseInt(sessionStorage.getItem(`rcmp-answered-count-${testId}`) ?? "0", 10);
+    const totalQuestions = Number.parseInt(sessionStorage.getItem(`rcmp-total-questions-${testId}`) ?? "0", 10);
+    const answeredQuestions = clampAnsweredQuestions(rawAnswered, totalQuestions || rawAnswered);
+
     const values = {
       session_id: sessionId,
-      answered_questions: Math.max(1, Number.parseInt(sessionStorage.getItem(`rcmp-answered-count-${testId}`) ?? "0", 10)),
+      answered_questions: answeredQuestions,
+      last_section_id: sectionId,
     };
 
     let updatedRows: unknown[] = [];
@@ -200,9 +262,6 @@ export async function trackCheckoutStarted() {
   analytics.checkoutStarted();
 }
 
-export async function trackPurchaseComplete(
-  sessionId: string,
-  amount: number
-) {
+export async function trackPurchaseComplete(sessionId: string, amount: number) {
   analytics.purchaseComplete(sessionId, amount);
 }

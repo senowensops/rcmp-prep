@@ -53,12 +53,16 @@ export type TestState = {
   currentQuestionIndex: number;
   answers: Record<string, number>;
   flags: Record<string, boolean>;
+  questionOrder?: string[];
   timestamps: {
     updatedAt: string;
     startedAt?: string;
     sectionEnteredAt?: string;
+    activeStartedAt?: string;
+    activeDurationSeconds?: number;
     sectionTimes?: Record<string, number>;
     questionTimes?: Record<string, number>;
+    sectionVisits?: Record<string, number>;
   };
 };
 export type SectionRendererProps = {

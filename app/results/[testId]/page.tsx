@@ -78,21 +78,32 @@ export default function ResultsPage() {
     const durationSeconds = startTime
       ? Math.round((Date.now() - Number.parseInt(startTime, 10)) / 1000)
       : 0;
+    const activeDurationSeconds = state.timestamps.activeDurationSeconds ?? durationSeconds;
+    const answeredQuestions = Math.min(Object.keys(state.answers).length, results.totalScored);
+    const completedAt = new Date().toISOString();
 
     void trackTestComplete({
       testId: params.testId,
       totalQuestions: results.totalScored,
-      answeredQuestions: Object.keys(state.answers).length,
+      answeredQuestions,
       correctAnswers: results.overallCorrect,
       scorePercent: results.overallPct,
       durationSeconds,
+      activeDurationSeconds,
+      startedAt: state.timestamps.startedAt,
+      completedAt,
       sections: results.sections,
       sectionTimes: state.timestamps.sectionTimes,
+      questionTimes: state.timestamps.questionTimes,
+      sectionVisits: state.timestamps.sectionVisits,
       lastSectionId: state.currentSectionId,
+      answers: state.answers,
+      skippedQuestions: (state.questionOrder ?? []).filter((questionId) => !(questionId in state.answers)),
+      questionOrder: state.questionOrder,
     });
 
     sessionStorage.setItem(completeKey, "1");
-  }, [params.testId, results, state.answers, state.currentSectionId, state.timestamps.sectionTimes]);
+  }, [params.testId, results, state.answers, state.currentSectionId, state.questionOrder, state.timestamps.activeDurationSeconds, state.timestamps.questionTimes, state.timestamps.sectionTimes, state.timestamps.sectionVisits, state.timestamps.startedAt]);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
