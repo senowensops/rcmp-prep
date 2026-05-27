@@ -2780,7 +2780,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     readTime: '6 min read',
     category: 'Application Guide',
     excerpt: 'The RCMP publishes minimum hearing standards for applicants, including exact decibel limits, testing rules, and when the exam is required in the recruiting process.',
-    coverImage: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&q=80',
+    coverImage: '/blog/rcmp-hearing-requirements.jpg',
     content: `
 <p>The RCMP requires applicants to meet minimum hearing standards before they reach the medical stage of the recruiting process. The hearing exam must be completed by an audiologist or other qualified practitioner, you cannot use a hearing aid during the test, and the results are valid for <strong>2 years</strong>.</p>
 
