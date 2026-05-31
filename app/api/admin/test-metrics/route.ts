@@ -33,7 +33,7 @@ function getSupabaseConfig() {
   return { url, key };
 }
 
-async function fetchAttempts(limit = 200): Promise<AttemptRow[]> {
+async function fetchAttempts(limit = 1000, offset = 0): Promise<AttemptRow[]> {
   const { url, key } = getSupabaseConfig();
   const query = new URLSearchParams({
     select: [
@@ -51,14 +51,17 @@ async function fetchAttempts(limit = 200): Promise<AttemptRow[]> {
       "question_times",
       "funnel",
     ].join(","),
-    order: "created_at.desc",
-    limit: String(limit),
+    order: "started_at.desc.nullslast,created_at.desc",
+      limit: String(limit),
+      offset: String(offset),
   });
 
   const response = await fetch(`${url.replace(/\/$/, "")}/rest/v1/test_attempts?${query.toString()}`, {
     headers: {
       apikey: key,
       Authorization: `Bearer ${key}`,
+      Range: `${offset}-${offset + limit - 1}`,
+      "Range-Unit": "items",
     },
     cache: "no-store",
   });
@@ -68,6 +71,20 @@ async function fetchAttempts(limit = 200): Promise<AttemptRow[]> {
   }
 
   return (await response.json()) as AttemptRow[];
+}
+
+async function fetchAllAttempts(maxRows = 5000): Promise<AttemptRow[]> {
+  const pageSize = 1000;
+  const rows: AttemptRow[] = [];
+
+  for (let offset = 0; offset < maxRows; offset += pageSize) {
+    const batch = await fetchAttempts(pageSize, offset);
+    rows.push(...batch);
+
+    if (batch.length < pageSize) break;
+  }
+
+  return rows;
 }
 
 const MIN_VALID_COMPLETION_SECONDS = 120;
@@ -103,7 +120,7 @@ function isSuspiciousCompletion(attempt: AttemptRow) {
 
 export async function GET() {
   try {
-    const attempts = await fetchAttempts();
+    const attempts = await fetchAllAttempts();
     const started = attempts.length;
     const completed = attempts.filter((attempt) => attempt.completed_at);
     const validCompleted = completed.filter((attempt) => !isSuspiciousCompletion(attempt));
