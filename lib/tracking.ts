@@ -2,7 +2,29 @@ import { analytics } from "@/lib/analytics";
 import { supabase } from "@/lib/supabase";
 
 const ATTEMPT_KEY_PREFIX = "rcmp-attempt-id-";
+const ATTEMPT_SNAPSHOT_PREFIX = "rcmp-attempt-snapshot-";
+const QUESTION_EVENTS_PREFIX = "rcmp-question-events-";
 const MIN_VALID_COMPLETION_SECONDS = 120;
+
+type AttemptSnapshot = {
+  currentSectionId?: string;
+  currentQuestionId?: string;
+  currentQuestionIndex?: number;
+  answers: Record<string, number>;
+  flags?: Record<string, boolean>;
+  questionOrder?: string[];
+  questionTimes?: Record<string, number>;
+  sectionTimes?: Record<string, number>;
+  updatedAt?: string;
+};
+
+type QuestionEvent = {
+  questionId: string;
+  sectionId: string;
+  answerIndex: number;
+  answeredAt: string;
+  changed: boolean;
+};
 
 function getSessionId(): string {
   if (typeof window === "undefined") return "ssr";
@@ -45,6 +67,14 @@ function getAttemptStorageKey(testId: string) {
   return `${ATTEMPT_KEY_PREFIX}${testId}`;
 }
 
+function getSnapshotStorageKey(testId: string) {
+  return `${ATTEMPT_SNAPSHOT_PREFIX}${testId}`;
+}
+
+function getQuestionEventsStorageKey(testId: string) {
+  return `${QUESTION_EVENTS_PREFIX}${testId}`;
+}
+
 function getAttemptId(testId: string): string | null {
   if (typeof window === "undefined") return null;
   return sessionStorage.getItem(getAttemptStorageKey(testId));
@@ -63,6 +93,60 @@ function clearAttemptState(testId: string) {
   sessionStorage.removeItem(`rcmp-test-start-${testId}`);
   sessionStorage.removeItem(`rcmp-test-started-${testId}`);
   sessionStorage.removeItem(`rcmp-answered-count-${testId}`);
+  sessionStorage.removeItem(getSnapshotStorageKey(testId));
+  sessionStorage.removeItem(getQuestionEventsStorageKey(testId));
+}
+
+function readSnapshot(testId: string): AttemptSnapshot | null {
+  if (typeof window === "undefined") return null;
+
+  const raw = sessionStorage.getItem(getSnapshotStorageKey(testId));
+  if (!raw) return null;
+
+  try {
+    return JSON.parse(raw) as AttemptSnapshot;
+  } catch {
+    return null;
+  }
+}
+
+function writeSnapshot(testId: string, snapshot: AttemptSnapshot) {
+  if (typeof window === "undefined") return;
+  sessionStorage.setItem(getSnapshotStorageKey(testId), JSON.stringify(snapshot));
+}
+
+function readQuestionEvents(testId: string): QuestionEvent[] {
+  if (typeof window === "undefined") return [];
+
+  const raw = sessionStorage.getItem(getQuestionEventsStorageKey(testId));
+  if (!raw) return [];
+
+  try {
+    return JSON.parse(raw) as QuestionEvent[];
+  } catch {
+    return [];
+  }
+}
+
+function writeQuestionEvents(testId: string, events: QuestionEvent[]) {
+  if (typeof window === "undefined") return;
+  sessionStorage.setItem(getQuestionEventsStorageKey(testId), JSON.stringify(events));
+}
+
+function getSkippedQuestions(snapshot: AttemptSnapshot | null, totalQuestions?: number) {
+  if (!snapshot?.questionOrder?.length) return [] as string[];
+
+  const answeredIds = new Set(Object.keys(snapshot.answers ?? {}));
+  const ordered = totalQuestions ? snapshot.questionOrder.slice(0, totalQuestions) : snapshot.questionOrder;
+  return ordered.filter((questionId) => !answeredIds.has(questionId));
+}
+
+function countChangedAnswers(events: QuestionEvent[]) {
+  return events.filter((event) => event.changed).length;
+}
+
+function countUniqueAnswered(events: QuestionEvent[]) {
+  return new Set(events.map((event) => event.questionId)).size;
 }
 
 function clampAnsweredQuestions(answeredQuestions: number, totalQuestions: number) {
@@ -106,9 +190,59 @@ export async function trackTestStart(testId: string) {
   }
 }
 
+export async function trackTestProgress(testId: string, snapshot: AttemptSnapshot) {
+  const attemptId = getAttemptId(testId);
+  const sessionId = getSessionId();
+  const questionEvents = readQuestionEvents(testId);
+  const skippedQuestions = getSkippedQuestions(snapshot);
+
+  writeSnapshot(testId, snapshot);
+
+  try {
+    const values = {
+      session_id: sessionId,
+      last_section_id: snapshot.currentSectionId ?? null,
+      last_question_id: snapshot.currentQuestionId ?? null,
+      last_question_index: snapshot.currentQuestionIndex ?? null,
+      answered_questions: Object.keys(snapshot.answers ?? {}).length,
+      skipped_questions: skippedQuestions,
+      skipped_count: skippedQuestions.length,
+      answers: snapshot.answers,
+      flags: snapshot.flags ?? {},
+      question_order: snapshot.questionOrder ?? [],
+      question_times: snapshot.questionTimes ?? {},
+      section_times: snapshot.sectionTimes ?? {},
+      answer_changes: countChangedAnswers(questionEvents),
+      unique_questions_answered: countUniqueAnswered(questionEvents),
+      progress_updated_at: snapshot.updatedAt ?? new Date().toISOString(),
+    };
+
+    let updatedRows: unknown[] = [];
+
+    if (attemptId) {
+      updatedRows = await supabase
+        .from("test_attempts")
+        .update(values)
+        .eq("id", attemptId)
+        .execute();
+    }
+
+    if (!updatedRows.length) {
+      await supabase
+        .from("test_attempts")
+        .update(values)
+        .eq("session_id", sessionId)
+        .eq("test_id", testId)
+        .is("completed_at", null)
+        .execute();
+    }
+  } catch (error) {
+    console.error("Failed to track test progress:", error);
+  }
+}
+
 export async function trackTestComplete(attempt: TestAttempt) {
   const answeredQuestions = clampAnsweredQuestions(attempt.answeredQuestions, attempt.totalQuestions);
-  const skippedQuestions = attempt.skippedQuestions ?? [];
   const activeDurationSeconds = attempt.activeDurationSeconds ?? attempt.durationSeconds;
 
   if (!isValidCompletion({ ...attempt, answeredQuestions, activeDurationSeconds })) {
@@ -131,6 +265,9 @@ export async function trackTestComplete(attempt: TestAttempt) {
 
   const attemptId = getAttemptId(attempt.testId);
   const sessionId = getSessionId();
+  const snapshot = readSnapshot(attempt.testId);
+  const questionEvents = readQuestionEvents(attempt.testId);
+  const skippedQuestions = attempt.skippedQuestions ?? getSkippedQuestions(snapshot, attempt.totalQuestions);
 
   try {
     const values = {
@@ -142,11 +279,20 @@ export async function trackTestComplete(attempt: TestAttempt) {
       answered_questions: answeredQuestions,
       correct_answers: attempt.correctAnswers,
       score_percent: attempt.scorePercent,
+      skipped_questions: skippedQuestions,
       skipped_count: skippedQuestions.length,
       sections: attempt.sections,
-      section_times: attempt.sectionTimes ?? {},
-      question_times: attempt.questionTimes ?? {},
-      last_section_id: attempt.lastSectionId ?? null,
+      section_times: attempt.sectionTimes ?? snapshot?.sectionTimes ?? {},
+      question_times: attempt.questionTimes ?? snapshot?.questionTimes ?? {},
+      question_order: attempt.questionOrder ?? snapshot?.questionOrder ?? [],
+      answers: attempt.answers ?? snapshot?.answers ?? {},
+      flags: snapshot?.flags ?? {},
+      last_section_id: attempt.lastSectionId ?? snapshot?.currentSectionId ?? null,
+      last_question_id: snapshot?.currentQuestionId ?? null,
+      last_question_index: snapshot?.currentQuestionIndex ?? null,
+      answer_changes: countChangedAnswers(questionEvents),
+      unique_questions_answered: countUniqueAnswered(questionEvents),
+      progress_updated_at: attempt.completedAt ?? new Date().toISOString(),
       session_id: sessionId,
       funnel: {
         started: true,
@@ -192,6 +338,20 @@ export async function trackSectionViewed(testId: string, sectionId: string, ques
 export async function trackQuestionAnswered(testId: string, sectionId: string, questionId: string, answerIndex: number) {
   analytics.questionAnswered({ testId, sectionId, questionId, answerIndex });
 
+  const now = new Date().toISOString();
+  const questionEvents = readQuestionEvents(testId);
+  const latestSnapshot = readSnapshot(testId);
+  const existingAnswer = latestSnapshot?.answers?.[questionId];
+
+  questionEvents.push({
+    questionId,
+    sectionId,
+    answerIndex,
+    answeredAt: now,
+    changed: typeof existingAnswer === "number" && existingAnswer !== answerIndex,
+  });
+  writeQuestionEvents(testId, questionEvents);
+
   const attemptId = getAttemptId(testId);
   const sessionId = getSessionId();
 
@@ -202,8 +362,12 @@ export async function trackQuestionAnswered(testId: string, sectionId: string, q
 
     const values = {
       session_id: sessionId,
-      answered_questions: answeredQuestions,
+      answered_questions: Math.max(1, answeredQuestions),
       last_section_id: sectionId,
+      last_question_id: questionId,
+      answer_changes: countChangedAnswers(questionEvents),
+      unique_questions_answered: countUniqueAnswered(questionEvents),
+      progress_updated_at: now,
     };
 
     let updatedRows: unknown[] = [];

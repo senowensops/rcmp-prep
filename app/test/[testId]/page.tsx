@@ -16,7 +16,7 @@ import { BusinessSection } from "@/components/sections/BusinessSection";
 import { useTestState } from "@/hooks/useTestState";
 import { useTimer } from "@/hooks/useTimer";
 import { getSectionsForTest } from "@/lib/testData";
-import { trackQuestionAnswered, trackSectionViewed, trackTestStart } from "@/lib/tracking";
+import { trackQuestionAnswered, trackSectionViewed, trackTestProgress, trackTestStart } from "@/lib/tracking";
 
 const renderers = {
   workstyle: WorkstyleSection,
@@ -65,6 +65,34 @@ export default function TestPage() {
     if (!activeSubsection) return;
     void trackSectionViewed(testId, activeSubsection.id, state.currentQuestionIndex);
   }, [testId, activeSubsection, state.currentQuestionIndex]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+
+    void trackTestProgress(testId, {
+      currentSectionId: currentSection.id,
+      currentQuestionId: currentQuestion.id,
+      currentQuestionIndex: state.currentQuestionIndex,
+      answers: state.answers,
+      flags: state.flags,
+      questionOrder: state.questionOrder,
+      questionTimes: state.timestamps.questionTimes,
+      sectionTimes: state.timestamps.sectionTimes,
+      updatedAt: state.timestamps.updatedAt,
+    });
+  }, [
+    hydrated,
+    testId,
+    currentSection.id,
+    currentQuestion.id,
+    state.currentQuestionIndex,
+    state.answers,
+    state.flags,
+    state.questionOrder,
+    state.timestamps.questionTimes,
+    state.timestamps.sectionTimes,
+    state.timestamps.updatedAt,
+  ]);
 
   const answered = Object.keys(state.answers).length;
 
