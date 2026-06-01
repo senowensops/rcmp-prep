@@ -3055,5 +3055,148 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'Canadian Information Centre for International Credentials (CICIC)', url: 'https://www.cicic.ca/' },
     ],
   },
+  {
+    slug: 'what-disqualifies-you-from-the-rcmp',
+    title: 'What Disqualifies You From the RCMP? The Official Before-You-Apply Rules',
+    subtitle: 'The RCMP is surprisingly clear about a few issues that can stop an application before it really starts.',
+    date: '2026-06-01',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'If you are wondering what can disqualify you from the RCMP, the official recruiting page gives a clearer answer than most forum threads do. Here are the criminal, conduct, and eligibility issues the RCMP tells applicants to understand before they apply.',
+    coverImage: '/blog/rcmp-hearing-requirements.jpg',
+    content: `
+<p>If you are asking what disqualifies you from the RCMP, start with the official recruiting page, not rumor threads. Before you even submit an application, the RCMP says applicants <strong>must not</strong> have matters pending before a criminal court, must not have certain unresolved criminal convictions, must not have participated in serious criminal behaviour, must not have engaged in criminal behaviour within at least <strong>one year</strong> of the application date, and must meet a wider set of conduct and eligibility standards.</p>
+
+<p>This is one of the highest-stakes questions in the whole process because people often guess wrong in both directions. Some assume one past mistake automatically ends the road forever. Others assume old issues do not matter if nobody asks directly. The RCMP's public guidance is more specific than that, and understanding it early can save you from wasting time or walking into the process unprepared.</p>
+
+<h2>What the RCMP Says Can Block an Application</h2>
+
+<p>On its official <strong>Before you apply</strong> recruiting page, the RCMP says that to apply as a police officer, you:</p>
+
+<ul>
+  <li><strong>must not have any matters pending or before a criminal court</strong></li>
+  <li><strong>must not have been convicted of a criminal offence for which you have not received a pardon or record suspension</strong></li>
+  <li><strong>must not have participated in any serious criminal behaviour or activity</strong>, whether you were arrested or charged or not</li>
+  <li><strong>must not have participated in any criminal behaviour or activity within at least one year of the date of application</strong>, whether you were arrested or charged or not</li>
+  <li><strong>must not have been dishonourably discharged or dismissed for misconduct</strong> from another police, military, or law enforcement organization</li>
+  <li><strong>must not have any pending or current personal bankruptcies or consumer proposals</strong></li>
+</ul>
+
+<p>That is the official starting point. If one of those items applies to you right now, you should treat it as a real eligibility issue, not a minor detail to explain away later.</p>
+
+<h2>Pending Charges or Court Matters</h2>
+
+<p>The RCMP says applicants <strong>must not have any matters pending or before a criminal court</strong>. That means if a criminal matter is still active, your file is not clean enough to move forward under the published rule.</p>
+
+<p>This is one of the clearest examples of a timing issue. Even if you believe a matter will resolve in your favour, the RCMP's public requirement is about your status <strong>when you apply</strong>.</p>
+
+<h2>Criminal Convictions and Record Suspensions</h2>
+
+<p>The RCMP also says you <strong>must not have been convicted of a criminal offence for which you have not received a pardon or record suspension</strong>.</p>
+
+<p>That wording matters. The public recruiting page does not say every past conviction is treated the same forever. It says unresolved convictions without a pardon or record suspension are a problem. If this is your situation, do not rely on hearsay. Get accurate information about your status before you apply.</p>
+
+<h2>Serious Criminal Behaviour, Even Without Charges</h2>
+
+<p>One part many applicants miss is that the RCMP's rule is broader than convictions alone. The page says you <strong>must not have participated in any serious criminal behaviour or activity</strong>, whether you were arrested or charged or not.</p>
+
+<p>The RCMP gives examples of serious criminal offences, including:</p>
+
+<ul>
+  <li>murder and manslaughter</li>
+  <li>sexual assault</li>
+  <li>production or distribution of child pornography</li>
+  <li>sexual exploitation, violence, abuse, or neglect toward children or vulnerable adults</li>
+  <li>terrorist activities</li>
+  <li>participation with an organized criminal group</li>
+  <li>benefiting from trafficking, importing, unlawful manufacturing, or unlawful cultivating of illegal drugs</li>
+  <li>arson resulting in loss of life or substantial damage</li>
+  <li>forcible confinement</li>
+  <li>robbery</li>
+  <li>any crime committed with a facial covering and/or weapon</li>
+</ul>
+
+<p>The practical point is simple: the RCMP is assessing conduct, not just paperwork outcomes.</p>
+
+<h2>The One-Year Rule on Criminal Behaviour</h2>
+
+<p>The RCMP also says applicants <strong>must not have participated in any criminal behaviour or activity within at least one year of the date of application</strong>, whether they were arrested or charged or not.</p>
+
+<p>It gives examples of criminal behaviours and activities that include:</p>
+
+<ul>
+  <li>illicit drug use, including non-medical prescription or steroid use</li>
+  <li>theft</li>
+  <li>purchasing sexual services</li>
+  <li>solicitation for the purpose of prostitution of another person</li>
+  <li>assault</li>
+  <li>impaired driving</li>
+</ul>
+
+<p>This does <strong>not</strong> mean the RCMP reduces every situation to a simple checklist. On the same page, it says it considers factors such as seriousness, frequency, circumstances, intent, regret, how much time has passed, how old you were, and how you have behaved since then. But the public rule is still clear that recent criminal behaviour inside that one-year window is a major problem.</p>
+
+<h2>Other Non-Criminal Issues That Can Still Stop You Early</h2>
+
+<p>Applicants often focus only on criminal history and miss that the RCMP lists other file-stopping issues on the same page. Public guidance says you must not:</p>
+
+<ul>
+  <li>have been dishonourably discharged or dismissed for misconduct from another police, military, or law enforcement organization</li>
+  <li>have any pending or current personal bankruptcies or consumer proposals</li>
+  <li>cheat on any portion of the RCMP application process</li>
+</ul>
+
+<p>That last point matters a lot. Under the RCMP's <strong>Demonstrate good character</strong> section, applicants must not cheat on any portion of the process. Trying to hide, spin, or game the file is exactly the kind of thing that can make a bad situation worse.</p>
+
+<h2>How the RCMP Says It Evaluates Past Conduct</h2>
+
+<p>The RCMP says it looks at the context around past actions, including:</p>
+
+<ul>
+  <li>how serious the behaviour was</li>
+  <li>how often it happened</li>
+  <li>the circumstances and intent</li>
+  <li>whether you regret it</li>
+  <li>how much time has passed</li>
+  <li>how old you were at the time</li>
+  <li>how you have behaved since</li>
+</ul>
+
+<p>That is important because it means applicants should think in terms of <strong>honest disclosure and documented change</strong>, not just panic or denial.</p>
+
+<h2>Bottom Line</h2>
+
+<p>If you want the official short version, the RCMP says you cannot apply cleanly if you have criminal court matters pending, unresolved criminal convictions without a pardon or record suspension, serious criminal behaviour, criminal behaviour within at least one year of applying, certain misconduct-based dismissals, or current bankruptcy or consumer-proposal issues.</p>
+
+<blockquote>If there is a possible red flag in your background, the smart move is to get brutally clear on it early. The RCMP's process is built around character, honesty, and trust. Guessing is a terrible strategy here.</blockquote>
+
+<p>If your file is otherwise in good shape and you are preparing for the first major screening step, try our <a href="/sample">free RCMP Online Entrance Assessment sample</a> and see where you stand.</p>
+    `,
+    faqs: [
+      {
+        question: 'What automatically disqualifies you from the RCMP?',
+        answer: 'According to the RCMP recruiting page, applicants must not have criminal matters pending before a court, unresolved criminal convictions without a pardon or record suspension, serious criminal behaviour, criminal behaviour within at least one year of applying, certain misconduct-based dismissals, or pending or current personal bankruptcies or consumer proposals.',
+      },
+      {
+        question: 'Can you apply to the RCMP with a criminal record?',
+        answer: 'The RCMP says applicants must not have been convicted of a criminal offence for which they have not received a pardon or record suspension. The official page also says the RCMP evaluates the seriousness, timing, and context of past behaviour.',
+      },
+      {
+        question: 'Does the RCMP care about criminal behaviour if you were never charged?',
+        answer: 'Yes. The RCMP says applicants must not have participated in serious criminal behaviour or activity, or criminal behaviour within at least one year of the application date, whether they were arrested or charged or not.',
+      },
+      {
+        question: 'How long do you need to be free of criminal behaviour before applying to the RCMP?',
+        answer: 'The RCMP says applicants must not have participated in criminal behaviour or activity within at least one year of the date of application.',
+      },
+      {
+        question: 'Can bankruptcy affect an RCMP application?',
+        answer: 'Yes. On its official before-you-apply page, the RCMP says applicants must not have any pending or current personal bankruptcies or consumer proposals.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+    ],
+  },
 
 ];
