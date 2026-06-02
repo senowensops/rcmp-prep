@@ -71,7 +71,7 @@ export function Hero() {
               </div>
 
               <p className="mt-3 text-sm text-white/50">
-                No account needed · Takes 2 minutes
+                No account needed
               </p>
             </div>
 
