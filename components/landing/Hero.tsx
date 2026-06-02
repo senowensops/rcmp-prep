@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-8">
+    <section className="relative overflow-hidden px-6 pb-0 pt-6 sm:px-8 sm:pt-8">
       <div className="mx-auto max-w-6xl">
-        <nav className="mb-16 flex items-center justify-between gap-4">
+        <nav className="mb-10 flex items-center justify-between gap-4">
           <Link href="/" className="font-head text-2xl font-extrabold uppercase tracking-[0.08em] text-white">
             RCMP<span className="text-[var(--red)]">PREP</span>
           </Link>
@@ -34,41 +34,48 @@ export function Hero() {
           </div>
         </nav>
 
-        <div className="max-w-4xl">
-          <p className="mb-4 text-sm text-white/50">
-            32 candidates have practiced this week
-          </p>
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#151111]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(177,17,22,0.18),_transparent_38%)]" />
 
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--red)]/30 bg-[var(--red)]/10 px-4 py-2 font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)]">
-            <span aria-hidden="true">&bull;</span>
-            Unofficial Practice Resource
+          <div className="relative grid min-h-[620px] items-end lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="relative z-10 px-6 pb-16 pt-10 sm:px-10 sm:pb-20 sm:pt-14 lg:px-12 lg:pb-24">
+              <p className="mb-4 text-sm text-white/50">
+                32 candidates have practiced this week
+              </p>
+
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--red)]/30 bg-[var(--red)]/10 px-4 py-2 font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)]">
+                <span aria-hidden="true">&bull;</span>
+                Unofficial Practice Resource
+              </div>
+
+              <h1 className="max-w-4xl font-head text-5xl font-extrabold uppercase leading-[0.95] tracking-[0.04em] text-white sm:text-7xl lg:text-[5.25rem]">
+                <span className="block">RCMP Online</span>
+                <span className="block text-white">Assessment Prep</span>
+              </h1>
+
+              <p className="mt-3 text-base font-medium text-[var(--gold)]">
+                Candidates who skip prep risk a 6-12 month deferral.
+              </p>
+
+              <p className="mt-4 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
+                Unofficial practice tests covering the same skill areas as the RCMP Online Assessment, spatial reasoning, memory, numerical, language, and more. 100% free, no account needed.
+              </p>
+
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/test/1"
+                  className="inline-flex items-center justify-center rounded-2xl bg-[var(--red)] px-8 py-5 font-head text-2xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)]"
+                >
+                  Start Practicing Free
+                </Link>
+              </div>
+
+              <p className="mt-3 text-sm text-white/50">
+                No account needed · Takes 2 minutes
+              </p>
+            </div>
+
           </div>
-
-          <h1 className="max-w-4xl font-head text-5xl font-extrabold uppercase leading-[0.95] tracking-[0.04em] text-white sm:text-7xl lg:text-[5.75rem]">
-            <span className="block">RCMP Online</span>
-            <span className="block text-white">Assessment Prep</span>
-          </h1>
-
-          <p className="mt-3 text-base font-medium text-[var(--gold)]">
-            Candidates who skip prep risk a 6-12 month deferral.
-          </p>
-
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
-            Unofficial practice tests covering the same skill areas as the RCMP Online Assessment, spatial reasoning, memory, numerical, language, and more. 100% free, no account needed.
-          </p>
-
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/test/1"
-              className="inline-flex items-center justify-center rounded-2xl bg-[var(--red)] px-8 py-5 font-head text-2xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)]"
-            >
-              Start Practicing Free
-            </Link>
-          </div>
-
-          <p className="mt-3 text-sm text-white/50">
-            No account needed · Takes 2 minutes
-          </p>
         </div>
       </div>
     </section>
