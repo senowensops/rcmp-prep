@@ -164,12 +164,11 @@ export async function trackTestStart(testId: string) {
   analytics.testStarted(testId);
 
   const sessionId = getSessionId();
+  const attemptId = crypto.randomUUID();
+  setAttemptId(testId, attemptId);
+  clearAttemptState(testId);
 
   try {
-    const attemptId = crypto.randomUUID();
-    setAttemptId(testId, attemptId);
-    clearAttemptState(testId);
-
     await supabase.from("test_attempts").insert({
       id: attemptId,
       session_id: sessionId,
@@ -185,8 +184,12 @@ export async function trackTestStart(testId: string) {
         sections_seen: {},
       },
     });
+
+    return true;
   } catch (error) {
+    sessionStorage.removeItem(`rcmp-attempt-id-${testId}`);
     console.error("Failed to track test start:", error);
+    return false;
   }
 }
 

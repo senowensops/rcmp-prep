@@ -56,9 +56,13 @@ export default function TestPage() {
     const startKey = `rcmp-test-started-${testId}`;
     if (sessionStorage.getItem(startKey)) return;
 
-    void trackTestStart(testId);
-    sessionStorage.setItem(startKey, "1");
-    sessionStorage.setItem(`rcmp-test-start-${testId}`, Date.now().toString());
+    void (async () => {
+      const tracked = await trackTestStart(testId);
+      if (!tracked) return;
+
+      sessionStorage.setItem(startKey, "1");
+      sessionStorage.setItem(`rcmp-test-start-${testId}`, Date.now().toString());
+    })();
   }, [testId]);
 
   useEffect(() => {
