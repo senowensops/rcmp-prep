@@ -176,13 +176,6 @@ export async function trackTestStart(testId: string) {
       started_at: new Date().toISOString(),
       user_agent: typeof navigator !== "undefined" ? navigator.userAgent : null,
       referrer: typeof document !== "undefined" ? document.referrer : null,
-      funnel: {
-        started: true,
-        results_viewed: false,
-        completed: false,
-        support_modal_shown: false,
-        sections_seen: {},
-      },
     });
 
     return true;

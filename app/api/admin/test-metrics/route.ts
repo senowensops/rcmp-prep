@@ -9,17 +9,9 @@ type AttemptRow = {
   answered_questions: number | null;
   skipped_count: number | null;
   duration_seconds: number | null;
-  active_duration_seconds: number | null;
   last_section_id: string | null;
   section_times?: Record<string, number> | null;
   question_times?: Record<string, number> | null;
-  funnel?: {
-    started?: boolean;
-    results_viewed?: boolean;
-    completed?: boolean;
-    support_modal_shown?: boolean;
-    sections_seen?: Record<string, number>;
-  } | null;
 };
 
 function getSupabaseConfig() {
@@ -45,11 +37,9 @@ async function fetchAttempts(limit = 1000, offset = 0): Promise<AttemptRow[]> {
       "answered_questions",
       "skipped_count",
       "duration_seconds",
-      "active_duration_seconds",
       "last_section_id",
       "section_times",
       "question_times",
-      "funnel",
     ].join(","),
     order: "started_at.desc.nullslast,created_at.desc",
       limit: String(limit),
@@ -107,7 +97,7 @@ function isSuspiciousCompletion(attempt: AttemptRow) {
   if (!attempt.completed_at) return false;
 
   const answered = attempt.answered_questions ?? 0;
-  const activeSeconds = attempt.active_duration_seconds ?? attempt.duration_seconds ?? 0;
+  const activeSeconds = attempt.duration_seconds ?? 0;
   const skipped = attempt.skipped_count ?? 0;
   const totalObserved = answered + skipped;
 
@@ -128,15 +118,15 @@ export async function GET() {
     const completionRate = started ? (validCompleted.length / started) * 100 : 0;
 
     const activeTimes = validCompleted
-      .map((attempt) => attempt.active_duration_seconds ?? 0)
+      .map((attempt) => attempt.duration_seconds ?? 0)
       .filter((value) => value > 0);
 
     const funnel = {
       started,
-      reachedResults: attempts.filter((attempt) => attempt.funnel?.results_viewed).length,
+      reachedResults: validCompleted.length,
       completed: validCompleted.length,
       suspiciousCompletions: suspiciousCompletions.length,
-      supportModalShown: attempts.filter((attempt) => attempt.funnel?.support_modal_shown).length,
+      supportModalShown: 0,
     };
 
     const dropOffBySection = new Map<string, number>();
@@ -195,7 +185,7 @@ export async function GET() {
         startedAt: attempt.started_at,
         completedAt: attempt.completed_at,
         score: attempt.score_percent,
-        activeSeconds: attempt.active_duration_seconds,
+        activeSeconds: attempt.duration_seconds,
         elapsedSeconds: attempt.duration_seconds,
         answered: attempt.answered_questions,
         skipped: attempt.skipped_count,
