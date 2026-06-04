@@ -3198,5 +3198,90 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
     ],
   },
+  {
+    slug: 'rcmp-tattoo-policy',
+    title: 'RCMP Tattoo Policy: Can You Join the RCMP With Tattoos?',
+    subtitle: 'Yes, tattoos are allowed, but the official RCMP rule has an important limit.',
+    date: '2026-06-04',
+    author: 'RCMP Prep Team',
+    readTime: '5 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP allows tattoos, but not without limits. Here is what the official recruiting page says about tattoos, personal effects, and the standards applicants should understand before applying.',
+    coverImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80',
+    content: `
+<p>Yes, you can join the RCMP with tattoos. On its official recruiting page, the RCMP says <strong>tattoos are permitted</strong> as long as they <strong>do not depict or incite hate, harassment, or discrimination</strong> against individuals on the grounds listed in the <strong>Canadian Human Rights Act, section 3</strong>.</p>
+
+<p>This is one of those questions that gets answered badly in forum threads. People often assume tattoos are automatically disqualifying in policing, or that only hidden tattoos are allowed. The RCMP’s published rule is more straightforward than that. Tattoos are allowed, but their <strong>content</strong> matters.</p>
+
+<h2>What the RCMP Officially Says About Tattoos</h2>
+
+<p>On the <strong>Before you apply</strong> page for Regular Member applicants, the RCMP states: <strong>“Tattoos are permitted if they do not depict or incite hate, harassment, or discrimination”</strong> against individuals on the protected grounds listed in the Canadian Human Rights Act.</p>
+
+<p>That means the issue is not simply whether you have tattoos. The issue is whether a tattoo conflicts with the RCMP’s standards.</p>
+
+<h2>What That Means in Practice</h2>
+
+<p>If your tattoos are ordinary personal tattoos and do not promote hateful, harassing, or discriminatory content, the RCMP’s public rule does <strong>not</strong> say tattoos by themselves disqualify you.</p>
+
+<p>If a tattoo depicts or promotes content that crosses that line, that is a different story. The official recruiting page makes clear that RCMP applicants and officers are expected to meet professional standards that support public trust.</p>
+
+<h2>It Is Not Just About Tattoos</h2>
+
+<p>On the same page, the RCMP also says applicants should be aware of requirements for <strong>tattoos, jewelry, and other personal effects</strong>.</p>
+
+<p>It adds that you may wear <strong>discreet personal effects</strong> on the body if they <strong>do not interfere with the effectiveness of personal protective equipment</strong>. The RCMP gives examples including glasses, watches, medical bracelets, jewelry, wedding bands, kangas, kirpans, karas, and medicine bags.</p>
+
+<p>That does not turn the recruiting page into a full dress-code manual, but it does show the broader principle: personal expression is considered in the context of <strong>professional standards</strong> and <strong>operational safety</strong>.</p>
+
+<h2>When These Standards Matter</h2>
+
+<p>The RCMP says that police officers must conform to certain standards and that, at several stages during the recruiting process, applicants will be made aware of the behaviour standards expected throughout the application process and their career as an RCMP police officer.</p>
+
+<p>In plain English, this is not something to shrug off as a small technicality. If you are unsure whether a tattoo could raise concerns, it is worth reading the official wording carefully and approaching the process honestly.</p>
+
+<h2>What Applicants Usually Get Wrong</h2>
+
+<ul>
+  <li><strong>Assuming all tattoos are banned</strong>, the RCMP does not say that. It says tattoos are permitted, subject to content-based limits.</li>
+  <li><strong>Assuming only hidden tattoos are allowed</strong>, the recruiting page does not create a simple visible-versus-hidden rule.</li>
+  <li><strong>Thinking standards only apply after hiring</strong>, the RCMP says applicants are made aware of behaviour standards during recruiting too.</li>
+  <li><strong>Ignoring the PPE issue for personal effects</strong>, the RCMP says discreet personal effects are acceptable only if they do not interfere with protective equipment.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP tattoo policy is more permissive than many applicants assume. <strong>Tattoos are allowed</strong>, but they cannot depict or incite <strong>hate, harassment, or discrimination</strong> against protected groups. More broadly, the RCMP expects applicants and officers to meet professional standards around personal appearance and safety-related equipment.</p>
+
+<blockquote>If tattoos are your concern, the official answer is not “no tattoos.” It is “tattoos are allowed, but content and professional standards matter.”</blockquote>
+
+<p>If you already meet the basic eligibility rules and want to focus on the first major screening step, try our <a href="/sample">free RCMP Online Entrance Assessment sample</a>.</p>
+    `,
+    faqs: [
+      {
+        question: 'Can you join the RCMP if you have tattoos?',
+        answer: 'Yes. The RCMP says tattoos are permitted as long as they do not depict or incite hate, harassment, or discrimination against individuals on the grounds listed in the Canadian Human Rights Act, section 3.',
+      },
+      {
+        question: 'Does the RCMP ban visible tattoos?',
+        answer: 'The RCMP’s public recruiting page does not create a simple visible-versus-hidden tattoo rule. It says tattoos are permitted, but sets limits on content.',
+      },
+      {
+        question: 'What tattoos are not allowed in the RCMP?',
+        answer: 'The RCMP says tattoos are not acceptable if they depict or incite hate, harassment, or discrimination against individuals on the grounds listed in the Canadian Human Rights Act, section 3.',
+      },
+      {
+        question: 'Does the RCMP allow jewelry and personal effects?',
+        answer: 'Yes, with limits. The RCMP says discreet personal effects may be worn if they do not interfere with the effectiveness of personal protective equipment.',
+      },
+      {
+        question: 'Do appearance standards matter during the RCMP application process?',
+        answer: 'Yes. The RCMP says applicants will be made aware at several stages of the behaviour standards expected throughout the application process and their career as an RCMP police officer.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'Canadian Human Rights Act, section 3', url: 'https://laws-lois.justice.gc.ca/eng/acts/h-6/section-3.html' },
+    ],
+  },
 
 ];
