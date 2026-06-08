@@ -3283,5 +3283,99 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'Canadian Human Rights Act, section 3', url: 'https://laws-lois.justice.gc.ca/eng/acts/h-6/section-3.html' },
     ],
   },
+  {
+    slug: 'rcmp-depot-training-program',
+    title: 'RCMP Depot Training: How Long It Is, Where It Happens, and What to Expect',
+    subtitle: 'The official RCMP cadet program is 26 weeks in Regina, but that is only part of the training path.',
+    date: '2026-06-08',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'If you are wondering what RCMP Depot training actually looks like, the official pages give a clearer picture than most forum answers. Here is what the RCMP says about length, location, living arrangements, training hours, and what happens after graduation.',
+    coverImage: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80',
+    content: `
+<p>RCMP Depot training is the <strong>Cadet Training Program</strong>, an official <strong>26-week basic training course</strong> delivered in <strong>Regina, Saskatchewan</strong>. Applicants who make it that far are required to <strong>live at Depot for the full training period</strong>, and the RCMP says cadets should also expect <strong>evening and weekend training activities</strong>.</p>
+
+<p>A lot of applicants search for “RCMP Depot” and get a mix of outdated forum posts, half-true Reddit answers, and vague recruiting chatter. The official RCMP pages are actually pretty clear on the basics. If you want the clean factual version, here it is.</p>
+
+<h2>What the RCMP Officially Says About Depot</h2>
+
+<p>On its recruiting pages, the RCMP says successful applicants attend the <strong>RCMP Training Academy called Depot</strong> in Regina, Saskatchewan. The training program lasts <strong>26 weeks</strong>, which the RCMP also describes as about <strong>6 months</strong>.</p>
+
+<p>The RCMP also says you must be willing to spend those 26 weeks at Depot and <strong>live there while in training</strong>. This is not a commute-in arrangement or a part-time course.</p>
+
+<h2>What Cadets Learn at Depot</h2>
+
+<p>According to the RCMP’s Cadet Training Program page, Depot is an <strong>820-hour</strong> basic training program. The published training breakdown includes:</p>
+
+<ul>
+  <li><strong>Applied Police Sciences:</strong> 432 hours</li>
+  <li><strong>Firearms:</strong> 104 hours</li>
+  <li><strong>Police Defensive Tactics / Immediate Action Rapid Deployment:</strong> 94 hours</li>
+  <li><strong>Police Driving:</strong> 67 hours</li>
+  <li><strong>Operational Conditioning:</strong> 45 hours</li>
+  <li><strong>Drill and Deportment:</strong> 37 hours</li>
+  <li><strong>Other:</strong> 41 hours</li>
+</ul>
+
+<p>That lines up with what the RCMP highlights elsewhere in recruiting materials: practical skills like <strong>defensive tactics, police driver training, and firearms training</strong>, alongside broader police training and assessment.</p>
+
+<h2>What Living at Depot Means</h2>
+
+<p>The RCMP says cadets <strong>live in modern barracks</strong> while at Depot Division. It also says <strong>meals and accommodation costs are covered by the RCMP</strong>, and that sports and recreation facilities are available.</p>
+
+<p>That does not mean Depot is easy. On the recruiting side, the RCMP specifically warns applicants that they will also be required to do <strong>evening and weekend training activities</strong>. In other words, this is a full-time immersive training environment.</p>
+
+<h2>What Happens After Depot</h2>
+
+<p>Graduating from Depot is a major milestone, but it is not the whole training journey. The RCMP’s Cadet Training Program page says that, after successfully completing Depot and being employed, members must then complete a <strong>6-month Field Coaching Program</strong> at selected training detachments, where they are involved in everyday police duties under supervision.</p>
+
+<p>That is useful context for applicants who think Depot is the finish line. It is better understood as the academy phase before coached field experience.</p>
+
+<h2>What Applicants Usually Miss</h2>
+
+<ul>
+  <li><strong>Depot is not optional</strong>. The RCMP says you must be willing to spend 26 weeks at the training academy in Regina.</li>
+  <li><strong>You live there</strong>. The RCMP explicitly says cadets are required to live at Depot for the entire 26-week duration.</li>
+  <li><strong>Training goes beyond weekdays</strong>. The official recruiting page says evening and weekend training activities are part of the program.</li>
+  <li><strong>Depot is only part of the path</strong>. The RCMP also publishes a 6-month Field Coaching Program after successful completion of the academy phase.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>If you are applying to the RCMP, Depot is the academy stage you are working toward: <strong>26 weeks in Regina</strong>, living on site, with structured training in firearms, driving, defensive tactics, fitness, and police sciences. Officially, it is intense, residential, and only one stage in the broader path to becoming an RCMP officer.</p>
+
+<blockquote>Depot is not just “training in Regina.” It is a 26-week, live-in RCMP academy program with formal assessment, practical skills training, and a field-coaching phase that follows graduation.</blockquote>
+
+<p>If your immediate goal is getting past the first screening stage before Depot is even on the table, start with our <a href="/sample">free RCMP Online Entrance Assessment sample</a>.</p>
+    `,
+    faqs: [
+      {
+        question: 'How long is RCMP Depot training?',
+        answer: 'The RCMP says the Cadet Training Program at Depot is 26 weeks long, which its recruiting page also describes as about 6 months.',
+      },
+      {
+        question: 'Where is RCMP Depot located?',
+        answer: 'RCMP Depot, the Training Academy for cadets, is located in Regina, Saskatchewan.',
+      },
+      {
+        question: 'Do you have to live at RCMP Depot?',
+        answer: 'Yes. The RCMP says cadets are required to live at Depot for the full 26-week duration of training.',
+      },
+      {
+        question: 'What do you learn at RCMP Depot?',
+        answer: 'According to the RCMP, Depot training includes Applied Police Sciences, firearms, police defensive tactics, police driving, operational conditioning, and drill and deportment.',
+      },
+      {
+        question: 'What happens after RCMP Depot graduation?',
+        answer: 'The RCMP says that after successfully completing the Cadet Training Program and being employed, members must complete a 6-month Field Coaching Program at selected training detachments.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'RCMP — Cadet Training Program', url: 'https://rcmp.ca/en/depot/services-and-information/cadet-training-program' },
+    ],
+  },
 
 ];
