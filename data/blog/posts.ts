@@ -3378,4 +3378,102 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     ],
   },
 
+
+  {
+    slug: 'rcmp-fitness-requirements',
+    title: 'RCMP Fitness Requirements: The Official Physical Standards Before Depot',
+    subtitle: 'The RCMP does not want beginners showing up to Depot cold, and it publishes clear self-assessment benchmarks.',
+    date: '2026-06-11',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'If you are searching for RCMP fitness requirements, the official recruiting page gives a more precise answer than most forum threads. Here is what the RCMP says about fitness before cadet training, including the 5 km run and push-up self-assessment benchmarks.',
+    coverImage: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80',
+    content: `
+<p>If you are asking about RCMP fitness requirements, the official answer starts <strong>before</strong> Depot. The RCMP says successful applicants must arrive at cadet training with <strong>good fitness habits</strong> and an <strong>adequate level of fitness</strong>, and it publishes two self-assessment benchmarks to help applicants gauge readiness: a <strong>5 kilometre run</strong> and a <strong>push-up test</strong>.</p>
+
+<p>This is where a lot of applicants get mixed up. Some people think the RCMP fitness standard is just the <a href="/blog/rcmp-pare-test-requirements-training">PARE</a>. Others assume Depot will get them into shape after they arrive. The RCMP's own recruiting page says otherwise. Depot is <strong>not</strong> a beginner fitness program, and applicants are expected to build a base before training starts.</p>
+
+<h2>What the RCMP Officially Says About Fitness Before Depot</h2>
+
+<p>On its <strong>Physical standards to become an RCMP officer</strong> page, the RCMP says police physical fitness is a discipline that develops over time and that applicants should <strong>start working on fitness today</strong>. It also says successful applicants will be invited to the Cadet Training Program prior to employment and are required to begin cadet training with an <strong>adequate level of fitness</strong>.</p>
+
+<p>The RCMP adds an important line that many applicants miss: the <strong>RCMP Police Fitness Training program at Depot is not a “boot camp” or a novice fitness program</strong>. To begin cadet training, the page says you need to be comfortable <strong>running, lifting, carrying, and performing daily moderate to intense physical exercise</strong>.</p>
+
+<h2>The 2 Official RCMP Fitness Self-Assessments</h2>
+
+<p>The RCMP says recruiters will ask applicants to perform basic fitness self-tests to help gauge readiness for cadet training, and recommends recording results every <strong>6 to 12 weeks</strong>.</p>
+
+<h3>1. 5 kilometre run</h3>
+
+<ul>
+  <li><strong>Minimum standard:</strong> 30 minutes</li>
+  <li><strong>Target standard:</strong> 23 minutes 30 seconds to 26 minutes 30 seconds</li>
+  <li><strong>Superior standard:</strong> 20 minutes 20 seconds to 23 minutes</li>
+</ul>
+
+<p>The RCMP says to mark out a 5 kilometre route using a GPS or odometer and, where possible, <strong>avoid using a treadmill</strong>.</p>
+
+<h3>2. Push-up test</h3>
+
+<ul>
+  <li><strong>Minimum standard:</strong> 10 continuous repetitions</li>
+  <li><strong>Target standard:</strong> 25 to 40 continuous repetitions</li>
+  <li><strong>Superior standard:</strong> 40 to 60 continuous repetitions</li>
+</ul>
+
+<p>For the push-up self-test, the RCMP says to lower until your <strong>chin touches a folded towel</strong>, fully straighten your elbows at the top of each rep, keep your thighs off the floor, and only count continuous repetitions done from the standard position.</p>
+
+<h2>What These Standards Mean, and What They Do Not Mean</h2>
+
+<p>The RCMP explains that the <strong>minimum</strong> standard is the lowest fitness level where you have a reasonable chance of successfully completing the physical demands of cadet training. It also says that falling below the minimum increases your risk of failure in the program.</p>
+
+<p>The <strong>target</strong> range represents an average level of fitness compared with the cadet population, and the <strong>superior</strong> range reflects a level that should help applicants perform comfortably during training.</p>
+
+<p>Just as important, these published benchmarks are framed as <strong>self-assessments for readiness</strong>. They are not presented on the page as a separate public hiring stage in the same way the PARE is. The safer interpretation is this: the RCMP wants you showing up to Depot already fit enough to handle the work.</p>
+
+<h2>What Applicants Usually Get Wrong</h2>
+
+<ul>
+  <li><strong>Thinking Depot will get you ready from scratch</strong>. The RCMP explicitly says it is not a boot camp or novice fitness program.</li>
+  <li><strong>Treating PARE as the whole story</strong>. PARE matters, but the RCMP also publishes separate pre-Depot fitness benchmarks and readiness guidance.</li>
+  <li><strong>Only testing once</strong>. The RCMP recommends tracking exercise and repeating self-assessments every 6 to 12 weeks.</li>
+  <li><strong>Ignoring the “comfortable running, lifting, carrying” part</strong>. The official page makes clear that general physical capacity matters, not just one test result.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP fitness requirement question is really a readiness question. Officially, the RCMP wants applicants building fitness <strong>before</strong> cadet training, not after arrival. The clearest public benchmarks are a <strong>5 km run</strong> and <strong>continuous push-ups</strong>, backed by the RCMP's broader warning that Depot is not designed for beginners.</p>
+
+<blockquote>If you are serious about the RCMP, do not treat fitness like a box to check later. The official recruiting guidance is clear: build the habit now, track it, and show up to Depot ready.</blockquote>
+
+<p>If your immediate hurdle is still the first screening stage, you can start with our <a href="/sample">free RCMP Online Entrance Assessment sample</a> while you build the physical side in parallel.</p>
+    `,
+    faqs: [
+      {
+        question: 'What are the RCMP fitness requirements before Depot?',
+        answer: 'On its official physical standards page, the RCMP says applicants must begin cadet training with an adequate level of fitness and publishes two self-assessment benchmarks: a 5 kilometre run and a push-up test.',
+      },
+      {
+        question: 'What is the RCMP 5 km run standard?',
+        answer: 'The RCMP lists a minimum 5 kilometre run standard of 30 minutes, a target range of 23 minutes 30 seconds to 26 minutes 30 seconds, and a superior range of 20 minutes 20 seconds to 23 minutes.',
+      },
+      {
+        question: 'How many push-ups do you need for the RCMP?',
+        answer: 'The RCMP lists a minimum push-up standard of 10 continuous repetitions, a target range of 25 to 40, and a superior range of 40 to 60 continuous repetitions on its physical standards page.',
+      },
+      {
+        question: 'Is Depot training meant to get you into shape?',
+        answer: 'No. The RCMP says its Police Fitness Training program at Depot is not a boot camp or a novice fitness program, and that applicants need to arrive comfortable running, lifting, carrying, and doing daily moderate to intense physical exercise.',
+      },
+      {
+        question: 'How often does the RCMP say to repeat the fitness self-assessments?',
+        answer: 'The RCMP recommends performing the self-assessments and recording the results every 6 to 12 weeks, or more often if you are struggling with your fitness level.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Physical standards to become an RCMP officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/physical-standards-become-rcmp-officer' },
+      { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+    ],
+  },
 ];
