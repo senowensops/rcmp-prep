@@ -3476,4 +3476,101 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
     ],
   },
+  {
+    slug: 'rcmp-citizenship-permanent-resident-requirements',
+    title: 'RCMP Citizenship Requirements: Can Permanent Residents Apply?',
+    subtitle: 'The official RCMP rule on Canadian citizens, permanent residents, and the 3-in-5 residency requirement',
+    date: '2026-06-15',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'Yes, permanent residents can apply to become RCMP officers, but the RCMP adds a specific residency rule. Here is the official requirement and what it means in plain English.',
+    coverImage: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80',
+    content: `
+<p>Yes, <strong>permanent residents can apply to become RCMP officers</strong>. The official RCMP rule is that you must be either a <strong>Canadian citizen</strong> or have <strong>permanent resident status in Canada</strong>. If you are a permanent resident, the RCMP also says you must have been <strong>physically present in Canada for 3 years (1,095 days) out of the last 5 years</strong> as a permanent resident.</p>
+
+<p>This is one of the most searched RCMP eligibility questions right now, and a lot of applicants still assume only Canadian citizens can apply. That is no longer the full picture. The important part is understanding the exact rule the RCMP publishes, and the extra conditions that come with permanent resident status.</p>
+
+<h2>The Official RCMP Citizenship Requirement</h2>
+
+<p>On its "Before you apply" recruiting page, the RCMP says applicants must <strong>be a Canadian citizen or have permanent resident status in Canada</strong>.</p>
+
+<p>That means there are now <strong>two qualifying status paths</strong> at the basic eligibility stage:</p>
+
+<ul>
+  <li><strong>Canadian citizen</strong></li>
+  <li><strong>Permanent resident of Canada</strong></li>
+</ul>
+
+<p>If you meet one of those two status requirements, you can move on to the rest of the RCMP's published entry requirements like age, driver's licence, education, language, health, and character standards.</p>
+
+<h2>The Extra Rule for Permanent Residents</h2>
+
+<p>The RCMP adds one important condition for permanent residents: you must have <strong>resided, meaning been physically present, in Canada for 3 of the last 5 years</strong> as a permanent resident. The page states that clearly as <strong>1,095 days out of the last 5 years</strong>.</p>
+
+<p>In practical terms, that means having permanent resident status alone is not enough. The RCMP wants a recent period of physical presence in Canada before you apply.</p>
+
+<h2>What the RCMP Says About Applying From Outside Canada</h2>
+
+<p>The RCMP also states that its <strong>application process is conducted in Canada only</strong>.</p>
+
+<p>For Canadian citizens living abroad, the RCMP says they may still apply if they meet the requirements, but they will have to <strong>travel to Canada at their own expense for some portions of the process</strong>.</p>
+
+<p>The same page also warns that if a Canadian citizen has lived outside Canada for an extended period, it may be <strong>difficult for the RCMP to accurately evaluate suitability</strong> for later stages of the process.</p>
+
+<h2>Do Permanent Residents Face Any Limits After Joining?</h2>
+
+<p>Yes, potentially. The RCMP says police officers who are permanent residents <strong>may be limited in obtaining certain positions</strong> that require a <strong>top secret security clearance</strong> or certain types of travel documents.</p>
+
+<p>That does not mean permanent residents cannot become RCMP officers. It means the RCMP has publicly noted that some later assignments or roles may have additional limitations tied to citizenship-related clearance or document requirements.</p>
+
+<h2>What This Means for Applicants</h2>
+
+<ul>
+  <li><strong>If you are a Canadian citizen</strong>, you meet the citizenship-status requirement itself, but you still need to meet all the other RCMP entry requirements.</li>
+  <li><strong>If you are a permanent resident</strong>, you need both your permanent resident status <em>and</em> the RCMP's 3-in-5-year physical-presence requirement.</li>
+  <li><strong>If you live outside Canada</strong>, expect that parts of the process will still require you to be in Canada.</li>
+</ul>
+
+<h2>A Common Mistake to Avoid</h2>
+
+<p>A lot of third-party websites still repeat outdated or oversimplified advice about RCMP citizenship requirements. The safer move is to ignore unofficial summaries and use the RCMP's own recruiting page as the authority.</p>
+
+<p>If you are unsure whether your residency history fits the 1,095-day rule, check your dates carefully before you submit an application. This is one of those details that is easy to gloss over and annoying to fix later.</p>
+
+<h2>Bottom Line</h2>
+
+<p>The official RCMP rule is straightforward: <strong>Canadian citizens and permanent residents can apply</strong>. But permanent residents must also show <strong>3 years of physical presence in Canada during the last 5 years as a permanent resident</strong>, and the process itself is conducted in Canada.</p>
+
+<blockquote>If you are a permanent resident and serious about applying, the question is not just “Do I have status?” It is “Do I meet the RCMP's exact residency rule today?”</blockquote>
+
+<p>Once you confirm your eligibility, the next big hurdle is usually the OEA. You can start with our <a href="/sample">free RCMP practice test sample</a> before the official assessment invite lands.</p>
+    `,
+    faqs: [
+      {
+        question: 'Do you have to be a Canadian citizen to join the RCMP?',
+        answer: 'No. The RCMP says applicants can be either Canadian citizens or permanent residents of Canada.',
+      },
+      {
+        question: 'Can a permanent resident apply to the RCMP?',
+        answer: 'Yes. Permanent residents can apply, but the RCMP says they must have been physically present in Canada for 3 years, or 1,095 days, out of the last 5 years as a permanent resident.',
+      },
+      {
+        question: 'What is the RCMP permanent resident residency requirement?',
+        answer: 'The RCMP requires individuals with permanent resident status to have resided, meaning been physically present, in Canada for 3 out of the last 5 years as a permanent resident.',
+      },
+      {
+        question: 'Can you apply to the RCMP from outside Canada?',
+        answer: 'The RCMP says the application process is conducted in Canada only. Canadian citizens living abroad may still apply if they meet the requirements, but they will need to travel to Canada at their own expense for some parts of the process.',
+      },
+      {
+        question: 'Can permanent residents hold every RCMP position?',
+        answer: 'Not necessarily. The RCMP says police officers who are permanent residents may be limited in obtaining certain positions that require a top secret security clearance or certain types of travel documents.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'Government of Canada — Immigration and citizenship', url: 'https://www.canada.ca/en/services/immigration-citizenship.html' },
+    ],
+  },
 ];
