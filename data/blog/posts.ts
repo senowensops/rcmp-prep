@@ -3573,4 +3573,99 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'Government of Canada — Immigration and citizenship', url: 'https://www.canada.ca/en/services/immigration-citizenship.html' },
     ],
   },
+  {
+    slug: 'rcmp-relocation-first-posting',
+    title: 'RCMP Relocation: Do You Have to Move Anywhere in Canada?',
+    subtitle: 'What the RCMP officially says about mobility, first postings, contract divisions, and whether you get a choice',
+    date: '2026-06-18',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'Yes, the RCMP requires applicants to be willing to relocate anywhere within Canada. Here is what that actually means for your first posting, your preferences, and how often moves can happen later.',
+    coverImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80',
+    content: `
+<p>Yes, if you want to become an RCMP officer, you must be <strong>willing to relocate anywhere within Canada</strong>. That is the RCMP's own wording on its recruiting page. The same page also says you may be asked to submit <strong>preferred options</strong> for your first post after graduation, but <strong>all postings are governed by operational needs</strong>.</p>
+
+<p>This is one of those RCMP career questions that gets answered badly online. Some people say you get sent wherever the RCMP wants with no say at all. Others say you can more or less choose your province. The official answer is more nuanced than both of those takes, and it matters if you are applying with a spouse, kids, or strong location preferences.</p>
+
+<h2>The Official RCMP Mobility Requirement</h2>
+
+<p>On its "Before you apply" page, the RCMP says applicants must be <strong>willing to relocate anywhere within Canada</strong>. It adds that because the RCMP is a national organization, you, and your family if applicable, <strong>must be willing to relocate anywhere within Canada</strong>.</p>
+
+<p>That means mobility is not a minor preference item. It is one of the published entry requirements, alongside age, education, language, driver's licence, health, and character standards.</p>
+
+<h2>Do You Get Any Choice in Your First RCMP Posting?</h2>
+
+<p>Some input, yes. A guarantee, no.</p>
+
+<p>The RCMP says you <strong>may be asked to submit preferred options for consideration in advance of your first post following graduation</strong>. But it immediately qualifies that with the key line: <strong>all postings are governed by operational needs</strong>.</p>
+
+<p>In plain English, that means the RCMP may consider your preferences, but it does not promise to honor them. The organization's staffing needs come first.</p>
+
+<h2>Where New RCMP Officers Usually Go After Depot</h2>
+
+<p>On its <strong>Career paths</strong> page, the RCMP says that <strong>the majority of cadets at Depot will be posted to a General Duty position in a contract division</strong>. It defines those contract divisions as provinces or territories where the RCMP has policing contracts, <strong>all except Ontario and Quebec</strong>.</p>
+
+<p>The same page says new members then complete about <strong>6 months of field coaching training at their detachment</strong> before continuing in general duty policing.</p>
+
+<p>That does not mean every graduate goes to the same kind of community, but it does mean most new officers should expect to start in general duty policing, not in a specialized unit or a hand-picked major-city role.</p>
+
+<h2>How Often Can RCMP Relocations Happen Later?</h2>
+
+<p>The RCMP does not publish one fixed relocation schedule, because there is not one. On the "Before you apply" page, it says the number of times a police officer will be relocated <strong>varies depending on the officer's role, promotional interests, human resourcing needs, and available opportunities</strong>.</p>
+
+<p>It also says RCMP officers are expected to be <strong>mobile to gain a variety of experience and to meet the operational needs of the organization</strong>.</p>
+
+<p>So if you are looking for a career where you can lock yourself permanently to one exact place, the RCMP's own wording should make you cautious. Mobility is built into the model.</p>
+
+<h2>What This Means If You Have a Family</h2>
+
+<p>The RCMP explicitly mentions that this requirement can affect <strong>you and your family</strong>. That is worth taking seriously before you apply. If a spouse's work, shared custody arrangement, or extended family support makes relocation extremely difficult, that is not a small footnote. It is something to think through early.</p>
+
+<p>This does not mean constant moving is guaranteed. It means the RCMP wants applicants who can realistically handle that possibility over the course of a national policing career.</p>
+
+<h2>Common Misunderstandings</h2>
+
+<ul>
+  <li><strong>"I can choose exactly where I will be posted."</strong> Not officially. The RCMP says preferences may be considered, but postings are governed by operational needs.</li>
+  <li><strong>"Everyone gets posted anywhere in Canada with zero notice or input."</strong> Also not the clean official answer. The RCMP does say preferred options may be requested for the first posting.</li>
+  <li><strong>"I can join the RCMP and stay in Ontario or Quebec general duty right away."</strong> The RCMP's career page says the majority of new cadets are posted to contract divisions, which it defines as all provinces and territories except Ontario and Quebec.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>If you are applying to the RCMP, you should assume that <strong>mobility is a real requirement, not a formality</strong>. Officially, you must be willing to relocate anywhere within Canada. You may get to submit first-posting preferences, but the RCMP is clear that <strong>operational needs decide</strong>.</p>
+
+<blockquote>The best mindset is simple: if moving would be a deal-breaker, figure that out before you apply, not after Depot assigns your first post.</blockquote>
+
+<p>If you are still at the front end of the process, your immediate gate is usually the OEA. You can start with our <a href="/sample">free RCMP practice test sample</a> while you work through the bigger life decision around mobility.</p>
+    `,
+    faqs: [
+      {
+        question: 'Do you have to relocate anywhere in Canada to join the RCMP?',
+        answer: 'Yes. The RCMP says applicants must be willing to relocate anywhere within Canada.',
+      },
+      {
+        question: 'Can you choose your first RCMP posting?',
+        answer: 'Not fully. The RCMP says you may be asked to submit preferred options for consideration before your first post following graduation, but all postings are governed by operational needs.',
+      },
+      {
+        question: 'Where are most new RCMP officers posted after Depot?',
+        answer: 'The RCMP says the majority of cadets at Depot are posted to a General Duty position in a contract division, meaning a province or territory where the RCMP has contracts, all except Ontario and Quebec.',
+      },
+      {
+        question: 'How long is field coaching after Depot?',
+        answer: 'The RCMP says new officers complete about 6 months of field coaching training at their detachment after Depot.',
+      },
+      {
+        question: 'How often do RCMP officers get relocated?',
+        answer: 'The RCMP does not give one fixed number. It says the number of relocations varies depending on the officer’s role, promotional interests, human resourcing needs, and available opportunities.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'RCMP — Career paths', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/career-paths' },
+      { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+    ],
+  },
 ];
