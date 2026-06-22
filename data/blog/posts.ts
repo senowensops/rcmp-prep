@@ -3668,4 +3668,106 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
     ],
   },
+  {
+    slug: 'rcmp-first-aid-cpr-requirement',
+    title: 'RCMP First Aid Requirement: Do You Need Level C CPR Before Depot?',
+    subtitle: 'The official RCMP rule on first aid, CPR, when they ask for it, and why timing matters',
+    date: '2026-06-22',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP requires a valid standard first aid certificate with Level C CPR, but not in your initial selection package. Here is the exact official rule, timing, and what applicants often miss.',
+    coverImage: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&q=80',
+    content: `
+<p>Yes, the RCMP requires a <strong>valid standard first aid certificate</strong> that includes <strong>Level C CPR for infant, child and adult</strong>. But the timing matters: according to official RCMP recruiting guidance, this certificate is requested <strong>closer to the end of the recruiting process</strong> and <strong>should not be submitted in your initial selection package</strong>.</p>
+
+<p>That detail catches a lot of applicants off guard. Some people think they need first aid before they even apply. Others wait too long and end up scrambling near the end of the process. The official answer sits in the middle: <strong>you do need it, but not at the very start</strong>.</p>
+
+<h2>What the RCMP Officially Requires</h2>
+
+<p>On the RCMP page about required forms and documents, the force lists the following item under required personal documents:</p>
+
+<ul>
+  <li><strong>a valid standard first aid certificate, including Level C CPR for infant, child and adult</strong></li>
+</ul>
+
+<p>The RCMP also adds an important note: this certificate will be requested <strong>closer to the end of the recruiting process</strong>, and applicants are <strong>not to submit it in the selection package</strong> when the earlier document package is requested.</p>
+
+<h2>Do You Need First Aid Before You Apply to the RCMP?</h2>
+
+<p><strong>No, not according to the official recruiting pages.</strong> The RCMP says you must meet the entry requirements, complete the application process, and later provide the certificate when requested. It is not listed as a requirement to submit your online application, and the RCMP explicitly says not to include it in the initial selection package.</p>
+
+<p>That means the smart move is not to rush into a course before you even know your timeline. It means you should know the rule early so you can time your certification properly.</p>
+
+<h2>When the RCMP Asks for It</h2>
+
+<p>The RCMP says the certificate is requested <strong>closer to the end of the recruiting process</strong>. On the same official page, it notes that the certification needs to be <strong>valid for the duration of your Cadet Training Program</strong>.</p>
+
+<p>The RCMP's "How to apply" page says Depot in Regina is a <strong>6-month</strong> training program. So the practical takeaway is simple: when you complete your first aid and Level C CPR course, make sure the certificate will still be valid through your time at Depot.</p>
+
+<h2>What “Level C CPR” Means in the RCMP Requirement</h2>
+
+<p>The RCMP requirement is specific. It does not just say “CPR.” It says <strong>Level C CPR for infant, child and adult</strong>. If you take a course that does not include that level, you may still need another course later.</p>
+
+<p>Before booking anything, verify that the provider clearly states:</p>
+
+<ul>
+  <li><strong>standard first aid</strong></li>
+  <li><strong>Level C CPR</strong></li>
+  <li><strong>coverage for infant, child, and adult</strong></li>
+</ul>
+
+<p>This is one of those small admin details that is annoying to fix late.</p>
+
+<h2>Common Mistakes Applicants Make</h2>
+
+<ol>
+  <li><strong>Getting certified far too early</strong> — The RCMP says the certificate must be valid for the duration of the Cadet Training Program. If you take the course too early, you could end up paying twice.</li>
+  <li><strong>Trying to submit it in the first document package</strong> — Official RCMP guidance says not to submit it in the initial selection package.</li>
+  <li><strong>Assuming any CPR course is fine</strong> — The requirement specifically says <strong>standard first aid</strong> plus <strong>Level C CPR</strong> for infant, child, and adult.</li>
+  <li><strong>Waiting until the last minute</strong> — Even though it is not needed at the start, leaving it too late can create stress if course availability is limited where you live.</li>
+</ol>
+
+<h2>A Simple Way to Handle It</h2>
+
+<p>If you are still early in the RCMP process, the best move is usually to <strong>note the requirement now</strong> and hold off on booking until your file is moving and your timeline is clearer. If you are later in the process and getting close to final stages, it makes sense to look for a course that clearly matches the RCMP wording so your certificate stays valid through Depot.</p>
+
+<p>In other words: <strong>be aware early, act later, time it properly</strong>.</p>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP does require a <strong>valid standard first aid certificate with Level C CPR</strong>, but it is <strong>not an upfront application requirement</strong>. Officially, it is requested closer to the end of recruiting, should not be included in your initial selection package, and needs to stay valid through your 6-month Cadet Training Program.</p>
+
+<blockquote>This is not a huge recruiting mystery. It is just one of those details that becomes expensive and annoying if you get the timing wrong.</blockquote>
+
+<p>If you are still working toward the earlier stages, your immediate gate is usually the OEA. You can start with our <a href="/sample">free RCMP practice test sample</a> while you get the rest of your application timeline organized.</p>
+    `,
+    faqs: [
+      {
+        question: 'Do you need first aid before applying to the RCMP?',
+        answer: 'No. The RCMP does require a valid standard first aid certificate with Level C CPR, but its recruiting guidance says this is requested closer to the end of the process, not when you first apply online.',
+      },
+      {
+        question: 'What CPR level does the RCMP require?',
+        answer: 'The RCMP says applicants need a valid standard first aid certificate that includes Level C CPR for infant, child and adult.',
+      },
+      {
+        question: 'Do you submit your first aid certificate in the RCMP selection package?',
+        answer: 'No. The RCMP says this certificate will be requested closer to the end of the recruiting process and should not be submitted in the initial selection package.',
+      },
+      {
+        question: 'How long does your first aid certificate need to stay valid for the RCMP?',
+        answer: 'The RCMP says the certification must be valid for the duration of your Cadet Training Program.',
+      },
+      {
+        question: 'How long is RCMP Depot training?',
+        answer: 'The RCMP says successful applicants attend Depot in Regina, Saskatchewan for 6 months.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
+      { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+      { label: 'RCMP — Become an RCMP officer: Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-online-application' },
+    ],
+  },
 ];
