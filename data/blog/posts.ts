@@ -3770,4 +3770,115 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-online-application' },
     ],
   },
+  {
+    slug: 'rcmp-reapplication-rules',
+    title: 'RCMP Reapplication Rules: When Can You Apply Again After a Closed File?',
+    subtitle: 'The official RCMP rules for returning applicants, 3-month waits, and the conditions you need to meet before reapplying',
+    date: '2026-06-25',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'If you applied to the RCMP before, you may be able to apply again — but the official reapplication rules are more specific than most people realize.',
+    coverImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    content: `
+<p>Yes, you can <strong>reapply to the RCMP</strong> after a previous application ends, but only if you meet the RCMP's published conditions for <strong>returning applicants</strong>. The key official rule is this: if your concluding letter did not give you a reapplication date, the RCMP says you can reapply <strong>3 months from the date your file was concluded</strong>.</p>
+
+<p>A lot of applicants mix up three different situations: an OEA deferral, a file that closes later in the process, and a full fresh application after time has passed. The RCMP's own recruiting pages separate those situations more clearly than most forum answers do.</p>
+
+<h2>The Official RCMP Rule for Returning Applicants</h2>
+
+<p>On its "How to apply" page, the RCMP says that if you applied in the past, you may be eligible to reapply if you meet all of the following conditions:</p>
+
+<ul>
+  <li><strong>your deferral period has passed</strong></li>
+  <li><strong>if no reapplication date was provided, 3 months have passed since your file was concluded</strong></li>
+  <li><strong>you still meet the RCMP's qualifications and requirements</strong></li>
+  <li><strong>you meet the vision and hearing standards and have obtained the 2 required medical assessments</strong></li>
+</ul>
+
+<p>The RCMP also says that if you fail to meet one of those conditions, your application could be rejected and you may <strong>not be permitted to reapply for an additional 6 months</strong>.</p>
+
+<h2>What If You Were Unsuccessful on the RCMP Online Entrance Assessment?</h2>
+
+<p>The OEA page gives a specific rule for that stage. It says that if you are unsuccessful after completing the RCMP Online Entrance Assessment, you will be eligible to reapply after a <strong>waiting period of 3 months</strong>.</p>
+
+<p>That means the OEA itself has its own published reapplication window. But if your file was concluded at some later stage, the RCMP's <strong>returning-applicant conditions</strong> are the safer rule to follow, because they add extra requirements beyond simply waiting.</p>
+
+<h2>What the RCMP Means by “Meet the Requirements Again”</h2>
+
+<p>The RCMP does not treat a returning applicant like someone who gets a permanent pass on the basics. Its recruiting page says you must still meet the current qualifications and requirements.</p>
+
+<p>That includes the published basics from the "Before you apply" page, like:</p>
+
+<ul>
+  <li>citizenship or permanent resident eligibility</li>
+  <li>age requirement</li>
+  <li>language requirement</li>
+  <li>driver's licence requirement</li>
+  <li>education requirement</li>
+  <li>health, hearing, vision, and character standards</li>
+</ul>
+
+<p>So if something changed since your last file, good or bad, assume the RCMP will look at your current situation, not your old one.</p>
+
+<h2>The Vision and Hearing Detail Many Returning Applicants Miss</h2>
+
+<p>This is the part a lot of people miss. The RCMP says returning applicants must <strong>meet the vision and hearing standards and have obtained the 2 required medical assessments</strong>.</p>
+
+<p>On the RCMP page for required forms and documents, those two assessments are the <strong>vision examination</strong> and <strong>hearing examination</strong>. That same page says the results are valid for <strong>2 years</strong>.</p>
+
+<p>If your old exams are expired, or you never completed them, do not assume you can just hit reapply and sort it out later. The RCMP's published wording is more strict than that.</p>
+
+<h2>What Happens After You Reapply?</h2>
+
+<p>The RCMP says that once it receives your new application, it will <strong>review it along with your previous application file</strong> and then contact you about next steps.</p>
+
+<p>That matters for one simple reason: your old file does not disappear. If there were issues around disclosure, incomplete information, or missed requirements the first time, expect the RCMP to compare the old and new records.</p>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<ul>
+  <li><strong>Assuming every RCMP reapplication rule is just “wait 3 months.”</strong> Sometimes it is, but not always. The returning-applicant page adds extra conditions.</li>
+  <li><strong>Ignoring the medical-exam requirement.</strong> The RCMP specifically says returning applicants need the vision and hearing standards and the 2 required medical assessments.</li>
+  <li><strong>Reapplying before your file-conclusion date window has passed.</strong> If no date was given in your letter, the RCMP says 3 months from file conclusion is the default.</li>
+  <li><strong>Changing your story.</strong> The RCMP says it reviews your new application with your old file, so consistency still matters a lot.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>If you want to reapply to the RCMP, do not rely on random forum advice. Officially, returning applicants may reapply once their deferral period has passed, or after <strong>3 months if no date was provided</strong>, but they also need to meet the current entry requirements and the vision/hearing assessment conditions.</p>
+
+<blockquote>The short version: waiting is only part of reapplying. The smarter move is making sure your file is actually eligible before you hit submit again.</blockquote>
+
+<p>If your next shot depends on doing better on the OEA, start with our <a href="/sample">free RCMP practice test sample</a> and use the waiting period to come back stronger.</p>
+    `,
+    faqs: [
+      {
+        question: 'Can you reapply to the RCMP after being deferred?',
+        answer: 'Yes. The RCMP says returning applicants may reapply once their deferral period has passed. If no reapplication date was provided, the RCMP says you can reapply 3 months from the date your file was concluded.',
+      },
+      {
+        question: 'How long do you have to wait to reapply to the RCMP?',
+        answer: 'If you were unsuccessful after the RCMP Online Entrance Assessment, the RCMP says the waiting period is 3 months. For returning applicants more broadly, the RCMP says you may reapply once your deferral period has passed, or after 3 months if no date was provided in your concluding letter.',
+      },
+      {
+        question: 'Do returning RCMP applicants need new vision and hearing exams?',
+        answer: 'Returning applicants must meet the RCMP vision and hearing standards and have obtained the 2 required medical assessments. The RCMP says vision and hearing exam results are valid for 2 years.',
+      },
+      {
+        question: 'What happens if you reapply to the RCMP too early or without meeting the conditions?',
+        answer: 'The RCMP says failure to meet one of the returning-applicant conditions could result in you being rejected from the recruitment process and not being permitted to reapply for an additional 6 months.',
+      },
+      {
+        question: 'Does the RCMP look at your old application when you reapply?',
+        answer: 'Yes. The RCMP says it will review your new application along with your previous application file and then contact you about next steps.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+      { label: 'RCMP — Become an RCMP officer: Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
+    ],
+  },
 ];
