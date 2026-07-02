@@ -3881,4 +3881,100 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
     ],
   },
+  {
+    slug: 'rcmp-immunization-tuberculosis-requirements',
+    title: 'RCMP Immunization Requirements: What Vaccines and TB Tests You Need Before Depot',
+    subtitle: 'The official RCMP immunization and tuberculosis screening requirements applicants need to sort out before attending Depot',
+    date: '2026-07-02',
+    author: 'RCMP Prep Team',
+    readTime: '5 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP does not ask for every medical item at the start, but it does publish specific immunization and tuberculosis-test requirements before Depot.',
+    coverImage: 'https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80',
+    content: `
+<p>The RCMP says applicants must submit a complete <strong>RCMP Applicant Immunization and Tuberculosis Test Record form</strong> before attending Depot. On its official medical-and-psychological-assessments page, the RCMP says your adult <strong>Tdap</strong>, <strong>MMR</strong>, and <strong>hepatitis B</strong> immunizations should be up to date, and your form must also document a <strong>two-step tuberculin skin test (Mantoux)</strong>.</p>
+
+<p>This is one of those recruiting details that is easy to miss because it does not sit at the very front of the process like the OEA or your first document package. But if you leave it too late, it can turn into a time-consuming scramble.</p>
+
+<h2>What the RCMP Says You Need Before Depot</h2>
+
+<p>On the official page for medical and psychological suitability assessments, the RCMP says applicants are required to submit a complete immunization and tuberculosis record form <strong>prior to attendance at Depot</strong>.</p>
+
+<p>That same page says the following adult immunizations should be <strong>up to date</strong>:</p>
+
+<ul>
+  <li><strong>tetanus, diphtheria, and pertussis (Tdap)</strong></li>
+  <li><strong>measles, mumps and rubella (MMR)</strong></li>
+  <li><strong>hepatitis B series</strong></li>
+</ul>
+
+<p>The RCMP also says your form must document the results of a <strong>two-step tuberculin skin test (Mantoux)</strong>.</p>
+
+<h2>Do You Need These Before You Apply?</h2>
+
+<p>Not exactly. The RCMP's wording is careful here. It says it <strong>recommends</strong> that you get these immunizations and a tuberculosis screening <strong>prior to applying</strong>, but the hard requirement it publishes is that you must submit the completed record form <strong>before attending Depot</strong>.</p>
+
+<p>That distinction matters. It means this is not framed the same way as your age, driver's licence, or education eligibility. But it is still an official requirement later in the funnel, so ignoring it is a bad idea.</p>
+
+<h2>What the RCMP Means by the TB Test Requirement</h2>
+
+<p>The RCMP does not just say “get a TB test.” It specifically says your record form needs results from a <strong>two-step tuberculin skin test (Mantoux)</strong>, including the <strong>date</strong>, the result in <strong>millimetres</strong>, and the <strong>signature of the provider</strong> reading the result.</p>
+
+<p>The RCMP also notes that this test sequence will require <strong>4 separate appointments</strong>. That is the practical detail most applicants should pay attention to, because it means you cannot leave it to the last second and expect to knock it out in one clinic visit.</p>
+
+<h2>When a Chest X-Ray Is Required</h2>
+
+<p>The RCMP says a <strong>chest x-ray</strong> is required <strong>only if</strong> your Mantoux result is positive at <strong>10 millimetres or greater</strong>.</p>
+
+<p>That does not mean every applicant needs chest imaging. Officially, it is conditional.</p>
+
+<h2>Why This Step Can Sneak Up on People</h2>
+
+<ul>
+  <li><strong>It is not one of the first high-profile recruiting steps.</strong> Applicants tend to focus on the OEA, interview, polygraph, and medical clearance.</li>
+  <li><strong>The TB testing timeline is longer than people expect.</strong> The RCMP explicitly says the two-step Mantoux requires 4 appointments.</li>
+  <li><strong>People assume “recommended before applying” means optional forever.</strong> It does not. The RCMP still says the completed form is required before Depot.</li>
+</ul>
+
+<h2>A Simple Way to Handle It</h2>
+
+<p>If you are very early in the RCMP process, the smart move is to <strong>know the requirement now</strong> and make sure you can access your immunization history when the time comes. If your application is moving well, do not wait until the last minute to ask your health provider about the TB screening schedule, because the RCMP's own guidance shows this step can take multiple visits.</p>
+
+<p>In short: <strong>do not panic early, but do not drift on it either</strong>.</p>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP says applicants must submit a complete immunization and tuberculosis record form before Depot. Officially, the adult immunizations that should be up to date are <strong>Tdap, MMR, and the hepatitis B series</strong>, and the tuberculosis piece is a <strong>two-step Mantoux test</strong> with a chest x-ray only if the result is positive at <strong>10 mm or greater</strong>.</p>
+
+<blockquote>This is a classic RCMP admin trap: not hard, but annoyingly slow if you ignore it until the clock is on.</blockquote>
+
+<p>If you are still at the front end of the process, your immediate hurdle is usually the OEA. You can start with our <a href="/sample">free RCMP practice test sample</a> while keeping the later medical paperwork on your radar.</p>
+    `,
+    faqs: [
+      {
+        question: 'What immunizations does the RCMP want applicants to have up to date?',
+        answer: 'The RCMP says the adult immunizations that should be up to date are tetanus, diphtheria, and pertussis (Tdap), measles, mumps and rubella (MMR), and the hepatitis B series.',
+      },
+      {
+        question: 'Do you need RCMP immunizations before applying?',
+        answer: 'The RCMP says it recommends getting these immunizations and a tuberculosis screening prior to applying, but the published requirement is that you submit the complete RCMP Applicant Immunization and Tuberculosis Test Record form before attending Depot.',
+      },
+      {
+        question: 'What TB test does the RCMP require?',
+        answer: 'The RCMP says the form must document a two-step tuberculin skin test (Mantoux), including the date, the result in millimetres, and the provider signature.',
+      },
+      {
+        question: 'How long does the RCMP tuberculosis screening take?',
+        answer: 'The RCMP says the two-step Mantoux test requires 4 separate appointments.',
+      },
+      {
+        question: 'Do all RCMP applicants need a chest x-ray?',
+        answer: 'No. The RCMP says a chest x-ray is required only if the Mantoux result is positive at 10 millimetres or greater.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Undergo medical and psychological suitability assessments', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-undergo-medical-psychological-suitability-assessments' },
+      { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
+    ],
+  },
 ];
