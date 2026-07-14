@@ -54,7 +54,7 @@ export function Hero() {
               </h1>
 
               <p className="mt-3 text-base font-medium text-[var(--gold)]">
-                Candidates who skip prep risk a 6-12 month deferral.
+                Applicants who skip prep risk a 3+ month deferral, delaying their journey before it starts.
               </p>
 
               <p className="mt-4 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
