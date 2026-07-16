@@ -3977,4 +3977,139 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
     ],
   },
+  {
+    slug: 'what-happens-after-passing-rcmp-oea',
+    title: 'What Happens After You Pass the RCMP Online Entrance Assessment?',
+    subtitle: 'Why passing the OEA does not mean you are fully in the application process yet',
+    date: '2026-07-16',
+    author: 'RCMP Prep Team',
+    readTime: '5 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP now says successful OEA candidates are retained until further notice and must still clear basic-requirement verification and pre-suitability screening.',
+    coverImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    content: `
+<p>After you pass the RCMP Online Entrance Assessment, the RCMP says your application is <strong>retained until further notice</strong>. It also says you are <strong>not in the application process yet</strong>. Before you move to the next major stage, your file must go through a mandatory verification of basic requirements and a pre-suitability assessment.</p>
+
+<p>That wording surprises a lot of applicants. Passing the OEA feels like the first real win, because it is the first major filter after the online application and career presentation video. But officially, it does not automatically move you into the full recruiting process the same day.</p>
+
+<p>Here is the clean version of what happens next, based on the RCMP's current recruiting pages.</p>
+
+<h2>Step 1: You Submit the Online Application</h2>
+
+<p>The RCMP says the online application is submitted through GC Jobs. To find the posting, applicants search for "police officer" under job title and look under jobs open to the public.</p>
+
+<p>This first step still matters. The RCMP says you may be screened out of the recruitment process because of the responses provided in your online application. If you are screened out at this step, the RCMP says you must wait <strong>6 months</strong> before reapplying.</p>
+
+<p>That is why the online application is not just paperwork. It is the first eligibility screen.</p>
+
+<h2>Step 2: You Watch the Mandatory Career Presentation Video</h2>
+
+<p>Once you are screened into the process, the RCMP says you will receive an email with a link to a <strong>mandatory career presentation video</strong>.</p>
+
+<p>The official page says the presentation covers:</p>
+
+<ul>
+  <li>the application process, step by step</li>
+  <li>practical tips on how to prepare</li>
+  <li>virtual tours of the RCMP Training Academy, also known as Depot</li>
+  <li>the core values of the RCMP</li>
+</ul>
+
+<p>This is not a random orientation video. It sits directly before the OEA in the official recruiting sequence. Treat it as part of the process.</p>
+
+<h2>Step 3: The OEA Starts After the Video</h2>
+
+<p>The RCMP says that once you have finished watching the video, the assessment will begin. You then have <strong>14 days</strong> to complete the RCMP Online Entrance Assessment from the date you receive the link.</p>
+
+<p>The OEA has six sections:</p>
+
+<ul>
+  <li>workstyle preference</li>
+  <li>language comprehension</li>
+  <li>numerical skills</li>
+  <li>spatial skills</li>
+  <li>memory quotient</li>
+  <li>business reasoning</li>
+</ul>
+
+<p>The RCMP says the assessment should take approximately <strong>55 to 70 minutes</strong>, includes several timed portions, and should be completed in one session.</p>
+
+<h2>Step 4: Your Score Has to Be Competitive</h2>
+
+<p>The RCMP is careful about this point: completing the OEA does not guarantee advancement. The official page says your score is measured against the RCMP Standards for police applicants to determine whether it is competitive.</p>
+
+<p>If you are unsuccessful, the RCMP says you are eligible to reapply after a waiting period of <strong>3 months</strong>.</p>
+
+<p>That means the OEA is not just pass/fail in the casual sense. It is a competitive screen. You are trying to clear the standard strongly enough to stay alive in the recruiting funnel.</p>
+
+<h2>Step 5: If You Pass, Your Application Is Retained</h2>
+
+<p>This is the part most applicants miss. The RCMP's OEA page says:</p>
+
+<blockquote>You have passed the RCMP Online Entrance Assessment. Your application has been retained until further notice. You are not in the application process yet.</blockquote>
+
+<p>In plain English: passing the OEA is good news, but it is not the same as being fully advanced into every later stage. Your file is held while the RCMP decides what happens next.</p>
+
+<h2>Step 6: Basic Requirements and Pre-Suitability Are Checked</h2>
+
+<p>The same RCMP page says that, to meet recruitment demands, applications at this stage undergo a mandatory verification of <strong>basic requirements</strong> and a <strong>pre-suitability assessment</strong>.</p>
+
+<p>That is where earlier eligibility details can come back into focus, including things like citizenship or permanent resident status, age, driver's licence, education, language ability, health standards, character, and other published requirements from the RCMP's before-you-apply page.</p>
+
+<p>This is also why you should not treat the OEA as the only hurdle. A strong score helps, but the rest of the file still has to make sense.</p>
+
+<h2>Step 7: If Contacted, the Document Stage Moves Fast</h2>
+
+<p>If an applicant is contacted by a Recruiting Analyst, the RCMP says they have <strong>14 days</strong> to complete the Security Screening Application and submit required documents through a secure online portal. The RCMP also warns applicants not to submit those forms and documents until they are requested.</p>
+
+<p>The required-documents page also says incomplete or illegible forms will not be considered, and incorrect or incomplete forms may cause significant delays or lead to the file being closed.</p>
+
+<p>So the practical move is simple: do not send documents early, but do get organized early.</p>
+
+<h2>What This Means for Applicants</h2>
+
+<p>If you have not written the OEA yet, your job is to prepare for all six sections and take the 14-day window seriously. The assessment is short, timed in places, and competitive.</p>
+
+<p>If you have already passed and your application is retained, do not panic. That wording is now part of the official RCMP page. Use the waiting time to make sure your basic requirements, documents, vision/hearing planning, driving record, and personal history are clean and ready if a Recruiting Analyst contacts you.</p>
+
+<p>The trap is thinking "I passed the OEA, so I can relax." A better way to think about it is: <strong>I cleared the first serious filter, and now the file has to survive verification.</strong></p>
+
+<h2>Bottom Line</h2>
+
+<p>Passing the RCMP Online Entrance Assessment is a real milestone, but the RCMP says successful candidates are retained until further notice and are not yet in the application process. Your file still needs mandatory basic-requirement verification and pre-suitability screening before the later stages can open up.</p>
+
+<blockquote>The OEA gets your file noticed. The rest of your application still has to prove you are ready to move forward.</blockquote>
+
+<p>If you are preparing for the OEA now, start with our <a href="/sample">free RCMP practice test sample</a> and get used to the six-section format before your 14-day window starts.</p>
+    `,
+    faqs: [
+      {
+        question: 'Are you in the RCMP application process after passing the OEA?',
+        answer: 'Not fully. The RCMP says that after you pass the Online Entrance Assessment, your application is retained until further notice and you are not in the application process yet.',
+      },
+      {
+        question: 'What happens after passing the RCMP Online Entrance Assessment?',
+        answer: 'The RCMP says applications at this stage undergo mandatory verification of basic requirements and a pre-suitability assessment before later recruiting stages continue.',
+      },
+      {
+        question: 'How long do you have to complete the RCMP OEA?',
+        answer: 'The RCMP says you have 14 days to complete the Online Entrance Assessment from the date you receive the link.',
+      },
+      {
+        question: 'What happens if you fail the RCMP OEA?',
+        answer: 'The RCMP says unsuccessful candidates are eligible to reapply after a waiting period of 3 months.',
+      },
+      {
+        question: 'Should you submit RCMP forms before they ask for them?',
+        answer: 'No. The RCMP says not to attempt to submit required forms and documents until they are requested.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-online-application' },
+      { label: 'RCMP — Become an RCMP officer: Watch a career presentation video', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-attend-career-presentation' },
+      { label: 'RCMP — Become an RCMP officer: Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+    ],
+  },
 ];
