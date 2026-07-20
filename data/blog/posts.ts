@@ -4112,4 +4112,121 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
     ],
   },
+  {
+    slug: 'rcmp-online-application-before-oea',
+    title: 'RCMP Online Application: What Happens Before the OEA?',
+    subtitle: 'GC Jobs, the career presentation video, screen-out risk, and the 14-day assessment window',
+    date: '2026-07-20',
+    author: 'RCMP Prep Team',
+    readTime: '5 min read',
+    category: 'Application Guide',
+    excerpt: 'Before you write the RCMP Online Entrance Assessment, your online application can still screen you out. Here is what the official RCMP pages say about GC Jobs, the career presentation video, and the OEA link.',
+    coverImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    content: `
+<p>Before you write the RCMP Online Entrance Assessment, you first submit an online application through <strong>GC Jobs</strong>. The RCMP says applicants should search for <strong>"police officer"</strong> under job title and look under the <strong>"Jobs open to the public"</strong> tab. It also warns that you may be <strong>screened out</strong> because of the responses in your online application, and if that happens at this step, you must wait <strong>6 months</strong> before re-applying.</p>
+
+<p>That makes the first online application more important than some applicants realize. The OEA is the first major assessment, but it is not the first filter.</p>
+
+<h2>Step 1: Find the RCMP Police Officer Posting on GC Jobs</h2>
+
+<p>The official RCMP online-application page says the application is submitted through GC Jobs. To find the right posting, the RCMP tells applicants to search for <strong>"police officer"</strong> under the job title and look under <strong>"Jobs open to the public"</strong> in the search results.</p>
+
+<p>This is basic, but it matters. If you are applying from a saved link, an old forum post, or a search result, make sure you are looking at the current official RCMP recruiting path and the public posting.</p>
+
+<h2>Step 2: Your Online Answers Can Screen You Out</h2>
+
+<p>The RCMP says you may be screened out of the recruitment process because of the responses provided in your online application. It also says that if your application is screened out at this step, you must wait <strong>6 months</strong> before re-applying.</p>
+
+<p>In plain English: do not treat the online application like a casual form. Your answers need to be accurate, complete, and consistent with the RCMP's published basic requirements.</p>
+
+<h2>What Should You Check Before Applying?</h2>
+
+<p>The RCMP's before-you-apply page lists the basic requirements applicants need to understand before starting. Those include citizenship or permanent resident eligibility, age, language ability, driver's licence, education, health standards, hearing and vision standards, physical fitness expectations, character, and willingness to relocate.</p>
+
+<p>You do not need to turn the first application into a legal brief. But you should read the requirements carefully before answering, especially if there is anything in your situation that is not straightforward.</p>
+
+<h2>Step 3: Watch the Mandatory Career Presentation Video</h2>
+
+<p>Once you have been screened into the process, the RCMP says you will receive an email containing a link to the <strong>mandatory career presentation video</strong>.</p>
+
+<p>The official career-presentation page says the video covers:</p>
+
+<ul>
+  <li>the application process, step by step</li>
+  <li>practical tips on how to prepare</li>
+  <li>virtual tours of the RCMP Training Academy, also known as Depot</li>
+  <li>the core values of the RCMP</li>
+</ul>
+
+<p>This sits directly before the Online Entrance Assessment in the official sequence. It is not random orientation content. It is part of the recruiting path.</p>
+
+<h2>Step 4: The OEA Starts After the Video</h2>
+
+<p>The RCMP says that once you have finished watching the video, the assessment will begin. You then have <strong>14 days</strong> to complete the RCMP Online Entrance Assessment from the date you receive the link.</p>
+
+<p>The OEA page also says the assessment should take approximately <strong>55 to 70 minutes</strong>, includes several timed portions, and should be completed in one session.</p>
+
+<p>So the practical mistake is obvious: waiting until the video link arrives before you start preparing. By then, the 14-day clock is part of the process.</p>
+
+<h2>What the OEA Covers</h2>
+
+<p>The RCMP lists six sections on the Online Entrance Assessment:</p>
+
+<ul>
+  <li>workstyle preference</li>
+  <li>language comprehension</li>
+  <li>numerical skills</li>
+  <li>spatial skills</li>
+  <li>memory quotient</li>
+  <li>business reasoning</li>
+</ul>
+
+<p>The RCMP also says your score is measured against RCMP Standards for police applicants to determine whether it is competitive. Completing the assessment does not automatically mean you move forward.</p>
+
+<h2>Common Mistakes at the Front of the Funnel</h2>
+
+<ul>
+  <li><strong>Applying before reading the basic requirements.</strong> The online form can screen you out, so read the official requirements first.</li>
+  <li><strong>Assuming the OEA is the first thing that matters.</strong> The online application comes first, and the RCMP publishes a 6-month wait if you are screened out at that step.</li>
+  <li><strong>Ignoring the career presentation video.</strong> The RCMP calls it mandatory, and the OEA begins after you finish watching it.</li>
+  <li><strong>Starting OEA prep after the link arrives.</strong> The RCMP gives you 14 days from the date you receive the assessment link.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP online application is not just a doorway to the Online Entrance Assessment. It is a screening step of its own. Officially, you apply through GC Jobs, your responses can screen you out, a screen-out at that stage creates a <strong>6-month</strong> wait, and the mandatory career presentation video comes before your <strong>14-day</strong> OEA window.</p>
+
+<blockquote>The best move is simple: read the official requirements before applying, answer carefully, and start preparing for the OEA before the assessment link arrives.</blockquote>
+
+<p>If you are getting ready for the first assessment gate, start with our <a href="/sample">free RCMP practice test sample</a> and get familiar with the six-section format early.</p>
+    `,
+    faqs: [
+      {
+        question: 'Where do you apply online to become an RCMP officer?',
+        answer: 'The RCMP says applicants submit the online application through GC Jobs. It tells applicants to search for "police officer" under job title and look under the "Jobs open to the public" tab.',
+      },
+      {
+        question: 'Can the RCMP screen you out before the Online Entrance Assessment?',
+        answer: 'Yes. The RCMP says you may be screened out of the recruitment process because of the responses provided in your online application.',
+      },
+      {
+        question: 'How long do you wait if the RCMP screens out your online application?',
+        answer: 'The RCMP says that if your application is screened out at the online application step, you must wait 6 months before re-applying.',
+      },
+      {
+        question: 'Is the RCMP career presentation video mandatory?',
+        answer: 'Yes. The RCMP says that once you have been screened into the process, you will receive an email with a link to the mandatory career presentation video.',
+      },
+      {
+        question: 'When does the RCMP Online Entrance Assessment start?',
+        answer: 'The RCMP says that once you have finished watching the career presentation video, the assessment will begin. You have 14 days to complete the online assessment from the date you receive the link.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-online-application' },
+      { label: 'RCMP — Become an RCMP officer: Watch a career presentation video', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-attend-career-presentation' },
+      { label: 'RCMP — Become an RCMP officer: Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+    ],
+  },
 ];
