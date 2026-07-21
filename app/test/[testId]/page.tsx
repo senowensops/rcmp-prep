@@ -70,6 +70,8 @@ export default function TestPage() {
     void trackSectionViewed(testId, activeSubsection.id, state.currentQuestionIndex);
   }, [testId, activeSubsection, state.currentQuestionIndex]);
 
+  const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
+
   useEffect(() => {
     if (!hydrated) return;
 
@@ -80,6 +82,7 @@ export default function TestPage() {
       answers: state.answers,
       flags: state.flags,
       questionOrder: state.questionOrder,
+      totalQuestions: total,
       questionTimes: state.timestamps.questionTimes,
       sectionTimes: state.timestamps.sectionTimes,
       updatedAt: state.timestamps.updatedAt,
@@ -93,6 +96,7 @@ export default function TestPage() {
     state.answers,
     state.flags,
     state.questionOrder,
+    total,
     state.timestamps.questionTimes,
     state.timestamps.sectionTimes,
     state.timestamps.updatedAt,
@@ -104,7 +108,6 @@ export default function TestPage() {
     if (typeof window === "undefined") return;
     sessionStorage.setItem(`rcmp-answered-count-${testId}`, String(answered));
   }, [answered, testId]);
-  const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;

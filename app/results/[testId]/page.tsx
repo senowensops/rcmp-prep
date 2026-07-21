@@ -79,12 +79,13 @@ export default function ResultsPage() {
       ? Math.round((Date.now() - Number.parseInt(startTime, 10)) / 1000)
       : 0;
     const activeDurationSeconds = state.timestamps.activeDurationSeconds ?? durationSeconds;
-    const answeredQuestions = Math.min(Object.keys(state.answers).length, results.totalScored);
+    const answeredQuestions = Object.keys(state.answers).length;
     const completedAt = new Date().toISOString();
+    const totalQuestions = state.questionOrder?.length ?? results.totalScored;
 
     void trackTestComplete({
       testId: params.testId,
-      totalQuestions: results.totalScored,
+      totalQuestions,
       answeredQuestions,
       correctAnswers: results.overallCorrect,
       scorePercent: results.overallPct,
@@ -100,9 +101,19 @@ export default function ResultsPage() {
       answers: state.answers,
       skippedQuestions: (state.questionOrder ?? []).filter((questionId) => !(questionId in state.answers)),
       questionOrder: state.questionOrder,
+    }).then((tracked) => {
+      if (tracked) {
+        sessionStorage.setItem(completeKey, "1");
+        return;
+      }
+
+      sessionStorage.removeItem(completeKey);
+    }).catch(() => {
+      sessionStorage.removeItem(completeKey);
     });
 
-    sessionStorage.setItem(completeKey, "1");
+    return;
+
   }, [params.testId, results, state.answers, state.currentSectionId, state.questionOrder, state.timestamps.activeDurationSeconds, state.timestamps.questionTimes, state.timestamps.sectionTimes, state.timestamps.sectionVisits, state.timestamps.startedAt]);
 
   return (

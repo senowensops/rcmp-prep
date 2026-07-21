@@ -13,6 +13,7 @@ type AttemptSnapshot = {
   answers: Record<string, number>;
   flags?: Record<string, boolean>;
   questionOrder?: string[];
+  totalQuestions?: number;
   questionTimes?: Record<string, number>;
   sectionTimes?: Record<string, number>;
   updatedAt?: string;
@@ -93,6 +94,7 @@ function clearAttemptState(testId: string) {
   sessionStorage.removeItem(`rcmp-test-start-${testId}`);
   sessionStorage.removeItem(`rcmp-test-started-${testId}`);
   sessionStorage.removeItem(`rcmp-answered-count-${testId}`);
+  sessionStorage.removeItem(`rcmp-total-questions-${testId}`);
   sessionStorage.removeItem(getSnapshotStorageKey(testId));
   sessionStorage.removeItem(getQuestionEventsStorageKey(testId));
 }
@@ -137,7 +139,8 @@ function getSkippedQuestions(snapshot: AttemptSnapshot | null, totalQuestions?: 
   if (!snapshot?.questionOrder?.length) return [] as string[];
 
   const answeredIds = new Set(Object.keys(snapshot.answers ?? {}));
-  const ordered = totalQuestions ? snapshot.questionOrder.slice(0, totalQuestions) : snapshot.questionOrder;
+  const effectiveTotal = totalQuestions ?? snapshot.totalQuestions;
+  const ordered = effectiveTotal ? snapshot.questionOrder.slice(0, effectiveTotal) : snapshot.questionOrder;
   return ordered.filter((questionId) => !answeredIds.has(questionId));
 }
 
@@ -153,8 +156,16 @@ function clampAnsweredQuestions(answeredQuestions: number, totalQuestions: numbe
   return Math.min(Math.max(answeredQuestions, 0), Math.max(totalQuestions, 0));
 }
 
-function isValidCompletion(attempt: TestAttempt) {
-  const answeredQuestions = clampAnsweredQuestions(attempt.answeredQuestions, attempt.totalQuestions);
+function getExpectedTotalQuestions(attempt: Pick<TestAttempt, "totalQuestions" | "questionOrder">, snapshot: AttemptSnapshot | null) {
+  const attemptTotal = attempt.totalQuestions;
+  const orderedCount = attempt.questionOrder?.length ?? snapshot?.questionOrder?.length ?? 0;
+  const snapshotTotal = snapshot?.totalQuestions ?? 0;
+  return Math.max(attemptTotal, orderedCount, snapshotTotal);
+}
+
+function isValidCompletion(attempt: TestAttempt, snapshot: AttemptSnapshot | null) {
+  const expectedTotalQuestions = getExpectedTotalQuestions(attempt, snapshot);
+  const answeredQuestions = clampAnsweredQuestions(attempt.answeredQuestions, expectedTotalQuestions);
   const activeDurationSeconds = attempt.activeDurationSeconds ?? attempt.durationSeconds;
 
   return answeredQuestions > 0 && activeDurationSeconds >= MIN_VALID_COMPLETION_SECONDS;
@@ -165,8 +176,8 @@ export async function trackTestStart(testId: string) {
 
   const sessionId = getSessionId();
   const attemptId = crypto.randomUUID();
-  setAttemptId(testId, attemptId);
   clearAttemptState(testId);
+  setAttemptId(testId, attemptId);
 
   try {
     await supabase.from("test_attempts").insert({
@@ -190,27 +201,31 @@ export async function trackTestProgress(testId: string, snapshot: AttemptSnapsho
   const attemptId = getAttemptId(testId);
   const sessionId = getSessionId();
   const questionEvents = readQuestionEvents(testId);
-  const skippedQuestions = getSkippedQuestions(snapshot);
+  const enrichedSnapshot = {
+    ...snapshot,
+    totalQuestions: snapshot.totalQuestions ?? snapshot.questionOrder?.length,
+  };
+  const skippedQuestions = getSkippedQuestions(enrichedSnapshot);
 
-  writeSnapshot(testId, snapshot);
+  writeSnapshot(testId, enrichedSnapshot);
 
   try {
     const values = {
       session_id: sessionId,
-      last_section_id: snapshot.currentSectionId ?? null,
-      last_question_id: snapshot.currentQuestionId ?? null,
-      last_question_index: snapshot.currentQuestionIndex ?? null,
-      answered_questions: Object.keys(snapshot.answers ?? {}).length,
+      last_section_id: enrichedSnapshot.currentSectionId ?? null,
+      last_question_id: enrichedSnapshot.currentQuestionId ?? null,
+      last_question_index: enrichedSnapshot.currentQuestionIndex ?? null,
+      answered_questions: Object.keys(enrichedSnapshot.answers ?? {}).length,
       skipped_questions: skippedQuestions,
       skipped_count: skippedQuestions.length,
-      answers: snapshot.answers,
-      flags: snapshot.flags ?? {},
-      question_order: snapshot.questionOrder ?? [],
-      question_times: snapshot.questionTimes ?? {},
-      section_times: snapshot.sectionTimes ?? {},
+      answers: enrichedSnapshot.answers,
+      flags: enrichedSnapshot.flags ?? {},
+      question_order: enrichedSnapshot.questionOrder ?? [],
+      question_times: enrichedSnapshot.questionTimes ?? {},
+      section_times: enrichedSnapshot.sectionTimes ?? {},
       answer_changes: countChangedAnswers(questionEvents),
       unique_questions_answered: countUniqueAnswered(questionEvents),
-      progress_updated_at: snapshot.updatedAt ?? new Date().toISOString(),
+      progress_updated_at: enrichedSnapshot.updatedAt ?? new Date().toISOString(),
     };
 
     let updatedRows: unknown[] = [];
@@ -238,17 +253,19 @@ export async function trackTestProgress(testId: string, snapshot: AttemptSnapsho
 }
 
 export async function trackTestComplete(attempt: TestAttempt) {
-  const answeredQuestions = clampAnsweredQuestions(attempt.answeredQuestions, attempt.totalQuestions);
+  const snapshot = readSnapshot(attempt.testId);
+  const expectedTotalQuestions = getExpectedTotalQuestions(attempt, snapshot);
+  const answeredQuestions = clampAnsweredQuestions(attempt.answeredQuestions, expectedTotalQuestions);
   const activeDurationSeconds = attempt.activeDurationSeconds ?? attempt.durationSeconds;
 
-  if (!isValidCompletion({ ...attempt, answeredQuestions, activeDurationSeconds })) {
+  if (!isValidCompletion({ ...attempt, answeredQuestions, totalQuestions: expectedTotalQuestions, activeDurationSeconds }, snapshot)) {
     console.warn("Skipping invalid completion payload", {
       testId: attempt.testId,
       answeredQuestions,
-      totalQuestions: attempt.totalQuestions,
+      totalQuestions: expectedTotalQuestions,
       activeDurationSeconds,
     });
-    return;
+    return false;
   }
 
   analytics.completePracticeTest(attempt.testId);
@@ -261,17 +278,15 @@ export async function trackTestComplete(attempt: TestAttempt) {
 
   const attemptId = getAttemptId(attempt.testId);
   const sessionId = getSessionId();
-  const snapshot = readSnapshot(attempt.testId);
   const questionEvents = readQuestionEvents(attempt.testId);
-  const skippedQuestions = attempt.skippedQuestions ?? getSkippedQuestions(snapshot, attempt.totalQuestions);
+  const skippedQuestions = attempt.skippedQuestions ?? getSkippedQuestions(snapshot, expectedTotalQuestions);
 
   try {
     const values = {
       completed_at: attempt.completedAt ?? new Date().toISOString(),
       started_at: attempt.startedAt ?? null,
       duration_seconds: attempt.durationSeconds,
-      active_duration_seconds: activeDurationSeconds,
-      total_questions: attempt.totalQuestions,
+      total_questions: expectedTotalQuestions,
       answered_questions: answeredQuestions,
       correct_answers: attempt.correctAnswers,
       score_percent: attempt.scorePercent,
@@ -290,13 +305,6 @@ export async function trackTestComplete(attempt: TestAttempt) {
       unique_questions_answered: countUniqueAnswered(questionEvents),
       progress_updated_at: attempt.completedAt ?? new Date().toISOString(),
       session_id: sessionId,
-      funnel: {
-        started: true,
-        results_viewed: true,
-        completed: true,
-        support_modal_shown: Boolean(sessionStorage.getItem(`rcmp-support-modal-shown-${attempt.testId}`)),
-        sections_seen: attempt.sectionVisits ?? {},
-      },
     };
 
     let updatedRows: unknown[] = [];
@@ -322,8 +330,11 @@ export async function trackTestComplete(attempt: TestAttempt) {
     if (!updatedRows.length) {
       throw new Error(`No attempt row updated for test ${attempt.testId} in session ${sessionId}`);
     }
+
+    return true;
   } catch (error) {
     console.error("Failed to track test completion:", error);
+    return false;
   }
 }
 
