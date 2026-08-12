@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 
-export function Hero() {
+type HeroProps = {
+  weeklyPracticeUsers: number;
+};
+
+export function Hero({ weeklyPracticeUsers }: HeroProps) {
   return (
     <section className="relative overflow-x-hidden px-4 pb-0 pt-6 sm:px-8 sm:pt-8">
       <div className="mx-auto max-w-6xl overflow-x-hidden">
@@ -40,7 +44,7 @@ export function Hero() {
           <div className="relative grid min-h-[620px] items-end lg:grid-cols-[1.05fr_0.95fr]">
             <div className="relative z-10 px-6 pb-16 pt-10 text-center sm:px-10 sm:pb-20 sm:pt-14 sm:text-left lg:px-12 lg:pb-24">
               <p className="mb-4 text-sm text-white/50">
-                32 candidates have practiced this week
+                {weeklyPracticeUsers.toLocaleString()} candidates have practiced this week
               </p>
 
               <div className="mb-6 inline-flex items-center gap-2 self-center rounded-full border border-[var(--red)]/30 bg-[var(--red)]/10 px-4 py-2 font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)] sm:self-auto">

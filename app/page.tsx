@@ -6,6 +6,9 @@ import { SectionBreakdown } from "@/components/landing/SectionBreakdown";
 import { WhyItWorks } from "@/components/landing/WhyItWorks";
 import { BlogSlider } from "@/components/landing/BlogSlider";
 import { Testimonials } from "@/components/landing/Testimonials";
+import { getWeeklyPracticeUserCount } from "@/lib/weeklyPracticeStats";
+
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "RCMP Online Assessment Practice Test | RCMPPrep.ca",
@@ -64,14 +67,16 @@ const faqJsonLd = {
   ],
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const weeklyPracticeUsers = await getWeeklyPracticeUserCount();
+
   return (
     <main id="main-content" className="min-h-screen bg-[var(--dark)] text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Hero />
+      <Hero weeklyPracticeUsers={weeklyPracticeUsers} />
       <SectionBreakdown />
       <WhyItWorks />
       <Testimonials />
