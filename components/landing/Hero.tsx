@@ -41,8 +41,8 @@ export function Hero({ weeklyPracticeUsers }: HeroProps) {
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#151111]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(177,17,22,0.18),_transparent_38%)]" />
 
-          <div className="relative grid min-h-[620px] items-end lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="relative z-10 px-6 pb-16 pt-10 text-center sm:px-10 sm:pb-20 sm:pt-14 sm:text-left lg:px-12 lg:pb-24">
+          <div className="relative grid min-h-[620px] items-center">
+            <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 text-center sm:px-10 sm:py-20 lg:px-12 lg:py-24">
               <p className="mb-4 text-sm text-white/50">
                 {weeklyPracticeUsers.toLocaleString()} candidates have practiced this week
               </p>
@@ -52,7 +52,7 @@ export function Hero({ weeklyPracticeUsers }: HeroProps) {
                 Unofficial Practice Resource
               </div>
 
-              <h1 className="max-w-4xl font-head text-5xl font-extrabold uppercase leading-[0.95] tracking-[0.04em] text-white sm:text-7xl lg:text-[5.25rem]">
+              <h1 className="mx-auto max-w-4xl font-head text-5xl font-extrabold uppercase leading-[0.95] tracking-[0.04em] text-white sm:text-7xl lg:text-[5.25rem]">
                 <span className="block">RCMP Online</span>
                 <span className="block text-white">Assessment Prep</span>
               </h1>
@@ -61,11 +61,11 @@ export function Hero({ weeklyPracticeUsers }: HeroProps) {
                 Applicants who skip prep risk a 3+ month deferral, delaying their journey before it starts.
               </p>
 
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
+              <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
                 Unofficial practice tests covering the same skill areas as the RCMP Online Assessment, spatial reasoning, memory, numerical, language, and more. 100% free, no account needed.
               </p>
 
-              <div className="mt-10 flex flex-col items-center gap-4 sm:items-start sm:flex-row">
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/test/1"
                   className="inline-flex w-full max-w-sm items-center justify-center rounded-2xl bg-[var(--red)] px-8 py-5 text-center font-head text-2xl font-bold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--red-dk)] sm:w-auto sm:max-w-none"
@@ -74,7 +74,7 @@ export function Hero({ weeklyPracticeUsers }: HeroProps) {
                 </Link>
               </div>
 
-              <p className="mt-3 text-center text-sm text-white/50 sm:text-left">
+              <p className="mt-3 text-center text-sm text-white/50">
                 No account needed
               </p>
             </div>
