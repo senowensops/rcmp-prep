@@ -4229,4 +4229,145 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
     ],
   },
+  {
+    slug: 'rcmp-oea-14-day-study-plan',
+    title: 'RCMP OEA 14-Day Study Plan: What to Do After You Get the Link',
+    subtitle: 'A practical two-week prep plan for the RCMP Online Entrance Assessment window',
+    date: '2026-08-12',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Assessment Prep',
+    excerpt: 'The RCMP says candidates have 14 days to complete the Online Entrance Assessment after receiving the link. Here is how to use that window without cramming blindly.',
+    coverImage: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80',
+    content: `
+<p>The RCMP says you have <strong>14 days</strong> to complete the Online Entrance Assessment from the date you receive the link. The assessment takes approximately <strong>55 to 70 minutes</strong>, includes several timed portions, and should be completed in one session. That gives you enough time to prepare, but not enough time to drift.</p>
+
+<p>If your OEA link just arrived, do not panic and do not spend the first week overthinking. Your job is to build familiarity with all six sections, practice under time pressure, and make the real test feel like something you have already rehearsed.</p>
+
+<h2>What the RCMP Says About the OEA Window</h2>
+
+<p>The official RCMP recruiting pages put the Online Entrance Assessment right after the mandatory career presentation video. Once you finish watching the video, the assessment begins, and you have 14 days to complete it from the date you receive the link.</p>
+
+<p>The RCMP lists six sections:</p>
+
+<ul>
+  <li>workstyle preference</li>
+  <li>language comprehension</li>
+  <li>numerical skills</li>
+  <li>spatial skills</li>
+  <li>memory quotient</li>
+  <li>business reasoning</li>
+</ul>
+
+<p>The RCMP also says your score is measured against RCMP Standards for police applicants to determine whether it is competitive. So the goal is not just to finish. The goal is to perform well across the full section mix.</p>
+
+<h2>Before Day 1: Set Up the Basics</h2>
+
+<p>Before you start studying, remove the easy ways to lose points. Confirm your assessment deadline. Choose the day and time you plan to write. Make sure you will have a stable Wi-Fi connection and power source. The RCMP preparatory guide specifically reminds candidates to have stable Wi-Fi and power so they do not lose progress during the assessment.</p>
+
+<p>Then block your prep into short, focused sessions. You do not need eight-hour study days. You need consistent reps across different skill types, because the OEA changes gears quickly.</p>
+
+<h2>Days 1-2: Learn the Format</h2>
+
+<p>Start with a full overview of all six sections. Your first goal is not mastery. It is orientation.</p>
+
+<ul>
+  <li><strong>Workstyle:</strong> understand that you will respond to statements using a scale from strongly disagree to strongly agree.</li>
+  <li><strong>Language:</strong> practice reading short passages and answering exactly what is asked.</li>
+  <li><strong>Numerical:</strong> refresh percentages, ratios, tables, and chart reading.</li>
+  <li><strong>Spatial:</strong> try rotations, shape matching, and visual pattern questions.</li>
+  <li><strong>Memory:</strong> practice observing details, then answering after a short delay.</li>
+  <li><strong>Business reasoning:</strong> practice choosing calm, practical, procedure-aware responses.</li>
+</ul>
+
+<p>Take one short mixed practice session. Do not worry about the score yet. Notice where you slow down.</p>
+
+<h2>Days 3-5: Train the Most Awkward Sections</h2>
+
+<p>Most candidates have one or two sections that feel uncomfortable right away. Usually it is spatial, memory, or numerical. Spend these three days attacking the weak points directly.</p>
+
+<p>For spatial, use short daily sets. The improvement comes from repetition. For memory, practice noticing location, colour, number, order, and unusual details. For numerical, time yourself while reading tables and charts so you train pace, not just accuracy.</p>
+
+<p>Keep workstyle in the rotation too, but do not try to "game" it. Use it as a self-reflection section. Read each statement carefully and answer consistently with who you actually are and how you actually behave.</p>
+
+<h2>Days 6-8: Add Time Pressure</h2>
+
+<p>By the middle of the 14-day window, untimed practice is no longer enough. The RCMP says the assessment includes several timed portions, so your prep should include timed portions too.</p>
+
+<p>Run shorter timed sets across language, numerical, spatial, memory, and business reasoning. After each set, review mistakes immediately. Ask whether the issue was knowledge, speed, focus, or misreading the question.</p>
+
+<p>This is where many candidates get better fast. They already understand the question types. Now they learn how to move through them without freezing.</p>
+
+<h2>Days 9-10: Do a Full Mixed Practice Run</h2>
+
+<p>The OEA is mentally tiring because it asks you to switch skills. Reading comprehension feels different from spatial reasoning. Spatial feels different from memory. Memory feels different from business judgment.</p>
+
+<p>On days 9 or 10, do a longer mixed practice run that touches every section. Try to simulate the experience of changing gears. Then review your result section by section.</p>
+
+<p>Do not just ask, "What did I get wrong?" Ask, "Where did my pace fall apart?" That answer tells you what to fix before test day.</p>
+
+<h2>Days 11-12: Clean Up the Leaks</h2>
+
+<p>Use these two days for targeted cleanup. If your numerical score drops when tables have several columns, practice that. If you miss small visual details in memory questions, train observation. If spatial rotations still feel slow, do another batch of rotations and cube-style reasoning.</p>
+
+<p>Also reread the instructions for each section carefully. A lot of avoidable mistakes come from rushing the prompt, not from lacking ability.</p>
+
+<h2>Day 13: Light Review Only</h2>
+
+<p>The day before your planned assessment should not be a panic-cram day. Do one light mixed review, check your setup, and stop while you still feel sharp.</p>
+
+<p>Pick your test time. Choose a quiet room. Charge your device. Confirm your internet. Clear the rest of your schedule so you can complete the assessment in one sitting, as the RCMP recommends.</p>
+
+<h2>Day 14: Write the Assessment</h2>
+
+<p>On test day, keep it simple. Eat normally. Start when you are alert. Read the instructions. Move steadily. Do not let one difficult question drag your focus into the next section.</p>
+
+<p>Remember the structure: this is a multi-section assessment, not one giant knowledge quiz. If one section feels rough, reset. There are still other sections where you can perform well.</p>
+
+<h2>The Biggest 14-Day Mistakes</h2>
+
+<ul>
+  <li><strong>Waiting until the last two days.</strong> The 14-day window is short, but it is long enough for meaningful reps if you start right away.</li>
+  <li><strong>Only practicing your strongest section.</strong> A comfortable section feels good, but weak sections move the score.</li>
+  <li><strong>Ignoring timed practice.</strong> The RCMP says several portions are timed, so speed has to be part of your prep.</li>
+  <li><strong>Treating workstyle like trivia.</strong> The workstyle section is about consistent self-reporting, not memorizing answers.</li>
+  <li><strong>Writing tired or distracted.</strong> The RCMP recommends completing the assessment in one session, so your test environment matters.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>The 14-day OEA window is not a lot of time, but it is enough time to get organized, practice every section, and sharpen the skills most likely to slow you down. Treat the two weeks like a short training block: learn the format, train the weak spots, add time pressure, then write when you are rested and ready.</p>
+
+<blockquote>Do not use the 14 days to worry. Use them to rehearse.</blockquote>
+
+<p>If your OEA link has arrived, start with our <a href="/sample">free RCMP practice test sample</a> and get a feel for the six-section format before you write the real assessment.</p>
+    `,
+    faqs: [
+      {
+        question: 'How long do you have to complete the RCMP OEA after getting the link?',
+        answer: 'The RCMP says you have 14 days to complete the Online Entrance Assessment from the date you receive the link.',
+      },
+      {
+        question: 'How long does the RCMP Online Entrance Assessment take?',
+        answer: 'The RCMP says the assessment should take approximately 55 to 70 minutes to complete.',
+      },
+      {
+        question: 'Is the RCMP OEA timed?',
+        answer: 'Yes. The RCMP says the Online Entrance Assessment includes several timed portions.',
+      },
+      {
+        question: 'Should you complete the RCMP OEA in one sitting?',
+        answer: 'Yes. The RCMP recommends completing the entire assessment in one session.',
+      },
+      {
+        question: 'What sections are on the RCMP OEA?',
+        answer: 'The RCMP lists six sections: workstyle preference, language comprehension, numerical skills, spatial skills, memory quotient, and business reasoning.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Become an RCMP officer: Watch a career presentation video', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-attend-career-presentation' },
+      { label: 'RCMP — Become an RCMP officer: Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
+  },
 ];
