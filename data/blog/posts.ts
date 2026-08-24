@@ -4620,4 +4620,134 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'Government of Canada — Immigration and citizenship', url: 'https://www.canada.ca/en/services/immigration-citizenship.html' },
     ],
   },
+  {
+    slug: 'rcmp-core-values-applicants',
+    title: 'RCMP Core Values: What Applicants Need to Understand',
+    subtitle: 'The 5 official values and how they show up in the OEA, interview, and recruiting process',
+    date: '2026-08-24',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP core values are not just words on a recruiting page. They are the standard applicants are expected to understand, demonstrate, and live up to throughout the process.',
+    coverImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    content: `
+<p>The official RCMP core values are <strong>Take responsibility</strong>, <strong>Show respect</strong>, <strong>Serve with excellence</strong>, <strong>Demonstrate compassion</strong>, and <strong>Act with integrity</strong>. For applicants, these values matter because the RCMP says employee conduct is expected to reflect them, and the recruiting process repeatedly looks for evidence of accountability, honesty, teamwork, communication, composure, and service orientation.</p>
+
+<p>A lot of applicants treat the RCMP core values like a memorization task. They look up the list the night before an interview, try to remember the words, and hope that is enough.</p>
+
+<p>That misses the point. The values are not trivia. They are a practical standard for how RCMP employees are expected to behave, and they connect directly to the parts of the application where your judgment, honesty, and past behaviour are assessed.</p>
+
+<h2>The 5 Official RCMP Core Values</h2>
+
+<p>The RCMP says its core values were renewed as part of the RCMP 2024-2027 strategic plan. The official values are:</p>
+
+<ol>
+  <li><strong>Take responsibility</strong> — The RCMP defines this as being transparent about decisions and actions, and holding yourself accountable for the results and impacts.</li>
+  <li><strong>Show respect</strong> — The RCMP describes this as treating all people with fairness, and valuing and promoting reconciliation, diversity, and inclusion by considering democratic rights, history, and lived experiences.</li>
+  <li><strong>Serve with excellence</strong> — The RCMP connects this value to continuous learning and working collaboratively with colleagues, communities, and partners to provide professional policing services.</li>
+  <li><strong>Demonstrate compassion</strong> — The RCMP defines this as caring for each other and the communities served by approaching each situation with empathy and a genuine desire to help.</li>
+  <li><strong>Act with integrity</strong> — The RCMP describes this as conducting yourself ethically, with honesty, dignity, and honour.</li>
+</ol>
+
+<p>The RCMP also says the conduct of employees is expected to reflect these core values. That is the line applicants should pay attention to. You are not just being asked whether you know the values. You are being assessed for whether your behaviour lines up with them.</p>
+
+<h2>Why Core Values Matter Before the OEA</h2>
+
+<p>The Online Entrance Assessment is usually the first major filter applicants think about, but the values start mattering before test day. The official recruiting pages ask applicants to understand and be prepared to uphold the RCMP core values before applying.</p>
+
+<p>That matters because the application process is not only checking whether you can pass a cognitive assessment. It is also checking whether your judgment, conduct, and motivation fit the role. If you only prepare the numerical, spatial, and memory sections while ignoring values and conduct, your prep is incomplete.</p>
+
+<h2>How the Values Connect to the Workstyle Section</h2>
+
+<p>The RCMP does not publish the exact scoring model for the workstyle section, and applicants should be careful with anyone who claims to have a secret answer key. But the connection is obvious: the workstyle section asks about tendencies, judgment, and preferred ways of behaving. The official values describe the kind of conduct the organization expects.</p>
+
+<p>That does not mean you should pretend to be perfect. In fact, pretending is usually a bad strategy. A value like <strong>Take responsibility</strong> is not about claiming you never make mistakes. It is about whether you own decisions, learn from outcomes, and stay accountable when something goes wrong.</p>
+
+<p>Similarly, <strong>Show respect</strong> is not just politeness. It includes fairness, diversity, reconciliation, and understanding the lived experiences of others. That is directly relevant to policing in real communities.</p>
+
+<h2>How the Values Show Up in the Suitability Interview</h2>
+
+<p>The official suitability interview page says the stage assesses whether applicants possess the core competencies, core values, and traits required of an RCMP police officer. It also says the Attribute Evaluation Interview uses behavioural questions and assesses four essential competencies: <strong>Problem Solving</strong>, <strong>Teamwork</strong>, <strong>Communication</strong>, and <strong>Self-Control and Composure</strong>.</p>
+
+<p>That is where values become examples. You may not be asked to recite all five values, but you should be ready to talk about real moments when you showed them:</p>
+
+<ul>
+  <li><strong>Take responsibility:</strong> a time you made an error, owned it, and fixed the outcome.</li>
+  <li><strong>Show respect:</strong> a time you dealt fairly with someone whose background, opinion, or behaviour challenged you.</li>
+  <li><strong>Serve with excellence:</strong> a time you improved a process, kept learning, or worked with others to serve a person or group better.</li>
+  <li><strong>Demonstrate compassion:</strong> a time you approached a difficult person or situation with empathy while still staying clear and effective.</li>
+  <li><strong>Act with integrity:</strong> a time you told the truth, followed through, or made the harder ethical choice.</li>
+</ul>
+
+<p>The RCMP recommends the STAR method for behavioural answers: Situation, Task, Action, Result. The values give you a useful way to choose examples before the interview.</p>
+
+<h2>Integrity Is Not Optional</h2>
+
+<p>The suitability interview page is direct about honesty. The Regular Member Applicant Questionnaire is used to understand whether actions or behaviours from your past could pose a challenge to becoming an RCMP officer. The RCMP says a heavy focus of the questionnaire is honesty, and that it considers the severity, recency, and repetitive nature of adverse actions.</p>
+
+<p>The page also tells applicants not to falsify, misrepresent, minimize, leave out facts, or withhold details about past actions or behaviours. If the questionnaire is not fully completed, the RCMP says the applicant will be removed from the recruiting process.</p>
+
+<p>That is <strong>Act with integrity</strong> in practical form. The recruiting process is not looking for a perfect life. It is looking for honest disclosure, accountability, and a pattern of conduct that fits policing.</p>
+
+<h2>Common Mistakes Applicants Make With RCMP Values</h2>
+
+<ul>
+  <li><strong>Memorizing the list but not understanding it.</strong> You should know the five values, but the deeper question is whether you can explain how they apply to police work.</li>
+  <li><strong>Using vague interview examples.</strong> The RCMP says behavioural questions require specific past examples. General statements like "I am honest" are weaker than a clear situation where honesty cost you something.</li>
+  <li><strong>Confusing respect with agreeableness.</strong> Respect includes fairness, rights, reconciliation, diversity, inclusion, and lived experience. It does not mean avoiding hard conversations.</li>
+  <li><strong>Trying to sound flawless.</strong> Responsibility and integrity are often easier to demonstrate through a mistake you handled well than through a story where you were perfect from the start.</li>
+  <li><strong>Separating values from test prep.</strong> The OEA, workstyle section, suitability interview, background review, and polygraph all reward consistency. Values should not be a last-minute add-on.</li>
+</ul>
+
+<h2>A Simple Prep Exercise</h2>
+
+<p>Before your OEA or suitability interview, make a five-row table with one RCMP value in each row. Beside each value, write one real example from your life that shows it. Keep the examples specific, honest, and recent where possible.</p>
+
+<p>Then test each example against the STAR structure:</p>
+
+<ul>
+  <li>What was the situation?</li>
+  <li>What was your responsibility?</li>
+  <li>What action did you personally take?</li>
+  <li>What changed because of your action?</li>
+</ul>
+
+<p>If you cannot find a strong example for one of the values, that is useful information. It tells you where to reflect, grow, or choose a better example before you are under interview pressure.</p>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP core values are not a slogan to memorize. They are the behaviour standard behind the application process. If you understand them early, they can guide how you approach the workstyle section, how you choose suitability interview examples, and how you think about honesty throughout the process.</p>
+
+<blockquote>Know the five values, but do not stop there. The real question is whether your examples, decisions, and disclosures show the same pattern.</blockquote>
+
+<p>If you are still preparing for the first assessment gate, start with our <a href="/sample">free RCMP practice test sample</a> and use the values as part of your workstyle and judgment prep.</p>
+    `,
+    faqs: [
+      {
+        question: 'What are the RCMP core values?',
+        answer: 'The official RCMP core values are Take responsibility, Show respect, Serve with excellence, Demonstrate compassion, and Act with integrity.',
+      },
+      {
+        question: 'Do RCMP applicants need to know the core values?',
+        answer: 'Yes. The RCMP recruiting pages say applicants should understand and be prepared to uphold the RCMP core values, and the suitability interview assesses core competencies, core values, and traits required of an RCMP police officer.',
+      },
+      {
+        question: 'How do RCMP core values affect the suitability interview?',
+        answer: 'The suitability interview uses behavioural questions and assesses whether applicants possess the competencies, values, and traits required for the role. Applicants should prepare specific examples that show accountability, respect, service, compassion, and integrity.',
+      },
+      {
+        question: 'Are RCMP core values part of the Online Entrance Assessment?',
+        answer: 'The RCMP does not publish the exact workstyle scoring model, but the workstyle section assesses tendencies and behaviour. The official values are useful context for understanding the conduct standard expected of RCMP employees.',
+      },
+      {
+        question: 'What is the most important RCMP value for applicants?',
+        answer: 'All five values matter, but integrity is especially important during recruiting. The RCMP suitability interview guidance emphasizes honest, complete disclosure and warns against falsifying, minimizing, leaving out, or withholding information.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Royal Canadian Mounted Police core values', url: 'https://rcmp.ca/en/corporate-information/royal-canadian-mounted-police-core-values' },
+      { label: 'RCMP — Basic requirements to be an RCMP police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/basic-requirements-be-rcmp-police-officer' },
+      { label: 'RCMP — Become an RCMP officer: Complete a suitability interview', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-suitability-assessment-interview' },
+    ],
+  },
 ];
