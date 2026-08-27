@@ -4750,4 +4750,115 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Become an RCMP officer: Complete a suitability interview', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-suitability-assessment-interview' },
     ],
   },
+  {
+    slug: 'rcmp-language-comprehension-section',
+    title: 'RCMP Language Comprehension Section: Word Meanings and Relationships',
+    subtitle: 'What the official OEA guide says about Section 2, plus a practical way to train before test day',
+    date: '2026-08-27',
+    author: 'RCMP Prep Team',
+    readTime: '5 min read',
+    category: 'Assessment Prep',
+    excerpt: 'The RCMP language comprehension section has two timed components: word meanings and word relationships. Here is what the official guide says and how to prepare without wasting time.',
+    coverImage: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&q=80',
+    content: `
+<p>The RCMP language comprehension section is <strong>Section 2</strong> of the Online Entrance Assessment. The official RCMP preparatory guide says it has <strong>two components</strong>: word meanings and word relationships. You have <strong>5 minutes</strong> to complete each component, receive <strong>1 point for each correct answer</strong>, and may skip questions by selecting <strong>"I don't know"</strong>.</p>
+
+<p>This is one of the quieter OEA sections. Applicants often spend most of their prep time on spatial reasoning, memory, or numerical skills, then assume language comprehension will take care of itself. That can be a mistake. The section is short, timed, and easy to underestimate if you have not practiced moving quickly through vocabulary and analogy-style questions.</p>
+
+<h2>What the RCMP Says Section 2 Includes</h2>
+
+<p>The official RCMP Online Assessment Preparatory Guide describes the language comprehension section as two separate parts:</p>
+
+<ul>
+  <li><strong>Part A: Word meanings</strong> — You read a word and select the answer option with the most similar meaning.</li>
+  <li><strong>Part B: Word relationships</strong> — You are given a pair of words with a relationship, then choose the answer that creates a similar relationship with another word.</li>
+</ul>
+
+<p>The guide says each component has a 5-minute time limit. It also says there is a timer at the bottom of the page, that each correct answer is worth 1 point, and that you may skip questions. If you do not know the answer, the guide says to select "I don't know."</p>
+
+<h2>Part A: Word Meanings</h2>
+
+<p>Word meanings are essentially synonym questions. The official guide's example gives the word "Glad" and asks for the most similar meaning from a list of options. The correct answer is "Happy."</p>
+
+<p>That sounds simple, but the challenge is speed and precision. You are not writing an essay or proving deep literary knowledge. You are choosing the closest meaning under time pressure. The wrong answers may be obviously unrelated, but they can also include words that feel emotionally similar while meaning something different.</p>
+
+<p>A good approach is to define the word in your head before looking at the answer choices. If you look at the choices first, distractor words can pull you away from the clean meaning. Start with your own quick definition, then match it to the closest option.</p>
+
+<h2>Part B: Word Relationships</h2>
+
+<p>Word relationships are analogy questions. The official guide gives this example: <strong>Tie: Rope</strong>, then <strong>Cut: ____</strong>. The correct answer is "Saw" because you tie with a rope and cut with a saw.</p>
+
+<p>The key is to name the relationship before choosing the answer. In that example, the relationship is action to tool. Other relationship types can include opposite meanings, category and example, cause and effect, part and whole, or object and use.</p>
+
+<p>If you only stare at the words, analogies can feel vague. If you force yourself to say the relationship in a short phrase, the right answer usually becomes clearer.</p>
+
+<h2>How to Train for the Language Section</h2>
+
+<p>Because each component is only 5 minutes, your prep should be short and timed. Long untimed vocabulary sessions are less useful than quick drills that mimic the pressure of the real section.</p>
+
+<ul>
+  <li><strong>Do 5-minute synonym drills.</strong> Pick a set of vocabulary questions and move quickly. Your goal is accurate first-pass recognition.</li>
+  <li><strong>Practice naming analogy relationships.</strong> For every word relationship question, say the relationship out loud or write it in 2 to 4 words before answering.</li>
+  <li><strong>Build a skip habit.</strong> The RCMP guide says you may skip questions and choose "I don't know." Do not burn a full minute on one word if the section is only 5 minutes.</li>
+  <li><strong>Review mistakes by category.</strong> Track whether you missed synonyms, opposites, tool relationships, category relationships, or cause-and-effect relationships. That tells you what to drill next.</li>
+  <li><strong>Read plain government-style writing.</strong> RCMP applicants benefit from being comfortable with clear, formal language. Read official pages carefully and summarize the main point in one sentence.</li>
+</ul>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+  <li><strong>Treating it as easy because it is verbal.</strong> The section is timed. Familiar words can still cost points if you move too slowly.</li>
+  <li><strong>Choosing a related word instead of a similar meaning.</strong> For word meanings, the answer needs to be closest in meaning, not just connected to the same topic.</li>
+  <li><strong>Skipping the relationship step.</strong> In analogy questions, identify how the first two words relate before testing the options.</li>
+  <li><strong>Overthinking simple answers.</strong> The official examples are direct. Do not make the relationship more complicated than it needs to be.</li>
+  <li><strong>Refusing to move on.</strong> If you genuinely do not know the answer, use the skip option and protect the rest of the section.</li>
+</ul>
+
+<h2>A Simple 7-Day Practice Plan</h2>
+
+<p>You do not need months to improve this section. A focused week can make the format feel much more familiar.</p>
+
+<ol>
+  <li><strong>Day 1:</strong> Read the official RCMP preparatory guide and complete a short untimed set to learn the format.</li>
+  <li><strong>Days 2-3:</strong> Do one 5-minute word meanings drill per day. Review only the words you missed or guessed.</li>
+  <li><strong>Days 4-5:</strong> Do one 5-minute word relationships drill per day. Write the relationship type for every missed question.</li>
+  <li><strong>Day 6:</strong> Combine both parts back to back: 5 minutes for meanings, then 5 minutes for relationships.</li>
+  <li><strong>Day 7:</strong> Do a final timed run, then stop. The goal is confidence and pacing, not cramming until you are tired.</li>
+</ol>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP language comprehension section is short, but it still counts. The official guide says it tests word meanings and word relationships, gives 5 minutes for each component, and awards 1 point for each correct answer. Your best prep is simple: practice vocabulary precision, learn common analogy relationships, and get comfortable making decisions quickly.</p>
+
+<blockquote>Do not let the verbal section become the part you ignored. Ten minutes of focused language practice per day can make Section 2 feel much calmer on test day.</blockquote>
+
+<p>If you are preparing for the full Online Entrance Assessment, try our <a href="/sample">free RCMP practice test sample</a> and get used to switching between language, numerical, spatial, memory, business reasoning, and workstyle sections.</p>
+    `,
+    faqs: [
+      {
+        question: 'What is the RCMP language comprehension section?',
+        answer: 'The RCMP says language comprehension is Section 2 of the Online Entrance Assessment. It consists of two components: word meanings and word relationships.',
+      },
+      {
+        question: 'How long is the RCMP language comprehension section?',
+        answer: 'The official RCMP preparatory guide says you have 5 minutes to complete the word meanings component and 5 minutes to complete the word relationships component.',
+      },
+      {
+        question: 'What are word meanings on the RCMP OEA?',
+        answer: 'Word meanings questions ask you to read a word and select the option with the most similar meaning.',
+      },
+      {
+        question: 'What are word relationships on the RCMP OEA?',
+        answer: 'Word relationship questions give you a pair of words with a relationship, then ask you to choose the answer that best creates the same kind of relationship with another word.',
+      },
+      {
+        question: 'Can you skip language comprehension questions on the RCMP assessment?',
+        answer: 'Yes. The RCMP preparatory guide says you may skip questions and, if you do not know the answer, select "I don\'t know."',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Online career presentation and entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/online-career-presentation-and-entrance-assessment' },
+      { label: 'RCMP — RCMP Online Assessment Preparatory Guide', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+    ],
+  },
 ];
