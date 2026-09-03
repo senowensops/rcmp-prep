@@ -20,6 +20,181 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'rcmp-health-conditions-medical-suitability',
+    title: 'RCMP Health Conditions: What Can Affect Medical Suitability?',
+    subtitle: 'The official condition categories, disclosure rules, and how the RCMP looks at fitness for duty',
+    date: '2026-09-03',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP lists health conditions that could affect medical suitability, but a condition does not always mean automatic disqualification. Here is what the official guidance actually says.',
+    coverImage: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80',
+    content: `
+<p>The RCMP says some medical and psychological conditions can affect your suitability to become a police officer. That does not mean every listed condition is an automatic disqualification. It means the condition, treatment, limitations, prognosis, and effect on essential policing duties may need to be reviewed during the medical and psychological suitability process.</p>
+
+<p>This is an area where applicants can easily panic or, worse, start guessing. The safer approach is simple: understand the official categories, disclose fully, and prepare documentation early if a condition applies to you.</p>
+
+<h2>Where Health Suitability Fits in the RCMP Process</h2>
+
+<p>After the suitability interview, the RCMP says applicants see RCMP-designated physicians and psychologists for medical and psychological suitability assessments. This part of the process is divided into two stages:</p>
+
+<ul>
+  <li><strong>Psychological Suitability Screening (PSS)</strong></li>
+  <li><strong>Medical Screening Process (MSP)</strong></li>
+</ul>
+
+<p>The RCMP says you must complete all steps of the Psychological Suitability Screening and be deemed psychologically qualified before continuing to the medical screening. If successful at these stages, you receive medical clearance.</p>
+
+<p>The RCMP also says it covers the cost of the basic assessments. Separate applicant-paid exams, like vision and hearing forms, may still have their own costs earlier in the process.</p>
+
+<h2>What The Standard Is Really About</h2>
+
+<p>The RCMP frames medical suitability as a fitness-for-duty question. Police officers must be able to safely perform essential operational duties, including:</p>
+
+<ul>
+  <li>operational driving</li>
+  <li>use of firearms and other intervention equipment</li>
+  <li>physical confrontation and use of force</li>
+  <li>operational decision-making</li>
+</ul>
+
+<p>That matters because the issue is not whether you have ever had a health problem. The issue is whether a current or past condition, treatment, limitation, or restriction affects your ability to train and work safely as an operational police officer.</p>
+
+<h2>Health Information You Are Expected To Declare</h2>
+
+<p>The official RCMP health conditions page says applicants are expected to declare current health conditions, even if they seem minor. That includes medical and psychological conditions.</p>
+
+<p>The RCMP also expects applicants to declare:</p>
+
+<ul>
+  <li>when the condition, limitation, or restriction started</li>
+  <li>treatment plans and prognosis</li>
+  <li>past medical and psychological history that required treatment or medication, or caused limitations or restrictions</li>
+  <li>medications, supplements, and substances, including why and when use started</li>
+  <li>any medical aids needed at the time of the medical assessment, such as orthotics, braces, or support animals</li>
+</ul>
+
+<p>The RCMP is direct about honesty here: if you do not declare your full medical and psychological history, it could be seen as dishonest and may affect your success in the application process.</p>
+
+<h2>Health Changes During Recruiting Still Matter</h2>
+
+<p>Disclosure is not a one-time task. The RCMP says it is crucial to declare health changes during the recruiting process before starting the Cadet Training Program at Depot, as well as any issues that emerge during training.</p>
+
+<p>In plain English: if something changes after your forms are submitted, do not assume silence is safer. A new diagnosis, injury, medication, or limitation can become a bigger issue if it looks like you hid it.</p>
+
+<h2>Official Condition Categories The RCMP Lists</h2>
+
+<p>The RCMP lists categories of health conditions that could cause restrictions, limitations, or both, to your ability to perform essential police officer duties. The list includes the following categories.</p>
+
+<h3>Respiratory disease</h3>
+<p>The RCMP lists asthma, chronic obstructive pulmonary disease (COPD), and emphysema.</p>
+
+<h3>Cardiovascular conditions</h3>
+<p>The RCMP lists high blood pressure, ischemic heart disease, myocardial infarction, cerebrovascular disease, aortic aneurysm, congestive heart failure, cardiac arrhythmia including use of a pacemaker, valvular heart disease, cardiomyopathy, and peripheral vascular disease.</p>
+
+<h3>Neurological conditions</h3>
+<p>The RCMP lists seizure disorders and epilepsy, narcolepsy, sleep apnea and other disturbances of consciousness, vestibular disorders, multiple sclerosis, disorders of coordination and muscle control, head injury, post traumatic conditions, and intracranial tumour.</p>
+
+<p>One specific published threshold matters here: the RCMP page says seizure disorders and epilepsy must be seizure free for at least <strong>5 years</strong>.</p>
+
+<h3>Endocrine conditions</h3>
+<p>The RCMP lists diabetes mellitus, thyroid disease, Cushing's disease, Addison's disease, and pheochromocytoma.</p>
+
+<h3>Musculoskeletal conditions</h3>
+<p>The RCMP lists rheumatoid arthritis and systemic lupus erythematosus, disease of the spine, significant joint dysfunction with unstable ligament or tear such as shoulder dislocation or ligamentous tears, and limb amputation.</p>
+
+<h3>Abdominal conditions</h3>
+<p>The RCMP lists inflammatory bowel disease including Crohn's disease and ulcerative colitis, irritable bowel syndrome, kidney diseases such as kidney stone or kidney failure requiring dialysis, and liver disease such as cirrhosis.</p>
+
+<h3>Eye or ear conditions</h3>
+<p>The RCMP lists ocular disorders associated with impaired visual function, including distant visual acuity, field of vision and colour vision, as well as hearing impairment such as hearing acuity, Meniere's disease, and benign positional vertigo.</p>
+
+<h3>Hematologic conditions</h3>
+<p>The RCMP lists bleeding disorders and clotting disorders, including deep vein thrombosis and pulmonary embolisms. It also says use of anti-coagulation medications may pose a risk to occupational policing and therefore may be disqualifying.</p>
+
+<h3>Immunologic, allergic, oncologic and infectious conditions</h3>
+<p>The RCMP lists immune disorders with an immunocompromised state, cancer, life-threatening allergies, and chronic or life-threatening infectious disease.</p>
+
+<h3>Psychological, psychiatric or mental health conditions</h3>
+<p>The RCMP lists mood disorders including depression, mania, and bipolar disorder; anxiety disorders including panic disorder and phobia; stress-related disorders including post-traumatic stress disorder; psychotic disorders including schizophrenia and delusional disorder; cognitive disorders including acquired brain injury and dementia; personality disorders; substance use and addictive disorders; ADHD and autism spectrum disorder; and other mental health disorders associated with significant distress or impairment, including somatoform disorder and obsessive compulsive disorder.</p>
+
+<h3>Other health conditions</h3>
+<p>The RCMP also says other chronic or medical conditions that cause functional impairment may interfere with policing duties. Unique conditions are assessed to determine suitability.</p>
+
+<h2>Does A Listed Condition Automatically Disqualify You?</h2>
+
+<p>Not always. The RCMP uses careful wording: these are conditions that <strong>could</strong> impact suitability. The medical suitability page also says a history of psychological difficulties does not automatically mean your application will be rejected.</p>
+
+<p>For the Medical Screening Process, the RCMP says you may not meet the minimum fitness-for-duty requirements if a medical or psychological condition, treatment, limitation, or restriction:</p>
+
+<ul>
+  <li>impairs performance so you cannot complete essential duties safely and effectively</li>
+  <li>increases risk to your personal health to an unacceptable level</li>
+  <li>increases risk of sudden incapacitation or impaired judgment</li>
+  <li>could spread an infectious disease to coworkers or the public</li>
+  <li>makes you ineligible to drive professionally under Canadian Medical Association guidelines</li>
+</ul>
+
+<p>That is the practical test. A diagnosis matters, but the functional impact, treatment, stability, documentation, and operational risk matter too.</p>
+
+<h2>What Documentation Might Be Requested?</h2>
+
+<p>During the Medical Screening Process, the RCMP Health Services Officer may request additional information from your primary health care provider or specialist. The official page gives examples, including relevant medical records, specialist consultations, and further testing or investigations.</p>
+
+<p>If you have a history of psychological difficulties, the RCMP says you may need to provide documentation showing how the difficulties were resolved and/or how you have functioned successfully over time.</p>
+
+<p>This is why preparation matters. You do not need to self-diagnose or argue your own clearance. But if you know a condition is in your history, it helps to have accurate dates, treatment details, current status, and provider records ready.</p>
+
+<h2>Common Mistakes Applicants Make</h2>
+
+<ul>
+  <li><strong>Self-disqualifying too early.</strong> A listed condition does not always mean the door is closed. Let the official process assess your actual situation.</li>
+  <li><strong>Minimizing something because it seems minor.</strong> The RCMP says to declare current conditions even if they seem minor to you.</li>
+  <li><strong>Forgetting supplements or substances.</strong> The official guidance includes medications, supplements, and substances, prescription or otherwise.</li>
+  <li><strong>Waiting to organize records.</strong> If a specialist report or old record is needed, it can take time to get. Start early if you know there is something to explain.</li>
+  <li><strong>Hiding a change during the process.</strong> The RCMP says health changes during recruiting and before Depot should be declared.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP medical suitability standard is not about having a perfect health history. It is about whether you can safely train and perform the essential duties of an operational police officer. Some conditions may create restrictions, delays, extra documentation, or disqualification. Others may be manageable if they are stable, disclosed, and properly documented.</p>
+
+<blockquote>The worst strategy is guessing. Read the official guidance, disclose fully, and treat medical honesty the same way the RCMP treats every other part of recruiting: as a test of judgment and integrity.</blockquote>
+
+<p>If you are still working toward the first major assessment gate, start with our <a href="/sample">free RCMP practice test sample</a> while you organize the paperwork and health-documentation side in parallel.</p>
+    `,
+    faqs: [
+      {
+        question: 'What health conditions can affect RCMP medical suitability?',
+        answer: 'The RCMP lists categories including respiratory, cardiovascular, neurological, endocrine, musculoskeletal, abdominal, eye or ear, hematologic, immunologic, allergic, oncologic, infectious, psychological, psychiatric, mental health, and other chronic or functionally impairing conditions.',
+      },
+      {
+        question: 'Does a medical condition automatically disqualify you from the RCMP?',
+        answer: 'Not always. The RCMP says some conditions could impact suitability, but the medical screening focuses on whether the condition, treatment, limitation, or restriction affects essential policing duties or creates unacceptable risk.',
+      },
+      {
+        question: 'Do you have to disclose minor health conditions to the RCMP?',
+        answer: 'Yes. The RCMP says applicants are expected to declare all current health conditions, even if they seem minor, including medical and psychological conditions.',
+      },
+      {
+        question: 'Can epilepsy affect an RCMP application?',
+        answer: 'Yes. The RCMP lists seizure disorders and epilepsy under neurological conditions and states that seizure disorders and epilepsy must be seizure free for at least 5 years.',
+      },
+      {
+        question: 'Can mental health history disqualify you from the RCMP?',
+        answer: 'It can affect suitability, but it is not always automatic. The RCMP says a history of psychological difficulties does not automatically mean rejection, and applicants may need documentation showing how difficulties were resolved or how they have functioned successfully over time.',
+      },
+      {
+        question: 'Should you report health changes during the RCMP recruiting process?',
+        answer: 'Yes. The RCMP says applicants should declare health changes during recruiting before starting Depot, as well as issues that emerge during cadet training.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Health conditions that could impact your suitability to become a police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/health-conditions-could-impact-your-suitability-become-police-officer' },
+      { label: 'RCMP — Complete psychological and medical suitability assessments', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/complete-psychological-and-medical-suitability-assessments' },
+    ],
+  },
+  {
     slug: 'how-to-pass-rcmp-online-assessment',
     title: 'How to Pass the RCMP Online Assessment',
     subtitle: 'A section-by-section breakdown of what\'s tested and how to prepare',
