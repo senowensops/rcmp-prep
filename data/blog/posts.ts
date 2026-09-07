@@ -195,6 +195,147 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    slug: 'rcmp-readiness-check-before-you-apply',
+    title: 'RCMP Readiness Check: The 7 Questions to Ask Before You Apply',
+    subtitle: 'The official self-assessment areas, from core values and fitness to relocation, shift work, and Depot training',
+    date: '2026-09-07',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP Readiness Check is a short official self-assessment for applicants. Here are the 7 areas it asks about and what they mean before you start the application.',
+    coverImage: 'https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80',
+    content: `
+<p>The RCMP now publishes an official <strong>Readiness Check</strong> for people thinking about applying to become police officers. It is not the Online Entrance Assessment, and it is not a scored practice test. It is a short self-assessment meant to help you decide whether you are fit and suited for a policing career before you start the formal application.</p>
+
+<p>That makes it useful. A lot of applicants focus only on the online assessment and miss the bigger question: are you actually ready for the lifestyle, standards, training, and judgment expected of an RCMP officer?</p>
+
+<h2>What Is The RCMP Readiness Check?</h2>
+
+<p>The official RCMP page describes the Readiness Check as a short quiz to help you know if you are ready to apply to be a police officer with the RCMP. The quiz has <strong>7 questions</strong>. Each one points to a practical part of the job or application standard.</p>
+
+<p>If you answer yes to every question, the RCMP result says you might have what it takes and points you to the basic requirements, the application process, and the apply-now page. If you answer no to one or more questions, the result points you back to the requirement areas you should review.</p>
+
+<h2>The 7 Areas The RCMP Asks About</h2>
+
+<p>The Readiness Check is built around these 7 areas:</p>
+
+<ul>
+  <li>RCMP core values</li>
+  <li>operational driving</li>
+  <li>use of force, firearms, and other police tools</li>
+  <li>physical fitness</li>
+  <li>26-week training at Depot</li>
+  <li>relocation</li>
+  <li>shift work</li>
+</ul>
+
+<p>Those areas are not random. They map closely to issues that can surprise applicants later: honesty and conduct, emergency driving, firearms, physical demands, being away at training, moving after graduation, and working nights, weekends, or holidays.</p>
+
+<h2>1. Core Values</h2>
+
+<p>The first readiness question is about whether you are willing to live by the RCMP's core values in your personal and work life. The RCMP lists its core values as <strong>act with integrity</strong>, <strong>show respect</strong>, <strong>demonstrate compassion</strong>, <strong>take responsibility</strong>, and <strong>serve with excellence</strong>.</p>
+
+<p>This matters throughout the process. The online assessment, RMAQ, suitability interview, background checks, and training environment are all looking for more than test-taking ability. They are looking for consistency, honesty, self-control, and judgment.</p>
+
+<h2>2. Operational Driving</h2>
+
+<p>The Readiness Check asks whether you would be comfortable driving in difficult conditions, including emergency response driving, extreme weather, rough terrain, and transporting people in custody.</p>
+
+<p>The RCMP also links this to the licence requirement. Applicants must have a valid, unrestricted Canadian driver's licence before they apply. The readiness page explains that unrestricted means full driving privileges with no probationary conditions or limitations, and the ability to drive on your own at any time, on any road.</p>
+
+<h2>3. Use Of Force, Firearms, And Police Tools</h2>
+
+<p>The RCMP asks whether you are comfortable with the reality that police officers may need to use force, carry firearms, and use approved intervention options. The readiness page lists tools such as firearms, pepper spray, handcuffs, conducted energy weapons, and batons.</p>
+
+<p>This is not about wanting conflict. It is about accepting that the role can require controlled, lawful, accountable intervention under pressure. If that idea makes you hesitate, it is better to think honestly before applying than to discover the mismatch later.</p>
+
+<h2>4. Physical Fitness</h2>
+
+<p>The Readiness Check gives practical fitness examples. It says policing is physically demanding and that you should be able to:</p>
+
+<ul>
+  <li>run 5 km without stopping in 30 to 35 minutes</li>
+  <li>do 10 or more push-ups in a row from your toes, lowering your chin or chest to the ground</li>
+  <li>lift and carry 45 lb for 50 m without stopping to rest</li>
+  <li>complete an intense 30-minute workout that keeps your heart rate up the entire time</li>
+  <li>run 500 m in under 2 minutes and 25 seconds</li>
+</ul>
+
+<p>The official point is simple: you need to arrive at Depot physically ready. Waiting until the end of the application to start training is a bad bet.</p>
+
+<h2>5. Depot Training</h2>
+
+<p>The RCMP Readiness Check asks whether you are willing to spend <strong>26 weeks</strong> at the RCMP Academy in Regina, Saskatchewan. It also asks you to think about being away from family and friends, training long hours, sometimes training on weekends, living in co-ed dorms onsite, and studying areas such as Canadian law, police procedures, investigations, firearms, defensive tactics, police driving, fitness, and drill.</p>
+
+<p>That is a serious commitment. Passing the Online Entrance Assessment is only one early gate. The real training environment is full-time and demanding.</p>
+
+<h2>6. Relocation</h2>
+
+<p>The RCMP asks whether you are willing to move anywhere in Canada after graduating from the Academy. The readiness page says the RCMP is a national police service and that, while personal preference is considered, postings are based on operational needs, including northern and remote regions.</p>
+
+<p>This is one of the biggest life questions in the process. If you are applying with a spouse, children, mortgage, business, or strong local roots, talk through the relocation reality early.</p>
+
+<h2>7. Shift Work</h2>
+
+<p>The final readiness question asks whether you are willing to work nights, weekends, and/or holidays. The RCMP says policing is a 24/7 service, shifts may extend based on operational needs, and officers may be called in outside regular hours, including in the middle of the night.</p>
+
+<p>For some applicants, that is part of the appeal. For others, it is the piece they have not fully pictured yet. Either way, the official quiz is asking you to be honest before you apply.</p>
+
+<h2>How To Use The Readiness Check</h2>
+
+<p>Do not treat the Readiness Check like a box to click through. Use it as a filter:</p>
+
+<ul>
+  <li><strong>If you answer yes to all 7 areas</strong>, review the basic requirements and start preparing for the application process.</li>
+  <li><strong>If you answer no to a practical requirement</strong>, like fitness or licence readiness, build a plan before applying.</li>
+  <li><strong>If you answer no to a lifestyle requirement</strong>, like relocation, shift work, or Depot separation, talk it through with the people affected.</li>
+  <li><strong>If you answer no to values, force, or firearms</strong>, slow down and think carefully about whether policing is the right fit.</li>
+</ul>
+
+<p>The Readiness Check will not tell you whether you can pass the Online Entrance Assessment. It tells you whether the bigger career path deserves a serious yes.</p>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP Readiness Check is short, but it points to the real shape of the job: values, judgment, fitness, training, mobility, and 24/7 public service. If those answers are strong, the next practical step is getting ready for the application and the Online Entrance Assessment.</p>
+
+<blockquote>The best time to find out whether the RCMP path fits your life is before the application clock starts.</blockquote>
+
+<p>If you are ready to move toward the first assessment gate, start with our <a href="/sample">free RCMP Online Entrance Assessment sample</a> and build from there.</p>
+    `,
+    faqs: [
+      {
+        question: 'What is the RCMP Readiness Check?',
+        answer: 'The RCMP Readiness Check is an official short self-assessment quiz that helps potential applicants decide if they are fit and suited for a career in policing before they apply.',
+      },
+      {
+        question: 'How many questions are on the RCMP Readiness Check?',
+        answer: 'The official RCMP Readiness Check has 7 questions covering core values, operational driving, use of force and police tools, physical fitness, Depot training, relocation, and shift work.',
+      },
+      {
+        question: 'Is the RCMP Readiness Check the same as the Online Entrance Assessment?',
+        answer: 'No. The Readiness Check is a pre-application self-assessment. The Online Entrance Assessment is a later application step used to assess cognitive ability and other suitability-related areas.',
+      },
+      {
+        question: 'What fitness does the RCMP Readiness Check mention?',
+        answer: 'The RCMP Readiness Check says applicants should be able to run 5 km without stopping in 30 to 35 minutes, do 10 or more push-ups, carry 45 lb for 50 m, complete an intense 30-minute workout, and run 500 m in under 2 minutes and 25 seconds.',
+      },
+      {
+        question: 'Does the RCMP require relocation after Depot?',
+        answer: 'The RCMP Readiness Check asks whether applicants are willing to move anywhere in Canada after graduation. It says personal preference is considered, but postings are based on operational needs, including northern and remote regions.',
+      },
+      {
+        question: 'What happens if you answer no on the RCMP Readiness Check?',
+        answer: 'The official quiz points you back to the requirement areas connected to your no answers so you can review them before deciding whether to apply.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Readiness Check', url: 'https://www.rcmp.ca/en/careers-rcmp/police-officer-careers/readiness-check' },
+      { label: 'RCMP — Core values', url: 'https://rcmp.ca/en/corporate-information/royal-canadian-mounted-police-core-values' },
+      { label: 'RCMP — Basic requirements to be an RCMP police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/basic-requirements-be-rcmp-police-officer' },
+      { label: 'RCMP — Police officer application process', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process' },
+    ],
+  },
+  {
     slug: 'how-to-pass-rcmp-online-assessment',
     title: 'How to Pass the RCMP Online Assessment',
     subtitle: 'A section-by-section breakdown of what\'s tested and how to prepare',
