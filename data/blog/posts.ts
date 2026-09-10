@@ -20,6 +20,126 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'rcmp-recruiter-contact-before-applying',
+    title: 'RCMP Recruiter Contact: When to Talk to a Recruiter Before Applying',
+    subtitle: 'How recruiter contact, recruiting events, and PFA workshops fit before the formal application',
+    date: '2026-09-10',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP publishes recruiter contact information and recruiting events for applicants before they apply. Here is when it is worth reaching out, what to ask, and what not to outsource.',
+    coverImage: 'https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80',
+    content: `
+<p>Before you submit an RCMP police officer application, you do not have to figure everything out from forums, old videos, or guesses. The RCMP publishes official recruiter contact information by province and territory, and it also runs recruiting events across the country.</p>
+
+<p>That matters because a lot of application mistakes happen before the Online Entrance Assessment ever starts. Applicants apply before reading the basic requirements, misunderstand the 14-day assessment window, wait too long to prepare documents, or skip useful recruiting events like career presentations and Police Fitness Assessment workshops.</p>
+
+<p>A recruiter cannot make the process easy for you. But if you use the official contact points well, you can get cleaner answers before you create avoidable delays.</p>
+
+<h2>Does the RCMP Let You Contact a Recruiter?</h2>
+
+<p>Yes. The RCMP has an official <strong>Contact a police officer recruiter</strong> page. It says recruiters are there to help people learn more about becoming RCMP police officers.</p>
+
+<p>The page lets applicants choose their province or territory to view recruitment-office contact information. The same page also says that if JavaScript is not available, contact information for every province and territory is listed on the page.</p>
+
+<p>The practical takeaway is simple: use the current official page instead of saving an email address from an old screenshot or forum post. Recruiting contacts can change, and the RCMP page is the source to trust.</p>
+
+<h2>When It Is Worth Contacting a Recruiter</h2>
+
+<p>Contacting a recruiter is most useful when your question is specific and tied to the official process. Good reasons include:</p>
+
+<ul>
+  <li>you are not sure how a basic requirement applies to your situation</li>
+  <li>you want to confirm the right official application path before using GC Jobs</li>
+  <li>you need help understanding which recruiting event or workshop fits your stage</li>
+  <li>you live in a province or territory with a listed regional recruiting office and want local guidance</li>
+  <li>you are an experienced police officer or former Regular Member and the contact page lists a separate contact stream</li>
+</ul>
+
+<p>That last point matters because the RCMP contact page separates some general applicant contacts from experienced police officer or ex-Regular Member contacts in certain regions. If that applies to you, do not assume the general applicant email is always the best path.</p>
+
+<h2>What Recruiters Should Not Replace</h2>
+
+<p>A recruiter is not a shortcut around the official requirements. Before asking basic questions, read the RCMP pages for basic requirements, physical standards, the Readiness Check, and the application process.</p>
+
+<p>A recruiter also should not be treated as your personal medical, psychological, legal, or security-clearance decision-maker. The RCMP has separate stages for suitability, psychological and medical assessments, field investigation, and security assessment. If your question is about whether a health history, conduct issue, travel history, or background detail will affect your file, ask carefully and honestly, but understand that the formal assessment happens later in the process.</p>
+
+<h2>Use Recruiting Events Before You Apply</h2>
+
+<p>The RCMP also publishes an official recruiting events page. It says people interested in careers as police officers, community constables, or telecommunications operators can attend recruiting events and meet real police officers or 9-1-1 police dispatchers.</p>
+
+<p>The RCMP says it hosts both in-person and virtual events across the country, including:</p>
+
+<ul>
+  <li>career presentations</li>
+  <li>workshops</li>
+  <li>career fairs</li>
+  <li>youth camps</li>
+  <li>special events</li>
+  <li>police fitness tests</li>
+</ul>
+
+<p>For RCMP police officer applicants, those events can be especially useful before you apply. A career presentation can clarify the lifestyle and process. A workshop can help you understand a specific step. A Police Fitness Assessment event can show you what the physical side looks like before Depot is close.</p>
+
+<h2>Questions to Ask Before the Formal Application</h2>
+
+<p>If you contact a recruiter or attend an event, go in prepared. Better questions get better answers.</p>
+
+<ul>
+  <li><strong>Application path:</strong> Is the current official path still to apply through GC Jobs for the police officer posting?</li>
+  <li><strong>Timing:</strong> What should I understand before the career presentation video and Online Entrance Assessment window?</li>
+  <li><strong>Events:</strong> Are there upcoming career presentations, workshops, or Police Fitness Assessment sessions in my region?</li>
+  <li><strong>Documents:</strong> Are there common document issues applicants in this region should prepare for early?</li>
+  <li><strong>Local context:</strong> Is there anything province-specific I should know before applying?</li>
+  <li><strong>Applicant stream:</strong> If I am an experienced officer or former RCMP member, which contact stream should I use?</li>
+</ul>
+
+<p>Keep the tone straightforward. Recruiters are not there to be impressed by polished speeches. They are there to help you understand the role and process. Be honest, specific, and respectful of their time.</p>
+
+<h2>Where This Fits in the RCMP Funnel</h2>
+
+<p>The official application path still matters. The RCMP application process page lays out the formal steps, including the online application, online career presentation and entrance assessment, required forms and documents, suitability interview, psychological and medical suitability assessments, and field investigation and security assessment.</p>
+
+<p>Recruiter contact and recruiting events sit before or alongside those steps. They help you make a better decision and avoid preventable confusion, but they do not replace the application itself.</p>
+
+<h2>Bottom Line</h2>
+
+<p>If you are serious about applying, use the official RCMP recruiter and recruiting-event pages early. They are useful for clarifying the path, finding local events, and asking specific questions before you submit an application.</p>
+
+<blockquote>Do not outsource your judgment to a recruiter, but do not guess in silence either. Read the official requirements, prepare your questions, and use the official RCMP contact points when something genuinely needs clarification.</blockquote>
+
+<p>If your next step is the Online Entrance Assessment, start with our <a href="/sample">free RCMP practice test sample</a> so the OEA does not become the first time you see the six-section format under pressure.</p>
+    `,
+    faqs: [
+      {
+        question: 'Can you contact an RCMP recruiter before applying?',
+        answer: 'Yes. The RCMP publishes an official Contact a police officer recruiter page with recruitment-office contact information by province and territory.',
+      },
+      {
+        question: 'What should you ask an RCMP recruiter?',
+        answer: 'Ask specific process questions, such as which official application path to use, what recruiting events are available, what to understand before the OEA window, and whether a specific applicant stream applies to you.',
+      },
+      {
+        question: 'Does contacting a recruiter replace the RCMP application process?',
+        answer: 'No. Recruiter contact can help you understand the role and process, but the formal application still follows the RCMP application steps, including the online application, OEA, documents, suitability stages, medical and psychological assessments, and security assessment.',
+      },
+      {
+        question: 'Does the RCMP run recruiting events?',
+        answer: 'Yes. The RCMP says it hosts in-person and virtual events including career presentations, workshops, career fairs, youth camps, special events, and police fitness tests.',
+      },
+      {
+        question: 'Where should you find current RCMP recruiter contact information?',
+        answer: 'Use the current official RCMP Contact a police officer recruiter page rather than old saved contact details, because recruitment-office contact information can change.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Contact a police officer recruiter', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/contact-recruiter' },
+      { label: 'RCMP — Recruiting events', url: 'https://rcmp.ca/en/careers-rcmp/recruiting-events' },
+      { label: 'RCMP — Apply now', url: 'https://rcmp.ca/en/careers-rcmp/apply-now' },
+      { label: 'RCMP — Police officer application process', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process' },
+    ],
+  },
+  {
     slug: 'rcmp-health-conditions-medical-suitability',
     title: 'RCMP Health Conditions: What Can Affect Medical Suitability?',
     subtitle: 'The official condition categories, disclosure rules, and how the RCMP looks at fitness for duty',
