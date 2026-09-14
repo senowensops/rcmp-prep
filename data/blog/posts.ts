@@ -20,6 +20,137 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'rcmp-gc-jobs-application-screen-out',
+    title: 'RCMP GC Jobs Application: How to Avoid Getting Screened Out',
+    subtitle: 'The first official filter happens before the OEA, and a screen-out now means a 3-month wait',
+    date: '2026-09-14',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP says your GC Jobs application answers determine whether you move forward. Here is what to check before submitting, and what happens if you are screened out.',
+    coverImage: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80',
+    content: `
+<p>The RCMP Online Entrance Assessment gets most of the attention, but it is not the first filter in the police officer application. Before the OEA, you submit an online application through the Government of Canada's <strong>GC Jobs</strong> portal.</p>
+
+<p>That first form matters. The current RCMP application page says your responses to screening questions determine whether you move forward in the recruitment process. If your application is screened out at this step, you must wait <strong>3 months</strong> before re-applying.</p>
+
+<p>So before you rush into GC Jobs, slow down enough to make sure your answers line up with the official requirements.</p>
+
+<h2>Where the RCMP Application Starts</h2>
+
+<p>The RCMP says all police officer applications are submitted through the GC Jobs portal. To start, you create a GC Jobs account and complete the online application for the RCMP police officer posting.</p>
+
+<p>The official application-process overview describes this first step as creating an account on the Government of Canada's GC Jobs online portal. The detailed RCMP page adds that the application includes screening questions based on the RCMP's basic requirements.</p>
+
+<p>In plain English: this is not just a contact form. It is a screening step.</p>
+
+<h2>What "Screened Out" Means at This Step</h2>
+
+<p>The RCMP says your responses determine whether you move forward. If your application is screened out at the online application step, you must wait <strong>3 months</strong> before re-applying.</p>
+
+<p>That does not mean every applicant needs a perfect life history before applying. It does mean you should not guess, skim, or answer based on old forum advice. If a requirement is unclear, read the current RCMP page and use official recruiter contact points before submitting.</p>
+
+<h2>The Requirements to Check Before You Apply</h2>
+
+<p>The RCMP's basic requirements page is the main checklist to review before answering screening questions. At minimum, applicants should understand these areas before opening the application:</p>
+
+<ul>
+  <li><strong>Citizenship or permanent residence:</strong> permanent residents must have lived in Canada for at least 1,095 days, or 3 years, during the past 5 years.</li>
+  <li><strong>Age:</strong> you can apply and begin selection and basic training at 18, but you must be at least 19 to be hired as a police officer.</li>
+  <li><strong>Language:</strong> you must be proficient in English or French. You do not need to be bilingual to apply.</li>
+  <li><strong>Driver's licence:</strong> you need a valid unrestricted driver's licence, with a specific remote rural exception before Depot.</li>
+  <li><strong>Education:</strong> you need a Canadian secondary school diploma or equivalent, with equivalency rules for education completed outside Canada.</li>
+  <li><strong>First aid and CPR:</strong> you need Level C CPR for infant, child, and adult, valid at Depot enrollment and requested closer to the end of recruiting.</li>
+  <li><strong>Health, vision, and hearing:</strong> you must meet standards assessed later by RCMP Health Services and qualified providers.</li>
+  <li><strong>Fitness:</strong> you need to be in good physical shape before applying; Depot is not designed to build beginner fitness.</li>
+  <li><strong>Relocation and shift work:</strong> you must be willing to relocate anywhere in Canada and work shifts, including nights, weekends, evenings, and holidays.</li>
+  <li><strong>Legal and conduct requirements:</strong> the RCMP lists legal issues, criminal behaviour, misconduct, and financial situations that can stop an application.</li>
+</ul>
+
+<p>If any of those points are not straightforward for you, do the homework before submitting. A few extra minutes before the application can save a 3-month delay.</p>
+
+<h2>Common GC Jobs Application Mistakes</h2>
+
+<p>The RCMP does not publish a full list of every screening question. But based on the official requirements, the predictable mistakes are easy to see.</p>
+
+<ul>
+  <li><strong>Applying before reading the current requirements.</strong> The RCMP page was modified in 2026, and older advice may be stale.</li>
+  <li><strong>Assuming the OEA is the first real gate.</strong> The online application can screen you out before you ever reach the assessment link.</li>
+  <li><strong>Answering too quickly on edge cases.</strong> Permanent residence history, education equivalency, driver's licence status, legal matters, and prior misconduct all deserve careful review.</li>
+  <li><strong>Using old wait-period information.</strong> The current RCMP online-application page says a screen-out at this step creates a 3-month wait before re-applying.</li>
+  <li><strong>Guessing instead of contacting recruiting.</strong> The RCMP says applicants with questions can attend a recruiting event or contact a recruiter before submitting the online application.</li>
+</ul>
+
+<h2>What Happens After You Are Screened In?</h2>
+
+<p>After you are screened into the process, the RCMP says you will be contacted by email inviting you to attend an online career presentation. The same invitation email includes the link to the RCMP Online Entrance Assessment.</p>
+
+<p>After the career presentation, you complete the OEA. The RCMP says you have <strong>14 days</strong> to complete the assessment from the date you receive the link. The assessment includes 6 sections:</p>
+
+<ul>
+  <li>workstyle preference</li>
+  <li>language comprehension</li>
+  <li>numerical skills</li>
+  <li>spatial skills</li>
+  <li>memory quotient</li>
+  <li>business reasoning</li>
+</ul>
+
+<p>The RCMP also says completing the OEA does not guarantee advancement. If you pass, your application is retained, but you are not yet active in the recruitment process. If you are unsuccessful, you can re-apply after a 3-month waiting period.</p>
+
+<h2>Before You Click Submit</h2>
+
+<p>Use this quick check before submitting the GC Jobs application:</p>
+
+<ul>
+  <li>Read the current RCMP basic requirements page.</li>
+  <li>Confirm your citizenship or permanent-resident eligibility.</li>
+  <li>Confirm your licence, education, language, and age status.</li>
+  <li>Review legal requirements and anything in your history that could affect suitability.</li>
+  <li>Check whether a recruiting event or recruiter contact would clarify your situation.</li>
+  <li>Start OEA prep before the career presentation email arrives.</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>The GC Jobs application is the first RCMP police officer screening step. The current RCMP page says screening answers determine whether you move forward, and a screen-out at this stage means waiting <strong>3 months</strong> before re-applying.</p>
+
+<blockquote>Do not treat the first application like admin. Treat it like the first test of whether you understand the requirements and can follow the process carefully.</blockquote>
+
+<p>If you are confident you meet the requirements and want to prepare for the next gate, start with our <a href="/sample">free RCMP practice test sample</a> so the OEA format is familiar before the 14-day clock starts.</p>
+    `,
+    faqs: [
+      {
+        question: 'Where do you apply to become an RCMP police officer?',
+        answer: 'The RCMP says all police officer applications are submitted through the Government of Canada GC Jobs portal.',
+      },
+      {
+        question: 'Can you get screened out before the RCMP Online Entrance Assessment?',
+        answer: 'Yes. The RCMP says the online application includes screening questions based on the basic requirements, and your responses determine whether you move forward in the recruitment process.',
+      },
+      {
+        question: 'How long do you wait if your RCMP online application is screened out?',
+        answer: 'The current RCMP online-application page says that if your application is screened out at this step, you must wait 3 months before re-applying.',
+      },
+      {
+        question: 'What should you review before submitting the RCMP GC Jobs application?',
+        answer: 'Review the official RCMP basic requirements, including citizenship or permanent residence, age, language, licence, education, first aid timing, health standards, fitness, relocation, shift work, and legal requirements.',
+      },
+      {
+        question: 'What happens after the RCMP screens you into the process?',
+        answer: 'The RCMP says you will be contacted by email inviting you to attend an online career presentation, and the same invitation email includes the link to the Online Entrance Assessment.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/submit-online-application' },
+      { label: 'RCMP — Basic requirements to be an RCMP police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/basic-requirements-be-rcmp-police-officer' },
+      { label: 'RCMP — Online career presentation and entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/online-career-presentation-and-entrance-assessment' },
+      { label: 'RCMP — Police officer application process', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process' },
+      { label: 'RCMP — Recruiting events', url: 'https://rcmp.ca/en/careers-rcmp/recruiting-events' },
+      { label: 'RCMP — Contact a police officer recruiter', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/contact-recruiter' },
+    ],
+  },
+  {
     slug: 'rcmp-recruiter-contact-before-applying',
     title: 'RCMP Recruiter Contact: When to Talk to a Recruiter Before Applying',
     subtitle: 'How recruiter contact, recruiting events, and PFA workshops fit before the formal application',
@@ -1118,7 +1249,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-prepare-for-rcmp-oea-after-deferral',
     title: 'How to Prepare for the RCMP OEA After a Deferral',
-    subtitle: 'A smart 6-month comeback plan for candidates who want to reapply stronger',
+    subtitle: 'A smart 3-month comeback plan for candidates who want to reapply stronger',
     date: '2026-03-25',
     author: 'RCMP Prep Team',
     readTime: '7 min read',
@@ -1126,14 +1257,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Got deferred on the RCMP online assessment? Here’s how to use the waiting period properly, what to train first, and how to come back with a stronger score instead of just more hope.',
     coverImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
     faqs: [
-      { question: 'Can you reapply after failing the RCMP online assessment?', answer: 'Yes. If you are deferred after the RCMP online assessment, you can typically reapply after the required waiting period. For many candidates, that period is 6 months.' },
+      { question: 'Can you reapply after failing the RCMP online assessment?', answer: 'Yes. The current RCMP online-assessment page says unsuccessful applicants can re-apply after a 3-month waiting period.' },
       { question: 'How do I prepare for the RCMP OEA after a deferral?', answer: 'Start by identifying the sections most likely to have hurt your score, then train those skills with timed, section-specific practice. The best approach is a structured plan covering numerical, spatial, memory, business reasoning, and workstyle reflection.' },
       { question: 'Why do people get deferred on the RCMP OEA?', answer: 'Most RCMP OEA deferrals happen because candidates underestimate the test, perform poorly in one or more sections, or answer the workstyle portion inconsistently. Preparation and self-awareness reduce that risk significantly.' },
-      { question: 'Is 6 months enough to improve for the RCMP test?', answer: 'Yes. Six months is enough time for most candidates to make major gains if they practice consistently. Even 20 to 30 focused minutes per day compounds meaningfully over that period.' },
+      { question: 'Is 3 months enough to improve for the RCMP test?', answer: 'Yes, if you train consistently and focus on the sections that caused problems. Even 20 to 30 focused minutes per day compounds meaningfully over that period.' },
       { question: 'What should I study first after an RCMP deferral?', answer: 'Start with your weakest or most neglected sections — usually spatial reasoning, memory, or numerical reasoning — while also reviewing your approach to the workstyle and business reasoning sections.' },
     ],
     content: `
-<p>If you were deferred on the RCMP Online Entrance Assessment (OEA), the best move is not to wait passively for your reapplication window — it is to train with a plan. Most candidates can make meaningful gains over a 6-month deferral period by improving the exact sections that usually cause weak scores: spatial reasoning, memory, numerical reasoning, business judgment, and workstyle consistency.</p>
+<p>If you were deferred on the RCMP Online Entrance Assessment (OEA), the best move is not to wait passively for your reapplication window — it is to train with a plan. The current RCMP online-assessment page says unsuccessful applicants can re-apply after a <strong>3-month waiting period</strong>. That is enough time to make meaningful gains if you train the exact sections that usually cause weak scores: spatial reasoning, memory, numerical reasoning, business judgment, and workstyle consistency.</p>
 
 <p>Getting deferred on the RCMP OEA stings. Most people take it personally for a few days. That's normal. But if you want the practical truth: a deferral is often less about your potential and more about your preparation. The OEA is designed to catch people who assume they can "wing it." If you came up short, your next shot should feel completely different.</p>
 
@@ -1153,17 +1284,14 @@ export const blogPosts: BlogPost[] = [
 
 <p>You do not need perfect certainty to build a smart study plan. You just need honesty about what felt weak.</p>
 
-<h2>Step 2: Build a 6-Month RCMP OEA Comeback Plan</h2>
+<h2>Step 2: Build a 3-Month RCMP OEA Comeback Plan</h2>
 
 <p>You do not need to grind for hours a day. What matters is consistency and specificity. A realistic plan looks more like 20 to 40 minutes per day, 4 to 5 days per week.</p>
 
 <ol>
   <li><strong>Month 1: Diagnose and rebuild basics</strong> — Take a realistic sample test. Figure out which sections feel weakest. Review percentage change, ratios, and chart reading for numerical. Reintroduce yourself to cube nets, rotations, and mechanical diagrams for spatial. Start short memory drills with timed recall.</li>
   <li><strong>Month 2: Section-by-section reps</strong> — Spend each week emphasizing one area: spatial, memory, numerical, language, then business reasoning. Keep workstyle reflection in the background. The goal is not variety — it's reps.</li>
-  <li><strong>Month 3: Add time pressure</strong> — Once you understand the format, start practicing at realistic pace. This is where the training starts to feel like the real thing instead of a study session.</li>
-  <li><strong>Month 4: Fix the recurring error patterns</strong> — By now you should know your traps. Maybe you misread chart axes, confuse mirrored shapes with rotated ones, or miss colours and positions in memory scenes. Name the pattern, then attack it directly.</li>
-  <li><strong>Month 5: Mixed assessment sessions</strong> — Start doing blended sessions that force you to switch from one skill type to another. That transition cost is part of the real OEA experience, and most candidates never practice it.</li>
-  <li><strong>Month 6: Full simulation and confidence reps</strong> — In the last month before reapplying, run full-length sessions periodically and tighten the weak spots that remain. You want familiarity, pace, and calm — not last-minute panic.</li>
+  <li><strong>Month 3: Add time pressure and mixed sessions</strong> — Once you understand the format, start practicing at realistic pace and blend all six sections. Use the final weeks to simulate test conditions, tighten weak spots, and stay calm if one section feels rough.</li>
 </ol>
 
 <h2>Step 3: Focus on the Most Trainable Sections First</h2>
@@ -1180,7 +1308,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Step 4: Don't Waste the Deferral Window</h2>
 
-<p>The biggest mistake candidates make after a deferral is doing nothing for five months and then panicking in the last two weeks. Familiarity with the test is not preparation. Real improvement comes from repeated exposure, answer review, and timed practice over time.</p>
+<p>The biggest mistake candidates make after a deferral is doing nothing for most of the waiting period and then panicking in the last two weeks. Familiarity with the test is not preparation. Real improvement comes from repeated exposure, answer review, and timed practice over time.</p>
 
 <p>If you use the deferral period properly, you come back with three major advantages:</p>
 
@@ -1207,14 +1335,13 @@ export const blogPosts: BlogPost[] = [
 
 <p>If you were deferred on the RCMP OEA, use the waiting period like a training block. The candidates who pass on their next attempt are usually not the smartest ones — they're the ones who came back with a plan, repeated reps, and a better understanding of how the test actually works.</p>
 
-<blockquote>A deferral can either become six months of frustration or six months of compounding improvement. The better choice is obvious.</blockquote>
+<blockquote>A deferral can either become 3 months of frustration or 3 months of compounding improvement. The better choice is obvious.</blockquote>
 
 <p>Want a structured place to start? Try the <a href="/sample">free RCMP practice test sample</a> and then train with the full <a href="/test/1">practice assessment</a> at <a href="https://rcmpprep.ca">RCMPPrep.ca</a>.</p>
     `,
     sources: [
-      { label: 'RCMP — How to Apply', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
-      { label: 'RCMP — Complete the Online Entrance Assessment', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
-      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://www.rcmp-grc.gc.ca/en/careers-rcmp/police-officer-careers/rcmp-online-assessment-preparatory-guide' },
+      { label: 'RCMP — Online career presentation and entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/online-career-presentation-and-entrance-assessment' },
+      { label: 'RCMP — Online Assessment Preparatory Guide', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/rcmp-online-assessment-preparatory-guide' },
     ],
   },
   {
@@ -4223,22 +4350,21 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 
 <h2>The Official RCMP Rule for Returning Applicants</h2>
 
-<p>On its "How to apply" page, the RCMP says that if you applied in the past, you may be eligible to reapply if you meet all of the following conditions:</p>
+<p>On its current online-application page, the RCMP says that if you applied in the past, you may be eligible to reapply if you meet all of the following conditions:</p>
 
 <ul>
   <li><strong>your deferral period has passed</strong></li>
   <li><strong>if no reapplication date was provided, 3 months have passed since your file was concluded</strong></li>
   <li><strong>you still meet the RCMP's qualifications and requirements</strong></li>
-  <li><strong>you meet the vision and hearing standards and have obtained the 2 required medical assessments</strong></li>
 </ul>
 
-<p>The RCMP also says that if you fail to meet one of those conditions, your application could be rejected and you may <strong>not be permitted to reapply for an additional 6 months</strong>.</p>
+<p>The RCMP also says that if you do not meet one of those conditions, your application may be rejected and you will not be able to re-apply for <strong>3 months</strong>.</p>
 
 <h2>What If You Were Unsuccessful on the RCMP Online Entrance Assessment?</h2>
 
 <p>The OEA page gives a specific rule for that stage. It says that if you are unsuccessful after completing the RCMP Online Entrance Assessment, you will be eligible to reapply after a <strong>waiting period of 3 months</strong>.</p>
 
-<p>That means the OEA itself has its own published reapplication window. But if your file was concluded at some later stage, the RCMP's <strong>returning-applicant conditions</strong> are the safer rule to follow, because they add extra requirements beyond simply waiting.</p>
+<p>That means the OEA itself has its own published reapplication window. But if your file was concluded at some later stage, the RCMP's <strong>returning-applicant conditions</strong> are the safer rule to follow, because they add requirements beyond simply waiting.</p>
 
 <h2>What the RCMP Means by “Meet the Requirements Again”</h2>
 
@@ -4259,11 +4385,11 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 
 <h2>The Vision and Hearing Detail Many Returning Applicants Miss</h2>
 
-<p>This is the part a lot of people miss. The RCMP says returning applicants must <strong>meet the vision and hearing standards and have obtained the 2 required medical assessments</strong>.</p>
+<p>This is the part a lot of people miss. Even if you are allowed to reapply, you still need to meet the RCMP's current requirements. Those include the published health, vision, and hearing standards.</p>
 
 <p>On the RCMP page for required forms and documents, those two assessments are the <strong>vision examination</strong> and <strong>hearing examination</strong>. That same page says the results are valid for <strong>2 years</strong>.</p>
 
-<p>If your old exams are expired, or you never completed them, do not assume you can just hit reapply and sort it out later. The RCMP's published wording is more strict than that.</p>
+<p>If your old exams are expired, or you never completed them, do not assume your previous file settles the issue. Check the current requirements before you apply again.</p>
 
 <h2>What Happens After You Reapply?</h2>
 
@@ -4275,7 +4401,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 
 <ul>
   <li><strong>Assuming every RCMP reapplication rule is just “wait 3 months.”</strong> Sometimes it is, but not always. The returning-applicant page adds extra conditions.</li>
-  <li><strong>Ignoring the medical-exam requirement.</strong> The RCMP specifically says returning applicants need the vision and hearing standards and the 2 required medical assessments.</li>
+  <li><strong>Ignoring health, vision, and hearing standards.</strong> The RCMP still expects returning applicants to meet current qualifications and requirements.</li>
   <li><strong>Reapplying before your file-conclusion date window has passed.</strong> If no date was given in your letter, the RCMP says 3 months from file conclusion is the default.</li>
   <li><strong>Changing your story.</strong> The RCMP says it reviews your new application with your old file, so consistency still matters a lot.</li>
 </ul>
@@ -4299,11 +4425,11 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       },
       {
         question: 'Do returning RCMP applicants need new vision and hearing exams?',
-        answer: 'Returning applicants must meet the RCMP vision and hearing standards and have obtained the 2 required medical assessments. The RCMP says vision and hearing exam results are valid for 2 years.',
+        answer: 'Returning applicants must still meet the RCMP qualifications and requirements. The RCMP says vision and hearing exam results are valid for 2 years.',
       },
       {
         question: 'What happens if you reapply to the RCMP too early or without meeting the conditions?',
-        answer: 'The RCMP says failure to meet one of the returning-applicant conditions could result in you being rejected from the recruitment process and not being permitted to reapply for an additional 6 months.',
+        answer: 'The current RCMP online-application page says that if you do not meet one of the returning-applicant conditions, your application may be rejected and you will not be able to re-apply for 3 months.',
       },
       {
         question: 'Does the RCMP look at your old application when you reapply?',
@@ -4311,10 +4437,10 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       },
     ],
     sources: [
-      { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
-      { label: 'RCMP — Become an RCMP officer: Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
-      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
-      { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
+      { label: 'RCMP — Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/submit-online-application' },
+      { label: 'RCMP — Online career presentation and entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/online-career-presentation-and-entrance-assessment' },
+      { label: 'RCMP — Basic requirements to be an RCMP police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/basic-requirements-be-rcmp-police-officer' },
+      { label: 'RCMP — How to complete the forms', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/complete-forms' },
     ],
   },
   {
@@ -4432,9 +4558,9 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 
 <h2>Step 1: You Submit the Online Application</h2>
 
-<p>The RCMP says the online application is submitted through GC Jobs. To find the posting, applicants search for "police officer" under job title and look under jobs open to the public.</p>
+<p>The RCMP says all police officer applications are submitted through the Government of Canada's GC Jobs portal.</p>
 
-<p>This first step still matters. The RCMP says you may be screened out of the recruitment process because of the responses provided in your online application. If you are screened out at this step, the RCMP says you must wait <strong>6 months</strong> before reapplying.</p>
+<p>This first step still matters. The RCMP says the online application includes screening questions based on the basic requirements, and your responses determine whether you move forward in the recruitment process. If you are screened out at this step, the RCMP says you must wait <strong>3 months</strong> before reapplying.</p>
 
 <p>That is why the online application is not just paperwork. It is the first eligibility screen.</p>
 
@@ -4541,11 +4667,10 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       },
     ],
     sources: [
-      { label: 'RCMP — Become an RCMP officer: Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-online-application' },
-      { label: 'RCMP — Become an RCMP officer: Watch a career presentation video', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-attend-career-presentation' },
-      { label: 'RCMP — Become an RCMP officer: Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
-      { label: 'RCMP — Become an RCMP officer: Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-required-forms-documents' },
-      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'RCMP — Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/submit-online-application' },
+      { label: 'RCMP — Online career presentation and entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/online-career-presentation-and-entrance-assessment' },
+      { label: 'RCMP — Submit the required forms and documents', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/submit-required-forms-and-documents' },
+      { label: 'RCMP — Basic requirements to be an RCMP police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/basic-requirements-be-rcmp-police-officer' },
     ],
   },
   {
@@ -4559,19 +4684,19 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     excerpt: 'Before you write the RCMP Online Entrance Assessment, your online application can still screen you out. Here is what the official RCMP pages say about GC Jobs, the career presentation video, and the OEA link.',
     coverImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
     content: `
-<p>Before you write the RCMP Online Entrance Assessment, you first submit an online application through <strong>GC Jobs</strong>. The RCMP says applicants should search for <strong>"police officer"</strong> under job title and look under the <strong>"Jobs open to the public"</strong> tab. It also warns that you may be <strong>screened out</strong> because of the responses in your online application, and if that happens at this step, you must wait <strong>6 months</strong> before re-applying.</p>
+<p>Before you write the RCMP Online Entrance Assessment, you first submit an online application through <strong>GC Jobs</strong>. The RCMP says all applications are submitted through the Government of Canada's GC Jobs portal. It also warns that you may be <strong>screened out</strong> because of the responses in your online application, and if that happens at this step, you must wait <strong>3 months</strong> before re-applying.</p>
 
 <p>That makes the first online application more important than some applicants realize. The OEA is the first major assessment, but it is not the first filter.</p>
 
 <h2>Step 1: Find the RCMP Police Officer Posting on GC Jobs</h2>
 
-<p>The official RCMP online-application page says the application is submitted through GC Jobs. To find the right posting, the RCMP tells applicants to search for <strong>"police officer"</strong> under the job title and look under <strong>"Jobs open to the public"</strong> in the search results.</p>
+<p>The official RCMP online-application page says the application is submitted through GC Jobs. Start from the current RCMP application page and use the linked GC Jobs posting rather than relying on old saved links or forum screenshots.</p>
 
 <p>This is basic, but it matters. If you are applying from a saved link, an old forum post, or a search result, make sure you are looking at the current official RCMP recruiting path and the public posting.</p>
 
 <h2>Step 2: Your Online Answers Can Screen You Out</h2>
 
-<p>The RCMP says you may be screened out of the recruitment process because of the responses provided in your online application. It also says that if your application is screened out at this step, you must wait <strong>6 months</strong> before re-applying.</p>
+<p>The RCMP says your responses determine whether you move forward in the recruitment process. It also says that if your application is screened out at this step, you must wait <strong>3 months</strong> before re-applying.</p>
 
 <p>In plain English: do not treat the online application like a casual form. Your answers need to be accurate, complete, and consistent with the RCMP's published basic requirements.</p>
 
@@ -4623,14 +4748,14 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 
 <ul>
   <li><strong>Applying before reading the basic requirements.</strong> The online form can screen you out, so read the official requirements first.</li>
-  <li><strong>Assuming the OEA is the first thing that matters.</strong> The online application comes first, and the RCMP publishes a 6-month wait if you are screened out at that step.</li>
+  <li><strong>Assuming the OEA is the first thing that matters.</strong> The online application comes first, and the RCMP publishes a 3-month wait if you are screened out at that step.</li>
   <li><strong>Ignoring the career presentation video.</strong> The RCMP calls it mandatory, and the OEA begins after you finish watching it.</li>
   <li><strong>Starting OEA prep after the link arrives.</strong> The RCMP gives you 14 days from the date you receive the assessment link.</li>
 </ul>
 
 <h2>Bottom Line</h2>
 
-<p>The RCMP online application is not just a doorway to the Online Entrance Assessment. It is a screening step of its own. Officially, you apply through GC Jobs, your responses can screen you out, a screen-out at that stage creates a <strong>6-month</strong> wait, and the mandatory career presentation video comes before your <strong>14-day</strong> OEA window.</p>
+<p>The RCMP online application is not just a doorway to the Online Entrance Assessment. It is a screening step of its own. Officially, you apply through GC Jobs, your responses can screen you out, a screen-out at that stage creates a <strong>3-month</strong> wait, and the mandatory career presentation video comes before your <strong>14-day</strong> OEA window.</p>
 
 <blockquote>The best move is simple: read the official requirements before applying, answer carefully, and start preparing for the OEA before the assessment link arrives.</blockquote>
 
@@ -4639,7 +4764,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     faqs: [
       {
         question: 'Where do you apply online to become an RCMP officer?',
-        answer: 'The RCMP says applicants submit the online application through GC Jobs. It tells applicants to search for "police officer" under job title and look under the "Jobs open to the public" tab.',
+        answer: 'The RCMP says applicants submit the online application through the Government of Canada GC Jobs portal.',
       },
       {
         question: 'Can the RCMP screen you out before the Online Entrance Assessment?',
@@ -4647,7 +4772,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       },
       {
         question: 'How long do you wait if the RCMP screens out your online application?',
-        answer: 'The RCMP says that if your application is screened out at the online application step, you must wait 6 months before re-applying.',
+        answer: 'The current RCMP page says that if your application is screened out at the online application step, you must wait 3 months before re-applying.',
       },
       {
         question: 'Is the RCMP career presentation video mandatory?',
@@ -4659,10 +4784,9 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       },
     ],
     sources: [
-      { label: 'RCMP — Become an RCMP officer: Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-submit-online-application' },
-      { label: 'RCMP — Become an RCMP officer: Watch a career presentation video', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-attend-career-presentation' },
-      { label: 'RCMP — Become an RCMP officer: Complete the RCMP online entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-complete-rcmp-online-entrance-assessment' },
-      { label: 'RCMP — Become an RCMP officer: Before you apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-before-you-apply' },
+      { label: 'RCMP — Submit an online application', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/submit-online-application' },
+      { label: 'RCMP — Online career presentation and entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/online-career-presentation-and-entrance-assessment' },
+      { label: 'RCMP — Basic requirements to be an RCMP police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/basic-requirements-be-rcmp-police-officer' },
     ],
   },
   {
