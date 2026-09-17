@@ -20,6 +20,163 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'rcmp-pfa-field-test-attribute-evaluation-interview',
+    title: 'RCMP PFA Field Test and Attribute Evaluation Interview: The New Early Step',
+    subtitle: 'Applicants who apply on or after September 15, 2026 must pass the PFA Field test before moving forward',
+    date: '2026-09-17',
+    author: 'RCMP Prep Team',
+    readTime: '7 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP now lists an early applicant fitness and attribute interview stage after the OEA. Here is what changed, what the PFA Field test includes, and how the AE Interview is assessed.',
+    coverImage: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80',
+    content: `
+<p>The RCMP application funnel has an important early step that applicants should not miss. After the Online Career Presentation and Online Entrance Assessment, the RCMP says successful applicants will be contacted by a Proactive Recruiter to schedule two things: the <strong>Police Fitness Assessment Field test</strong> and the <strong>Attribute Evaluation Interview</strong>.</p>
+
+<p>This matters because the PFA Field test is now more than a vague future fitness check. The RCMP says applicants who apply on or after <strong>September 15, 2026</strong> must successfully complete the PFA Field test to continue in the recruitment process.</p>
+
+<p>If you are preparing for the RCMP Online Entrance Assessment, that does not mean you should ignore fitness or interview prep until later. The new step comes early enough that you want both tracks moving before the OEA link arrives.</p>
+
+<h2>Where This Step Fits in the RCMP Process</h2>
+
+<p>The current RCMP application-process menu places <strong>Applicant fitness test and attribute interview</strong> after the Online Career Presentation and Entrance Assessment, and before the required forms and documents stage.</p>
+
+<p>The official page says that once you have successfully completed the Online Career Presentation and Entrance Assessment, a Proactive Recruiter will contact you to schedule:</p>
+
+<ul>
+  <li>your Police Fitness Assessment Field version</li>
+  <li>your Attribute Evaluation Interview</li>
+</ul>
+
+<p>The recruiter provides more information about scheduling, preparation requirements, and next steps. In plain English: the OEA is still a major early gate, but passing it is not the end of the early-stage work.</p>
+
+<h2>The New PFA Field Requirement</h2>
+
+<p>The RCMP describes the PFA Field test as a predictive version of the Police Fitness Assessment that can be delivered with less equipment while still measuring readiness for the RCMP Academy.</p>
+
+<p>The key new requirement is direct: applicants who apply on or after <strong>September 15, 2026</strong> must successfully complete the PFA Field test to continue in the Regular Member recruitment process.</p>
+
+<p>That is different from older applicant advice that treated the PFA mostly as a Depot issue. Depot fitness still matters, but the field version now sits in the recruiting funnel for new applicants.</p>
+
+<h2>What the PFA Field Test Includes</h2>
+
+<p>The official PFA page says the Field test is pass or fail and has three components. Applicants must meet the established standard for each component.</p>
+
+<h3>1. Foot Pursuit</h3>
+
+<p>You run a total distance of <strong>500 m</strong> as quickly and safely as possible. The course layout can vary by facility, such as multiple laps of a 50 m course, a 250 m out-and-back course, or a square or circular course.</p>
+
+<p><strong>Standard:</strong> complete the course in <strong>2 minutes and 30 seconds or less</strong>.</p>
+
+<h3>2. Emergency Assistance</h3>
+
+<p>This component combines repeated lifting and carrying. The RCMP says applicants lift <strong>20.5 kg</strong> or <strong>45 lb</strong> sandbags, complete 14 lifts to a height of 1 m, complete one final lift to 1.4 m, then complete repeated run-and-carry sequences with two 20.5 kg sandbags.</p>
+
+<p><strong>Standard:</strong> complete the entire event in <strong>3 minutes and 45 seconds or less</strong>.</p>
+
+<h3>3. Physical Control</h3>
+
+<p>This component uses a medicine ball toss. You sit with your back against a wall and throw a <strong>4.5 kg</strong> or <strong>10 lb</strong> medicine ball forward. The RCMP says applicants receive one practice attempt and three attempts for best distance.</p>
+
+<p><strong>Standard:</strong> throw the medicine ball at least <strong>2.6 m</strong>.</p>
+
+<p>The PFA page also says applicants receive a minimum five-minute recovery period between assessment components and should arrive in appropriate athletic clothing and footwear.</p>
+
+<h2>How the PFA Field Test Differs From the Depot PFA</h2>
+
+<p>The RCMP lists two versions of the Police Fitness Assessment:</p>
+
+<ul>
+  <li><strong>Field version:</strong> the Regular Member version used during the recruiting process.</li>
+  <li><strong>Bona fide Occupational Requirement version:</strong> the cadet version used at the RCMP Academy, also described as the gold standard.</li>
+</ul>
+
+<p>The Academy version is different from the Field test. At Depot, cadets complete a version with four assessments, including tasks such as a 500 m run with directional changes and a fence climb, sled push and pull, loading weighted objects, simulated evacuation, and a high-priority task.</p>
+
+<p>Do not blend the two versions together when you prepare. The Field test is the recruiting requirement. The Academy version is the Depot standard.</p>
+
+<h2>What the Attribute Evaluation Interview Assesses</h2>
+
+<p>The same early stage also includes the <strong>Attribute Evaluation Interview</strong>. The RCMP says it is designed to assess personal qualities and attributes that are important for success as an RCMP police officer.</p>
+
+<p>The official page says AE Interview questions were developed after analysis of RCMP constable duties. The questions are behavioural, meaning they ask about how you handled situations in your past. The RCMP wants specific examples, not general statements about what you would do.</p>
+
+<p>The current page lists five competencies:</p>
+
+<ul>
+  <li><strong>Problem solving:</strong> analyzing problems, risks, opportunities, and issues, then identifying appropriate solutions and timely actions.</li>
+  <li><strong>Teamwork:</strong> working cooperatively with others, building a positive work climate, and helping teams function.</li>
+  <li><strong>Communication:</strong> receiving and conveying ideas or information in a way that increases understanding.</li>
+  <li><strong>Self-control and composure:</strong> staying effective under stress, opposition, provocation, or hostility.</li>
+  <li><strong>Courage of convictions:</strong> trusting your ability to make difficult decisions and take appropriate action in the best interest of others.</li>
+</ul>
+
+<h2>Use STAR, But Do Not Sound Rehearsed</h2>
+
+<p>The RCMP recommends the STAR technique for behavioural answers:</p>
+
+<ul>
+  <li><strong>Situation:</strong> describe the context.</li>
+  <li><strong>Task:</strong> explain what you were asked to complete or solve.</li>
+  <li><strong>Action:</strong> explain what you did.</li>
+  <li><strong>Result:</strong> explain the outcome of your actions.</li>
+</ul>
+
+<p>STAR is useful because it keeps answers specific. But do not turn it into a memorized speech. Strong answers sound like real experience: clear context, honest decisions, specific actions, and a result you can explain without pretending everything was perfect.</p>
+
+<h2>How to Prepare Without Overcomplicating It</h2>
+
+<p>For the PFA Field test, start early. The RCMP encourages regular cardiovascular training, strength training, and functional fitness activities. The official PFA page also recommends three to five cardiovascular sessions per week and two to three resistance sessions per week, with some workouts including running, jumping, lifting, and carrying.</p>
+
+<p>For the AE Interview, build a story bank before you are scheduled. Look for real examples from work, school, sport, volunteering, family responsibility, leadership, conflict, mistakes, pressure, or service. You want examples that show what you did, not just what happened around you.</p>
+
+<p>A practical prep split looks like this:</p>
+
+<ul>
+  <li>keep OEA practice moving so the first online gate does not surprise you</li>
+  <li>train running, carrying, lifting, and upper-body power several times per week</li>
+  <li>draft one or two STAR examples for each AE competency</li>
+  <li>attend a PFA workshop if one is available through the RCMP recruiting events page</li>
+  <li>avoid guessing based on old PARE advice or outdated application timelines</li>
+</ul>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP has made the early application funnel more physical and more behavioural. After the Online Career Presentation and Entrance Assessment, applicants can be scheduled for the PFA Field test and the Attribute Evaluation Interview. For applicants who apply on or after <strong>September 15, 2026</strong>, passing the PFA Field test is required to continue.</p>
+
+<blockquote>Prepare like the early process has two lanes: the OEA tests how you think under timed conditions, and the next stage tests whether your fitness and past behaviour are already moving in the right direction.</blockquote>
+
+<p>If you are still working on the OEA side, start with our <a href="/sample">free RCMP practice test sample</a> so you are not learning the six-section format under pressure.</p>
+    `,
+    faqs: [
+      {
+        question: 'Is the RCMP PFA Field test required for applicants?',
+        answer: 'Yes, for new applicants who apply on or after September 15, 2026. The RCMP says they must successfully complete the PFA Field test to continue in the Regular Member recruitment process.',
+      },
+      {
+        question: 'When does the RCMP PFA Field test happen?',
+        answer: 'The RCMP places the applicant fitness test and attribute interview after the Online Career Presentation and Entrance Assessment, and says a Proactive Recruiter will contact successful applicants to schedule the PFA Field test and AE Interview.',
+      },
+      {
+        question: 'What are the RCMP PFA Field test components?',
+        answer: 'The RCMP lists three pass/fail components: a 500 m foot pursuit, an emergency assistance event using 20.5 kg sandbags, and a physical control medicine ball toss.',
+      },
+      {
+        question: 'What is the RCMP Attribute Evaluation Interview?',
+        answer: 'The AE Interview is a behavioural interview that assesses qualities considered essential for RCMP constables, including problem solving, teamwork, communication, self-control and composure, and courage of convictions.',
+      },
+      {
+        question: 'Does STAR work for the RCMP AE Interview?',
+        answer: 'Yes. The RCMP recommends the STAR technique: Situation, Task, Action, Result. Applicants should use specific past examples instead of speaking in general terms.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — Applicant fitness test and attribute interview', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/applicant-fitness-test-and-attribute-interview' },
+      { label: 'RCMP — Police Fitness Assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/police-fitness-assessment' },
+      { label: 'RCMP — Recruiting events', url: 'https://rcmp.ca/en/careers-rcmp/recruiting-events' },
+      { label: 'RCMP — Online career presentation and entrance assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/online-career-presentation-and-entrance-assessment' },
+    ],
+  },
+  {
     slug: 'rcmp-gc-jobs-application-screen-out',
     title: 'RCMP GC Jobs Application: How to Avoid Getting Screened Out',
     subtitle: 'The first official filter happens before the OEA, and a screen-out now means a 3-month wait',
@@ -1763,12 +1920,12 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     author: 'RCMP Prep Team',
     readTime: '8 min read',
     category: 'Application Guide',
-    excerpt: 'The RCMP replaced the PARE test with the Police Fitness Assessment (PFA) on April 1, 2024. The PFA has 4 stations simulating real policing tasks. Here\'s what to expect and how to prepare.',
+    excerpt: 'The RCMP replaced the PARE test with the Police Fitness Assessment (PFA). The field version is now an early recruiting requirement for applicants who apply on or after September 15, 2026.',
     coverImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
     faqs: [
       { question: 'Did the RCMP replace the PARE test?', answer: 'Yes. The RCMP officially replaced the PARE with the Police Fitness Assessment (PFA) on April 1, 2024. The PFA better reflects the actual physical demands of policing.' },
-      { question: 'What is the RCMP Police Fitness Assessment (PFA)?', answer: 'The PFA has 4 stations — Foot Pursuit, Physical Control, Emergency Assistance, and High Priority Task — each simulating a real policing scenario. It is performed in police uniform and duty kit.' },
-      { question: 'Do RCMP applicants need to pass the PFA before Depot?', answer: 'You are not required to pass the PFA before cadet training begins. However, you will need to pass it periodically throughout the 26-week Depot program. A field version may be used during recruiting as a readiness check.' },
+      { question: 'What is the RCMP Police Fitness Assessment (PFA)?', answer: 'The RCMP lists two versions: the PFA Field test used during recruiting, and the bona fide Occupational Requirement version used at the RCMP Academy.' },
+      { question: 'Do RCMP applicants need to pass the PFA before Depot?', answer: 'Applicants who apply on or after September 15, 2026 must successfully complete the PFA Field test to continue in the recruitment process. Cadets also complete the Academy version at Depot.' },
       { question: 'What are the self-assessment fitness standards for RCMP applicants?', answer: 'Applicants should aim to run 5km in under 30 minutes (target: 23:30–26:30) and complete at least 10 continuous push-ups (target: 25–40). These are preparatory benchmarks provided by your recruiter.' },
       { question: 'What is the difference between the PFA gold standard and field version?', answer: 'The gold standard (cadet version) uses full policing equipment — fence climbs, truck loading, sled push/pull, mannequin takedown. The field version is portable and may be used during recruiting to predict your Depot readiness.' },
       { question: 'How do I prepare for the RCMP Police Fitness Assessment?', answer: 'Train 3–5 cardio sessions and 2–3 resistance sessions per week. Focus on running, lifting, carrying, and sustained elevated heart rate. Practice the specific movement patterns: fence climbs, heavy carries, stair sprints, and push/pull work.' },
@@ -1815,7 +1972,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
   <li><strong>Gold Standard (Cadet Version)</strong> — The full version used at RCMP Depot in Regina. Uses actual equipment: real fence, truck bed, sled, and mannequin. Cadets must pass this during training.</li>
   <li><strong>Field Version (Regular Member Version)</strong> — A portable version that may be used during recruiting to assess your readiness. Substitutes some equipment (e.g., weighted items on a wall instead of a truck, medicine ball tosses instead of the sled).</li>
 </ul>
-<p>As an applicant, you are <strong>not required to pass the PFA before entering Depot</strong>. But you may complete the field version as a readiness check, and you'll need to pass the full version periodically once at Depot.</p>
+<p>As an applicant, the version to watch is now the <strong>PFA Field test</strong>. The RCMP says applicants who apply on or after September 15, 2026 must successfully complete the PFA Field test to continue in the recruitment process. You will also need to complete the Academy version once you are at Depot.</p>
 
 <h2>RCMP Fitness Self-Assessment Standards</h2>
 <p>Your recruiter will ask you to track fitness against two benchmarks throughout the application:</p>
@@ -1876,6 +2033,8 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 <p>Start your preparation early, track your progress against the self-assessment benchmarks, and arrive at Depot with margin — not just enough to get by.</p>
     `,
     sources: [
+      { label: 'RCMP — Police Fitness Assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/police-fitness-assessment' },
+      { label: 'RCMP — Applicant fitness test and attribute interview', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/applicant-fitness-test-and-attribute-interview' },
       { label: 'RCMP — Physical Standards to Become an RCMP Officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/physical-standards-become-rcmp-officer' },
       { label: 'RCMP Gazette — RCMP Revamps Fitness Assessment', url: 'https://rcmp.ca/en/gazette/rcmp-revamps-fitness-assessment-reflect-duty-demands-officers' },
     ],
@@ -3955,7 +4114,7 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     content: `
 <p>If you are asking about RCMP fitness requirements, the official answer starts <strong>before</strong> Depot. The RCMP says successful applicants must arrive at cadet training with <strong>good fitness habits</strong> and an <strong>adequate level of fitness</strong>, and it publishes two self-assessment benchmarks to help applicants gauge readiness: a <strong>5 kilometre run</strong> and a <strong>push-up test</strong>.</p>
 
-<p>This is where a lot of applicants get mixed up. Some people think the RCMP fitness standard is just the <a href="/blog/rcmp-pare-test-requirements-training">PARE</a>. Others assume Depot will get them into shape after they arrive. The RCMP's own recruiting page says otherwise. Depot is <strong>not</strong> a beginner fitness program, and applicants are expected to build a base before training starts.</p>
+<p>This is where a lot of applicants get mixed up. Some people still search for the old PARE, while others assume Depot will get them into shape after they arrive. The RCMP's current language points to the Police Fitness Assessment, including a Field test during recruiting and a separate Academy version at Depot. The RCMP also says Depot is <strong>not</strong> a beginner fitness program, so applicants are expected to build a base before training starts.</p>
 
 <h2>What the RCMP Officially Says About Fitness Before Depot</h2>
 
@@ -3993,13 +4152,13 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
 
 <p>The <strong>target</strong> range represents an average level of fitness compared with the cadet population, and the <strong>superior</strong> range reflects a level that should help applicants perform comfortably during training.</p>
 
-<p>Just as important, these published benchmarks are framed as <strong>self-assessments for readiness</strong>. They are not presented on the page as a separate public hiring stage in the same way the PARE is. The safer interpretation is this: the RCMP wants you showing up to Depot already fit enough to handle the work.</p>
+<p>Just as important, these published benchmarks are framed as <strong>self-assessments for readiness</strong>. They are not the same thing as the PFA Field test. The safer interpretation is this: the RCMP wants you building fitness early enough to handle both the recruiting assessment and the later Depot standard.</p>
 
 <h2>What Applicants Usually Get Wrong</h2>
 
 <ul>
   <li><strong>Thinking Depot will get you ready from scratch</strong>. The RCMP explicitly says it is not a boot camp or novice fitness program.</li>
-  <li><strong>Treating PARE as the whole story</strong>. PARE matters, but the RCMP also publishes separate pre-Depot fitness benchmarks and readiness guidance.</li>
+  <li><strong>Using old PARE advice</strong>. The RCMP now publishes Police Fitness Assessment guidance, including a Field test used during recruiting.</li>
   <li><strong>Only testing once</strong>. The RCMP recommends tracking exercise and repeating self-assessments every 6 to 12 weeks.</li>
   <li><strong>Ignoring the “comfortable running, lifting, carrying” part</strong>. The official page makes clear that general physical capacity matters, not just one test result.</li>
 </ul>
@@ -4036,6 +4195,8 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
     ],
     sources: [
       { label: 'RCMP — Physical standards to become an RCMP officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/physical-standards-become-rcmp-officer' },
+      { label: 'RCMP — Police Fitness Assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/police-fitness-assessment' },
+      { label: 'RCMP — Applicant fitness test and attribute interview', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/applicant-fitness-test-and-attribute-interview' },
       { label: 'RCMP — Become an RCMP officer: How to apply', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/become-rcmp-officer-how-apply' },
     ],
   },
