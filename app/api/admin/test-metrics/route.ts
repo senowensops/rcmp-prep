@@ -1,4 +1,27 @@
 import { NextResponse } from "next/server";
+import { createHash, timingSafeEqual } from "node:crypto";
+
+const privateHeaders = { "Cache-Control": "private, no-store" };
+
+function authorize(request: Request) {
+  const expected = process.env.ADMIN_API_KEY?.trim();
+  if (!expected) {
+    return NextResponse.json({ error: "Admin metrics are unavailable" }, { status: 503, headers: privateHeaders });
+  }
+
+  const token = /^Bearer (\S+)$/i.exec(request.headers.get("authorization") ?? "")?.[1];
+  // Hash both values so timingSafeEqual always receives equal-length buffers.
+  if (!token || !timingSafeEqual(
+    createHash("sha256").update(token).digest(),
+    createHash("sha256").update(expected).digest(),
+  )) {
+    return NextResponse.json({ error: "Unauthorized" }, {
+      status: 401,
+      headers: { ...privateHeaders, "WWW-Authenticate": "Bearer" },
+    });
+  }
+  return null;
+}
 
 type AttemptRow = {
   id: string;
@@ -108,7 +131,10 @@ function isSuspiciousCompletion(attempt: AttemptRow) {
   return false;
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  const denied = authorize(request);
+  if (denied) return denied;
+
   try {
     const attempts = await fetchAllAttempts();
     const started = attempts.length;
@@ -190,9 +216,9 @@ export async function GET() {
         answered: attempt.answered_questions,
         skipped: attempt.skipped_count,
       })),
-    });
+    }, { headers: privateHeaders });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error("[test-metrics] Failed to load metrics:", error);
+    return NextResponse.json({ error: "Unable to load metrics" }, { status: 500, headers: privateHeaders });
   }
 }

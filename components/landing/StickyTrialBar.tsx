@@ -1,28 +1,23 @@
 'use client';
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function StickyTrialBar() {
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  const pathname = usePathname();
+  const dismissed = pathname.startsWith("/sample") || pathname.startsWith("/test");
 
   useEffect(() => {
-    // Hide if user has already visited /sample or /test
-    if (typeof window !== 'undefined') {
-      const path = window.location.pathname;
-      if (path.startsWith('/sample') || path.startsWith('/test')) {
-        setDismissed(true);
-        return;
-      }
-    }
+    if (dismissed) return;
 
     const onScroll = () => {
       setVisible(window.scrollY > 100);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [dismissed]);
 
   if (dismissed) return null;
 

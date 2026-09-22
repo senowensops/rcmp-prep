@@ -42,7 +42,7 @@ export function SectionBreakdown() {
     <section className="px-6 py-20 sm:px-8 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <p className="font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)]">What You'll Face</p>
+          <p className="font-head text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)]">What You&apos;ll Face</p>
           <h2 className="mt-3 font-head text-4xl font-extrabold uppercase tracking-[0.04em] text-white sm:text-5xl">
             Six Sections. Zero Surprises.
           </h2>

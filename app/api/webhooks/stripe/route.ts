@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
+import { sendConfirmationEmail } from '@/lib/server/purchaseEmail';
 
 function getStripe() {
   const key = process.env.STRIPE_SECRET_KEY;
@@ -34,38 +35,6 @@ async function storeAccess(email: string, sessionId: string, product: string) {
   }
 }
 
-async function sendConfirmationEmail(email: string, name: string, plan: string, section: string) {
-  // ============================================================
-  // TODO: Add RESEND_API_KEY to Vercel environment variables
-  // 1. Go to https://resend.com — create a free account
-  // 2. Copy your API key from the Resend dashboard
-  // 3. In Vercel: Project → Settings → Environment Variables
-  //    Add: RESEND_API_KEY = re_xxxxxxxxxxxx
-  // 4. Also verify rcmpprep.ca as a sending domain in Resend
-  // 5. Redeploy for the env var to take effect
-  // ============================================================
-
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rcmpprep.ca';
-
-  const res = await fetch(`${baseUrl}/api/send-confirmation`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, name, plan, section }),
-  });
-
-  if (!res.ok) {
-    const body = await res.text();
-    console.error('[stripe-webhook] send-confirmation failed:', res.status, body);
-  } else {
-    const data = await res.json();
-    if (data.warning) {
-      console.warn('[stripe-webhook] send-confirmation warning:', data.warning);
-    } else {
-      console.log('[stripe-webhook] Confirmation email sent:', data.id);
-    }
-  }
-}
-
 export async function POST(req: NextRequest) {
   const body = await req.text();
   const sig = req.headers.get('stripe-signature') ?? '';
@@ -92,10 +61,15 @@ export async function POST(req: NextRequest) {
     console.log('[stripe-webhook] ✅ Payment completed:', session.id, customerEmail, product);
 
     if (customerEmail) {
-      await Promise.allSettled([
+      const outcomes = await Promise.allSettled([
         storeAccess(customerEmail, session.id, product),
         sendConfirmationEmail(customerEmail, customerName, metadata.plan ?? "full", metadata.section ?? ""),
       ]);
+      for (const outcome of outcomes) {
+        if (outcome.status === "rejected") {
+          console.error("[stripe-webhook] Fulfillment failed:", outcome.reason);
+        }
+      }
     }
   }
 

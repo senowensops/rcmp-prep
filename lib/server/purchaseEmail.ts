@@ -1,23 +1,15 @@
-import { NextRequest, NextResponse } from 'next/server';
+import "server-only";
 
-// ============================================================
-// TODO: RESEND API KEY SETUP
-// ============================================================
-// 1. Go to https://resend.com and create a free account
-// 2. Get your API key from the dashboard
-// 3. Add it to Vercel env vars:
-//    - Go to Vercel project → Settings → Environment Variables
-//    - Add: RESEND_API_KEY = re_xxxxxxxxxxxx
-//    - Redeploy for it to take effect
-// 4. Also add your "from" domain in Resend → Domains
-//    (verify rcmpprep.ca so emails come from noreply@rcmpprep.ca)
-// ============================================================
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  })[character]!);
+}
 
 function buildEmailHtml(name: string, email: string, plan: string, section: string): string {
-  const displayName = name && name.trim() ? name.split(' ')[0] : 'there';
-  const accessUrl = `https://rcmpprep.ca/access?email=${encodeURIComponent(email)}`;
+  const displayName = name && name.trim() ? escapeHtml(name.split(' ')[0]) : 'there';
   const isSection = plan === 'section' && section;
-  const sectionLabel = isSection ? section.charAt(0).toUpperCase() + section.slice(1) : '';
+  const sectionLabel = isSection ? escapeHtml(section.charAt(0).toUpperCase() + section.slice(1)) : '';
   const emailTitle = isSection
     ? `You're in — RCMP Prep ${sectionLabel} Section Unlocked`
     : "You're in — RCMP Prep Full Access Unlocked";
@@ -138,7 +130,7 @@ function buildEmailHtml(name: string, email: string, plan: string, section: stri
                   <td style="padding:18px 20px;">
                     <p style="margin:0 0 4px;color:#c8102e;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">How to Access</p>
                     <p style="margin:0;color:rgba(255,255,255,0.7);font-size:14px;line-height:1.6;">
-                      Your access is tied to this email address: <strong style="color:#fff;">${email}</strong><br/>
+                      Your access is tied to this email address: <strong style="color:#fff;">${escapeHtml(email)}</strong><br/>
                       Just visit <a href="https://rcmpprep.ca" style="color:#c8102e;text-decoration:none;">rcmpprep.ca</a> and enter your email to unlock everything — on any device, any time.
                     </p>
                   </td>
@@ -194,62 +186,34 @@ function buildEmailHtml(name: string, email: string, plan: string, section: stri
 </html>`;
 }
 
-export async function POST(req: NextRequest) {
-  try {
-    const { email, name, plan, section } = await req.json();
-
-    if (!email) {
-      return NextResponse.json({ error: 'email is required' }, { status: 400 });
-    }
-
-    const apiKey = process.env.RESEND_API_KEY;
-
-    // ============================================================
-    // TODO: Add RESEND_API_KEY to Vercel environment variables
-    // See instructions at the top of this file
-    // ============================================================
-    if (!apiKey) {
-      console.warn('[send-confirmation] RESEND_API_KEY not set — email not sent');
-      return NextResponse.json(
-        { warning: 'RESEND_API_KEY not configured — email skipped' },
-        { status: 200 }
-      );
-    }
-
-    const emailPlan = plan ?? 'full';
-    const emailSection = section ?? '';
-    const isSection = emailPlan === 'section' && emailSection;
-    const sectionLabel = isSection ? emailSection.charAt(0).toUpperCase() + emailSection.slice(1) : '';
-    const emailSubject = isSection
-      ? `You're in — RCMP Prep ${sectionLabel} Section Unlocked`
-      : "You're in — RCMP Prep Full Access Unlocked";
-    const html = buildEmailHtml(name ?? '', email, emailPlan, emailSection);
-
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'RCMP Prep <noreply@rcmpprep.ca>',
-        to: [email],
-        subject: emailSubject,
-        html,
-      }),
-    });
-
-    if (!res.ok) {
-      const body = await res.text();
-      console.error('[send-confirmation] Resend error:', res.status, body);
-      return NextResponse.json({ error: 'Failed to send email', detail: body }, { status: 500 });
-    }
-
-    const data = await res.json();
-    console.log('[send-confirmation] Email sent:', data.id, '→', email);
-    return NextResponse.json({ success: true, id: data.id });
-  } catch (err) {
-    console.error('[send-confirmation] Unexpected error:', err);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+// Called only by the server-side Stripe webhook after signature verification.
+export async function sendConfirmationEmail(email: string, name: string, plan: string, section: string) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn("[purchase-email] RESEND_API_KEY not configured — email skipped");
+    return { skipped: true };
   }
+
+  const isSection = plan === "section" && section;
+  const sectionLabel = isSection ? section.charAt(0).toUpperCase() + section.slice(1) : "";
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "RCMP Prep <noreply@rcmpprep.ca>",
+      to: [email],
+      subject: isSection
+        ? `You're in — RCMP Prep ${sectionLabel} Section Unlocked`
+        : "You're in — RCMP Prep Full Access Unlocked",
+      html: buildEmailHtml(name, email, plan, section),
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Purchase email failed: ${response.status}`);
+  }
+  return { skipped: false };
 }

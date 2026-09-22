@@ -1,5 +1,7 @@
 # Test Tracking Implementation
 
+> Historical proposal: the current client, fields, and update behavior differ from this document. Do not apply this SQL to production without inspecting the live schema and RLS policies. See README.md for current setup.
+
 ## 1. Create Supabase Table
 
 Run this SQL in Supabase Dashboard → SQL Editor:

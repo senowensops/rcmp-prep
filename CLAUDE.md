@@ -1,6 +1,16 @@
 # RCMP Prep — Claude Project Context
 
-This is the master reference for rcmpprep.ca. Use this to understand the app's architecture, integrations, and how to contribute.
+Start with README.md for current setup, validation, and deployment requirements. This document retains historical product and integration context.
+
+## Current foundation stage
+
+The app is currently free and donation-supported. Paid plans described below are legacy context, not the current landing-page offer. Test questions and behavior are deferred to a later stage, including the memory and spatial update. The three test routes currently share test 1's question bank.
+
+- Run `npm run validate` before submitting changes.
+- Admin metrics require a server-only `ADMIN_API_KEY` bearer token.
+- Purchase emails are sent by `lib/server/purchaseEmail.ts` after Stripe webhook signature verification. The public `/api/send-confirmation` endpoint is removed.
+- Use feature branches and review before merging; `main` is documented as the Vercel production branch.
+- Treat database/RLS notes below and TRACKING_BRIEFING.md as historical until checked against the live schema. See docs/foundation-stage-1.md for deferred work.
 
 ## Quick Facts
 
@@ -49,7 +59,6 @@ rcmp-prep/
 │   ├── api/
 │   │   ├── checkout/route.ts       # Creates Stripe checkout session
 │   │   ├── webhooks/stripe/route.ts # Handles payment completion
-│   │   ├── send-confirmation/route.ts # Sends purchase email via Resend
 │   │   ├── access/route.ts         # Checks if email has access
 │   │   └── leads/route.ts          # Captures email leads
 │   ├── about/, privacy-policy/, terms/
@@ -109,8 +118,8 @@ rcmp-prep/
 
 ### Resend (Email)
 
-- **Sender:** support@rcmpprep.ca (verified domain)
-- **Trigger:** Stripe webhook calls `/api/send-confirmation`
+- **Sender configured in code:** noreply@rcmpprep.ca (verify domain configuration in Resend)
+- **Trigger:** Verified Stripe webhook calls `lib/server/purchaseEmail.ts` directly
 - **Key:** `RESEND_API_KEY` in Vercel env
 
 ### Google Analytics 4
@@ -167,7 +176,8 @@ Script at `~/.openclaw/workspace/scripts/ga-report.py` queries:
 Push to `main` → Vercel builds and deploys automatically.
 
 ```bash
-git add -A && git commit -m "feat: description" && git push origin main
+npm run validate
+# Push a feature branch and review a pull request before merging to main.
 ```
 
 ### Manual Deploy

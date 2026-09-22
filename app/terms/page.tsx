@@ -46,7 +46,7 @@ export default function TermsPage() {
               RCMP Prep is provided free of charge. All three practice tests and all sections are available at no cost. No payment information is collected or required.
             </p>
             <p className="mt-3">
-              If you choose to support the platform voluntarily via the "Support the App" link, that contribution is entirely optional and non-refundable. No additional access or benefits are provided in exchange.
+              If you choose to support the platform voluntarily via the &quot;Support the App&quot; link, that contribution is entirely optional and non-refundable. No additional access or benefits are provided in exchange.
             </p>
           </section>
 
@@ -75,7 +75,7 @@ export default function TermsPage() {
           <section>
             <h2 className="font-head text-xl font-bold uppercase tracking-[0.06em] text-white mb-3">6. Limitation of Liability</h2>
             <p>
-              RCMP Prep is provided <strong className="text-white">"as is"</strong> without warranties of any kind, express or implied. We do not guarantee that use of this platform will result in passing the RCMP assessment or any other examination.
+              RCMP Prep is provided <strong className="text-white">&quot;as is&quot;</strong> without warranties of any kind, express or implied. We do not guarantee that use of this platform will result in passing the RCMP assessment or any other examination.
             </p>
             <p className="mt-3">
               To the maximum extent permitted by applicable law, RCMP Prep and its owner(s) shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of, or inability to use, the platform.
