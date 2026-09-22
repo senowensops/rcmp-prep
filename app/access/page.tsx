@@ -8,10 +8,12 @@ function AccessPageInner() {
   const params = useSearchParams();
   const router = useRouter();
   const email = params.get("email");
-  const [status, setStatus] = useState<"checking" | "granted" | "not_found" | "error">("checking");
+  const [requestStatus, setStatus] = useState<"checking" | "granted" | "not_found" | "error">("checking");
+
+  const status = email ? requestStatus : "not_found";
 
   useEffect(() => {
-    if (!email) { setStatus("not_found"); return; }
+    if (!email) return;
 
     fetch(`/api/access?email=${encodeURIComponent(email)}`)
       .then(r => r.json())

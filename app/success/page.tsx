@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import '@fontsource/barlow-condensed/700.css';
 import '@fontsource/barlow-condensed/800.css';
 import { AccessUnlocker } from './AccessUnlocker';
@@ -126,7 +127,7 @@ export default async function SuccessPage({ searchParams }: Props) {
           </p>
 
           {verified && (
-            <a
+            <Link
               href="/test/1"
               style={{
                 display: 'block',
@@ -145,7 +146,7 @@ export default async function SuccessPage({ searchParams }: Props) {
               }}
             >
               Start Your Test →
-            </a>
+            </Link>
           )}
 
           <p
