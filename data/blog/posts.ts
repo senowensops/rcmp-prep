@@ -5735,4 +5735,166 @@ A: Honesty matters more. Most candidates are at least somewhat nervous. What cre
       { label: 'RCMP — Complete a field investigation and security assessment', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/application-process/complete-field-investigation-and-security-assessment' },
     ],
   },
+  {
+    slug: 'rcmp-indigenous-dice-pre-cadet-programs',
+    title: 'RCMP Indigenous and DICE Pre-Cadet Programs: Support Before You Apply',
+    subtitle: 'Official RCMP programs that offer mentorship, Depot exposure, and application support for Indigenous and underrepresented applicants',
+    date: '2026-10-05',
+    author: 'RCMP Prep Team',
+    readTime: '6 min read',
+    category: 'Application Guide',
+    excerpt: 'The RCMP has official programs that can help some applicants explore policing before Depot, including Indigenous mentorship, the Indigenous Pre-Cadet Training Program, and DICE.',
+    coverImage: 'https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80',
+    content: `
+<p>Not every RCMP applicant starts from the same place. Some people grow up around policing. Others are interested but do not personally know anyone in the RCMP, have questions about whether they belong, or want a clearer look at Depot before committing to the full application process.</p>
+
+<p>The RCMP publishes official programs meant to reduce those barriers. For Indigenous applicants, that includes the <strong>Indigenous Applicant Mentorship Program</strong> and the <strong>Indigenous Pre-Cadet Training Program</strong>. For applicants from racialized and underrepresented groups, the RCMP also offers the <strong>Diverse and Inclusive Pre-Cadet Experience</strong>, usually shortened to <strong>DICE</strong>.</p>
+
+<p>These programs are not shortcuts around the RCMP application standards. They are support pathways: mentorship, exposure, training, and guidance so applicants can make a better-informed decision and prepare with more confidence.</p>
+
+<h2>Why These Programs Matter</h2>
+
+<p>The RCMP says it is committed to building a more inclusive and representative police service that reflects the strengths and diversity of First Nations, Inuit, and Métis communities across Canada. It also says its Indigenous recruitment efforts support a renewed relationship and trust with the approximately 600 Indigenous communities it serves.</p>
+
+<p>For applicants, the practical point is simple: if you qualify for one of these programs, do not assume you have to figure the process out alone. There may be an official RCMP support option that fits your situation before the application gets deep into assessments, forms, interviews, fitness testing, and background work.</p>
+
+<h2>Indigenous Applicant Mentorship Program</h2>
+
+<p>The RCMP's Indigenous Applicant Mentorship Program, also called <strong>I-AM-RCMP</strong>, connects Indigenous applicants with experienced Indigenous RCMP police officers.</p>
+
+<p>The official page says mentors can provide personalized guidance, encouragement, and insight throughout the application process. The RCMP lists several things mentees can expect:</p>
+
+<ul>
+  <li>matching with an RCMP member who self-identifies as First Nations, Inuit, or Métis</li>
+  <li>support from GC Jobs application through preparation for the entrance assessment, fitness assessments, and interviews</li>
+  <li>insight into Depot Division in Regina and the 26-week Cadet Training Program</li>
+  <li>discussion of RCMP core values, organizational culture, and career paths</li>
+  <li>culturally relevant support, encouragement, and space to discuss questions about the process</li>
+</ul>
+
+<p>The RCMP says the program is formally offered after someone applies to become a police officer, confirms they meet the basic requirements, and self-identifies as First Nations, Inuit, or Métis. It also says applicants can contact a recruiter and ask to be matched with a mentor sooner.</p>
+
+<h2>Indigenous Pre-Cadet Training Program</h2>
+
+<p>The <strong>Indigenous Pre-Cadet Training Program</strong>, or <strong>IPTP</strong>, is a three-week training session for Canadian Indigenous Peoples who want a first-hand opportunity to explore a policing career. The RCMP says the training takes place at the RCMP Academy, Depot, in Regina, Saskatchewan.</p>
+
+<p>According to the official page, participants learn:</p>
+
+<ul>
+  <li>how to work as part of a policing team</li>
+  <li>an introduction to the Criminal Code and RCMP policy</li>
+  <li>physical fitness and drill</li>
+  <li>skills that can help prepare them to apply to be a police officer</li>
+</ul>
+
+<p>The RCMP says Indigenous police officers serve as mentors during the program. It also says participants who choose to apply to join the RCMP after completing the program continue to receive support and guidance throughout the application process.</p>
+
+<h2>Who Can Apply for IPTP?</h2>
+
+<p>The RCMP lists these basic requirements for the Indigenous Pre-Cadet Training Program:</p>
+
+<ul>
+  <li>be of First Nations, Inuit, or Métis descent</li>
+  <li>be 19 years of age or older</li>
+  <li>be a Canadian citizen</li>
+  <li>be able to pass an enhanced reliability security check</li>
+  <li>be in good physical condition</li>
+  <li>possess a Canadian high school diploma or equivalent at the time of program participation</li>
+</ul>
+
+<p>The RCMP also says it covers all program-related costs, including travel, uniforms, meals, and accommodations. Applicants should still use the current official IPTP page or program email for session dates and application instructions, because those details can change.</p>
+
+<h2>Diverse and Inclusive Pre-Cadet Experience</h2>
+
+<p>The <strong>Diverse and Inclusive Pre-Cadet Experience</strong>, or <strong>DICE</strong>, is an RCMP recruitment and retention initiative focused on removing barriers affecting racialized and underrepresented groups who aspire to join the RCMP.</p>
+
+<p>The official DICE page says the program offers opportunities to:</p>
+
+<ul>
+  <li>newcomers to Canada, meaning new Canadian citizens or permanent residents</li>
+  <li>persons from diverse ethnic and cultural groups</li>
+  <li>individuals from racialized groups and communities</li>
+  <li>persons from all employment equity seeking groups</li>
+</ul>
+
+<p>DICE has two parts. The first is mentorship pairing with an RCMP employee mentor who provides support and insight into a career with the RCMP. The second is a three-week on-site training session at the RCMP Academy, Depot Division, for candidates identified to benefit most from the experience.</p>
+
+<p>The RCMP says DICE candidates learn policing-team skills, an introduction to the Criminal Code and RCMP policy, physical fitness and drill, and skills to help them prepare to apply as police officers. Candidates who complete the training receive ongoing support and guidance through the RCMP police officer application process.</p>
+
+<h2>Who Can Apply for DICE?</h2>
+
+<p>The RCMP lists these DICE application requirements:</p>
+
+<ul>
+  <li>be 19 years of age or older</li>
+  <li>be a Canadian citizen or have permanent resident status in Canada</li>
+  <li>be of good character</li>
+  <li>be able to pass an enhanced reliability security check</li>
+  <li>be in good physical condition</li>
+</ul>
+
+<p>Like IPTP, DICE is cost-covered by the RCMP. The official page says program costs include travel, uniform, meals, and accommodations.</p>
+
+<h2>How This Connects to the Regular RCMP Application</h2>
+
+<p>These programs can support applicants, but they do not erase the regular application process. If you want to become an RCMP police officer, you still need to meet the official requirements, apply through the correct RCMP route, complete the Online Entrance Assessment when required, and move through the later stages if selected.</p>
+
+<p>That distinction matters. A pre-cadet program can help you understand the environment, get mentorship, and build confidence. It is not the same thing as being accepted to Depot as a cadet in the 26-week Cadet Training Program.</p>
+
+<h2>What to Do Before You Reach Out</h2>
+
+<p>Before contacting a program mailbox or recruiter, do a quick self-check:</p>
+
+<ul>
+  <li>read the current official RCMP program page for the pathway that fits you</li>
+  <li>confirm the listed age, citizenship or permanent residence, education, and security-check requirements</li>
+  <li>review the regular RCMP basic requirements so you know where you stand</li>
+  <li>write down specific questions instead of sending a vague message</li>
+  <li>keep preparing for the Online Entrance Assessment if your goal is the police officer application process</li>
+</ul>
+
+<p>If you qualify, these programs are worth understanding early. The RCMP process is long and can feel opaque from the outside. Official mentorship or pre-cadet exposure can make the path feel less abstract before the stakes get higher.</p>
+
+<h2>Bottom Line</h2>
+
+<p>The RCMP has official support pathways for Indigenous, racialized, and underrepresented applicants. I-AM-RCMP focuses on Indigenous mentorship through the application process. IPTP gives First Nations, Inuit, and Métis participants a three-week Depot-based look at policing. DICE combines mentorship with a three-week Depot training experience for candidates from racialized and underrepresented groups.</p>
+
+<blockquote>Support programs do not lower the standard. They help more qualified people see the path clearly enough to pursue it.</blockquote>
+
+<p>If your next step is the Online Entrance Assessment, start with our <a href="/sample">free RCMP practice test sample</a> while you explore the official program that fits your background.</p>
+    `,
+    faqs: [
+      {
+        question: 'What is the RCMP Indigenous Applicant Mentorship Program?',
+        answer: 'The RCMP says I-AM-RCMP connects Indigenous applicants with experienced Indigenous RCMP police officers who provide guidance, encouragement, and insight throughout the application process.',
+      },
+      {
+        question: 'What is the RCMP Indigenous Pre-Cadet Training Program?',
+        answer: 'The RCMP says IPTP is a three-week training session at Depot in Regina that gives Canadian Indigenous Peoples a first-hand opportunity to explore a policing career.',
+      },
+      {
+        question: 'Who can apply for the RCMP Indigenous Pre-Cadet Training Program?',
+        answer: 'The RCMP lists requirements including First Nations, Inuit, or Métis descent, age 19 or older, Canadian citizenship, ability to pass an enhanced reliability security check, good physical condition, and a Canadian high school diploma or equivalent at the time of participation.',
+      },
+      {
+        question: 'What is RCMP DICE?',
+        answer: 'DICE stands for Diverse and Inclusive Pre-Cadet Experience. The RCMP describes it as a recruitment and retention initiative focused on removing barriers for racialized and underrepresented groups who aspire to join the RCMP.',
+      },
+      {
+        question: 'Does the RCMP cover pre-cadet program costs?',
+        answer: 'Yes. The RCMP says IPTP program-related costs include travel, uniforms, meals, and accommodations, and the DICE page says all program costs are covered, including travel, uniform, meals, and accommodations.',
+      },
+      {
+        question: 'Do pre-cadet programs replace the RCMP application process?',
+        answer: 'No. These programs can provide mentorship, exposure, and support, but applicants still need to meet RCMP requirements and move through the official police officer application process.',
+      },
+    ],
+    sources: [
+      { label: 'RCMP — First Nations, Inuit and Metis applicant programs', url: 'https://rcmp.ca/en/careers-rcmp/indigenous-recruiting' },
+      { label: 'RCMP — Indigenous Applicant Mentorship Program', url: 'https://rcmp.ca/en/careers-rcmp/indigenous-recruiting/indigenous-applicant-mentorship-program' },
+      { label: 'RCMP — Indigenous Pre-Cadet Training Program', url: 'https://rcmp.ca/en/careers-rcmp/indigenous-recruiting/indigenous-pre-cadet-training-program' },
+      { label: 'RCMP — Diverse and Inclusive Pre-Cadet Experience', url: 'https://rcmp.ca/en/careers-rcmp/diverse-and-inclusive-pre-cadet-experience' },
+      { label: 'RCMP — Basic requirements to be an RCMP police officer', url: 'https://rcmp.ca/en/careers-rcmp/police-officer-careers/basic-requirements-be-rcmp-police-officer' },
+    ],
+  },
 ];
